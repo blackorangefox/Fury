@@ -1,0 +1,40 @@
+//
+//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+import Swinject
+import SwinjectStoryboard
+
+class {{ module_info.name }}Assembly {
+
+    class func assembly(_ container: Container) {
+        container.registerForStoryboard({{ prefix }}{{ module_info.name }}ViewController.self, initCompleted: {r, c in
+            c.output = r.resolve({{ prefix }}{{ module_info.name }}ViewOutput.self, argument: c as {{ prefix }}{{ module_info.name }}ViewInput)
+        })
+
+        container.register({{ prefix }}{{ module_info.name }}ViewOutput.self, factory: { (r, view : {{ prefix }}{{ module_info.name }}ViewInput) in
+            let presenter = {{ prefix }}{{ module_info.name }}Presenter()
+            presenter.view = view
+            presenter.interactor = r.resolve({{ prefix }}{{ module_info.name }}InteractorInput.self, argument: presenter as {{ prefix }}{{ module_info.name }}InteractorOutput)
+            presenter.router = r.resolve({{ prefix }}{{ module_info.name }}RouterInput.self, argument: view as! {{ prefix }}{{ module_info.name }}ViewController)
+            return presenter
+        }).inObjectScope(ObjectScope.none)
+        
+        container.register({{ prefix }}{{ module_info.name }}InteractorInput.self, factory: { (r, presenter : {{ prefix }}{{ module_info.name }}InteractorOutput) in
+            let interactor = {{ prefix }}{{ module_info.name }}Interactor()
+            interactor.output = presenter
+            return interactor
+        }).inObjectScope(ObjectScope.none)
+
+        container.register({{ prefix }}{{ module_info.name }}RouterInput.self, factory: { (r, view : {{ prefix }}{{ module_info.name }}ViewController) in
+            let router = {{ prefix }}{{ module_info.name }}Router()
+            router.viewController = view
+            return router
+        }).inObjectScope(ObjectScope.none)
+    }
+}
