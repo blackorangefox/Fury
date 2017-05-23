@@ -15,7 +15,7 @@ protocol BottomViewControllerDelegate: class {
     func continueButtonPress()
 }
 
-class BottomViewController: RootContainerController, LetsGoViewDelegate, PauseViewDelegate, FinishOrContinueViewDelegate {
+class BottomCoordinator: RootContainerController, LetsGoViewDelegate, PauseViewDelegate, FinishOrContinueViewDelegate {
     
     weak var delegate: BottomViewControllerDelegate!
     var letsGoView: LetsGoView!

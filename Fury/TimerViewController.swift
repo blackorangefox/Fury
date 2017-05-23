@@ -7,82 +7,92 @@
 //
 
 import UIKit
+import Foundation
 
-class TimerViewController: UIViewController, MainViewInput {
+enum TimerState {
+    case CLASSIC
+    case COUNTDOWN
+}
 
+protocol TimerViewControllerDelegate: class {
+    func timerFinish()
+}
+
+class TimerViewController: UIViewController, MainViewInputProtocol {
     @IBOutlet weak var timerLabel: UILabel!
-    var timer = Timer()
-    var startTime = NSDate.timeIntervalSinceReferenceDate
-    var isTimerRunning = false
-    var resumeTapped = false
+    private var timer = Timer()
+    private var isTimerRunning = false
+    private var resumeTapped = false
+
+    public  var startTime : Date!
+    public  let format = DateFormatter()
+    public var state: TimerState = .CLASSIC
+    public var delegate: TimerViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        format.dateFormat = "mm:ss:SS"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    func letsGoButtonPress() {
-        startTime = NSDate.timeIntervalSinceReferenceDate
-        let aSelector : Selector = #selector(TimerViewController.updateTime)
+    //MARK: - MainViewInputProtocol
+    public func letsGoButtonPress() {
+        let time = format.date(from: "00:00:00")
+        state = .CLASSIC
+        startWith(time: time!)
+    }
+
+    public func startWith(time: Date) {
+        self.startTime = time
+        timerLabel.text = format.string(from: startTime!)
+        var aSelector : Selector
+        switch state {
+            case .COUNTDOWN:
+                aSelector = #selector(TimerViewController.updateCountdownTime)
+            default:
+                aSelector = #selector(TimerViewController.updateClassicTime)
+        }
+
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
         isTimerRunning = true
+        timerLabel.textColor = UIColor.furyYellowGreen
     }
     
-    func continueButtonPress() {
+    public func continueButtonPress() {
         self.pauseButtonPress()
     }
     
-    func pauseButtonPress() {
+    public func pauseButtonPress() {
         if self.resumeTapped == false {
             timer.invalidate()
             self.resumeTapped = true
         } else {
-            letsGoButtonPress()
+            startWith(time: startTime)
             self.resumeTapped = false
         }
     }
+
+    //MARK: - Private
+    @objc private func updateCountdownTime() {
+        startTime = startTime! - 0.01
+        timerLabel.text = format.string(from: startTime)
+        if self.format.string(from: startTime!) == "00:00:00" {
+            timer.invalidate()
+            delegate.timerFinish()
+        }
+    }
     
-    func updateTime() {
-        
-        let currentTime = NSDate.timeIntervalSinceReferenceDate
-        
-        //Find the difference between current time and start time.
-        
-        var elapsedTime: TimeInterval = currentTime - startTime
-        
-        //calculate the minutes in elapsed time.
-        
-        let minutes = UInt8(elapsedTime / 60.0)
-        
-        elapsedTime -= (TimeInterval(minutes) * 60)
-        
-        //calculate the seconds in elapsed time.
-        
-        let seconds = UInt8(elapsedTime)
-        
-        elapsedTime -= TimeInterval(seconds)
-        
-        //find out the fraction of milliseconds to be displayed.
-        
-        let fraction = UInt8(elapsedTime * 100)
-        
-        //add the leading zero for minutes, seconds and millseconds and store them as string constants
-        
-        let strMinutes = String(format: "%02d", minutes)
-        let strSeconds = String(format: "%02d", seconds)
-        let strFraction = String(format: "%02d", fraction)
-        
-        //concatenate minuets, seconds and milliseconds as assign it to the UILabel
-        
-        timerLabel.text = "\(strMinutes):\(strSeconds): \(strFraction)"
-        
+    @objc private func updateClassicTime() {
+        startTime = startTime! + 0.01
+        timerLabel.text = format.string(from: startTime!)
     }
 
 }

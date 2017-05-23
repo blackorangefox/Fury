@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B41082361ECC376900D285AC /* IntervalNavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */; };
+		B41082371ECC37E600D285AC /* IntervalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4FB261EC5DC7F00146F50 /* IntervalNavigationController.swift */; };
+		B41082391ECC38DF00D285AC /* IntervalNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4FB291EC5DEEA00146F50 /* IntervalNavigationCell.swift */; };
+		B410823A1ECC393F00D285AC /* styleguide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47539A71EB8CC42008B3A1D /* styleguide.swift */; };
+		B410823D1ED2F70B00D285AC /* 4459147_siren_by_vladrusetsky_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B410823C1ED2F70B00D285AC /* 4459147_siren_by_vladrusetsky_preview.mp3 */; };
+		B410823F1ED31F9400D285AC /* sirena.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B410823E1ED31F9400D285AC /* sirena.mp3 */; };
+		B41858991EC73A8C006A63D7 /* CountdowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41858981EC73A8C006A63D7 /* CountdowController.swift */; };
+		B418589B1ECAE31A006A63D7 /* PreStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B418589A1ECAE31A006A63D7 /* PreStartController.swift */; };
+		B41858A11ECB1FC5006A63D7 /* BebasNeue Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B418589C1ECB1FC5006A63D7 /* BebasNeue Bold.ttf */; };
+		B41858A21ECB1FC5006A63D7 /* BebasNeue Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B418589D1ECB1FC5006A63D7 /* BebasNeue Book.ttf */; };
+		B41858A31ECB1FC5006A63D7 /* BebasNeue Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B418589E1ECB1FC5006A63D7 /* BebasNeue Light.ttf */; };
+		B41858A41ECB1FC5006A63D7 /* BebasNeue Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B418589F1ECB1FC5006A63D7 /* BebasNeue Regular.ttf */; };
+		B41858A51ECB1FC5006A63D7 /* BebasNeue Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B41858A01ECB1FC5006A63D7 /* BebasNeue Thin.ttf */; };
+		B42404061EC48C30000EE6DC /* Font+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42404051EC48C30000EE6DC /* Font+extension.swift */; };
 		B475397A1EB4DDE0008B3A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47539791EB4DDE0008B3A1D /* AppDelegate.swift */; };
 		B475397F1EB4DDE0008B3A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B475397D1EB4DDE0008B3A1D /* Main.storyboard */; };
 		B47539811EB4DDE0008B3A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47539801EB4DDE0008B3A1D /* Assets.xcassets */; };
@@ -53,10 +67,16 @@
 		B4753A3E1EB9FB2E008B3A1D /* LetsGoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A3D1EB9FB2E008B3A1D /* LetsGoView.swift */; };
 		B4753A411EBA028A008B3A1D /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A401EBA028A008B3A1D /* PauseView.swift */; };
 		B4753A431EBA0A05008B3A1D /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A421EBA0A05008B3A1D /* BottomViewController.swift */; };
-		B4753A451EBB5CF2008B3A1D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A441EBB5CF2008B3A1D /* MainViewController.swift */; };
+		B4753A451EBB5CF2008B3A1D /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A441EBB5CF2008B3A1D /* MainViewCoordinator.swift */; };
 		B4753A471EBB5D25008B3A1D /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A461EBB5D25008B3A1D /* TimerViewController.swift */; };
 		B4753A491EBB5D79008B3A1D /* RootContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A481EBB5D79008B3A1D /* RootContainerController.swift */; };
 		B4753A4B1EBB64A6008B3A1D /* FinishOrContinueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A4A1EBB64A6008B3A1D /* FinishOrContinueView.swift */; };
+		B4A89C6B1EBC68E800A78DC7 /* NavigationMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A89C6A1EBC68E800A78DC7 /* NavigationMainCoordinator.swift */; };
+		B4A89C6D1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A89C6C1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift */; };
+		B4A89C6F1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A89C6E1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift */; };
+		B4B4FB271EC5DC7F00146F50 /* IntervalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4FB261EC5DC7F00146F50 /* IntervalNavigationController.swift */; };
+		B4B4FB2A1EC5DEEA00146F50 /* IntervalNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4FB291EC5DEEA00146F50 /* IntervalNavigationCell.swift */; };
+		B4E6035C1ECB2314004109B3 /* Pennstat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4E6035B1ECB2314004109B3 /* Pennstat.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +97,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationControllerTests.swift; sourceTree = "<group>"; };
+		B410823C1ED2F70B00D285AC /* 4459147_siren_by_vladrusetsky_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4459147_siren_by_vladrusetsky_preview.mp3; sourceTree = "<group>"; };
+		B410823E1ED31F9400D285AC /* sirena.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sirena.mp3; sourceTree = "<group>"; };
+		B41858981EC73A8C006A63D7 /* CountdowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdowController.swift; sourceTree = "<group>"; };
+		B418589A1ECAE31A006A63D7 /* PreStartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreStartController.swift; sourceTree = "<group>"; };
+		B418589C1ECB1FC5006A63D7 /* BebasNeue Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Bold.ttf"; sourceTree = "<group>"; };
+		B418589D1ECB1FC5006A63D7 /* BebasNeue Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Book.ttf"; sourceTree = "<group>"; };
+		B418589E1ECB1FC5006A63D7 /* BebasNeue Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Light.ttf"; sourceTree = "<group>"; };
+		B418589F1ECB1FC5006A63D7 /* BebasNeue Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Regular.ttf"; sourceTree = "<group>"; };
+		B41858A01ECB1FC5006A63D7 /* BebasNeue Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Thin.ttf"; sourceTree = "<group>"; };
+		B42404051EC48C30000EE6DC /* Font+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+extension.swift"; sourceTree = "<group>"; };
 		B47539761EB4DDE0008B3A1D /* Fury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47539791EB4DDE0008B3A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B475397E1EB4DDE0008B3A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,10 +160,16 @@
 		B4753A3D1EB9FB2E008B3A1D /* LetsGoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetsGoView.swift; sourceTree = "<group>"; };
 		B4753A401EBA028A008B3A1D /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
 		B4753A421EBA0A05008B3A1D /* BottomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
-		B4753A441EBB5CF2008B3A1D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B4753A441EBB5CF2008B3A1D /* MainViewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		B4753A461EBB5D25008B3A1D /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		B4753A481EBB5D79008B3A1D /* RootContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContainerController.swift; sourceTree = "<group>"; };
 		B4753A4A1EBB64A6008B3A1D /* FinishOrContinueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishOrContinueView.swift; sourceTree = "<group>"; };
+		B4A89C6A1EBC68E800A78DC7 /* NavigationMainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMainCoordinator.swift; sourceTree = "<group>"; };
+		B4A89C6C1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTypeSelectionController.swift; sourceTree = "<group>"; };
+		B4A89C6E1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingIntervalMainViewController.swift; sourceTree = "<group>"; };
+		B4B4FB261EC5DC7F00146F50 /* IntervalNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationController.swift; sourceTree = "<group>"; };
+		B4B4FB291EC5DEEA00146F50 /* IntervalNavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationCell.swift; sourceTree = "<group>"; };
+		B4E6035B1ECB2314004109B3 /* Pennstat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pennstat.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,9 +197,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B41082341ECC362F00D285AC /* NavigationContainerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */,
+			);
+			name = NavigationContainerTests;
+			sourceTree = "<group>";
+		};
+		B410823B1ED2F6FC00D285AC /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				B410823E1ED31F9400D285AC /* sirena.mp3 */,
+				B410823C1ED2F70B00D285AC /* 4459147_siren_by_vladrusetsky_preview.mp3 */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+		B42404041EC48C19000EE6DC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B42404051EC48C30000EE6DC /* Font+extension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		B475396D1EB4DDE0008B3A1D = {
 			isa = PBXGroup;
 			children = (
+				B410823B1ED2F6FC00D285AC /* Music */,
+				B42404041EC48C19000EE6DC /* Extension */,
 				B47539A91EB9EF72008B3A1D /* Fonts */,
 				B47539781EB4DDE0008B3A1D /* Fury */,
 				B475398D1EB4DDE0008B3A1D /* FuryTests */,
@@ -184,11 +248,13 @@
 		B47539781EB4DDE0008B3A1D /* Fury */ = {
 			isa = PBXGroup;
 			children = (
+				B4A89C691EBC68AF00A78DC7 /* NavigationContainer */,
 				B4753A3F1EB9FCE8008B3A1D /* MainContainer */,
 				B4753A3C1EB9FB18008B3A1D /* BottomContainer */,
 				B47539A71EB8CC42008B3A1D /* styleguide.swift */,
 				B47539791EB4DDE0008B3A1D /* AppDelegate.swift */,
 				B475397D1EB4DDE0008B3A1D /* Main.storyboard */,
+				B418589A1ECAE31A006A63D7 /* PreStartController.swift */,
 				B47539801EB4DDE0008B3A1D /* Assets.xcassets */,
 				B47539821EB4DDE0008B3A1D /* LaunchScreen.storyboard */,
 				B47539851EB4DDE0008B3A1D /* Info.plist */,
@@ -201,6 +267,7 @@
 		B475398D1EB4DDE0008B3A1D /* FuryTests */ = {
 			isa = PBXGroup;
 			children = (
+				B41082341ECC362F00D285AC /* NavigationContainerTests */,
 				B475398E1EB4DDE0008B3A1D /* FuryTests.swift */,
 				B47539901EB4DDE0008B3A1D /* Info.plist */,
 			);
@@ -219,6 +286,12 @@
 		B47539A91EB9EF72008B3A1D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				B4E6035B1ECB2314004109B3 /* Pennstat.ttf */,
+				B418589C1ECB1FC5006A63D7 /* BebasNeue Bold.ttf */,
+				B418589D1ECB1FC5006A63D7 /* BebasNeue Book.ttf */,
+				B418589E1ECB1FC5006A63D7 /* BebasNeue Light.ttf */,
+				B418589F1ECB1FC5006A63D7 /* BebasNeue Regular.ttf */,
+				B41858A01ECB1FC5006A63D7 /* BebasNeue Thin.ttf */,
 				B4753A101EB9F144008B3A1D /* Apache License.txt */,
 				B4753A111EB9F144008B3A1D /* Roboto-Black.ttf */,
 				B4753A121EB9F144008B3A1D /* Roboto-BlackItalic.ttf */,
@@ -272,10 +345,31 @@
 		B4753A3F1EB9FCE8008B3A1D /* MainContainer */ = {
 			isa = PBXGroup;
 			children = (
-				B4753A441EBB5CF2008B3A1D /* MainViewController.swift */,
+				B4753A441EBB5CF2008B3A1D /* MainViewCoordinator.swift */,
 				B4753A461EBB5D25008B3A1D /* TimerViewController.swift */,
+				B4A89C6E1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift */,
+				B41858981EC73A8C006A63D7 /* CountdowController.swift */,
 			);
 			name = MainContainer;
+			sourceTree = "<group>";
+		};
+		B4A89C691EBC68AF00A78DC7 /* NavigationContainer */ = {
+			isa = PBXGroup;
+			children = (
+				B4B4FB281EC5DECE00146F50 /* Cell */,
+				B4A89C6A1EBC68E800A78DC7 /* NavigationMainCoordinator.swift */,
+				B4A89C6C1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift */,
+				B4B4FB261EC5DC7F00146F50 /* IntervalNavigationController.swift */,
+			);
+			name = NavigationContainer;
+			sourceTree = "<group>";
+		};
+		B4B4FB281EC5DECE00146F50 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B4B4FB291EC5DEEA00146F50 /* IntervalNavigationCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,7 +441,7 @@
 					B47539751EB4DDE0008B3A1D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 8U3EZY8K9K;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					B47539891EB4DDE0008B3A1D = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -391,6 +485,7 @@
 				B4753A071EB9F136008B3A1D /* Oswald-HeavyItalic.ttf in Resources */,
 				B4753A0E1EB9F136008B3A1D /* Oswald-Stencil.ttf in Resources */,
 				B4753A261EB9F144008B3A1D /* Roboto-Bold.ttf in Resources */,
+				B41858A51ECB1FC5006A63D7 /* BebasNeue Thin.ttf in Resources */,
 				B4753A021EB9F136008B3A1D /* Oswald-Demi-BoldItalic.ttf in Resources */,
 				B4753A311EB9F144008B3A1D /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				B47539841EB4DDE0008B3A1D /* LaunchScreen.storyboard in Resources */,
@@ -399,13 +494,16 @@
 				B4753A0B1EB9F136008B3A1D /* Oswald-MediumItalic.ttf in Resources */,
 				B4753A081EB9F136008B3A1D /* Oswald-Light.ttf in Resources */,
 				B4753A331EB9F144008B3A1D /* RobotoCondensed-Light.ttf in Resources */,
+				B41858A31ECB1FC5006A63D7 /* BebasNeue Light.ttf in Resources */,
 				B4753A0C1EB9F136008B3A1D /* Oswald-Regular.ttf in Resources */,
 				B4753A061EB9F136008B3A1D /* Oswald-Heavy.ttf in Resources */,
 				B4753A0D1EB9F136008B3A1D /* Oswald-RegularItalic.ttf in Resources */,
 				B4753A2D1EB9F144008B3A1D /* Roboto-Regular.ttf in Resources */,
 				B4753A281EB9F144008B3A1D /* Roboto-Italic.ttf in Resources */,
+				B41858A41ECB1FC5006A63D7 /* BebasNeue Regular.ttf in Resources */,
 				B4753A241EB9F144008B3A1D /* Roboto-Black.ttf in Resources */,
 				B4753A2A1EB9F144008B3A1D /* Roboto-LightItalic.ttf in Resources */,
+				B410823D1ED2F70B00D285AC /* 4459147_siren_by_vladrusetsky_preview.mp3 in Resources */,
 				B47539811EB4DDE0008B3A1D /* Assets.xcassets in Resources */,
 				B4753A031EB9F136008B3A1D /* Oswald-DemiBold.ttf in Resources */,
 				B475397F1EB4DDE0008B3A1D /* Main.storyboard in Resources */,
@@ -414,14 +512,18 @@
 				B4753A301EB9F144008B3A1D /* RobotoCondensed-Bold.ttf in Resources */,
 				B4753A011EB9F136008B3A1D /* Oswald-BoldItalic.ttf in Resources */,
 				B4753A321EB9F144008B3A1D /* RobotoCondensed-Italic.ttf in Resources */,
+				B4E6035C1ECB2314004109B3 /* Pennstat.ttf in Resources */,
 				B4753A341EB9F144008B3A1D /* RobotoCondensed-LightItalic.ttf in Resources */,
 				B4753A041EB9F136008B3A1D /* Oswald-Extra-LightItalic.ttf in Resources */,
 				B4753A351EB9F144008B3A1D /* RobotoCondensed-Regular.ttf in Resources */,
 				B4753A271EB9F144008B3A1D /* Roboto-BoldItalic.ttf in Resources */,
 				B4753A251EB9F144008B3A1D /* Roboto-BlackItalic.ttf in Resources */,
 				B4753A001EB9F136008B3A1D /* Oswald-Bold.ttf in Resources */,
+				B41858A11ECB1FC5006A63D7 /* BebasNeue Bold.ttf in Resources */,
+				B410823F1ED31F9400D285AC /* sirena.mp3 in Resources */,
 				B4753A291EB9F144008B3A1D /* Roboto-Light.ttf in Resources */,
 				B4753A2B1EB9F144008B3A1D /* Roboto-Medium.ttf in Resources */,
+				B41858A21ECB1FC5006A63D7 /* BebasNeue Book.ttf in Resources */,
 				B4753A2F1EB9F144008B3A1D /* Roboto-ThinItalic.ttf in Resources */,
 				B4753A231EB9F144008B3A1D /* Apache License.txt in Resources */,
 				B4753A051EB9F136008B3A1D /* Oswald-ExtraLight.ttf in Resources */,
@@ -450,16 +552,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A89C6B1EBC68E800A78DC7 /* NavigationMainCoordinator.swift in Sources */,
+				B4B4FB271EC5DC7F00146F50 /* IntervalNavigationController.swift in Sources */,
 				B4753A431EBA0A05008B3A1D /* BottomViewController.swift in Sources */,
+				B42404061EC48C30000EE6DC /* Font+extension.swift in Sources */,
 				B4753A3E1EB9FB2E008B3A1D /* LetsGoView.swift in Sources */,
+				B41858991EC73A8C006A63D7 /* CountdowController.swift in Sources */,
+				B418589B1ECAE31A006A63D7 /* PreStartController.swift in Sources */,
 				B4753A491EBB5D79008B3A1D /* RootContainerController.swift in Sources */,
 				B47539A81EB8CC42008B3A1D /* styleguide.swift in Sources */,
 				B4753A371EB9F953008B3A1D /* RootViewController.swift in Sources */,
+				B4A89C6D1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift in Sources */,
 				B4753A4B1EBB64A6008B3A1D /* FinishOrContinueView.swift in Sources */,
 				B4753A471EBB5D25008B3A1D /* TimerViewController.swift in Sources */,
 				B475397A1EB4DDE0008B3A1D /* AppDelegate.swift in Sources */,
 				B4753A411EBA028A008B3A1D /* PauseView.swift in Sources */,
-				B4753A451EBB5CF2008B3A1D /* MainViewController.swift in Sources */,
+				B4753A451EBB5CF2008B3A1D /* MainViewCoordinator.swift in Sources */,
+				B4B4FB2A1EC5DEEA00146F50 /* IntervalNavigationCell.swift in Sources */,
+				B4A89C6F1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,7 +577,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B41082391ECC38DF00D285AC /* IntervalNavigationCell.swift in Sources */,
+				B41082361ECC376900D285AC /* IntervalNavigationControllerTests.swift in Sources */,
 				B475398F1EB4DDE0008B3A1D /* FuryTests.swift in Sources */,
+				B41082371ECC37E600D285AC /* IntervalNavigationController.swift in Sources */,
+				B410823A1ECC393F00D285AC /* styleguide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,14 +724,17 @@
 		B475399F1EB4DDE0008B3A1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALTERNATE_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8U3EZY8K9K;
 				INFOPLIST_FILE = Fury/Info.plist;
+				INSTALL_GROUP = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nova9.Fury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "151bf1fb-bb0d-4063-971f-f6bee0496304";
+				PROVISIONING_PROFILE_SPECIFIER = fury_Development;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -625,14 +742,17 @@
 		B47539A01EB4DDE0008B3A1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALTERNATE_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 8U3EZY8K9K;
 				INFOPLIST_FILE = Fury/Info.plist;
+				INSTALL_GROUP = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nova9.Fury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "e0932de9-77b9-4a3c-98d0-d244170ea3ee";
+				PROVISIONING_PROFILE_SPECIFIER = fury_Distribution;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -714,6 +834,7 @@
 				B47539A01EB4DDE0008B3A1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B47539A11EB4DDE0008B3A1D /* Build configuration list for PBXNativeTarget "FuryTests" */ = {
 			isa = XCConfigurationList;
@@ -722,6 +843,7 @@
 				B47539A31EB4DDE0008B3A1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B47539A41EB4DDE0008B3A1D /* Build configuration list for PBXNativeTarget "FuryUITests" */ = {
 			isa = XCConfigurationList;
@@ -730,6 +852,7 @@
 				B47539A61EB4DDE0008B3A1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,13 +8,14 @@
 
 import UIKit
 
-class RootViewController: UIViewController, BottomViewControllerDelegate  {
+class RootViewController: RootContainerController, BottomViewControllerDelegate, NavigationMainControllerDelegate, MainViewCoordinatorDelegate  {
 
     @IBOutlet weak var navigationContainer: UIView!
     @IBOutlet weak var bottomContainer: UIView!
     @IBOutlet weak var mainContainer: UIView!
-    var bottomViewController: BottomViewController!
-    var mainViewController: MainViewController!
+    var bottomViewController: BottomCoordinator!
+    var mainViewController: MainViewCoordinator!
+    var navigationMainController: NavigationMainCoordinator!
     
     override func viewDidLoad() {
         startConfiguration()
@@ -24,28 +25,24 @@ class RootViewController: UIViewController, BottomViewControllerDelegate  {
     
     //MARK: - Private
     func startConfiguration() {
-        bottomViewController = self.storyboard?.instantiateViewController(withIdentifier: "BottomViewController") as! BottomViewController
+        bottomViewController = self.storyboard?.instantiateViewController(withIdentifier: "BottomViewController") as! BottomCoordinator
         bottomViewController.delegate = self
         bottomViewController.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChildViewController(bottomViewController)
         self.addSubview(subView: self.bottomViewController!.view, toView: self.bottomContainer)
         
-        mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
-       // mainViewController.delegate = self
+        mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewCoordinator
+        mainViewController.delegate = self
         mainViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        self.addChildViewController(bottomViewController)
+        self.addChildViewController(mainViewController)
         self.addSubview(subView: self.mainViewController!.view, toView: self.mainContainer)
-    }
-    
-    func addSubview(subView: UIView, toView parentView: UIView) {
-        parentView.addSubview(subView)
+        mainViewController.showTimerController()
         
-        var viewBindingsDict = [String: AnyObject]()
-        viewBindingsDict["subView"] = subView
-        parentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[subView]|",
-                                                                 options: [], metrics: nil, views: viewBindingsDict))
-        parentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[subView]|",
-                                                                 options: [], metrics: nil, views: viewBindingsDict))
+        navigationMainController = self.storyboard?.instantiateViewController(withIdentifier: "NavigationMainController") as! NavigationMainCoordinator
+        navigationMainController.delegate = self
+        navigationMainController.view.translatesAutoresizingMaskIntoConstraints = false
+        self.addChildViewController(navigationMainController)
+        self.addSubview(subView: self.navigationMainController!.view, toView: self.navigationContainer)
     }
     
     
@@ -64,5 +61,38 @@ class RootViewController: UIViewController, BottomViewControllerDelegate  {
     
     func continueButtonPress() {
         mainViewController.continueButtonPress()
+    }
+    
+    //MARK: - NavigationMainControllerDelegate
+    func classicButtonPress() {
+        mainViewController.showTimerController()
+        bottomViewController.startConfiguration()
+    }
+    
+    func intervalButtonPress() {
+        mainViewController.openSettingIntervalMainViewController()
+        bottomViewController.startConfiguration()
+    }
+    
+    func countdownButtonPress() {
+        mainViewController.openCountdowController()
+        bottomViewController.startConfiguration()
+    }
+
+    //MARK: -  MainViewCoordinatorDelegate
+    func mainFinish() {
+
+    }
+
+    func openIntervatController() {
+        self.navigationMainController.changeToIntervanNavigationController()
+    }
+
+    func nextSegment() {
+        self.navigationMainController.nextSegment()
+    }
+
+    func intervalSetting(laps: Int) {
+        self.navigationMainController.intervalSetting(laps: laps)
     }
 }

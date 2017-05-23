@@ -12,23 +12,17 @@ import UIKit
 // Sample color palette
 
 extension UIColor {
-    class var furyYellow: UIColor {
-        return UIColor(red: 254.0 / 255.0, green: 207.0 / 255.0, blue: 51.0 / 255.0, alpha: 1.0)
+    class var furyYellowGreen: UIColor {
+        return UIColor(red: 194.0 / 255.0, green: 255.0 / 255.0, blue: 59.0 / 255.0, alpha: 1.0)
     }
     
-    class var furyLightOrange: UIColor {
-        return UIColor(red: 253.0 / 255.0, green: 189.0 / 255.0, blue: 57.0 / 255.0, alpha: 1.0)
-    }
-    
-    class var furyPeach: UIColor {
-        return UIColor(red: 238.0 / 255.0, green: 103.0 / 255.0, blue: 35.0 / 255.0, alpha: 1.0)
+    class var furyWhite5: UIColor {
+        return UIColor(white: 255.0 / 255.0, alpha: 0.3)
     }
 }
 
 // Sample text styles
 
 extension UIFont {
-    class func furyHeaderFont() -> UIFont {
-        return UIFont.systemFont(ofSize: 24.0, weight: UIFontWeightRegular)
-    }
+    
 }
