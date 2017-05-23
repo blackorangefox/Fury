@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cc3d49e-9dc8-4386-ab35-9c25434747ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BebasNeue Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BebasNeue Book.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BebasNeue Light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BebasNeue Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BebasNeue Thin.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pennstat.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Font+extension.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fury/CountdowController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fury/IntervalNavigationCell.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fury/IntervalNavigationController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fury/MainViewCoordinator.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fury/NavigationMainCoordinator.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fury/PreStartController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fury/SettingIntervalMainViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Fury/TimerTypeSelectionController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FuryTests/IntervalNavigationControllerTests.swift" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Fury/MainViewController.swift" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fury.xcodeproj/project.xcworkspace/xcuserdata/mikhail.fokin.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Fury.xcodeproj/project.xcworkspace/xcuserdata/mikhail.fokin.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fury.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Fury.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fury.xcodeproj/xcuserdata/mikhail.fokin.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/Fury.xcodeproj/xcuserdata/mikhail.fokin.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fury.xcodeproj/xcuserdata/mikhail.fokin.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Fury.xcodeproj/xcuserdata/mikhail.fokin.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fury/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Fury/Base.lproj/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fury/BottomViewController.swift" afterPath="$PROJECT_DIR$/Fury/BottomViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fury/RootViewController.swift" afterPath="$PROJECT_DIR$/Fury/RootViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fury/TimerViewController.swift" afterPath="$PROJECT_DIR$/Fury/TimerViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Fury/styleguide.swift" afterPath="$PROJECT_DIR$/Fury/styleguide.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,8 +19,8 @@
       <file leaf-file-name="MainViewCoordinator.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Fury/MainViewCoordinator.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+            <state relative-caret-position="680">
+              <caret line="123" column="5" lean-forward="false" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -102,8 +79,8 @@
       <file leaf-file-name="RootViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Fury/RootViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+            <state relative-caret-position="507">
+              <caret line="75" column="4" lean-forward="true" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -113,9 +90,9 @@
         <entry file="file://$PROJECT_DIR$/Fury/PreStartController.swift">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
-              <caret line="46" column="10" lean-forward="false" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+              <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
               <folding>
-                <marker date="1495003555000" expanded="true" signature="1386:1393" ph="{...}" />
+                <marker date="1495460192000" expanded="true" signature="1541:1548" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -174,10 +151,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="22" />
     <option name="width" value="1680" />
-    <option name="height" value="1054" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -304,6 +279,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -388,15 +364,15 @@
       <updated>1494573571748</updated>
       <workItem from="1494573574895" duration="19466000" />
       <workItem from="1494599573804" duration="9016000" />
-      <workItem from="1494999392469" duration="7401000" />
+      <workItem from="1494999392469" duration="7545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35883000" />
+    <option name="totallyTimeSpent" value="36027000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="22" width="1680" height="1054" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -406,7 +382,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21015228" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20638086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -436,7 +412,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Fury/MainViewCoordinator.swift</url>
-          <line>108</line>
+          <line>110</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
@@ -461,7 +437,7 @@
         <state relative-caret-position="585">
           <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
           <folding>
-            <marker date="1495003555000" expanded="true" signature="1386:1393" ph="{...}" />
+            <marker date="1495460192000" expanded="true" signature="1541:1548" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -596,9 +572,9 @@
     <entry file="file://$PROJECT_DIR$/Fury/PreStartController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
-          <caret line="46" column="10" lean-forward="false" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+          <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
           <folding>
-            <marker date="1495003555000" expanded="true" signature="1386:1393" ph="{...}" />
+            <marker date="1495460192000" expanded="true" signature="1541:1548" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -671,8 +647,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Fury/MainViewCoordinator.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+        <state relative-caret-position="680">
+          <caret line="123" column="5" lean-forward="false" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -687,8 +663,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Fury/RootViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+        <state relative-caret-position="507">
+          <caret line="75" column="4" lean-forward="true" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
           <folding />
         </state>
       </provider>

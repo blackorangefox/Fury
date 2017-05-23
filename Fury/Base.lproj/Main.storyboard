@@ -217,7 +217,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="82"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="57l-uk-Amg">
+                            <collectionView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="57l-uk-Amg">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="82"/>
                                 <color key="backgroundColor" red="0.087449230253696442" green="0.087530605494976044" blue="0.092729054391384125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="euB-oe-tyG">
@@ -343,7 +343,7 @@
                                 <rect key="frame" x="0.0" y="77" width="146" height="74"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLp-FK-VOo">
-                                        <rect key="frame" x="16" y="26.5" width="36.5" height="22.5"/>
+                                        <rect key="frame" x="16" y="28" width="42.5" height="20"/>
                                         <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -361,7 +361,7 @@
                                 <rect key="frame" x="147" y="77" width="259.5" height="74"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAP TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jm3-LI-qNA">
-                                        <rect key="frame" x="16" y="16" width="68" height="24"/>
+                                        <rect key="frame" x="16" y="16" width="68" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="68" id="h7c-e6-sbS"/>
                                         </constraints>
@@ -370,7 +370,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIN ∙ SEC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10u-aE-7Gf">
-                                        <rect key="frame" x="16" y="41" width="68" height="15"/>
+                                        <rect key="frame" x="16" y="38" width="68" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="68" id="d6q-Q2-Cti"/>
                                         </constraints>
@@ -392,7 +392,7 @@
                                 <rect key="frame" x="407.5" y="77" width="259.5" height="74"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REST TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd6-VD-pFL">
-                                        <rect key="frame" x="16" y="16" width="77" height="24"/>
+                                        <rect key="frame" x="16" y="16" width="77" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="77" id="WcP-6y-JIk"/>
                                         </constraints>
@@ -401,7 +401,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIN ∙ SEC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wa-gb-FL4">
-                                        <rect key="frame" x="16" y="41" width="77" height="15"/>
+                                        <rect key="frame" x="16" y="38" width="77" height="13"/>
                                         <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="11"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -691,7 +691,7 @@
                                 <rect key="frame" x="0.0" y="77" width="667" height="74"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIN ∙ SEC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAd-Zl-FH8">
-                                        <rect key="frame" x="163.5" y="41" width="68" height="15"/>
+                                        <rect key="frame" x="163.5" y="38" width="68" height="13"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="68" id="TPD-PK-ip0"/>
                                         </constraints>
@@ -700,7 +700,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhV-ri-z5r">
-                                        <rect key="frame" x="163.5" y="16" width="68" height="24"/>
+                                        <rect key="frame" x="163.5" y="16" width="68" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="68" id="lL0-8E-mNK"/>
                                         </constraints>
