@@ -15,11 +15,12 @@ protocol BottomViewControllerDelegate: class {
     func continueButtonPress()
 }
 
-class BottomCoordinator: RootContainerController, LetsGoViewDelegate, PauseViewDelegate, FinishOrContinueViewDelegate {
+class BottomCoordinator: RootContainerController, LetsGoViewDelegate, PauseViewDelegate, FinishOrContinueViewDelegate, FinishViewDelegate {
     
     weak var delegate: BottomViewControllerDelegate!
     var letsGoView: LetsGoView!
     var pauseView: PauseView!
+    var finishView: FinishView!
     var finishOrContinueView: FinishOrContinueView!
     weak var currentViewController: UIViewController?
 
@@ -43,6 +44,15 @@ class BottomCoordinator: RootContainerController, LetsGoViewDelegate, PauseViewD
         self.currentViewController = letsGoView
     }
     
+    func timerFinish() {
+        finishView = self.storyboard?.instantiateViewController(withIdentifier: "FinishView") as! FinishView
+        finishView.delegate = self
+        finishView.view.translatesAutoresizingMaskIntoConstraints = false
+        self.addChildViewController(finishView)
+        self.addSubview(subView: self.finishView!.view, toView: self.view)
+        self.currentViewController = finishView
+    }
+    
     //MARK: - LetsGoViewDelegate
     func letsGoButtonPress() {
         self.delegate.letsGoButtonPress()
@@ -63,8 +73,9 @@ class BottomCoordinator: RootContainerController, LetsGoViewDelegate, PauseViewD
         self.currentViewController = finishOrContinueView
     }
     
-    //MARK: - FinishOrContinueViewDelegate
+    //MARK: - FinishOrContinueViewDelegate && FinishViewDelegate
     func finishButtonPress() {
+        startConfiguration()
         self.delegate.finishButtonPress()
     }
     

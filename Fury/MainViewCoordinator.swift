@@ -33,6 +33,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     private var timeArray: [Date] = []
     private var iterator = 0
     private var player: AVAudioPlayer?
+    private var timerType: TimerType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,18 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    public func openTimeByType(timerType: TimerType) {
+        self.timerType = timerType
+        switch timerType {
+        case .interval:
+            openSettingIntervalMainViewController()
+        case .countdown:
+            openCountdowController()
+        default:
+            showTimerController()
+        }
     }
     
     public func showTimerController() {
@@ -89,6 +102,18 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     
     func continueButtonPress() {
         self.timerViewController.continueButtonPress()
+    }
+    
+    func finishButtonPress() {
+        if timerType == TimerType.classic {
+            let resultController = self.storyboard?.instantiateViewController(withIdentifier: "ResultController") as! ResultController
+            resultController.ruselt = timerViewController.timerLabel.text
+            self.present(resultController, animated: false, completion: nil)
+        } else {
+            let finishController = self.storyboard?.instantiateViewController(withIdentifier: "FinishController") as! FinishController
+            self.present(finishController, animated: false, completion: nil)
+        }
+        openTimeByType(timerType: .classic)
     }
     
     //MARK: - SettingIntervalMainViewControllerDelegate

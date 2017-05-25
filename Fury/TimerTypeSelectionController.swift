@@ -30,6 +30,12 @@ class TimerTypeSelectionController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func startConfiguration() {
+        classicButton.setTitleColor(UIColor.furyYellowGreen, for: .normal)
+        intervalButton.setTitleColor(UIColor.white.withAlphaComponent(0.3), for: .normal)
+        countdownButton.setTitleColor(UIColor.white.withAlphaComponent(0.3), for: .normal)
+    }
+    
     @IBAction func classicButtonPress(_ sender: Any) {
         self.delegate.classicButtonPress()
         classicButton.setTitleColor(UIColor.furyYellowGreen, for: .normal)

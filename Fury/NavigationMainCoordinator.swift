@@ -39,6 +39,7 @@ class NavigationMainCoordinator: RootContainerController, TimerTypeSelectionCont
         self.addChildViewController(timerTypeSelectionController)
         self.addSubview(subView: self.timerTypeSelectionController!.view, toView: self.view)
         self.currentViewController = timerTypeSelectionController
+        timerTypeSelectionController.startConfiguration()
     }
 
     func changeToIntervanNavigationController() {
@@ -46,6 +47,11 @@ class NavigationMainCoordinator: RootContainerController, TimerTypeSelectionCont
         self.addChildViewController(intervanNavigationController)
         self.addSubview(subView: self.intervanNavigationController!.view, toView: self.view)
         self.currentViewController = intervanNavigationController
+    }
+    
+    //MARK: Bottom event
+    func finishButtonPress() {
+        startConfiguration()
     }
 
     //MARK: - TimerTypeSelectionControllerDelegate

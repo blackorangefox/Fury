@@ -20,6 +20,8 @@
 		B41858A31ECB1FC5006A63D7 /* BebasNeue Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B418589E1ECB1FC5006A63D7 /* BebasNeue Light.ttf */; };
 		B41858A41ECB1FC5006A63D7 /* BebasNeue Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B418589F1ECB1FC5006A63D7 /* BebasNeue Regular.ttf */; };
 		B41858A51ECB1FC5006A63D7 /* BebasNeue Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B41858A01ECB1FC5006A63D7 /* BebasNeue Thin.ttf */; };
+		B423F3691ED41BF30034BFF1 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423F3681ED41BF30034BFF1 /* ResultController.swift */; };
+		B423F36B1ED42B1F0034BFF1 /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423F36A1ED42B1F0034BFF1 /* FinishController.swift */; };
 		B42404061EC48C30000EE6DC /* Font+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42404051EC48C30000EE6DC /* Font+extension.swift */; };
 		B475397A1EB4DDE0008B3A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47539791EB4DDE0008B3A1D /* AppDelegate.swift */; };
 		B475397F1EB4DDE0008B3A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B475397D1EB4DDE0008B3A1D /* Main.storyboard */; };
@@ -71,6 +73,7 @@
 		B4753A471EBB5D25008B3A1D /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A461EBB5D25008B3A1D /* TimerViewController.swift */; };
 		B4753A491EBB5D79008B3A1D /* RootContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A481EBB5D79008B3A1D /* RootContainerController.swift */; };
 		B4753A4B1EBB64A6008B3A1D /* FinishOrContinueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A4A1EBB64A6008B3A1D /* FinishOrContinueView.swift */; };
+		B4A53F9B1ED6B67000838F86 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A53F9A1ED6B67000838F86 /* FinishView.swift */; };
 		B4A89C6B1EBC68E800A78DC7 /* NavigationMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A89C6A1EBC68E800A78DC7 /* NavigationMainCoordinator.swift */; };
 		B4A89C6D1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A89C6C1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift */; };
 		B4A89C6F1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A89C6E1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift */; };
@@ -107,6 +110,8 @@
 		B418589E1ECB1FC5006A63D7 /* BebasNeue Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Light.ttf"; sourceTree = "<group>"; };
 		B418589F1ECB1FC5006A63D7 /* BebasNeue Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Regular.ttf"; sourceTree = "<group>"; };
 		B41858A01ECB1FC5006A63D7 /* BebasNeue Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Thin.ttf"; sourceTree = "<group>"; };
+		B423F3681ED41BF30034BFF1 /* ResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		B423F36A1ED42B1F0034BFF1 /* FinishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
 		B42404051EC48C30000EE6DC /* Font+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+extension.swift"; sourceTree = "<group>"; };
 		B47539761EB4DDE0008B3A1D /* Fury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47539791EB4DDE0008B3A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +169,7 @@
 		B4753A461EBB5D25008B3A1D /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		B4753A481EBB5D79008B3A1D /* RootContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContainerController.swift; sourceTree = "<group>"; };
 		B4753A4A1EBB64A6008B3A1D /* FinishOrContinueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishOrContinueView.swift; sourceTree = "<group>"; };
+		B4A53F9A1ED6B67000838F86 /* FinishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishView.swift; sourceTree = "<group>"; };
 		B4A89C6A1EBC68E800A78DC7 /* NavigationMainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMainCoordinator.swift; sourceTree = "<group>"; };
 		B4A89C6C1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTypeSelectionController.swift; sourceTree = "<group>"; };
 		B4A89C6E1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingIntervalMainViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +260,8 @@
 				B47539A71EB8CC42008B3A1D /* styleguide.swift */,
 				B47539791EB4DDE0008B3A1D /* AppDelegate.swift */,
 				B475397D1EB4DDE0008B3A1D /* Main.storyboard */,
+				B423F36A1ED42B1F0034BFF1 /* FinishController.swift */,
+				B423F3681ED41BF30034BFF1 /* ResultController.swift */,
 				B418589A1ECAE31A006A63D7 /* PreStartController.swift */,
 				B47539801EB4DDE0008B3A1D /* Assets.xcassets */,
 				B47539821EB4DDE0008B3A1D /* LaunchScreen.storyboard */,
@@ -338,6 +346,7 @@
 				B4753A401EBA028A008B3A1D /* PauseView.swift */,
 				B4753A421EBA0A05008B3A1D /* BottomViewController.swift */,
 				B4753A4A1EBB64A6008B3A1D /* FinishOrContinueView.swift */,
+				B4A53F9A1ED6B67000838F86 /* FinishView.swift */,
 			);
 			name = BottomContainer;
 			sourceTree = "<group>";
@@ -556,6 +565,7 @@
 				B4B4FB271EC5DC7F00146F50 /* IntervalNavigationController.swift in Sources */,
 				B4753A431EBA0A05008B3A1D /* BottomViewController.swift in Sources */,
 				B42404061EC48C30000EE6DC /* Font+extension.swift in Sources */,
+				B423F3691ED41BF30034BFF1 /* ResultController.swift in Sources */,
 				B4753A3E1EB9FB2E008B3A1D /* LetsGoView.swift in Sources */,
 				B41858991EC73A8C006A63D7 /* CountdowController.swift in Sources */,
 				B418589B1ECAE31A006A63D7 /* PreStartController.swift in Sources */,
@@ -565,6 +575,8 @@
 				B4A89C6D1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift in Sources */,
 				B4753A4B1EBB64A6008B3A1D /* FinishOrContinueView.swift in Sources */,
 				B4753A471EBB5D25008B3A1D /* TimerViewController.swift in Sources */,
+				B4A53F9B1ED6B67000838F86 /* FinishView.swift in Sources */,
+				B423F36B1ED42B1F0034BFF1 /* FinishController.swift in Sources */,
 				B475397A1EB4DDE0008B3A1D /* AppDelegate.swift in Sources */,
 				B4753A411EBA028A008B3A1D /* PauseView.swift in Sources */,
 				B4753A451EBB5CF2008B3A1D /* MainViewCoordinator.swift in Sources */,
