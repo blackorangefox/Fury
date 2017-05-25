@@ -91,7 +91,7 @@ class RootViewController: RootContainerController, BottomViewControllerDelegate,
     }
 
     //MARK: -  MainViewCoordinatorDelegate
-    func mainFinish() {
+    func timerFinish() {
         bottomViewController.timerFinish()
     }
 
@@ -103,7 +103,7 @@ class RootViewController: RootContainerController, BottomViewControllerDelegate,
         self.navigationMainController.nextSegment()
     }
 
-    func intervalSetting(laps: Int) {
-        self.navigationMainController.intervalSetting(laps: laps)
+    func intervalSetting(laps: Int, isRest: Bool) {
+        self.navigationMainController.intervalSetting(laps: laps, isRest: isRest)
     }
 }

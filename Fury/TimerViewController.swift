@@ -15,7 +15,7 @@ enum TimerState {
 }
 
 protocol TimerViewControllerDelegate: class {
-    func timerFinish()
+    func currentSegmentFinish()
 }
 
 class TimerViewController: UIViewController, MainViewInputProtocol {
@@ -86,7 +86,7 @@ class TimerViewController: UIViewController, MainViewInputProtocol {
         timerLabel.text = format.string(from: startTime)
         if self.format.string(from: startTime!) == "00:00:00" {
             timer.invalidate()
-            delegate.timerFinish()
+            delegate.currentSegmentFinish()
         }
     }
     

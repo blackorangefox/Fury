@@ -16,8 +16,8 @@ class CountdowController: UIViewController, MainViewInputProtocol {
 
     @IBOutlet weak var minTime: UIPickerView!
     @IBOutlet weak var secondTime: UIPickerView!
-    let secTimeSource = LapsPickerDataSource()
-    let minTimeSource = LapsPickerDataSource()
+    let secTimeSource = TimeSecondsPickerDataSource()
+    let minTimeSource = TimeMinutsPickerDataSource()
     weak var delegate: CountdowControllerDelegate!
     
     override func viewDidLoad() {
@@ -37,7 +37,7 @@ class CountdowController: UIViewController, MainViewInputProtocol {
         let format = DateFormatter()
         format.dateFormat = "mm:ss"
         
-        let secondTime = self.secondTime.selectedRow(inComponent: 0)
+        let secondTime = self.secondTime.selectedRow(inComponent: 0)+1
         let minutsTime = minTime.selectedRow(inComponent: 0)
         let timeDate = format.date(from: "\(minutsTime):\(secondTime)")
         

@@ -74,6 +74,7 @@
 		B4753A491EBB5D79008B3A1D /* RootContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A481EBB5D79008B3A1D /* RootContainerController.swift */; };
 		B4753A4B1EBB64A6008B3A1D /* FinishOrContinueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A4A1EBB64A6008B3A1D /* FinishOrContinueView.swift */; };
 		B4A53F9B1ED6B67000838F86 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A53F9A1ED6B67000838F86 /* FinishView.swift */; };
+		B4A53F9D1ED6D15500838F86 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A53F9C1ED6D15500838F86 /* Date+extension.swift */; };
 		B4A89C6B1EBC68E800A78DC7 /* NavigationMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A89C6A1EBC68E800A78DC7 /* NavigationMainCoordinator.swift */; };
 		B4A89C6D1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A89C6C1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift */; };
 		B4A89C6F1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A89C6E1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift */; };
@@ -170,6 +171,7 @@
 		B4753A481EBB5D79008B3A1D /* RootContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContainerController.swift; sourceTree = "<group>"; };
 		B4753A4A1EBB64A6008B3A1D /* FinishOrContinueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishOrContinueView.swift; sourceTree = "<group>"; };
 		B4A53F9A1ED6B67000838F86 /* FinishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishView.swift; sourceTree = "<group>"; };
+		B4A53F9C1ED6D15500838F86 /* Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		B4A89C6A1EBC68E800A78DC7 /* NavigationMainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMainCoordinator.swift; sourceTree = "<group>"; };
 		B4A89C6C1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerTypeSelectionController.swift; sourceTree = "<group>"; };
 		B4A89C6E1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingIntervalMainViewController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				B42404051EC48C30000EE6DC /* Font+extension.swift */,
+				B4A53F9C1ED6D15500838F86 /* Date+extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				B423F3691ED41BF30034BFF1 /* ResultController.swift in Sources */,
 				B4753A3E1EB9FB2E008B3A1D /* LetsGoView.swift in Sources */,
 				B41858991EC73A8C006A63D7 /* CountdowController.swift in Sources */,
+				B4A53F9D1ED6D15500838F86 /* Date+extension.swift in Sources */,
 				B418589B1ECAE31A006A63D7 /* PreStartController.swift in Sources */,
 				B4753A491EBB5D79008B3A1D /* RootContainerController.swift in Sources */,
 				B47539A81EB8CC42008B3A1D /* styleguide.swift in Sources */,

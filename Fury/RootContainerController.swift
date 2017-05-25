@@ -39,5 +39,11 @@ class RootContainerController: UIViewController {
                         newViewController.didMove(toParentViewController: self)
         })
     }
+    
+    func showViewController(controller: UIViewController) {
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        self.addChildViewController(controller)
+        self.addSubview(subView: controller.view, toView: self.view)
+    }
 
 }

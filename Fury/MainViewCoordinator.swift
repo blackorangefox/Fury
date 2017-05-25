@@ -14,9 +14,9 @@ protocol MainViewInputProtocol: class {
 }
 
 protocol MainViewCoordinatorDelegate: class {
-    func mainFinish()
+    func timerFinish()
     func nextSegment()
-    func intervalSetting(laps: Int)
+    func intervalSetting(laps: Int, isRest: Bool)
 }
 
 class MainViewCoordinator: RootContainerController, SettingIntervalMainViewControllerDelegate, TimerViewControllerDelegate, CountdowControllerDelegate, PreStartControllerDelegate {
@@ -27,8 +27,6 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     weak var currentViewController: MainViewInputProtocol!
     weak var delegate: MainViewCoordinatorDelegate!
     
-    private var lapTime: Date!
-    private var restTime: Date!
     private let formater = DateFormatter()
     private var timeArray: [Date] = []
     private var iterator = 0
@@ -38,9 +36,6 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     override func viewDidLoad() {
         super.viewDidLoad()
         formater.dateFormat = "mm:ss:SS"
-        
-        settingIntervalMainViewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingIntervalMainViewController") as! SettingIntervalMainViewController
-        countdowController = self.storyboard?.instantiateViewController(withIdentifier: "CountdowController") as! CountdowController
         // Do any additional setup after loading the view.
     }
     
@@ -53,37 +48,12 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         self.timerType = timerType
         switch timerType {
         case .interval:
-            openSettingIntervalMainViewController()
+            showSettingIntervalMainViewController()
         case .countdown:
-            openCountdowController()
+            showCountdowController()
         default:
             showTimerController()
         }
-    }
-    
-    public func showTimerController() {
-        timerViewController = self.storyboard?.instantiateViewController(withIdentifier: "TimerViewController") as! TimerViewController
-        timerViewController.delegate = self
-        timerViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        self.addChildViewController(timerViewController)
-        self.addSubview(subView: timerViewController.view, toView: self.view)
-        self.currentViewController = timerViewController
-    }
-    
-    public func openSettingIntervalMainViewController() {
-        settingIntervalMainViewController.delegate = self
-        settingIntervalMainViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        self.addChildViewController(settingIntervalMainViewController)
-        self.addSubview(subView: self.settingIntervalMainViewController!.view, toView: self.view)
-        self.currentViewController = settingIntervalMainViewController
-    }
-    
-    public func openCountdowController() {
-        countdowController.delegate = self
-        countdowController.view.translatesAutoresizingMaskIntoConstraints = false
-        self.addChildViewController(countdowController)
-        self.addSubview(subView: self.countdowController!.view, toView: self.view)
-        self.currentViewController = countdowController
     }
     
     //MARK: Bottom event
@@ -117,49 +87,35 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     }
     
     //MARK: - SettingIntervalMainViewControllerDelegate
-    func setting(laps: Int, lapTime: Date, restTime: Date) {
-        self.lapTime = lapTime
-        self.restTime = restTime
-        for _ in 0..<laps {
-            self.timeArray.append(self.lapTime)
-            self.timeArray.append(self.restTime)
+    func createTimerWithParams(laps: Int, lapTime: Date, restTime: Date) {
+        iterator = 0
+        if restTime.isEmpty(dateFormat: "mm:ss") {
+            self.delegate.intervalSetting(laps: laps, isRest: false)
+            self.timeArray = createTimeArrayWithoutRest(lapTime: lapTime, laps: laps)
+        }else {
+            self.delegate.intervalSetting(laps: laps, isRest: true)
+            self.timeArray = createTimeArrayWithRest(lapTime: lapTime, laps: laps, restTime: restTime)
         }
-        self.timeArray.removeLast() // delete last rest interval
-        let time = self.timeArray[iterator]
+        let time = self.timeArray.first!
         iterator = iterator + 1
         self.startTimer(time: time, state: .COUNTDOWN)
-        self.delegate.intervalSetting(laps: laps)
     }
-    
+
     //MARK: - TimerViewControllerDelegate
-    func timerFinish() {
+    func currentSegmentFinish() {
         if self.iterator < self.timeArray.count {
             let time = self.timeArray[iterator]
             iterator = iterator + 1
             self.timerViewController.startWith(time: time)
             self.delegate.nextSegment()
         }else {
-            delegate.mainFinish()
+            delegate.timerFinish()
         }
     }
     
     //MARK: - CountdowControllerDelegate
     func setting(time: Date) {
         self.startTimer(time: time, state: .COUNTDOWN)
-    }
-    
-    //MARK: - Private
-    private func startTimer(time: Date, state: TimerState) {
-        self.showTimerController()
-        let preScreen  = self.storyboard?.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
-        preScreen.delegate = self
-        self.present(preScreen, animated: false) {
-            preScreen.animateWithString(10)
-            preScreen.completionBlock = {
-                self.timerViewController.state = state
-                self.timerViewController.startWith(time: time)
-            }
-        }
     }
     
     //MARK: - PreStartControllerDelegate
@@ -186,4 +142,65 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
             print(error.localizedDescription)
         }
     }
+    
+    //MARK: - Private
+    private func startTimer(time: Date, state: TimerState) {
+        self.showTimerController()
+        let preScreen  = self.storyboard?.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
+        preScreen.delegate = self
+        self.present(preScreen, animated: false) {
+            preScreen.animateWithString(10)
+            preScreen.completionBlock = {
+                self.timerViewController.state = state
+                self.timerViewController.startWith(time: time)
+            }
+        }
+    }
+    
+    private func showTimerController() {
+        timerViewController = self.storyboard?.instantiateViewController(withIdentifier: "TimerViewController") as! TimerViewController
+        timerViewController.delegate = self
+        timerViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        self.addChildViewController(timerViewController)
+        self.addSubview(subView: timerViewController.view, toView: self.view)
+        self.currentViewController = timerViewController
+    }
+    
+    private func showSettingIntervalMainViewController() {
+        settingIntervalMainViewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingIntervalMainViewController") as! SettingIntervalMainViewController
+        settingIntervalMainViewController.delegate = self
+        settingIntervalMainViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        self.addChildViewController(settingIntervalMainViewController)
+        self.addSubview(subView: self.settingIntervalMainViewController!.view, toView: self.view)
+        self.currentViewController = settingIntervalMainViewController
+    }
+    
+    private func showCountdowController() {
+        countdowController = self.storyboard?.instantiateViewController(withIdentifier: "CountdowController") as! CountdowController
+        countdowController.delegate = self
+        countdowController.view.translatesAutoresizingMaskIntoConstraints = false
+        self.addChildViewController(countdowController)
+        self.addSubview(subView: self.countdowController!.view, toView: self.view)
+        self.currentViewController = countdowController
+    }
+
+    private func createTimeArrayWithRest(lapTime: Date, laps: Int,  restTime: Date) -> [Date] {
+        var timeArray : [Date] = []
+        for _ in 0..<laps {
+            timeArray.append(lapTime)
+            timeArray.append(restTime)
+        }
+        timeArray.removeLast()
+        return timeArray
+    }
+
+    private func createTimeArrayWithoutRest(lapTime: Date, laps: Int) -> [Date] {
+        var timeArray : [Date] = []
+        for _ in 0..<laps {
+            timeArray.append(lapTime)
+        }
+        return timeArray
+    }
+    
+    
 }
