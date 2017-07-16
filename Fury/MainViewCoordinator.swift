@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
 
 protocol MainViewInputProtocol: class {
     func letsGoButtonPress()
@@ -30,18 +29,12 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     private let formater = DateFormatter()
     private var timeArray: [Date] = []
     private var iterator = 0
-    private var player: AVAudioPlayer?
     private var timerType: TimerType!
+    private let playerService = PlayerService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         formater.dateFormat = "mm:ss:SS"
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     public func openTimeByType(timerType: TimerType) {
@@ -88,7 +81,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     
     //MARK: - SettingIntervalMainViewControllerDelegate
     func createTimerWithParams(laps: Int, lapTime: Date, restTime: Date) {
-        iterator = 0
+    iterator = 0
         if restTime.isEmpty(dateFormat: "mm:ss") {
             self.delegate.intervalSetting(laps: laps, isRest: false)
             self.timeArray = createTimeArrayWithoutRest(lapTime: lapTime, laps: laps)
@@ -118,28 +111,15 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         self.startTimer(time: time, state: .COUNTDOWN)
     }
     
-    //MARK: - PreStartControllerDelegate
     
-    func goShow() {
-        self.playSound()
+    //MARK: - PreStartControllerDelegate
+    func countdownFinish() {
+        self.playerService.playStartWork()
     }
     
-    func playSound() {
-        guard let url = Bundle.main.url(forResource: "sirena", withExtension: "mp3") else {
-            print("error")
-            return
-        }
-        
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            
-            player = try AVAudioPlayer(contentsOf: url)
-            guard let player = player else { return }
-            
-            player.play()
-        } catch let error {
-            print(error.localizedDescription)
+    func left(second: Int) {
+        if second == 3 || second == 2 {
+            self.playerService.playOneSecond()
         }
     }
     
@@ -149,7 +129,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         let preScreen  = self.storyboard?.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
         preScreen.delegate = self
         self.present(preScreen, animated: false) {
-            preScreen.animateWithString(10)
+            preScreen.startCountdown(10)
             preScreen.completionBlock = {
                 self.timerViewController.state = state
                 self.timerViewController.startWith(time: time)

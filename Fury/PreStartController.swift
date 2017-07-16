@@ -8,7 +8,8 @@
 
 import UIKit
 protocol PreStartControllerDelegate: class {
-    func goShow()
+    func countdownFinish()
+    func left(second: Int)
 }
 
 class PreStartController: UIViewController {
@@ -23,14 +24,19 @@ class PreStartController: UIViewController {
         
     }
     
+    func startCountdown(_ count: Int) {
+        animateWithString(count)
+    }
+    
     func animateWithString(_ count: Int) {
-        numberLabel.font = UIFont(name: "Oswald-Bold", size: 154) // set font siz
         if count == 0 {
             numberLabel.text = "GO"
-            delegate.goShow()
+            delegate.countdownFinish()
         }else {
             numberLabel.text = "\(count)"
+            delegate.left(second: count)
         }
+        
         numberLabel.transform = numberLabel.transform.scaledBy(x: 0.5, y: 0.5);
         numberLabel.contentScaleFactor = 1
         UIView.animate(withDuration: 1.0, animations: {
@@ -46,18 +52,10 @@ class PreStartController: UIViewController {
             }
         }
     }
-
+    
     func removeFromSuperview() {
         self.dismiss(animated: false, completion: {
             self.completionBlock!()
         })
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-
 }

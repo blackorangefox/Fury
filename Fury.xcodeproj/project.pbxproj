@@ -11,8 +11,6 @@
 		B41082371ECC37E600D285AC /* IntervalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4FB261EC5DC7F00146F50 /* IntervalNavigationController.swift */; };
 		B41082391ECC38DF00D285AC /* IntervalNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4FB291EC5DEEA00146F50 /* IntervalNavigationCell.swift */; };
 		B410823A1ECC393F00D285AC /* styleguide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47539A71EB8CC42008B3A1D /* styleguide.swift */; };
-		B410823D1ED2F70B00D285AC /* 4459147_siren_by_vladrusetsky_preview.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B410823C1ED2F70B00D285AC /* 4459147_siren_by_vladrusetsky_preview.mp3 */; };
-		B410823F1ED31F9400D285AC /* sirena.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B410823E1ED31F9400D285AC /* sirena.mp3 */; };
 		B41858991EC73A8C006A63D7 /* CountdowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41858981EC73A8C006A63D7 /* CountdowController.swift */; };
 		B418589B1ECAE31A006A63D7 /* PreStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B418589A1ECAE31A006A63D7 /* PreStartController.swift */; };
 		B41858A11ECB1FC5006A63D7 /* BebasNeue Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B418589C1ECB1FC5006A63D7 /* BebasNeue Bold.ttf */; };
@@ -23,6 +21,7 @@
 		B423F3691ED41BF30034BFF1 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423F3681ED41BF30034BFF1 /* ResultController.swift */; };
 		B423F36B1ED42B1F0034BFF1 /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423F36A1ED42B1F0034BFF1 /* FinishController.swift */; };
 		B42404061EC48C30000EE6DC /* Font+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42404051EC48C30000EE6DC /* Font+extension.swift */; };
+		B45D6E6B1F13D52C00A725D8 /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D6E6A1F13D52C00A725D8 /* PlayerService.swift */; };
 		B475397A1EB4DDE0008B3A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47539791EB4DDE0008B3A1D /* AppDelegate.swift */; };
 		B475397F1EB4DDE0008B3A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B475397D1EB4DDE0008B3A1D /* Main.storyboard */; };
 		B47539811EB4DDE0008B3A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47539801EB4DDE0008B3A1D /* Assets.xcassets */; };
@@ -81,6 +80,7 @@
 		B4B4FB271EC5DC7F00146F50 /* IntervalNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4FB261EC5DC7F00146F50 /* IntervalNavigationController.swift */; };
 		B4B4FB2A1EC5DEEA00146F50 /* IntervalNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4FB291EC5DEEA00146F50 /* IntervalNavigationCell.swift */; };
 		B4E6035C1ECB2314004109B3 /* Pennstat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4E6035B1ECB2314004109B3 /* Pennstat.ttf */; };
+		B4F9268E1F13D109003C0828 /* Airhorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4F9268D1F13D109003C0828 /* Airhorn.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,9 +101,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B40989DC1F17A378001ACF1B /* 1_second.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1_second.mp3; sourceTree = "<group>"; };
+		B40989DD1F17A37E001ACF1B /* long-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "long-beep.mp3"; sourceTree = "<group>"; };
 		B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationControllerTests.swift; sourceTree = "<group>"; };
-		B410823C1ED2F70B00D285AC /* 4459147_siren_by_vladrusetsky_preview.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4459147_siren_by_vladrusetsky_preview.mp3; sourceTree = "<group>"; };
-		B410823E1ED31F9400D285AC /* sirena.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sirena.mp3; sourceTree = "<group>"; };
 		B41858981EC73A8C006A63D7 /* CountdowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdowController.swift; sourceTree = "<group>"; };
 		B418589A1ECAE31A006A63D7 /* PreStartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreStartController.swift; sourceTree = "<group>"; };
 		B418589C1ECB1FC5006A63D7 /* BebasNeue Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Bold.ttf"; sourceTree = "<group>"; };
@@ -114,6 +114,7 @@
 		B423F3681ED41BF30034BFF1 /* ResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
 		B423F36A1ED42B1F0034BFF1 /* FinishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
 		B42404051EC48C30000EE6DC /* Font+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+extension.swift"; sourceTree = "<group>"; };
+		B45D6E6A1F13D52C00A725D8 /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
 		B47539761EB4DDE0008B3A1D /* Fury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47539791EB4DDE0008B3A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B475397E1EB4DDE0008B3A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 		B4B4FB261EC5DC7F00146F50 /* IntervalNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationController.swift; sourceTree = "<group>"; };
 		B4B4FB291EC5DEEA00146F50 /* IntervalNavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationCell.swift; sourceTree = "<group>"; };
 		B4E6035B1ECB2314004109B3 /* Pennstat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pennstat.ttf; sourceTree = "<group>"; };
+		B4F9268D1F13D109003C0828 /* Airhorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Airhorn.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,8 +218,9 @@
 		B410823B1ED2F6FC00D285AC /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				B410823E1ED31F9400D285AC /* sirena.mp3 */,
-				B410823C1ED2F70B00D285AC /* 4459147_siren_by_vladrusetsky_preview.mp3 */,
+				B40989DD1F17A37E001ACF1B /* long-beep.mp3 */,
+				B40989DC1F17A378001ACF1B /* 1_second.mp3 */,
+				B4F9268D1F13D109003C0828 /* Airhorn.mp3 */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -229,6 +232,14 @@
 				B4A53F9C1ED6D15500838F86 /* Date+extension.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		B45D6E691F13D50F00A725D8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B45D6E6A1F13D52C00A725D8 /* PlayerService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		B475396D1EB4DDE0008B3A1D = {
@@ -257,6 +268,7 @@
 		B47539781EB4DDE0008B3A1D /* Fury */ = {
 			isa = PBXGroup;
 			children = (
+				B45D6E691F13D50F00A725D8 /* Service */,
 				B4A89C691EBC68AF00A78DC7 /* NavigationContainer */,
 				B4753A3F1EB9FCE8008B3A1D /* MainContainer */,
 				B4753A3C1EB9FB18008B3A1D /* BottomContainer */,
@@ -454,6 +466,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 8U3EZY8K9K;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					B47539891EB4DDE0008B3A1D = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -495,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4753A071EB9F136008B3A1D /* Oswald-HeavyItalic.ttf in Resources */,
+				B4F9268E1F13D109003C0828 /* Airhorn.mp3 in Resources */,
 				B4753A0E1EB9F136008B3A1D /* Oswald-Stencil.ttf in Resources */,
 				B4753A261EB9F144008B3A1D /* Roboto-Bold.ttf in Resources */,
 				B41858A51ECB1FC5006A63D7 /* BebasNeue Thin.ttf in Resources */,
@@ -515,7 +533,6 @@
 				B41858A41ECB1FC5006A63D7 /* BebasNeue Regular.ttf in Resources */,
 				B4753A241EB9F144008B3A1D /* Roboto-Black.ttf in Resources */,
 				B4753A2A1EB9F144008B3A1D /* Roboto-LightItalic.ttf in Resources */,
-				B410823D1ED2F70B00D285AC /* 4459147_siren_by_vladrusetsky_preview.mp3 in Resources */,
 				B47539811EB4DDE0008B3A1D /* Assets.xcassets in Resources */,
 				B4753A031EB9F136008B3A1D /* Oswald-DemiBold.ttf in Resources */,
 				B475397F1EB4DDE0008B3A1D /* Main.storyboard in Resources */,
@@ -532,7 +549,6 @@
 				B4753A251EB9F144008B3A1D /* Roboto-BlackItalic.ttf in Resources */,
 				B4753A001EB9F136008B3A1D /* Oswald-Bold.ttf in Resources */,
 				B41858A11ECB1FC5006A63D7 /* BebasNeue Bold.ttf in Resources */,
-				B410823F1ED31F9400D285AC /* sirena.mp3 in Resources */,
 				B4753A291EB9F144008B3A1D /* Roboto-Light.ttf in Resources */,
 				B4753A2B1EB9F144008B3A1D /* Roboto-Medium.ttf in Resources */,
 				B41858A21ECB1FC5006A63D7 /* BebasNeue Book.ttf in Resources */,
@@ -574,6 +590,7 @@
 				B4A53F9D1ED6D15500838F86 /* Date+extension.swift in Sources */,
 				B418589B1ECAE31A006A63D7 /* PreStartController.swift in Sources */,
 				B4753A491EBB5D79008B3A1D /* RootContainerController.swift in Sources */,
+				B45D6E6B1F13D52C00A725D8 /* PlayerService.swift in Sources */,
 				B47539A81EB8CC42008B3A1D /* styleguide.swift in Sources */,
 				B4753A371EB9F953008B3A1D /* RootViewController.swift in Sources */,
 				B4A89C6D1EBC6A2B00A78DC7 /* TimerTypeSelectionController.swift in Sources */,
