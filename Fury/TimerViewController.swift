@@ -21,6 +21,7 @@ class TimerViewController: UIViewController, MainViewInputProtocol, TimerService
     public var delegate: TimerViewControllerDelegate!
     private var timerService: TimerServiceProtocol!
     private var playerService: PlayerService = PlayerService()
+    private var type: TimerType = .classic
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +35,10 @@ class TimerViewController: UIViewController, MainViewInputProtocol, TimerService
         let time = format.date(from: "00:00:00")
         startWith(time: time!, type: .classic)
     }
-
+    
     func startWith(time: Date, type: TimerType) {
         timerService.startWith(time: time, type: type)
+        self.type = type
         timerLabel.textColor = UIColor.furyYellowGreen
     }
     
@@ -51,14 +53,16 @@ class TimerViewController: UIViewController, MainViewInputProtocol, TimerService
     //MARK TimerServiceDelegate
     func newTime(time: Date) {
         let timeForString  = self.format.string(from: time)
-        if timeForString == "00:01:99" || timeForString == "00:02:99"  || timeForString == "00:03:99"{
-            playerService.playOneSecond()
+        if self.type != .classic {
+            if timeForString == "00:01:99" || timeForString == "00:02:99" || timeForString == "00:03:99" {
+                playerService.playOneSecond()
+            }
         }
         timerLabel.text = format.string(from: time)
     }
     
     func timerFinish() {
-        timerLabel.text = "00:00:99"
+        timerLabel.text = "00:00:00"
         playerService.playStartOrFinisRound()
         delegate.currentSegmentFinish()
     }
