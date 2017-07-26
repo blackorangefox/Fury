@@ -25,7 +25,17 @@ PODS:
 DEPENDENCIES:
   - Firebase/Core
   - SwiftDate (~> 4.0)
-  - Swinject (~> 2.1.0)
+  - Swinject (from `https://github.com/Swinject/Swinject.git`, branch `swift4`)
+
+EXTERNAL SOURCES:
+  Swinject:
+    :branch: swift4
+    :git: https://github.com/Swinject/Swinject.git
+
+CHECKOUT OPTIONS:
+  Swinject:
+    :commit: 4b3d047cd6745a276d20e5e2fe6ded7fd6b4454e
+    :git: https://github.com/Swinject/Swinject.git
 
 SPEC CHECKSUMS:
   Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
@@ -35,8 +45,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
   SwiftDate: '029be76691ee89176da3a46c7df3415b6734bc5b'
-  Swinject: 85e468ac75c5c2d234076f98c591d57d56bc64bc
+  Swinject: 4793342bed1bed528c7e97d5bae3e7a60e3bdcac
 
-PODFILE CHECKSUM: c58f7162aa6c12ef37885aef36c41c3bc58f9d3f
+PODFILE CHECKSUM: f6bc639a2eda1e0e9105b06cb3f7559010bf60a6
 
 COCOAPODS: 1.2.1
