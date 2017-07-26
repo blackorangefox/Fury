@@ -9,90 +9,57 @@
 import UIKit
 import Foundation
 
-enum TimerState {
-    case CLASSIC
-    case COUNTDOWN
-}
-
 protocol TimerViewControllerDelegate: class {
     func currentSegmentFinish()
+    func lessThen3Second()
 }
 
-class TimerViewController: UIViewController, MainViewInputProtocol {
+class TimerViewController: UIViewController, MainViewInputProtocol, TimerServiceDelegate {
+    
     @IBOutlet weak var timerLabel: UILabel!
-    private var timer = Timer()
-    private var isTimerRunning = false
-    private var resumeTapped = false
-
-    public  var startTime : Date!
     public  let format = DateFormatter()
-    public var state: TimerState = .CLASSIC
     public var delegate: TimerViewControllerDelegate!
+    private var timerService: TimerServiceProtocol!
+    private var playerService: PlayerService = PlayerService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         format.dateFormat = "mm:ss:SS"
+        timerService = GlobalAssembly.resolve(type: TimerServiceProtocol.self)
+        timerService.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     //MARK: - MainViewInputProtocol
     public func letsGoButtonPress() {
         let time = format.date(from: "00:00:00")
-        state = .CLASSIC
-        startWith(time: time!)
+        startWith(time: time!, type: .classic)
     }
 
-    public func startWith(time: Date) {
-        self.startTime = time
-        timerLabel.text = format.string(from: startTime!)
-        var aSelector : Selector
-        switch state {
-            case .COUNTDOWN:
-                aSelector = #selector(TimerViewController.updateCountdownTime)
-            default:
-                aSelector = #selector(TimerViewController.updateClassicTime)
-        }
-
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-        isTimerRunning = true
+    func startWith(time: Date, type: TimerType) {
+        timerService.startWith(time: time, type: type)
         timerLabel.textColor = UIColor.furyYellowGreen
     }
     
     public func continueButtonPress() {
-        self.pauseButtonPress()
+        timerService.resume()
     }
     
     public func pauseButtonPress() {
-        if self.resumeTapped == false {
-            timer.invalidate()
-            self.resumeTapped = true
-        } else {
-            startWith(time: startTime)
-            self.resumeTapped = false
-        }
-    }
-
-    //MARK: - Private
-    @objc private func updateCountdownTime() {
-        startTime = startTime! - 0.01
-        timerLabel.text = format.string(from: startTime)
-        if self.format.string(from: startTime!) == "00:00:00" {
-            timer.invalidate()
-            delegate.currentSegmentFinish()
-        }
+        timerService.pause()
     }
     
-    @objc private func updateClassicTime() {
-        startTime = startTime! + 0.01
-        timerLabel.text = format.string(from: startTime!)
+    //MARK TimerServiceDelegate
+    func newTime(time: Date) {
+        let timeForString  = self.format.string(from: time)
+        if timeForString == "00:01:99" || timeForString == "00:02:99"  || timeForString == "00:03:99"{
+            playerService.playOneSecond()
+        }
+        timerLabel.text = format.string(from: time)
     }
-
+    
+    func timerFinish() {
+        timerLabel.text = "00:00:99"
+        playerService.playStartOrFinisRound()
+        delegate.currentSegmentFinish()
+    }
 }

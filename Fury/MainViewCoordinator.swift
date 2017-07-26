@@ -53,7 +53,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     func letsGoButtonPress() {
         if currentViewController is TimerViewController {
             let time = formater.date(from: "00:00:00")
-            self.startTimer(time: time!, state: .CLASSIC)
+            self.startTimer(time: time!, state: .classic)
             return
         }
         self.currentViewController.letsGoButtonPress()
@@ -91,7 +91,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         }
         let time = self.timeArray.first!
         iterator = iterator + 1
-        self.startTimer(time: time, state: .COUNTDOWN)
+        self.startTimer(time: time, state: .countdown)
     }
 
     //MARK: - TimerViewControllerDelegate
@@ -99,18 +99,22 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         if self.iterator < self.timeArray.count {
             let time = self.timeArray[iterator]
             iterator = iterator + 1
-            self.timerViewController.startWith(time: time)
+            self.timerViewController.startWith(time: time, type: .countdown)
             self.delegate.nextSegment()
         }else {
             delegate.timerFinish()
         }
+        self.playerService.playStartOrFinisRound()
+    }
+    
+    func lessThen3Second() {
+        self.playerService.playOneSecond()
     }
     
     //MARK: - CountdowControllerDelegate
     func setting(time: Date) {
-        self.startTimer(time: time, state: .COUNTDOWN)
+        self.startTimer(time: time, state: .countdown)
     }
-    
     
     //MARK: - PreStartControllerDelegate
     func countdownFinish() {
@@ -118,21 +122,20 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     }
     
     func left(second: Int) {
-        if second == 3 || second == 2 {
+        if second <= 3 && second != 0 {
             self.playerService.playOneSecond()
         }
     }
     
     //MARK: - Private
-    private func startTimer(time: Date, state: TimerState) {
+    private func startTimer(time: Date, state: TimerType) {
         self.showTimerController()
         let preScreen  = self.storyboard?.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
         preScreen.delegate = self
         self.present(preScreen, animated: false) {
             preScreen.startCountdown(10)
             preScreen.completionBlock = {
-                self.timerViewController.state = state
-                self.timerViewController.startWith(time: time)
+                self.timerViewController.startWith(time: time, type: state)
             }
         }
     }
@@ -140,7 +143,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     private func showTimerController() {
         timerViewController = self.storyboard?.instantiateViewController(withIdentifier: "TimerViewController") as! TimerViewController
         timerViewController.delegate = self
-        timerViewController.view.translatesAutoresizingMaskIntoConstraints = false
+         timerViewController.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChildViewController(timerViewController)
         self.addSubview(subView: timerViewController.view, toView: self.view)
         self.currentViewController = timerViewController

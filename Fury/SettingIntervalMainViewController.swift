@@ -94,7 +94,6 @@ class LapsPickerDataSource: NSObject, UIPickerViewDataSource, UIPickerViewDelega
         if label == nil {
             label = UILabel()
         }
-        
         let font = (row == pickerView.selectedRow(inComponent: component)) ? UIFont(name: "Roboto-Bold", size: 48.0)! : UIFont(name: "Roboto-Bold", size: 36.0)!
         let color = (row == pickerView.selectedRow(inComponent: component)) ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.3)
         let title = NSAttributedString(string: "\(row+1)", attributes: [NSFontAttributeName: font])

@@ -14,7 +14,7 @@ class PlayerService {
     var songPlayer : AVAudioPlayer?
     
     func playStartWork() {
-        self.playSound(name: "long-beep", loop: 0)
+        self.playSound(name: "Airhorn", loop: 0)
     }
     
     func playStartOrFinisRound() {
