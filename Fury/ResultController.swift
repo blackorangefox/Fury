@@ -25,7 +25,7 @@ class ResultController: UIViewController {
     }
     
     @IBAction func nextButtonPress(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
+       self.dismiss(animated: false, completion: nil)
     }
 
     @IBAction func sharedButtonPress(_ sender: Any) {

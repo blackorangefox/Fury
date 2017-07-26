@@ -31,10 +31,21 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     private var iterator = 0
     private var timerType: TimerType!
     private let playerService = PlayerService()
+    private var isFinishTimer: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         formater.dateFormat = "mm:ss:SS"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if isFinishTimer {
+            isFinishTimer = false
+            openTimeByType(timerType: .classic)
+            let finishController = self.storyboard?.instantiateViewController(withIdentifier: "SurveyController") as! SurveyController
+            self.show(finishController, sender: nil)
+        }
     }
     
     public func openTimeByType(timerType: TimerType) {
@@ -76,12 +87,12 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
             let finishController = self.storyboard?.instantiateViewController(withIdentifier: "FinishController") as! FinishController
             self.present(finishController, animated: false, completion: nil)
         }
-        openTimeByType(timerType: .classic)
+        isFinishTimer = true
     }
     
     //MARK: - SettingIntervalMainViewControllerDelegate
     func createTimerWithParams(laps: Int, lapTime: Date, restTime: Date) {
-    iterator = 0
+        iterator = 0
         if restTime.isEmpty(dateFormat: "mm:ss") {
             self.delegate.intervalSetting(laps: laps, isRest: false)
             self.timeArray = createTimeArrayWithoutRest(lapTime: lapTime, laps: laps)
@@ -93,7 +104,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         iterator = iterator + 1
         self.startTimer(time: time, state: .countdown)
     }
-
+    
     //MARK: - TimerViewControllerDelegate
     func currentSegmentFinish() {
         if self.iterator < self.timeArray.count {
@@ -143,7 +154,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
     private func showTimerController() {
         timerViewController = self.storyboard?.instantiateViewController(withIdentifier: "TimerViewController") as! TimerViewController
         timerViewController.delegate = self
-         timerViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        timerViewController.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChildViewController(timerViewController)
         self.addSubview(subView: timerViewController.view, toView: self.view)
         self.currentViewController = timerViewController
@@ -166,7 +177,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         self.addSubview(subView: self.countdowController!.view, toView: self.view)
         self.currentViewController = countdowController
     }
-
+    
     private func createTimeArrayWithRest(lapTime: Date, laps: Int,  restTime: Date) -> [Date] {
         var timeArray : [Date] = []
         for _ in 0..<laps {
@@ -176,7 +187,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         timeArray.removeLast()
         return timeArray
     }
-
+    
     private func createTimeArrayWithoutRest(lapTime: Date, laps: Int) -> [Date] {
         var timeArray : [Date] = []
         for _ in 0..<laps {

@@ -91,6 +91,7 @@
 		B4B4FB2A1EC5DEEA00146F50 /* IntervalNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B4FB291EC5DEEA00146F50 /* IntervalNavigationCell.swift */; };
 		B4E6035C1ECB2314004109B3 /* Pennstat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4E6035B1ECB2314004109B3 /* Pennstat.ttf */; };
 		B4F9268E1F13D109003C0828 /* Airhorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4F9268D1F13D109003C0828 /* Airhorn.mp3 */; };
+		B4FDDD8C1F292E9A00762382 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDDD8B1F292E9A00762382 /* SurveyController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +203,7 @@
 		B4B4FB291EC5DEEA00146F50 /* IntervalNavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationCell.swift; sourceTree = "<group>"; };
 		B4E6035B1ECB2314004109B3 /* Pennstat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pennstat.ttf; sourceTree = "<group>"; };
 		B4F9268D1F13D109003C0828 /* Airhorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Airhorn.mp3; sourceTree = "<group>"; };
+		B4FDDD8B1F292E9A00762382 /* SurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyController.swift; sourceTree = "<group>"; };
 		C4FDFFB2043BF21EB50A836B /* Pods_FuryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A7BE91DD9CE1B135939F50 /* Pods-FuryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuryTests/Pods-FuryTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -347,6 +349,7 @@
 				B44732CB1F248C040013A17B /* GoogleService-Info.plist */,
 				B4753A361EB9F953008B3A1D /* RootViewController.swift */,
 				B4753A481EBB5D79008B3A1D /* RootContainerController.swift */,
+				B4FDDD8B1F292E9A00762382 /* SurveyController.swift */,
 			);
 			path = Fury;
 			sourceTree = "<group>";
@@ -830,6 +833,7 @@
 				B4B4FB2A1EC5DEEA00146F50 /* IntervalNavigationCell.swift in Sources */,
 				B4A89C6F1EBC8FAC00A78DC7 /* SettingIntervalMainViewController.swift in Sources */,
 				B44732D51F24946F0013A17B /* BaseAssembly.swift in Sources */,
+				B4FDDD8C1F292E9A00762382 /* SurveyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

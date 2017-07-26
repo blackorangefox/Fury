@@ -38,7 +38,7 @@ class TimerViewController: UIViewController, MainViewInputProtocol, TimerService
     
     func startWith(time: Date, type: TimerType) {
         timerService.startWith(time: time, type: type)
-        self.type = type
+        self.type = type 
         timerLabel.textColor = UIColor.furyYellowGreen
     }
     
