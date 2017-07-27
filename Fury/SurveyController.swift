@@ -13,16 +13,10 @@ class SurveyController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func notNowButtonPress(_ sender: Any) {
+        UserDefaults.standard.set(Date(), forKey: "TimeForSurvey")
         self.dismiss(animated: false, completion: nil)
     }
     
@@ -30,15 +24,7 @@ class SurveyController: UIViewController {
         if let url = URL(string: "https://dmitrykurash.typeform.com/to/lXywEJ") {
             UIApplication.shared.open(url, options: [:])
         }
+        UserDefaults.standard.set(true, forKey: "AlwaysShowSurvey")
+        self.dismiss(animated: false, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

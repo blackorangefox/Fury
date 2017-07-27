@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftDate
 
 protocol MainViewInputProtocol: class {
     func letsGoButtonPress()
@@ -42,10 +43,26 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         super.viewDidAppear(animated)
         if isFinishTimer {
             isFinishTimer = false
-            openTimeByType(timerType: .classic)
-            let finishController = self.storyboard?.instantiateViewController(withIdentifier: "SurveyController") as! SurveyController
-            self.show(finishController, sender: nil)
+            if isNeedShowSurvey() {
+                let finishController = self.storyboard?.instantiateViewController(withIdentifier: "SurveyController") as! SurveyController
+                self.show(finishController, sender: nil)
+            }
         }
+        openTimeByType(timerType: .classic)
+    }
+    
+    func isNeedShowSurvey() -> Bool {
+        if UserDefaults.standard.object(forKey: "AlwaysShowSurvey") != nil {
+            return false
+        }
+        let timeForSurvey: Date = UserDefaults.standard.object(forKey: "TimeForSurvey") as! Date
+        let currentDate = Date()
+        let diferent = timeForSurvey - currentDate
+        if diferent > Double(7.day.in(.second)!) {
+            UserDefaults.standard.set(currentDate, forKey: "TimeForSurvey")
+            return true
+        }
+        return false
     }
     
     public func openTimeByType(timerType: TimerType) {

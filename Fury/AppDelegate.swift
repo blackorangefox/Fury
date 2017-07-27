@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import Swinject
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GlobalAssembly.configure()
         timerService = GlobalAssembly.resolve(type: TimerServiceProtocol.self)
         FirebaseApp.configure()
+        if !UserDefaults.standard.bool(forKey: "FirstLaunch") {
+           UserDefaults.standard.set(true, forKey: "FirstLaunch")
+           UserDefaults.standard.set(Date(), forKey: "TimeForSurvey")
+        }
         return true
     }
 
