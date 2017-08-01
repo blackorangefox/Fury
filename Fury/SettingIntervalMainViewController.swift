@@ -100,6 +100,8 @@ class LapsPickerDataSource: NSObject, UIPickerViewDataSource, UIPickerViewDelega
         label?.attributedText = title
         label?.textColor = color
         label?.textAlignment = .center
+        label?.adjustsFontSizeToFitWidth = true
+        label?.minimumScaleFactor = 0.5
         return label!
         
     }
@@ -145,6 +147,8 @@ class TimeMinutsPickerDataSource: NSObject, UIPickerViewDataSource, UIPickerView
         label?.attributedText = title
         label?.textColor = color
         label?.textAlignment = .center
+        label?.adjustsFontSizeToFitWidth = true
+        label?.minimumScaleFactor = 0.5
         return label!
         
     }
@@ -191,6 +195,8 @@ class TimeSecondsPickerDataSource: NSObject, UIPickerViewDataSource, UIPickerVie
         label?.attributedText = title
         label?.textColor = color
         label?.textAlignment = .center
+        label?.adjustsFontSizeToFitWidth = true
+        label?.minimumScaleFactor = 0.5
         return label!
         
     }
