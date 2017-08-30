@@ -38,22 +38,8 @@ public final class Assembler {
     /// - parameter assemblies:         the list of assemblies to build the container from
     /// - parameter container:          the baseline container
     ///
-    @available(*, deprecated, message: "Use not throwing alternative: init(_:, container:)")
-    public convenience init(assemblies: [Assembly], container: Container? = Container()) throws {
-        if let container = container {
-            self.init(assemblies, container: container)
-        } else {
-            self.init(assemblies)
-        }
-    }
-
-    /// Will create a new `Assembler` with the given `Assembly` instances to build a `Container`
-    ///
-    /// - parameter assemblies:         the list of assemblies to build the container from
-    /// - parameter container:          the baseline container
-    ///
-    public init(_ assemblies: [Assembly], container: Container = Container()) {
-        self.container = container
+    public init(assemblies: [Assembly], container: Container? = Container()) throws {
+        self.container = container!
         run(assemblies: assemblies)
     }
     
@@ -62,18 +48,8 @@ public final class Assembler {
     /// - parameter assemblies:         the list of assemblies to build the container from
     /// - parameter parentAssembler:    the baseline assembler
     ///
-    @available(*, deprecated, message: "Use not throwing alternative: init(_:, parent:)")
-    public convenience init(assemblies: [Assembly], parentAssembler: Assembler?) throws {
-        self.init(_: assemblies, parent: parentAssembler)
-    }
-
-    /// Will create a new `Assembler` with the given `Assembly` instances to build a `Container`
-    ///
-    /// - parameter assemblies: the list of assemblies to build the container from
-    /// - parameter parent:     the baseline assembler
-    ///
-    public init(_ assemblies: [Assembly], parent: Assembler?) {
-        container = Container(parent: parent?.container)
+    public init(assemblies: [Assembly], parentAssembler: Assembler?) throws {
+        container = Container(parent: parentAssembler?.container)
         run(assemblies: assemblies)
     }
     

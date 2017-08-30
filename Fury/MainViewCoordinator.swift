@@ -162,10 +162,10 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         preScreen.delegate = self
         self.present(preScreen, animated: false) {
             preScreen.startCountdown(10)
-            preScreen.completionBlock = {
-                self.timerType = state
-                self.timerViewController.startWith(time: time, type: state)
-            }
+//            preScreen.completionBlock = {
+//                self.timerType = state
+//                self.timerViewController.startWith(time: time, type: state)
+//            }
         }
     }
     

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R7S-s3-L2s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R7S-s3-L2s">
     <device id="retina3_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -310,7 +310,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.062965318560600281" green="0.066727966070175171" blue="0.070717096328735352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.062745098039215685" green="0.066666666666666666" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="esO-gY-2GW" firstAttribute="top" secondItem="Jfz-IM-WqA" secondAttribute="bottom" id="8oy-23-OFx"/>
                             <constraint firstAttribute="trailing" secondItem="Jfz-IM-WqA" secondAttribute="trailing" constant="20" id="Bbg-y9-6hx"/>
@@ -523,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ysn-TX-frf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="160"/>
+            <point key="canvasLocation" x="136" y="47"/>
         </scene>
         <!--Finish Or Continue View-->
         <scene sceneID="ZHN-uj-zaw">
@@ -566,13 +566,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4M8-8x-Zcm" firstAttribute="leading" secondItem="Ilh-8y-gBT" secondAttribute="trailing" id="1BS-Kb-wqt"/>
-                            <constraint firstItem="5Mg-UH-dy9" firstAttribute="top" secondItem="4M8-8x-Zcm" secondAttribute="bottom" id="Az9-eu-B5Y"/>
                             <constraint firstAttribute="trailing" secondItem="4M8-8x-Zcm" secondAttribute="trailing" id="OOG-Wo-XDQ"/>
-                            <constraint firstItem="5Mg-UH-dy9" firstAttribute="top" secondItem="Ilh-8y-gBT" secondAttribute="bottom" id="OkU-zI-uF1"/>
                             <constraint firstItem="Ilh-8y-gBT" firstAttribute="leading" secondItem="IKW-BV-hHD" secondAttribute="leading" id="WWE-D0-IjJ"/>
                             <constraint firstItem="4M8-8x-Zcm" firstAttribute="width" secondItem="Ilh-8y-gBT" secondAttribute="width" multiplier="2:1" id="WeN-QV-hBw"/>
+                            <constraint firstItem="5Mg-UH-dy9" firstAttribute="top" secondItem="Ilh-8y-gBT" secondAttribute="bottom" id="XWH-8H-D5i"/>
                             <constraint firstItem="4M8-8x-Zcm" firstAttribute="top" secondItem="IKW-BV-hHD" secondAttribute="top" id="faA-Gn-RNB"/>
                             <constraint firstItem="Ilh-8y-gBT" firstAttribute="top" secondItem="IKW-BV-hHD" secondAttribute="top" id="jCQ-sX-Ir6"/>
+                            <constraint firstItem="5Mg-UH-dy9" firstAttribute="top" secondItem="4M8-8x-Zcm" secondAttribute="bottom" id="oCy-iY-GIR"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -679,19 +679,19 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="46" translatesAutoresizingMaskIntoConstraints="NO" id="oqJ-bp-4Xh">
-                                <rect key="frame" x="100" y="99.5" width="280" height="121"/>
+                                <rect key="frame" x="100" y="106.5" width="280" height="107.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="92"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY RESULT IS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAv-I2-aJ1">
-                                <rect key="frame" x="176.5" y="105.5" width="127" height="29"/>
+                                <rect key="frame" x="163.5" y="108" width="153.5" height="26"/>
                                 <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRZ-4A-P2D">
-                                <rect key="frame" x="382" y="132.5" width="54" height="54"/>
+                                <rect key="frame" x="386" y="132.5" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="Nrp-0D-5Aw"/>
                                     <constraint firstAttribute="height" constant="54" id="RaL-Sk-8bm"/>
@@ -702,7 +702,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyd-lh-t8X">
-                                <rect key="frame" x="44" y="132.5" width="54" height="54"/>
+                                <rect key="frame" x="40" y="132.5" width="54" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="Bq1-lk-Mb0"/>
                                     <constraint firstAttribute="width" constant="54" id="K6R-zu-4j9"/>
@@ -765,7 +765,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COOL, STILL ALIVE! YOU DID IT!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIZ-S7-6iU">
-                                <rect key="frame" x="32" y="32" width="410.5" height="142.5"/>
+                                <rect key="frame" x="28" y="12" width="410.5" height="142.5"/>
                                 <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="54"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -935,13 +935,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE NEED YOUR ADVISE." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fi0-bP-amf">
-                                <rect key="frame" x="32" y="32" width="514.5" height="71.5"/>
+                                <rect key="frame" x="28" y="12" width="514.5" height="71.5"/>
                                 <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="54"/>
                                 <color key="textColor" red="0.80983877182006836" green="0.9942328929901123" blue="0.3841153085231781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vx-tk-Aoj">
-                                <rect key="frame" x="32" y="126.5" width="489" height="84.5"/>
+                                <rect key="frame" x="28" y="106.5" width="489" height="84.5"/>
                                 <string key="text">Please fill a short survey, we promise –
 it won’t take more than 3 minutes.</string>
                                 <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="32"/>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Bold.ttf">
+            <string>Oswald-Bold</string>
+        </array>
+        <array key="RobotoCondensed-Bold.ttf">
+            <string>RobotoCondensed-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Finish Or Continue View-->
+        <scene sceneID="nJ9-yY-omV">
+            <objects>
+                <viewController storyboardIdentifier="FinishOrContinueView" id="LjC-uZ-BoQ" customClass="FinishOrContinueView" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="moC-cm-LPG"/>
+                        <viewControllerLayoutGuide type="bottom" id="7c3-uP-BQk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bbP-YF-3ZW">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="65"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izX-SL-0YI">
+                                <rect key="frame" x="0.0" y="0.0" width="222.5" height="65"/>
+                                <color key="backgroundColor" red="0.090412244200000005" green="0.094174742699999994" blue="0.098164245489999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="sWZ-Hp-RJ9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="26"/>
+                                <state key="normal" title="FINISH">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishButtonPress:" destination="LjC-uZ-BoQ" eventType="touchUpInside" id="ERx-Jc-Jb9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpX-iD-zUj">
+                                <rect key="frame" x="222.5" y="0.0" width="444.5" height="65"/>
+                                <color key="backgroundColor" red="0.76078431369999999" green="1" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="26"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButtonPress:" destination="LjC-uZ-BoQ" eventType="touchUpInside" id="Pau-nX-xsC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="izX-SL-0YI" firstAttribute="leading" secondItem="bbP-YF-3ZW" secondAttribute="leading" id="DXU-jt-zA5"/>
+                            <constraint firstItem="7c3-uP-BQk" firstAttribute="top" secondItem="VpX-iD-zUj" secondAttribute="bottom" id="Eyk-9O-v0h"/>
+                            <constraint firstItem="izX-SL-0YI" firstAttribute="top" secondItem="bbP-YF-3ZW" secondAttribute="top" id="Htm-jK-1HK"/>
+                            <constraint firstItem="VpX-iD-zUj" firstAttribute="top" secondItem="bbP-YF-3ZW" secondAttribute="top" id="NLg-hj-4Vx"/>
+                            <constraint firstAttribute="trailing" secondItem="VpX-iD-zUj" secondAttribute="trailing" id="OAr-cF-NpM"/>
+                            <constraint firstItem="7c3-uP-BQk" firstAttribute="top" secondItem="izX-SL-0YI" secondAttribute="bottom" id="ZNu-VP-423"/>
+                            <constraint firstItem="VpX-iD-zUj" firstAttribute="leading" secondItem="izX-SL-0YI" secondAttribute="trailing" id="iwF-zR-Gv2"/>
+                            <constraint firstItem="VpX-iD-zUj" firstAttribute="width" secondItem="izX-SL-0YI" secondAttribute="width" multiplier="2:1" id="ykX-vp-Yrv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sg2-Qg-zF0"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="667" height="65"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bqS-Zu-yC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="714"/>
+        </scene>
+        <!--Pause View-->
+        <scene sceneID="3hx-1e-7cx">
+            <objects>
+                <viewController storyboardIdentifier="PauseView" id="Pnn-9w-cYA" customClass="PauseView" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ud3-yA-idG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qfz-n6-5Da"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z8j-qx-Dsw">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="65"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBE-4T-to7">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="65"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="26"/>
+                                <state key="normal" title="PAUSE">
+                                    <color key="titleColor" red="0.80983877179999997" green="0.99423289299999995" blue="0.38411530849999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="PauseButtonPress:" destination="Pnn-9w-cYA" eventType="touchUpInside" id="5bq-Dd-6tR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sBE-4T-to7" firstAttribute="top" secondItem="z8j-qx-Dsw" secondAttribute="top" id="9at-us-g2v"/>
+                            <constraint firstItem="sBE-4T-to7" firstAttribute="leading" secondItem="z8j-qx-Dsw" secondAttribute="leading" id="hSY-Ls-wHr"/>
+                            <constraint firstItem="Qfz-n6-5Da" firstAttribute="top" secondItem="sBE-4T-to7" secondAttribute="bottom" id="mha-KY-gUZ"/>
+                            <constraint firstAttribute="trailing" secondItem="sBE-4T-to7" secondAttribute="trailing" id="tvL-g2-bP1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6du-Wt-ju3"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="667" height="65"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xlp-t2-hAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="534"/>
+        </scene>
+        <!--Lets Go View-->
+        <scene sceneID="9gJ-LW-Jj9">
+            <objects>
+                <viewController storyboardIdentifier="LetsGoView" id="njm-j1-HRa" customClass="LetsGoView" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y2j-9P-7Vw"/>
+                        <viewControllerLayoutGuide type="bottom" id="oaN-Aq-KlS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lYT-nm-Igp">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="65"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVM-fc-9U2">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="65"/>
+                                <color key="backgroundColor" red="0.76078431369999999" green="1" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="26"/>
+                                <state key="normal" title="LET’S GO">
+                                    <color key="titleColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="LetsGoButtonPress:" destination="njm-j1-HRa" eventType="touchUpInside" id="oPX-f9-239"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qVM-fc-9U2" secondAttribute="trailing" id="2mP-WR-38t"/>
+                            <constraint firstAttribute="bottom" secondItem="qVM-fc-9U2" secondAttribute="bottom" id="Ar1-WO-Ids"/>
+                            <constraint firstItem="qVM-fc-9U2" firstAttribute="leading" secondItem="lYT-nm-Igp" secondAttribute="leading" id="Ies-tc-DsA"/>
+                            <constraint firstItem="qVM-fc-9U2" firstAttribute="top" secondItem="lYT-nm-Igp" secondAttribute="top" id="rPT-2n-CQi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TpR-gL-pRn"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="667" height="65"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6HT-rf-LCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="351"/>
+        </scene>
+        <!--Finish View-->
+        <scene sceneID="SnT-f8-aPD">
+            <objects>
+                <viewController storyboardIdentifier="FinishView" id="okp-94-DmD" customClass="FinishView" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7tg-zl-Jky"/>
+                        <viewControllerLayoutGuide type="bottom" id="kZK-9k-Upq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nem-Qh-9XX">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="65"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXd-CY-apb">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="65"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="26"/>
+                                <state key="normal" title="FINISH">
+                                    <color key="titleColor" red="0.80983877179999997" green="0.99423289299999995" blue="0.38411530849999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="finishButtonPress:" destination="okp-94-DmD" eventType="touchUpInside" id="oGc-Mb-rnH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qXd-CY-apb" firstAttribute="top" secondItem="Nem-Qh-9XX" secondAttribute="top" id="CuS-rq-bW1"/>
+                            <constraint firstItem="qXd-CY-apb" firstAttribute="leading" secondItem="Nem-Qh-9XX" secondAttribute="leading" id="J6W-C4-2XI"/>
+                            <constraint firstAttribute="trailing" secondItem="qXd-CY-apb" secondAttribute="trailing" id="T1k-Hp-1RX"/>
+                            <constraint firstItem="kZK-9k-Upq" firstAttribute="top" secondItem="qXd-CY-apb" secondAttribute="bottom" id="wYR-gI-I5w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xLW-JQ-0d4"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="667" height="65"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCt-Uk-aHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="931"/>
+        </scene>
+        <!--Bottom Coordinator-->
+        <scene sceneID="Eaa-ZE-dAY">
+            <objects>
+                <viewController storyboardIdentifier="BottomViewController" id="Aec-RY-o2K" customClass="BottomCoordinator" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9t7-05-Sff"/>
+                        <viewControllerLayoutGuide type="bottom" id="wEC-si-9ug"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cJi-tz-z6B">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="y7b-Ni-di5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZK-CM-xtr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="-142"/>
+        </scene>
+    </scenes>
+</document>

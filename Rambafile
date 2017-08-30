@@ -2,7 +2,7 @@
 company: nova9
 
 ### Xcode project settings
-project_name: Fury
+project_name: fury
 xcodeproj_path: Fury.xcodeproj
 
 ### Code generation settings section
@@ -10,20 +10,23 @@ xcodeproj_path: Fury.xcodeproj
 project_target: Fury
 
 # The file path for new modules
-project_file_path: module
+project_file_path: Modules
 
 # The Xcode group path to new modules
-project_group_path: module
+project_group_path: Modules
 
 ### Tests generation settings section
 # The tests target name
 test_target: FuryTests
 
 # The file path for new tests
-test_file_path: test
+test_file_path: UnitTests
 
 # The Xcode group path to new tests
-test_group_path: test
+test_group_path: UnitTests
+
+### Dependencies settings section
+podfile_path: Podfile
 
 ### Templates
 templates:

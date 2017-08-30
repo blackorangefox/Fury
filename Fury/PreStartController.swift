@@ -9,7 +9,6 @@
 import UIKit
 protocol PreStartControllerDelegate: class {
     func countdownFinish()
-    func left(second: Int)
 }
 
 class PreStartController: UIViewController {
@@ -17,11 +16,10 @@ class PreStartController: UIViewController {
     weak var delegate: PreStartControllerDelegate!
     
     @IBOutlet weak var numberLabel: UILabel!
-    var completionBlock : (() -> Void)?
+    private let playerService = PlayerService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     func startCountdown(_ count: Int) {
@@ -31,10 +29,10 @@ class PreStartController: UIViewController {
     func animateWithString(_ count: Int) {
         if count == 0 {
             numberLabel.text = "GO"
-            delegate.countdownFinish()
+            self.playerService.playStartWork()
         }else {
             numberLabel.text = "\(count)"
-            delegate.left(second: count)
+            playMusic(count)
         }
         
         numberLabel.transform = numberLabel.transform.scaledBy(x: 0.5, y: 0.5);
@@ -53,9 +51,15 @@ class PreStartController: UIViewController {
         }
     }
     
+    func playMusic(_ count: Int) {
+        if count <= 3 && count != 0 {
+            self.playerService.playOneSecond()
+        }
+    }
+    
     func removeFromSuperview() {
         self.dismiss(animated: false, completion: {
-            self.completionBlock!()
+            self.delegate.countdownFinish()
         })
     }
 }

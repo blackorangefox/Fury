@@ -75,24 +75,24 @@ class RootViewController: RootContainerController, BottomViewControllerDelegate,
     func classicButtonPress() {
         timerType = .classic
         mainViewController.openTimeByType(timerType: timerType)
-        bottomViewController.startConfiguration()
+       // bottomViewController.startConfiguration()
     }
     
     func intervalButtonPress() {
         timerType = .interval
         mainViewController.openTimeByType(timerType: timerType)
-        bottomViewController.startConfiguration()
+       // bottomViewController.startConfiguration()
     }
     
     func countdownButtonPress() {
         timerType = .countdown
         mainViewController.openTimeByType(timerType: timerType)
-        bottomViewController.startConfiguration()
+       // bottomViewController.startConfiguration()
     }
 
     //MARK: -  MainViewCoordinatorDelegate
     func timerFinish() {
-        bottomViewController.timerFinish()
+        //bottomViewController.timerFinish()
     }
 
     func openIntervatController() {

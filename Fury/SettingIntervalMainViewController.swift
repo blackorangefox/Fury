@@ -19,11 +19,11 @@ class SettingIntervalMainViewController: UIViewController, MainViewInputProtocol
     @IBOutlet weak var minTime: UIPickerView!
     @IBOutlet weak var secondTime: UIPickerView!
     @IBOutlet weak var minRest: UIPickerView!
-    let lapsSource = LapsPickerDataSource()
-    let secondsRestDS = TimeMinutsPickerDataSource()
-    let minutsRestDS = TimeMinutsPickerDataSource()
-    let minutsLapDS = TimeMinutsPickerDataSource()
-    let secondLapDS = TimeSecondsPickerDataSource()
+    let lapsSource = IntervatSettingDDM(startFromZero: false)
+    let secondsRestDS = IntervatSettingDDM(startFromZero: true)
+    let minutsRestDS = IntervatSettingDDM(startFromZero: true)
+    let minutsLapDS = IntervatSettingDDM(startFromZero: true)
+    let secondLapDS = IntervatSettingDDM(startFromZero: true)
 
     weak var delegate: SettingIntervalMainViewControllerDelegate!
     
@@ -62,147 +62,5 @@ class SettingIntervalMainViewController: UIViewController, MainViewInputProtocol
         let restMinutus = minRest.selectedRow(inComponent: 0)
         let restDate = format.date(from: "\(restMinutus):\(restSecond)")
         delegate.createTimerWithParams(laps: laps, lapTime: timeDate!, restTime: restDate!)
-    }
-}
-
-class LapsPickerDataSource: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 59
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(row+1)"
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let color = (row == pickerView.selectedRow(inComponent: component)) ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.3)
-        return NSAttributedString(string: "\(row)", attributes: [NSForegroundColorAttributeName: color])
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 65
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        
-        var label = view as! UILabel!
-        if label == nil {
-            label = UILabel()
-        }
-        let font = (row == pickerView.selectedRow(inComponent: component)) ? UIFont(name: "Roboto-Bold", size: 48.0)! : UIFont(name: "Roboto-Bold", size: 36.0)!
-        let color = (row == pickerView.selectedRow(inComponent: component)) ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.3)
-        let title = NSAttributedString(string: "\(row+1)", attributes: [NSFontAttributeName: font])
-        label?.attributedText = title
-        label?.textColor = color
-        label?.textAlignment = .center
-        label?.adjustsFontSizeToFitWidth = true
-        label?.minimumScaleFactor = 0.5
-        return label!
-        
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        pickerView.reloadAllComponents()
-    }
-}
-
-class TimeMinutsPickerDataSource: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 60
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(row)"
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let color = (row == pickerView.selectedRow(inComponent: component)) ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.3)
-        return NSAttributedString(string: "\(row)", attributes: [NSForegroundColorAttributeName: color])
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 65
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        
-        var label = view as! UILabel!
-        if label == nil {
-            label = UILabel()
-        }
-        
-        let font = (row == pickerView.selectedRow(inComponent: component)) ? UIFont(name: "Roboto-Bold", size: 48.0)! : UIFont(name: "Roboto-Bold", size: 36.0)!
-        let color = (row == pickerView.selectedRow(inComponent: component)) ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.3)
-        let title = NSAttributedString(string: "\(row)", attributes: [NSFontAttributeName: font])
-        label?.attributedText = title
-        label?.textColor = color
-        label?.textAlignment = .center
-        label?.adjustsFontSizeToFitWidth = true
-        label?.minimumScaleFactor = 0.5
-        return label!
-        
-    }
-    
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        pickerView.reloadAllComponents()
-    }
-}
-
-class TimeSecondsPickerDataSource: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 59
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(row+1)"
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let color = (row == pickerView.selectedRow(inComponent: component)) ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.3)
-        return NSAttributedString(string: "\(row)", attributes: [NSForegroundColorAttributeName: color])
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 65
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        
-        var label = view as! UILabel!
-        if label == nil {
-            label = UILabel()
-        }
-        
-        let font = (row == pickerView.selectedRow(inComponent: component)) ? UIFont(name: "Roboto-Bold", size: 48.0)! : UIFont(name: "Roboto-Bold", size: 36.0)!
-        let color = (row == pickerView.selectedRow(inComponent: component)) ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.3)
-        let title = NSAttributedString(string: "\(row+1)", attributes: [NSFontAttributeName: font])
-        label?.attributedText = title
-        label?.textColor = color
-        label?.textAlignment = .center
-        label?.adjustsFontSizeToFitWidth = true
-        label?.minimumScaleFactor = 0.5
-        return label!
-        
-    }
-    
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        pickerView.reloadAllComponents()
     }
 }

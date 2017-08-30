@@ -16,8 +16,8 @@ class CountdowController: UIViewController, MainViewInputProtocol {
 
     @IBOutlet weak var minTime: UIPickerView!
     @IBOutlet weak var secondTime: UIPickerView!
-    let secTimeSource = TimeSecondsPickerDataSource()
-    let minTimeSource = TimeMinutsPickerDataSource()
+    let secTimeSource = IntervatSettingDDM(startFromZero: true)
+    let minTimeSource = IntervatSettingDDM(startFromZero: true)
     weak var delegate: CountdowControllerDelegate!
     
     override func viewDidLoad() {

@@ -28,7 +28,7 @@ class TimerService: TimerServiceProtocol {
     
     func startWith(time: Date, type: TimerType) {
         self.currenTime = time
-        format.dateFormat = "mm:ss"
+        format.dateFormat = "mm:ss:SS"
         self.type = type
         switch type {
         case .countdown, .interval:
@@ -86,7 +86,7 @@ class TimerService: TimerServiceProtocol {
     //MARK: - Private
     @objc private func updateCountdownTime() {
         currenTime.addTimeInterval(-0.01)
-        if self.format.string(from: currenTime!) == "00:00" {
+        if self.format.string(from: currenTime!) == "00:00:00" {
             timer.invalidate()
             delegate.timerFinish()
             return

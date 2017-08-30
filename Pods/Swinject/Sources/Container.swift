@@ -47,7 +47,6 @@ public final class Container {
     /// - Parameters:
     ///     - parent:             The optional parent `Container`.
     ///     - registeringClosure: The closure registering services to the new container instance.
-    /// - Remark: Compile time may be long if you pass a long closure to this initializer. Use `init()` or `init(parent:)` instead.
     public convenience init(parent: Container? = nil, registeringClosure: (Container) -> Void) {
         self.init(parent: parent)
         registeringClosure(self)
@@ -120,7 +119,6 @@ public final class Container {
     ///
     /// - Returns: A registered `ServiceEntry` to configure more settings with method chaining.
     @discardableResult
-    // swiftlint:disable:next identifier_name
     public func _register<Service, Factory>(
         _ serviceType: Service.Type,
         factory: Factory,
@@ -144,7 +142,6 @@ public final class Container {
 
 // MARK: - _Resolver
 extension Container: _Resolver {
-    // swiftlint:disable:next identifier_name
     public func _resolve<Service, Factory>(name: String?, option: ServiceKeyOption? = nil, invoker: (Factory) -> Service) -> Service? {
         incrementResolutionDepth()
         defer { decrementResolutionDepth() }
@@ -242,7 +239,7 @@ extension Container: Resolver {
         }
         entry.storage.instance = resolvedInstance as Any
 
-        if let completed = entry.initCompleted as? (Resolver, Service) -> Void {
+        if let completed = entry.initCompleted as? (Resolver, Service) -> () {
             completed(self, resolvedInstance)
         }
         return resolvedInstance

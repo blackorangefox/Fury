@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import Swinject
 import Foundation
+import Hero
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,8 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var timerService: TimerServiceProtocol!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UIApplication.shared.isIdleTimerDisabled = true
         GlobalAssembly.configure()
+        
         timerService = GlobalAssembly.resolve(type: TimerServiceProtocol.self)
+        
+        let vc = GlobalAssembly.resolve(type: ClassicTimerViewInput.self) as! UIViewController
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.isNavigationBarHidden = true
+        navigationController.isHeroEnabled = true
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
+        
         FirebaseApp.configure()
         if !UserDefaults.standard.bool(forKey: "FirstLaunch") {
            UserDefaults.standard.set(true, forKey: "FirstLaunch")

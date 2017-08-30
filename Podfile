@@ -5,8 +5,10 @@ target 'Fury' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'Firebase/Core'
-  pod 'Swinject', :git => 'https://github.com/Swinject/Swinject.git', :branch => 'swift4'
+  pod 'Swinject'
+  pod 'SwinjectStoryboard', '~> 1.0.0'
   pod 'SwiftDate', '~> 4.0'
+  pod 'Hero'
   # Pods for Fury
 
   target 'FuryTests' do

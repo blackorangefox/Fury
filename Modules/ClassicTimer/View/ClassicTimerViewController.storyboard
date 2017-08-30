@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Bold.ttf">
+            <string>Oswald-Bold</string>
+        </array>
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Classic Timer View Controller-->
+        <scene sceneID="bA5-lX-3Z8">
+            <objects>
+                <viewController storyboardIdentifier="ClassicTimerViewController" id="db9-ID-aEY" customClass="ClassicTimerViewController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3T4-eL-gWE">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFC-Um-rjg">
+                                <rect key="frame" x="0.0" y="311" width="667" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="8Bn-xm-g0m"/>
+                                </constraints>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NN-bG-bDP">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="82"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYc-Fa-x49">
+                                        <rect key="frame" x="12" y="0.0" width="108" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="C8X-K5-fyT"/>
+                                            <constraint firstAttribute="width" constant="108" id="fkq-rs-bYB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
+                                        <state key="normal" title="CLASSIC">
+                                            <color key="titleColor" red="0.80983877179999997" green="0.99423289299999995" blue="0.38411530849999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ada-VM-6qh">
+                                        <rect key="frame" x="144" y="0.0" width="117" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="AH8-V5-vvk"/>
+                                            <constraint firstAttribute="width" constant="117" id="Zz6-3W-fev"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
+                                        <state key="normal" title="INTERVAL">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="intervalButtonPress:" destination="db9-ID-aEY" eventType="touchUpInside" id="IGe-Ek-l8g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxk-oI-EzN">
+                                        <rect key="frame" x="285" y="0.5" width="151" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="lpg-0b-DQ4"/>
+                                            <constraint firstAttribute="width" constant="151" id="xmw-Tk-0MR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
+                                        <state key="normal" title="COUNTDOWN">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Ada-VM-6qh" firstAttribute="centerY" secondItem="2NN-bG-bDP" secondAttribute="centerY" id="0s0-5U-PW4"/>
+                                    <constraint firstItem="yYc-Fa-x49" firstAttribute="centerY" secondItem="2NN-bG-bDP" secondAttribute="centerY" id="31S-uP-7xv"/>
+                                    <constraint firstItem="Bxk-oI-EzN" firstAttribute="centerY" secondItem="2NN-bG-bDP" secondAttribute="centerY" id="BuY-Pu-WpW"/>
+                                    <constraint firstItem="yYc-Fa-x49" firstAttribute="leading" secondItem="2NN-bG-bDP" secondAttribute="leadingMargin" constant="4" id="DCm-eK-RTh"/>
+                                    <constraint firstAttribute="height" constant="82" id="WB3-4b-J8z"/>
+                                    <constraint firstItem="Ada-VM-6qh" firstAttribute="leading" secondItem="yYc-Fa-x49" secondAttribute="trailing" constant="24" id="ewZ-KX-ZoU"/>
+                                    <constraint firstItem="Bxk-oI-EzN" firstAttribute="leading" secondItem="Ada-VM-6qh" secondAttribute="trailing" constant="24" id="vq8-9n-YGr"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="77" translatesAutoresizingMaskIntoConstraints="NO" id="FgB-xo-q1F">
+                                <rect key="frame" x="0.0" y="82" width="667" height="229"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="154"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062745098040000002" green="0.066666666669999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2NN-bG-bDP" firstAttribute="leading" secondItem="qFO-rO-hnO" secondAttribute="leading" id="1aW-Xb-DPQ"/>
+                            <constraint firstItem="FgB-xo-q1F" firstAttribute="leading" secondItem="qFO-rO-hnO" secondAttribute="leading" id="4IH-S7-pXJ"/>
+                            <constraint firstItem="LFC-Um-rjg" firstAttribute="leading" secondItem="qFO-rO-hnO" secondAttribute="leading" id="STM-zB-V2d"/>
+                            <constraint firstItem="LFC-Um-rjg" firstAttribute="bottom" secondItem="qFO-rO-hnO" secondAttribute="bottom" id="UiE-4s-zDh"/>
+                            <constraint firstItem="2NN-bG-bDP" firstAttribute="trailing" secondItem="qFO-rO-hnO" secondAttribute="trailing" id="VUE-fq-MyU"/>
+                            <constraint firstItem="2NN-bG-bDP" firstAttribute="top" secondItem="qFO-rO-hnO" secondAttribute="top" id="abS-jY-vbn"/>
+                            <constraint firstItem="LFC-Um-rjg" firstAttribute="top" secondItem="FgB-xo-q1F" secondAttribute="bottom" id="o0k-fj-HZu"/>
+                            <constraint firstItem="FgB-xo-q1F" firstAttribute="top" secondItem="2NN-bG-bDP" secondAttribute="bottom" id="ola-V6-suu"/>
+                            <constraint firstItem="qFO-rO-hnO" firstAttribute="trailing" secondItem="FgB-xo-q1F" secondAttribute="trailing" id="sJE-wC-JKJ"/>
+                            <constraint firstItem="qFO-rO-hnO" firstAttribute="trailing" secondItem="LFC-Um-rjg" secondAttribute="trailing" id="xgL-hy-JnT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qFO-rO-hnO"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="bottomContainer" destination="LFC-Um-rjg" id="JVQ-Xh-VaY"/>
+                        <outlet property="timeLabel" destination="FgB-xo-q1F" id="fxZ-FP-cae"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xHc-ay-dZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="-59"/>
+        </scene>
+    </scenes>
+</document>
