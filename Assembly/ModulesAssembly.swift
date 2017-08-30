@@ -18,5 +18,11 @@ class ModulesAssembly: BaseAssembly {
         IntervalTimerSettingAssembly.configure()
         IntervalTimerAssembly.configure()
         ClassicTimerAssembly.configure()
+        
+        container.register(CustomNavigationProtocol.self) { resolver in
+            let story = UIStoryboard.init(name: "CustomNavigation", bundle: nil)
+            let controller = story.instantiateViewController(withIdentifier: "CustomNavigation") as! CustomNavigation
+            return controller
+            }.inObjectScope(.transient)
     }
 }

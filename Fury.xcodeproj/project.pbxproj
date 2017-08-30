@@ -114,6 +114,9 @@
 		B4753A471EBB5D25008B3A1D /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A461EBB5D25008B3A1D /* TimerViewController.swift */; };
 		B4753A491EBB5D79008B3A1D /* RootContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A481EBB5D79008B3A1D /* RootContainerController.swift */; };
 		B4753A4B1EBB64A6008B3A1D /* FinishOrContinueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A4A1EBB64A6008B3A1D /* FinishOrContinueView.swift */; };
+		B4868BA81F5701BB0066200D /* CustomNavigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4868BA71F5701BB0066200D /* CustomNavigation.storyboard */; };
+		B4868BAA1F5704720066200D /* CustomNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4868BA91F5704720066200D /* CustomNavigation.swift */; };
+		B491DFA01F57107000B5DD53 /* CustomNavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B491DF9F1F57107000B5DD53 /* CustomNavigationProtocol.swift */; };
 		B4A53F9B1ED6B67000838F86 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A53F9A1ED6B67000838F86 /* FinishView.swift */; };
 		B4A53F9D1ED6D15500838F86 /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A53F9C1ED6D15500838F86 /* Date+extension.swift */; };
 		B4A89C6B1EBC68E800A78DC7 /* NavigationMainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A89C6A1EBC68E800A78DC7 /* NavigationMainCoordinator.swift */; };
@@ -278,6 +281,9 @@
 		B4753A461EBB5D25008B3A1D /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		B4753A481EBB5D79008B3A1D /* RootContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContainerController.swift; sourceTree = "<group>"; };
 		B4753A4A1EBB64A6008B3A1D /* FinishOrContinueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishOrContinueView.swift; sourceTree = "<group>"; };
+		B4868BA71F5701BB0066200D /* CustomNavigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomNavigation.storyboard; sourceTree = "<group>"; };
+		B4868BA91F5704720066200D /* CustomNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigation.swift; sourceTree = "<group>"; };
+		B491DF9F1F57107000B5DD53 /* CustomNavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationProtocol.swift; sourceTree = "<group>"; };
 		B4A53F9A1ED6B67000838F86 /* FinishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishView.swift; sourceTree = "<group>"; };
 		B4A53F9C1ED6D15500838F86 /* Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
 		B4A89C6A1EBC68E800A78DC7 /* NavigationMainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMainCoordinator.swift; sourceTree = "<group>"; };
@@ -410,6 +416,7 @@
 		3DFE53C6C9176101CF189142 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B4868BA61F5701A30066200D /* CustomNavigation */,
 				D4959DE31F46958D00E794BC /* IntervalTimerStorry */,
 				884310ADB7CF15C185499A38 /* ClassicTimer */,
 			);
@@ -801,6 +808,16 @@
 			name = MainContainer;
 			sourceTree = "<group>";
 		};
+		B4868BA61F5701A30066200D /* CustomNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				B4868BA71F5701BB0066200D /* CustomNavigation.storyboard */,
+				B4868BA91F5704720066200D /* CustomNavigation.swift */,
+				B491DF9F1F57107000B5DD53 /* CustomNavigationProtocol.swift */,
+			);
+			path = CustomNavigation;
+			sourceTree = "<group>";
+		};
 		B49E88EA1F24A5FD0006FED1 /* TimerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1138,6 +1155,7 @@
 				B41858A41ECB1FC5006A63D7 /* BebasNeue Regular.ttf in Resources */,
 				B4753A241EB9F144008B3A1D /* Roboto-Black.ttf in Resources */,
 				B4753A2A1EB9F144008B3A1D /* Roboto-LightItalic.ttf in Resources */,
+				B4868BA81F5701BB0066200D /* CustomNavigation.storyboard in Resources */,
 				B47539811EB4DDE0008B3A1D /* Assets.xcassets in Resources */,
 				B4753A031EB9F136008B3A1D /* Oswald-DemiBold.ttf in Resources */,
 				B475397F1EB4DDE0008B3A1D /* Main.storyboard in Resources */,
@@ -1375,6 +1393,7 @@
 				B4A53F9B1ED6B67000838F86 /* FinishView.swift in Sources */,
 				B423F36B1ED42B1F0034BFF1 /* FinishController.swift in Sources */,
 				B475397A1EB4DDE0008B3A1D /* AppDelegate.swift in Sources */,
+				B4868BAA1F5704720066200D /* CustomNavigation.swift in Sources */,
 				D4959DF01F469CDF00E794BC /* IntervalTimerStoryProtocol.swift in Sources */,
 				B4753A411EBA028A008B3A1D /* PauseView.swift in Sources */,
 				D4C4C96B1F46AA1E0015536A /* ServiceAssembly.swift in Sources */,
@@ -1389,6 +1408,7 @@
 				6193A97E9E9A74D42827EBC2 /* IntervalTimerSettingViewOutput.swift in Sources */,
 				4D148E8A7CB0048B827296E7 /* IntervalTimerSettingViewController.swift in Sources */,
 				1CCDEA56423B12A9D09AE5E0 /* IntervalTimerSettingModuleInput.swift in Sources */,
+				B491DFA01F57107000B5DD53 /* CustomNavigationProtocol.swift in Sources */,
 				62D1E290C3899766F55C9D55 /* IntervalTimerSettingPresenter.swift in Sources */,
 				D4959DE51F4695AD00E794BC /* IntervalTimerStory.swift in Sources */,
 				70BFEB96101E5FA19C0EE233 /* IntervalTimerSettingInteractorInput.swift in Sources */,

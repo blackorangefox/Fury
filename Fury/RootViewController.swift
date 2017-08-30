@@ -14,7 +14,7 @@ enum TimerType {
     case countdown
 }
 
-class RootViewController: RootContainerController, BottomViewControllerDelegate, NavigationMainControllerDelegate, MainViewCoordinatorDelegate  {
+class RootViewController: UIViewController, RootContainerControllerProtocol, BottomViewControllerDelegate, NavigationMainControllerDelegate, MainViewCoordinatorDelegate  {
 
     @IBOutlet weak var navigationContainer: UIView!
     @IBOutlet weak var bottomContainer: UIView!
@@ -36,20 +36,20 @@ class RootViewController: RootContainerController, BottomViewControllerDelegate,
         bottomViewController.delegate = self
         bottomViewController.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChildViewController(bottomViewController)
-        self.addSubview(subView: self.bottomViewController!.view, toView: self.bottomContainer)
+        //self.addSubview(subView: self.bottomViewController!.view, toView: self.bottomContainer)
         
         mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewCoordinator
         mainViewController.delegate = self
         mainViewController.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChildViewController(mainViewController)
-        self.addSubview(subView: self.mainViewController!.view, toView: self.mainContainer)
+        //self.addSubview(subView: self.mainViewController!.view, toView: self.mainContainer)
         mainViewController.openTimeByType(timerType: .classic)
         
         navigationMainController = self.storyboard?.instantiateViewController(withIdentifier: "NavigationMainController") as! NavigationMainCoordinator
         navigationMainController.delegate = self
         navigationMainController.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChildViewController(navigationMainController)
-        self.addSubview(subView: self.navigationMainController!.view, toView: self.navigationContainer)
+       // self.addSubview(subView: self.navigationMainController!.view, toView: self.navigationContainer)
     }
     
     

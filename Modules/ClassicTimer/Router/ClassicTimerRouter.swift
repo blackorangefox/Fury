@@ -15,7 +15,6 @@ class ClassicTimerRouter: ClassicTimerRouterInput {
     // контрллеры постоянно плодяться - раходуется память
     func openIntervalTimer() {
         let newView = GlobalAssembly.resolve(type: IntervalTimerSettingViewInput.self) as! UIViewController
-        view.di
         view?.present(newView, animated: true, completion: nil)
     }
 }

@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Oswald-Bold.ttf">
-            <string>Oswald-Bold</string>
-        </array>
         <array key="RobotoCondensed-Bold.ttf">
             <string>RobotoCondensed-Bold</string>
         </array>
@@ -28,71 +24,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ube-UP-nNH">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="82"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z36-nB-UNT">
-                                        <rect key="frame" x="12" y="0.0" width="108" height="81"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="81" id="VRY-hP-5aj"/>
-                                            <constraint firstAttribute="width" constant="108" id="W99-ML-V1o"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
-                                        <state key="normal" title="CLASSIC">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="classicButtonPress:" destination="vGd-E4-PVD" eventType="touchUpInside" id="qr1-ec-p7v"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLq-ml-FeP">
-                                        <rect key="frame" x="144" y="0.0" width="117" height="81"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="81" id="oEa-z1-Qxc"/>
-                                            <constraint firstAttribute="width" constant="117" id="yPf-hY-5L0"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
-                                        <state key="normal" title="INTERVAL">
-                                            <color key="titleColor" red="0.76078431369999999" green="1" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myp-Lc-4Zk">
-                                        <rect key="frame" x="285" y="0.5" width="151" height="81"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="151" id="KiO-vv-0Za"/>
-                                            <constraint firstAttribute="height" constant="81" id="Mcf-NQ-Lxy"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
-                                        <state key="normal" title="COUNTDOWN">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="countdownButtonPress:" destination="vGd-E4-PVD" eventType="touchUpInside" id="c1t-g1-ULb"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="z36-nB-UNT" firstAttribute="centerY" secondItem="ube-UP-nNH" secondAttribute="centerY" id="4hW-TG-KYa"/>
-                                    <constraint firstItem="Myp-Lc-4Zk" firstAttribute="centerY" secondItem="ube-UP-nNH" secondAttribute="centerY" id="8tF-1D-wZi"/>
-                                    <constraint firstItem="FLq-ml-FeP" firstAttribute="leading" secondItem="z36-nB-UNT" secondAttribute="trailing" constant="24" id="S2l-kn-FFn"/>
-                                    <constraint firstItem="Myp-Lc-4Zk" firstAttribute="leading" secondItem="FLq-ml-FeP" secondAttribute="trailing" constant="24" id="isS-ay-Cfi"/>
-                                    <constraint firstItem="z36-nB-UNT" firstAttribute="leading" secondItem="ube-UP-nNH" secondAttribute="leadingMargin" constant="4" id="pkR-gC-w3m"/>
-                                    <constraint firstItem="FLq-ml-FeP" firstAttribute="centerY" secondItem="ube-UP-nNH" secondAttribute="centerY" id="tM7-uC-CdB"/>
-                                    <constraint firstAttribute="height" constant="82" id="uHj-y0-EPg"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="navigation"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMd-nP-DOD">
-                                <rect key="frame" x="0.0" y="82" width="667" height="229"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="311"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5D-qJ-m3r">
-                                        <rect key="frame" x="0.0" y="77" width="146" height="74"/>
+                                        <rect key="frame" x="0.0" y="118" width="146" height="74"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELa-kH-ntf">
-                                                <rect key="frame" x="52.5" y="-78" width="93.5" height="229"/>
+                                                <rect key="frame" x="52.5" y="-119" width="93.5" height="311"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjw-L2-AVL">
@@ -117,14 +56,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mb2-hH-GWc">
-                                        <rect key="frame" x="147" y="77" width="259.5" height="74"/>
+                                        <rect key="frame" x="147" y="118" width="259.5" height="74"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xxm-IO-EFN">
-                                                <rect key="frame" x="99" y="-78" width="80" height="229"/>
+                                                <rect key="frame" x="99" y="-119" width="80" height="311"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </pickerView>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpg-gS-YN9">
-                                                <rect key="frame" x="179" y="-78" width="80" height="229"/>
+                                                <rect key="frame" x="179" y="-119" width="80" height="311"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAP TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzg-AP-8Ko">
@@ -162,14 +101,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjQ-wR-qAT">
-                                        <rect key="frame" x="407.5" y="77" width="259.5" height="74"/>
+                                        <rect key="frame" x="407.5" y="118" width="259.5" height="74"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvO-Jg-bB9">
-                                                <rect key="frame" x="99.5" y="-78" width="80" height="229"/>
+                                                <rect key="frame" x="99.5" y="-119" width="80" height="311"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </pickerView>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKP-BO-D5K">
-                                                <rect key="frame" x="179.5" y="-78" width="80" height="229"/>
+                                                <rect key="frame" x="179.5" y="-119" width="80" height="311"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REST TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kf-h9-VHh">
@@ -246,14 +185,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.062745098039215685" green="0.066666666666666666" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="ube-UP-nNH" firstAttribute="top" secondItem="G3U-hq-nzG" secondAttribute="top" id="AlL-HX-Ue1"/>
-                            <constraint firstItem="SMd-nP-DOD" firstAttribute="top" secondItem="ube-UP-nNH" secondAttribute="bottom" id="IZF-3v-xEr"/>
                             <constraint firstItem="SMd-nP-DOD" firstAttribute="leading" secondItem="QF6-c8-s4m" secondAttribute="leading" id="J9H-yd-WJi"/>
                             <constraint firstItem="0kd-zW-98z" firstAttribute="top" secondItem="SMd-nP-DOD" secondAttribute="bottom" id="KOw-dR-8dV"/>
-                            <constraint firstItem="ube-UP-nNH" firstAttribute="trailing" secondItem="QF6-c8-s4m" secondAttribute="trailing" id="TFB-jp-PlB"/>
-                            <constraint firstItem="ube-UP-nNH" firstAttribute="leading" secondItem="QF6-c8-s4m" secondAttribute="leading" id="WtH-tN-5VF"/>
                             <constraint firstItem="SMd-nP-DOD" firstAttribute="trailing" secondItem="QF6-c8-s4m" secondAttribute="trailing" id="XiD-SQ-ckw"/>
                             <constraint firstItem="0kd-zW-98z" firstAttribute="bottom" secondItem="QF6-c8-s4m" secondAttribute="bottom" id="bOq-d3-xH8"/>
+                            <constraint firstItem="SMd-nP-DOD" firstAttribute="top" secondItem="QF6-c8-s4m" secondAttribute="top" id="hpt-Z2-6kd"/>
                             <constraint firstItem="0kd-zW-98z" firstAttribute="leading" secondItem="QF6-c8-s4m" secondAttribute="leading" id="pDJ-Ya-hfi"/>
                             <constraint firstItem="0kd-zW-98z" firstAttribute="trailing" secondItem="QF6-c8-s4m" secondAttribute="trailing" id="tdf-Px-4ct"/>
                         </constraints>

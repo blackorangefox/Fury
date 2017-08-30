@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClassicTimerViewController: RootContainerController, ClassicTimerViewInput, BottomViewControllerDelegate {
+class ClassicTimerViewController: UIViewController, RootContainerControllerProtocol, ClassicTimerViewInput, BottomViewControllerDelegate {
     
     @IBOutlet weak var bottomContainer: UIView!
     @IBOutlet weak var timeLabel: UILabel!
@@ -26,9 +26,7 @@ class ClassicTimerViewController: RootContainerController, ClassicTimerViewInput
         let storyboard = UIStoryboard.init(name: "BottomCoordinator", bundle: nil)
         bottomViewController = storyboard.instantiateViewController(withIdentifier: "BottomViewController") as! BottomCoordinator
         bottomViewController.delegate = self
-        bottomViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        self.addChildViewController(bottomViewController)
-        self.addSubview(subView: self.bottomViewController!.view, toView: self.bottomContainer)
+        self.addSubview(self.bottomViewController, container: bottomContainer)
     }
     
     @IBAction func intervalButtonPress(_ sender: Any) {

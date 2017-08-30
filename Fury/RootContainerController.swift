@@ -8,25 +8,24 @@
 
 import UIKit
 
-class RootContainerController: UIViewController {
+protocol RootContainerControllerProtocol {
+    func addSubview(_ viewController: UIViewController, container: UIView)
+    func embeddedTransition(oldViewController: UIViewController, toViewController newViewController: UIViewController, container: UIView)
+}
 
-   //MARK: - Private
+extension RootContainerControllerProtocol where Self: UIViewController {
     
-    func addSubview(subView: UIView, toView parentView: UIView) {
-        parentView.addSubview(subView)
-        
-        var viewBindingsDict = [String: AnyObject]()
-        viewBindingsDict["subView"] = subView
-        parentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[subView]|",
-                                                                 options: [], metrics: nil, views: viewBindingsDict))
-        parentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[subView]|",
-                                                                 options: [], metrics: nil, views: viewBindingsDict))
+    func addSubview(_ viewController: UIViewController, container: UIView) {
+        addChildViewController(viewController)
+        container.addSubview(viewController.view)
+        viewController.view.translatesAutoresizingMaskIntoConstraints = false
+        setupConstraints(for: viewController, in: container)
     }
     
-    func cycleFromViewController(oldViewController: UIViewController, toViewController newViewController: UIViewController) {
+    func embeddedTransition(oldViewController: UIViewController, toViewController newViewController: UIViewController, container: UIView) {
         oldViewController.willMove(toParentViewController: nil)
         self.addChildViewController(newViewController)
-        self.addSubview(subView: newViewController.view, toView:self.view!)
+        self.addSubview(newViewController, container: container)
         newViewController.view.alpha = 0
         newViewController.view.layoutIfNeeded()
         UIView.animate(withDuration: 0.5, animations: {
@@ -38,12 +37,13 @@ class RootContainerController: UIViewController {
                         oldViewController.removeFromParentViewController()
                         newViewController.didMove(toParentViewController: self)
         })
+        
     }
     
-    func showViewController(controller: UIViewController) {
-        controller.view.translatesAutoresizingMaskIntoConstraints = false
-        self.addChildViewController(controller)
-        self.addSubview(subView: controller.view, toView: self.view)
+    private func setupConstraints(for viewController: UIViewController, in container: UIView) {
+        viewController.view.leadingAnchor.constraint(equalTo: container.leadingAnchor).isActive = true
+        viewController.view.trailingAnchor.constraint(equalTo: container.trailingAnchor).isActive = true
+        viewController.view.bottomAnchor.constraint(equalTo: container.bottomAnchor).isActive = true
+        viewController.view.topAnchor.constraint(equalTo: container.topAnchor).isActive = true
     }
-
 }

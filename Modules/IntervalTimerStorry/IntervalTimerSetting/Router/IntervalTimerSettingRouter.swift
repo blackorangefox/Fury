@@ -32,6 +32,6 @@ class IntervalTimerSettingRouter: IntervalTimerSettingRouterInput, PreStartContr
     
     func countdownFinish() {
         let intervalTimer = GlobalAssembly.resolve(type: IntervalTimerViewInput.self) as! UIViewController
-        viewController?.navigationController?.pushViewController(intervalTimer, animated: true)
+        viewController?.navigationController?.present(intervalTimer, animated: true)
     }
 }

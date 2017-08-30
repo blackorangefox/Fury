@@ -24,12 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GlobalAssembly.configure()
         
         timerService = GlobalAssembly.resolve(type: TimerServiceProtocol.self)
-        
-        let vc = GlobalAssembly.resolve(type: ClassicTimerViewInput.self) as! UIViewController
-        let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.isNavigationBarHidden = true
-        navigationController.isHeroEnabled = true
-        self.window?.rootViewController = navigationController
+        let vc = GlobalAssembly.resolve(type: CustomNavigationProtocol.self) as! UIViewController
+        self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
         
         FirebaseApp.configure()

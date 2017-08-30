@@ -15,7 +15,7 @@ protocol NavigationMainControllerDelegate: class {
 }
 
 
-class NavigationMainCoordinator: RootContainerController, TimerTypeSelectionControllerDelegate {
+class NavigationMainCoordinator: UIViewController, RootContainerControllerProtocol, TimerTypeSelectionControllerDelegate {
     
     var timerTypeSelectionController: TimerTypeSelectionController!
     var intervanNavigationController: IntervalNavigationController!
@@ -32,13 +32,13 @@ class NavigationMainCoordinator: RootContainerController, TimerTypeSelectionCont
     
     func startConfiguration() {
         timerTypeSelectionController = createTimerTypeSelectionController()
-        self.showViewController(controller: timerTypeSelectionController)
+        //self.showViewController(controller: timerTypeSelectionController)
         timerTypeSelectionController.startConfiguration()
     }
     
     func changeToIntervanNavigationController() {
         intervanNavigationController = createIntervalNavigationController()
-        self.showViewController(controller: intervanNavigationController)
+        //self.showViewController(controller: intervanNavigationController)
     }
     
     func createIntervalNavigationController() -> IntervalNavigationController {
@@ -81,7 +81,7 @@ class NavigationMainCoordinator: RootContainerController, TimerTypeSelectionCont
         }else {
             intervanNavigationController.titleArray = createTitleWithoutRest(laps: laps)
         }
-        showViewController(controller: intervanNavigationController)
+       // showViewController(controller: intervanNavigationController)
     }
     
     private func createTitleWithoutRest(laps: Int) -> [String] {

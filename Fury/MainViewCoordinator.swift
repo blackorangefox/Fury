@@ -19,7 +19,7 @@ protocol MainViewCoordinatorDelegate: class {
     func intervalSetting(laps: Int, isRest: Bool)
 }
 
-class MainViewCoordinator: RootContainerController, SettingIntervalMainViewControllerDelegate, TimerViewControllerDelegate, CountdowControllerDelegate, PreStartControllerDelegate {
+class MainViewCoordinator: UIViewController, RootContainerControllerProtocol, SettingIntervalMainViewControllerDelegate, TimerViewControllerDelegate, CountdowControllerDelegate, PreStartControllerDelegate {
     
     var timerViewController: TimerViewController!
     var settingIntervalMainViewController: SettingIntervalMainViewController!
@@ -174,7 +174,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         timerViewController.delegate = self
         timerViewController.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChildViewController(timerViewController)
-        self.addSubview(subView: timerViewController.view, toView: self.view)
+       // self.addSubview(subView: timerViewController.view, toView: self.view)
         self.currentViewController = timerViewController
     }
     
@@ -183,7 +183,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         settingIntervalMainViewController.delegate = self
         settingIntervalMainViewController.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChildViewController(settingIntervalMainViewController)
-        self.addSubview(subView: self.settingIntervalMainViewController!.view, toView: self.view)
+        //self.addSubview(subView: self.settingIntervalMainViewController!.view, toView: self.view)
         self.currentViewController = settingIntervalMainViewController
     }
     
@@ -192,7 +192,7 @@ class MainViewCoordinator: RootContainerController, SettingIntervalMainViewContr
         countdowController.delegate = self
         countdowController.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChildViewController(countdowController)
-        self.addSubview(subView: self.countdowController!.view, toView: self.view)
+        //self.addSubview(subView: self.countdowController!.view, toView: self.view)
         self.currentViewController = countdowController
     }
     

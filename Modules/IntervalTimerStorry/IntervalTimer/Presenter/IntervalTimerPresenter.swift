@@ -81,9 +81,9 @@ class IntervalTimerPresenter: IntervalTimerModuleInput, IntervalTimerViewOutput,
         let b1 =  String(format: "%07d", b)
         let b2 = Int(b1)
         
-        let persent = 100 - Int((a2!*100)/b2!)
-        let lenghtPersent = UIScreen.main.bounds.width*CGFloat(persent)/CGFloat(100)
-        view.updateLine(width: lenghtPersent)
+       // let persent = 100 - Int((a2!*100)/b2!)
+       // let lenghtPersent = UIScreen.main.bounds.width*CGFloat(persent)/CGFloat(100)
+       // view.updateLine(width: lenghtPersent)
     }
     
     

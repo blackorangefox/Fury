@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Bold.ttf">
+            <string>Oswald-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Custom Navigation-->
+        <scene sceneID="LzL-H0-K2Z">
+            <objects>
+                <viewController storyboardIdentifier="CustomNavigation" id="Pn1-3K-TZU" customClass="CustomNavigation" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kiB-xQ-st7">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0b-Jt-4pv">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="82"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XA-g5-szw">
+                                        <rect key="frame" x="12" y="0.0" width="108" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="108" id="JL9-BE-2EX"/>
+                                            <constraint firstAttribute="height" constant="81" id="KL5-We-YMo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
+                                        <state key="normal" title="CLASSIC">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="classicTimerButtonPress:" destination="Pn1-3K-TZU" eventType="touchUpInside" id="OCx-g8-sfE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkL-T5-iv3">
+                                        <rect key="frame" x="144" y="0.0" width="117" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="117" id="Vim-wv-awx"/>
+                                            <constraint firstAttribute="height" constant="81" id="vDP-r0-3rV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
+                                        <state key="normal" title="INTERVAL">
+                                            <color key="titleColor" red="0.76078431369999999" green="1" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="intervalTimerButtonPress:" destination="Pn1-3K-TZU" eventType="touchUpInside" id="Vpb-DF-1f1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocZ-9h-jz5">
+                                        <rect key="frame" x="285" y="0.5" width="151" height="81"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="81" id="vfZ-Dy-RDt"/>
+                                            <constraint firstAttribute="width" constant="151" id="vls-dP-4mc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
+                                        <state key="normal" title="COUNTDOWN">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="countdownTimerButtonPress:" destination="Pn1-3K-TZU" eventType="touchUpInside" id="u2n-L4-m5l"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="ocZ-9h-jz5" firstAttribute="leading" secondItem="EkL-T5-iv3" secondAttribute="trailing" constant="24" id="EoT-Dq-zvQ"/>
+                                    <constraint firstAttribute="height" constant="82" id="Itq-Xo-1w7"/>
+                                    <constraint firstItem="1XA-g5-szw" firstAttribute="leading" secondItem="C0b-Jt-4pv" secondAttribute="leadingMargin" constant="4" id="aVJ-dZ-QIc"/>
+                                    <constraint firstItem="EkL-T5-iv3" firstAttribute="centerY" secondItem="C0b-Jt-4pv" secondAttribute="centerY" id="lWq-Fp-KRH"/>
+                                    <constraint firstItem="ocZ-9h-jz5" firstAttribute="centerY" secondItem="C0b-Jt-4pv" secondAttribute="centerY" id="mHA-90-2DF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="82" id="qCU-Xf-H8l"/>
+                                    <constraint firstItem="1XA-g5-szw" firstAttribute="centerY" secondItem="C0b-Jt-4pv" secondAttribute="centerY" id="roh-hm-jgC"/>
+                                    <constraint firstItem="EkL-T5-iv3" firstAttribute="leading" secondItem="1XA-g5-szw" secondAttribute="trailing" constant="24" id="u49-l6-RfH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="navigation"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkh-nJ-6WN">
+                                <rect key="frame" x="0.0" y="82" width="667" height="293"/>
+                                <connections>
+                                    <segue destination="geK-4c-LJM" kind="embed" id="SQu-Qf-lJg"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kkh-nJ-6WN" firstAttribute="leading" secondItem="rNj-Rq-voB" secondAttribute="leading" id="7LJ-59-QdC"/>
+                            <constraint firstItem="C0b-Jt-4pv" firstAttribute="top" secondItem="rNj-Rq-voB" secondAttribute="top" id="MMc-qm-OQS"/>
+                            <constraint firstItem="kkh-nJ-6WN" firstAttribute="bottom" secondItem="rNj-Rq-voB" secondAttribute="bottom" id="UqJ-Kl-BVh"/>
+                            <constraint firstItem="C0b-Jt-4pv" firstAttribute="trailing" secondItem="rNj-Rq-voB" secondAttribute="trailing" id="dAl-p2-rU4"/>
+                            <constraint firstItem="kkh-nJ-6WN" firstAttribute="trailing" secondItem="rNj-Rq-voB" secondAttribute="trailing" id="gdV-xw-n35"/>
+                            <constraint firstItem="C0b-Jt-4pv" firstAttribute="leading" secondItem="rNj-Rq-voB" secondAttribute="leading" id="nQX-CB-Nd2"/>
+                            <constraint firstItem="kkh-nJ-6WN" firstAttribute="top" secondItem="C0b-Jt-4pv" secondAttribute="bottom" id="yfs-Tl-5G4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rNj-Rq-voB"/>
+                    </view>
+                    <connections>
+                        <outlet property="classicTimerButton" destination="1XA-g5-szw" id="Zer-Gw-cjL"/>
+                        <outlet property="countdownTimerButton" destination="ocZ-9h-jz5" id="j1o-vV-SmQ"/>
+                        <outlet property="intervalTimerButton" destination="EkL-T5-iv3" id="jHE-zG-0lR"/>
+                        <outlet property="mainContainer" destination="kkh-nJ-6WN" id="V3N-qt-6j5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1C-Vn-YRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-682.3088455772114" y="112.8"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="19G-ao-5Pi">
+            <objects>
+                <viewController id="geK-4c-LJM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="81a-rl-rNe">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="293"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="b7R-Gc-bvJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLc-cs-RSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-682" y="930"/>
+        </scene>
+    </scenes>
+</document>
