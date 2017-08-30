@@ -109,7 +109,7 @@
 		B4753A371EB9F953008B3A1D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A361EB9F953008B3A1D /* RootViewController.swift */; };
 		B4753A3E1EB9FB2E008B3A1D /* LetsGoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A3D1EB9FB2E008B3A1D /* LetsGoView.swift */; };
 		B4753A411EBA028A008B3A1D /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A401EBA028A008B3A1D /* PauseView.swift */; };
-		B4753A431EBA0A05008B3A1D /* BottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A421EBA0A05008B3A1D /* BottomViewController.swift */; };
+		B4753A431EBA0A05008B3A1D /* BottomCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A421EBA0A05008B3A1D /* BottomCoordinator.swift */; };
 		B4753A451EBB5CF2008B3A1D /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A441EBB5CF2008B3A1D /* MainViewCoordinator.swift */; };
 		B4753A471EBB5D25008B3A1D /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A461EBB5D25008B3A1D /* TimerViewController.swift */; };
 		B4753A491EBB5D79008B3A1D /* RootContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4753A481EBB5D79008B3A1D /* RootContainerController.swift */; };
@@ -276,7 +276,7 @@
 		B4753A361EB9F953008B3A1D /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B4753A3D1EB9FB2E008B3A1D /* LetsGoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetsGoView.swift; sourceTree = "<group>"; };
 		B4753A401EBA028A008B3A1D /* PauseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
-		B4753A421EBA0A05008B3A1D /* BottomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomViewController.swift; sourceTree = "<group>"; };
+		B4753A421EBA0A05008B3A1D /* BottomCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomCoordinator.swift; sourceTree = "<group>"; };
 		B4753A441EBB5CF2008B3A1D /* MainViewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		B4753A461EBB5D25008B3A1D /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		B4753A481EBB5D79008B3A1D /* RootContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootContainerController.swift; sourceTree = "<group>"; };
@@ -787,11 +787,6 @@
 		B4753A3C1EB9FB18008B3A1D /* BottomContainer */ = {
 			isa = PBXGroup;
 			children = (
-				B4753A3D1EB9FB2E008B3A1D /* LetsGoView.swift */,
-				B4753A401EBA028A008B3A1D /* PauseView.swift */,
-				B4753A421EBA0A05008B3A1D /* BottomViewController.swift */,
-				B4753A4A1EBB64A6008B3A1D /* FinishOrContinueView.swift */,
-				B4A53F9A1ED6B67000838F86 /* FinishView.swift */,
 			);
 			name = BottomContainer;
 			sourceTree = "<group>";
@@ -923,6 +918,11 @@
 			isa = PBXGroup;
 			children = (
 				D4F3A23F1F4FD2F4007EECCC /* BottomCoordinator.storyboard */,
+				B4753A421EBA0A05008B3A1D /* BottomCoordinator.swift */,
+				B4753A3D1EB9FB2E008B3A1D /* LetsGoView.swift */,
+				B4753A401EBA028A008B3A1D /* PauseView.swift */,
+				B4753A4A1EBB64A6008B3A1D /* FinishOrContinueView.swift */,
+				B4A53F9A1ED6B67000838F86 /* FinishView.swift */,
 			);
 			path = BottomCoordinator;
 			sourceTree = "<group>";
@@ -1372,7 +1372,7 @@
 			files = (
 				B4A89C6B1EBC68E800A78DC7 /* NavigationMainCoordinator.swift in Sources */,
 				B4B4FB271EC5DC7F00146F50 /* IntervalNavigationController.swift in Sources */,
-				B4753A431EBA0A05008B3A1D /* BottomViewController.swift in Sources */,
+				B4753A431EBA0A05008B3A1D /* BottomCoordinator.swift in Sources */,
 				B42404061EC48C30000EE6DC /* Font+extension.swift in Sources */,
 				D4959DEE1F469CB900E794BC /* StoriesAssembly.swift in Sources */,
 				B423F3691ED41BF30034BFF1 /* ResultController.swift in Sources */,

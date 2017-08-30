@@ -35,7 +35,7 @@ class PreStartController: UIViewController {
             playMusic(count)
         }
         
-        numberLabel.transform = numberLabel.transform.scaledBy(x: 0.5, y: 0.5);
+        numberLabel.transform = numberLabel.transform.scaledBy(x: 0.3, y: 0.3);
         numberLabel.contentScaleFactor = 1
         UIView.animate(withDuration: 1.0, animations: {
             self.numberLabel.transform = self.numberLabel.transform.scaledBy(x: 3, y: 3);
