@@ -9,24 +9,32 @@
 /* Begin PBXBuildFile section */
 		0083AF77EB2A1EBAD3C74FFA /* IntervalTimerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E186E60DD03274E7AA01D /* IntervalTimerViewTests.swift */; };
 		0E693BA6F9EBF8E9E5A73FEC /* IntervalTimerSettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9500CD121381445E46C0F9 /* IntervalTimerSettingRouter.swift */; };
+		13678F411C7D714A2BFA092A /* CoutdownTimerInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887689546723919C1883D7DF /* CoutdownTimerInteractorOutput.swift */; };
 		14B0117B0B41423EEA415794 /* IntervalTimerModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C79AE4E78407E7AAAE87660 /* IntervalTimerModuleInput.swift */; };
+		18156A97236338A6D4522609 /* CoutdownTimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB25671B775E739C7F3DA92 /* CoutdownTimerRouter.swift */; };
 		1C3A2F83E4114AC8E1D1C4AE /* IntervalTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EFDBDE6528D128EFF99E57 /* IntervalTimerViewController.swift */; };
 		1CCDEA56423B12A9D09AE5E0 /* IntervalTimerSettingModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CE5F5BC6709DF61C4F446 /* IntervalTimerSettingModuleInput.swift */; };
 		2196A547D444B35E530B7411 /* IntervalTimerSettingRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA7AB0807AC5471FA131C3 /* IntervalTimerSettingRouterTests.swift */; };
 		2A2E5395D8B479EF7A274BDE /* ClassicTimerModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA68E93928B1D35E2FF9296 /* ClassicTimerModuleInput.swift */; };
 		2B5F63F3F6E5E0A2B3DAE14F /* Pods_FuryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FDFFB2043BF21EB50A836B /* Pods_FuryUITests.framework */; };
+		2B6149C097C174AC315359AF /* CoutdownTimerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768FF57353B495A4B1F6740 /* CoutdownTimerAssembly.swift */; };
+		2DD475923B2D621D84BA9FD0 /* CoutdownTimerInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07706EB2835EF345B5F1D2F /* CoutdownTimerInteractorInput.swift */; };
+		33AE6E4BA3FC34AD86A6C5DB /* CoutdownTimerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B03796B64BF334CE396BF /* CoutdownTimerViewTests.swift */; };
 		34AB6D15CF0B11BBD1D649FF /* IntervalTimerInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD961B57E2FF234DFEDA9D /* IntervalTimerInteractorInput.swift */; };
 		37223EEED66A0B69FDC1B88E /* IntervalTimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B75B0ED02E13EAC6143E70 /* IntervalTimerInteractor.swift */; };
 		3A41B530F94D9F3E41952503 /* ClassicTimerViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AC27E270F52E9E9C4FAE82 /* ClassicTimerViewOutput.swift */; };
 		3C9CA49B5ECE7825E3F25E74 /* IntervalTimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337AE1392BD7E9FC40078E00 /* IntervalTimerPresenter.swift */; };
 		3EA7DCC93B29B3E5555F2727 /* ClassicTimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D0C483857BC6611306E657 /* ClassicTimerInteractor.swift */; };
+		479F3FA12A648AB34B2AB525 /* CoutdownTimerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157E2817D1E89CBFDE07CAD2 /* CoutdownTimerRouterTests.swift */; };
 		4C58B1CA7BC6654A97854172 /* ClassicTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF84E1ECAA76C22368BF95 /* ClassicTimerViewController.swift */; };
 		4D148E8A7CB0048B827296E7 /* IntervalTimerSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6F813FC07C81A52700A47 /* IntervalTimerSettingViewController.swift */; };
 		5280539411DA61E0A4193D34 /* Pods_Fury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4492F19A02CB7A69961D429 /* Pods_Fury.framework */; };
 		5ADA49836B860FB3640E74C9 /* IntervalTimerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA17C30745C11B7B2887F8 /* IntervalTimerAssembly.swift */; };
+		5D45F8CFB9C65AB52A0F79FF /* CoutdownTimerViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9808392823B9D8C4056FD18 /* CoutdownTimerViewOutput.swift */; };
 		60D8E1D2800D16A97874DF6E /* ClassicTimerConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6724C772BD7CBB02E94EDA19 /* ClassicTimerConfiguratorTests.swift */; };
 		6193A97E9E9A74D42827EBC2 /* IntervalTimerSettingViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B9D3D9262802993A8E229D /* IntervalTimerSettingViewOutput.swift */; };
 		62D1E290C3899766F55C9D55 /* IntervalTimerSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B340FD84CE71178F936809 /* IntervalTimerSettingPresenter.swift */; };
+		6788E00B2BB626002592A201 /* CoutdownTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C77FB0179A4E29653778CB /* CoutdownTimerViewController.swift */; };
 		6DE0C7344EEE8569208E2098 /* IntervalTimerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD17CDBBCA329B65F412AAA /* IntervalTimerRouterTests.swift */; };
 		70A29F208BCD89D9EAF90905 /* ClassicTimerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175FACA00442BECD9F84A94F /* ClassicTimerViewTests.swift */; };
 		70BFEB96101E5FA19C0EE233 /* IntervalTimerSettingInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EAC64A30BEAE871FFF6CDE /* IntervalTimerSettingInteractorInput.swift */; };
@@ -35,17 +43,22 @@
 		7565C4BFAEBCAF2D7B33DFCD /* IntervalTimerSettingViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E54422F7B9A793CAE97F16 /* IntervalTimerSettingViewInput.swift */; };
 		7597E188301C144D38ED1914 /* IntervalTimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67895C07BA5911759994993 /* IntervalTimerRouter.swift */; };
 		7A3894E929D77561414A5E27 /* ClassicTimerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97753711DBDFE2FA8572C34 /* ClassicTimerAssembly.swift */; };
+		7A788699FFD5FD31F7C48738 /* CoutdownTimerRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCC0ADEF7CB2DF83C69587C /* CoutdownTimerRouterInput.swift */; };
 		7AB7B3860FBC08C73EBDD3F8 /* IntervalTimerSettingInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCAF823F0B2ED916B67E9 /* IntervalTimerSettingInteractorOutput.swift */; };
+		869C950FD2C99A60F0CA33F6 /* CoutdownTimerViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7E2FA289E6323D294291C /* CoutdownTimerViewInput.swift */; };
 		88B483A5E377429FC29E0585 /* ClassicTimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C275D6328C84306FCD06F /* ClassicTimerPresenter.swift */; };
 		8930F1F4E92605B34B20E267 /* ClassicTimerViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C332B18F4622EF6D1624A0 /* ClassicTimerViewInput.swift */; };
 		8DF963AFF68572ADDE28D3E3 /* ClassicTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25979BECDE070CF16D0C72A4 /* ClassicTimerInteractorTests.swift */; };
 		8E5B423071134A204EB92993 /* IntervalTimerSettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14CA77EDB2BD851A950B50 /* IntervalTimerSettingInteractor.swift */; };
+		917E3D1A724E622C59D9DCDF /* CoutdownTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6BF6EDC3C050A4F0E4A70 /* CoutdownTimerInteractorTests.swift */; };
 		9526F477356033A503A8EFCD /* IntervalTimerRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18AE630C419126C7693B0C /* IntervalTimerRouterInput.swift */; };
 		96D2ABDCA58BF45742C56BD4 /* IntervalTimerSettingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F6A5AA706FAD8B174510E3 /* IntervalTimerSettingAssembly.swift */; };
 		980C8DB33C3F7EAE95D11E30 /* IntervalTimerSettingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D58324485DA483857494F /* IntervalTimerSettingInteractorTests.swift */; };
 		9A0B521A48DDDC63508CFF55 /* ClassicTimerInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D535EBE83A053D1BD45066A0 /* ClassicTimerInteractorInput.swift */; };
 		9A0C80CC3FB9ACB501085EA2 /* ClassicTimerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E738D9F8B431C6431A8E9 /* ClassicTimerRouterTests.swift */; };
+		ACB1C2D4A33580366DD1DF59 /* CoutdownTimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D17604FC5A65E9F243C0FE /* CoutdownTimerPresenter.swift */; };
 		B2CDE9DDDC4E1ACF734966B3 /* Pods_FuryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DE0B8B83BF4F6ECAF658A9 /* Pods_FuryTests.framework */; };
+		B4050BCA1F584CDC00A8BEE5 /* CoutdownTimerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4050BC91F584CDC00A8BEE5 /* CoutdownTimerViewController.storyboard */; };
 		B40CDC0B1F1B683C00B2187A /* long-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B40989DD1F17A37E001ACF1B /* long-beep.mp3 */; };
 		B40CDC0C1F1B683F00B2187A /* 1_second.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B40989DC1F17A378001ACF1B /* 1_second.mp3 */; };
 		B41082361ECC376900D285AC /* IntervalNavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */; };
@@ -129,9 +142,12 @@
 		B4FDDD8C1F292E9A00762382 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDDD8B1F292E9A00762382 /* SurveyController.swift */; };
 		B8C72946842FD8F9D1EEA54F /* ClassicTimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF972ED134A4CE693762E1A1 /* ClassicTimerRouter.swift */; };
 		BD1A87F2F72C4E29D49D0C40 /* IntervalTimerSettingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E3A4D58E029B0C6A900397 /* IntervalTimerSettingViewTests.swift */; };
+		C0634B5ADA5C9799CDFEB819 /* CoutdownTimerConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E073441B5D5115198FF133 /* CoutdownTimerConfiguratorTests.swift */; };
 		C234264C5E0F73B944FCCB19 /* ClassicTimerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208A955F72DEF538440CED2 /* ClassicTimerPresenterTests.swift */; };
 		C40B30991462D210929F47A5 /* IntervalTimerSettingRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CCACF8217DC69CA5BAAEBA /* IntervalTimerSettingRouterInput.swift */; };
 		CBB18309DEA7E7A948390433 /* IntervalTimerConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2A9D312C7E180F70D16D7 /* IntervalTimerConfiguratorTests.swift */; };
+		CC7EDFABB7F84EBBCE3F5ECF /* CoutdownTimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C61D3AF3AC9880509D6A976 /* CoutdownTimerInteractor.swift */; };
+		CF1ACEF9B68747480B6EDA2B /* CoutdownTimerModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C15117C0843AC6648239F8B /* CoutdownTimerModuleInput.swift */; };
 		D4959DD91F4687C600E794BC /* IntervalTimerSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4959DD81F4687C600E794BC /* IntervalTimerSettingViewController.storyboard */; };
 		D4959DDC1F4689C700E794BC /* LetsGoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4959DDB1F4689C700E794BC /* LetsGoButton.swift */; };
 		D4959DDF1F468B3400E794BC /* UIColor+FURYAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4959DDE1F468B3400E794BC /* UIColor+FURYAdditions.swift */; };
@@ -149,6 +165,7 @@
 		DE3F092A962C7ED23739BEE3 /* IntervalTimerViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98537A2F8B4C1EF794A1990F /* IntervalTimerViewOutput.swift */; };
 		E00C90A5EC3509C9614A2163 /* IntervalTimerSettingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834114FCA92A0B9EC54D71B8 /* IntervalTimerSettingPresenterTests.swift */; };
 		E70BC2BEADC655E1D09BC374 /* IntervalTimerSettingConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A211601C73CDD4B0230EB1 /* IntervalTimerSettingConfiguratorTests.swift */; };
+		E8E9969366B0A6C8D26D07C5 /* CoutdownTimerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928656134D51E2EB0E47FB86 /* CoutdownTimerPresenterTests.swift */; };
 		E9A64220996722A9928F17C9 /* ClassicTimerRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCEDCFB5C3E17064E003379 /* ClassicTimerRouterInput.swift */; };
 		EDE5B3B37584B9B558ACEA30 /* IntervalTimerViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCF5C04DA0E35EADB04445D /* IntervalTimerViewInput.swift */; };
 		EFA776E26EF468CC0EFC2CE8 /* IntervalTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AD5D751F015CE1ADF0EC34 /* IntervalTimerInteractorTests.swift */; };
@@ -174,32 +191,43 @@
 
 /* Begin PBXFileReference section */
 		08F6A5AA706FAD8B174510E3 /* IntervalTimerSettingAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingAssembly.swift; sourceTree = "<group>"; };
+		0C61D3AF3AC9880509D6A976 /* CoutdownTimerInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerInteractor.swift; sourceTree = "<group>"; };
 		0DA2A9D312C7E180F70D16D7 /* IntervalTimerConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerConfiguratorTests.swift; sourceTree = "<group>"; };
+		157E2817D1E89CBFDE07CAD2 /* CoutdownTimerRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerRouterTests.swift; sourceTree = "<group>"; };
 		175FACA00442BECD9F84A94F /* ClassicTimerViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerViewTests.swift; sourceTree = "<group>"; };
 		1D8CE5F5BC6709DF61C4F446 /* IntervalTimerSettingModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingModuleInput.swift; sourceTree = "<group>"; };
 		25979BECDE070CF16D0C72A4 /* ClassicTimerInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerInteractorTests.swift; sourceTree = "<group>"; };
 		28C332B18F4622EF6D1624A0 /* ClassicTimerViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerViewInput.swift; sourceTree = "<group>"; };
 		2B14CA77EDB2BD851A950B50 /* IntervalTimerSettingInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingInteractor.swift; sourceTree = "<group>"; };
+		2B8B03796B64BF334CE396BF /* CoutdownTimerViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerViewTests.swift; sourceTree = "<group>"; };
 		337AE1392BD7E9FC40078E00 /* IntervalTimerPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerPresenter.swift; sourceTree = "<group>"; };
+		3768FF57353B495A4B1F6740 /* CoutdownTimerAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerAssembly.swift; sourceTree = "<group>"; };
 		40DE0B8B83BF4F6ECAF658A9 /* Pods_FuryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A211601C73CDD4B0230EB1 /* IntervalTimerSettingConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingConfiguratorTests.swift; sourceTree = "<group>"; };
 		44AC27E270F52E9E9C4FAE82 /* ClassicTimerViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerViewOutput.swift; sourceTree = "<group>"; };
+		4FB25671B775E739C7F3DA92 /* CoutdownTimerRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerRouter.swift; sourceTree = "<group>"; };
 		51AD5D751F015CE1ADF0EC34 /* IntervalTimerInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerInteractorTests.swift; sourceTree = "<group>"; };
 		555CC4BFB2DF1E9A24E5331C /* Pods-FuryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuryUITests/Pods-FuryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		56B75B0ED02E13EAC6143E70 /* IntervalTimerInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerInteractor.swift; sourceTree = "<group>"; };
 		5C79AE4E78407E7AAAE87660 /* IntervalTimerModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerModuleInput.swift; sourceTree = "<group>"; };
 		5DB86E4C2200C679B4B1E408 /* Pods-Fury.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fury.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fury/Pods-Fury.debug.xcconfig"; sourceTree = "<group>"; };
+		62D17604FC5A65E9F243C0FE /* CoutdownTimerPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerPresenter.swift; sourceTree = "<group>"; };
 		63EFDBDE6528D128EFF99E57 /* IntervalTimerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerViewController.swift; sourceTree = "<group>"; };
 		6724C772BD7CBB02E94EDA19 /* ClassicTimerConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerConfiguratorTests.swift; sourceTree = "<group>"; };
+		6BCC0ADEF7CB2DF83C69587C /* CoutdownTimerRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerRouterInput.swift; sourceTree = "<group>"; };
 		7FA68E93928B1D35E2FF9296 /* ClassicTimerModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerModuleInput.swift; sourceTree = "<group>"; };
 		834114FCA92A0B9EC54D71B8 /* IntervalTimerSettingPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingPresenterTests.swift; sourceTree = "<group>"; };
 		86A6F813FC07C81A52700A47 /* IntervalTimerSettingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingViewController.swift; sourceTree = "<group>"; };
+		887689546723919C1883D7DF /* CoutdownTimerInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerInteractorOutput.swift; sourceTree = "<group>"; };
+		89C77FB0179A4E29653778CB /* CoutdownTimerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerViewController.swift; sourceTree = "<group>"; };
 		8C18AE630C419126C7693B0C /* IntervalTimerRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerRouterInput.swift; sourceTree = "<group>"; };
 		920C275D6328C84306FCD06F /* ClassicTimerPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerPresenter.swift; sourceTree = "<group>"; };
+		928656134D51E2EB0E47FB86 /* CoutdownTimerPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerPresenterTests.swift; sourceTree = "<group>"; };
 		95E3A4D58E029B0C6A900397 /* IntervalTimerSettingViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingViewTests.swift; sourceTree = "<group>"; };
 		9647165800605984508E8409 /* Pods-Fury.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fury.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fury/Pods-Fury.release.xcconfig"; sourceTree = "<group>"; };
 		96947A30242E0990190C470A /* Pods-FuryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuryUITests/Pods-FuryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		98537A2F8B4C1EF794A1990F /* IntervalTimerViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerViewOutput.swift; sourceTree = "<group>"; };
+		9C15117C0843AC6648239F8B /* CoutdownTimerModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerModuleInput.swift; sourceTree = "<group>"; };
 		9D9500CD121381445E46C0F9 /* IntervalTimerSettingRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingRouter.swift; sourceTree = "<group>"; };
 		9F9FC94AD57618229E44C794 /* IntervalTimerPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerPresenterTests.swift; sourceTree = "<group>"; };
 		9FBD961B57E2FF234DFEDA9D /* IntervalTimerInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerInteractorInput.swift; sourceTree = "<group>"; };
@@ -207,7 +235,9 @@
 		A407F662F7007661AFE05E89 /* Pods-FuryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuryTests/Pods-FuryTests.release.xcconfig"; sourceTree = "<group>"; };
 		A67895C07BA5911759994993 /* IntervalTimerRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerRouter.swift; sourceTree = "<group>"; };
 		A7B9D3D9262802993A8E229D /* IntervalTimerSettingViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingViewOutput.swift; sourceTree = "<group>"; };
+		B1F6BF6EDC3C050A4F0E4A70 /* CoutdownTimerInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerInteractorTests.swift; sourceTree = "<group>"; };
 		B208A955F72DEF538440CED2 /* ClassicTimerPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerPresenterTests.swift; sourceTree = "<group>"; };
+		B4050BC91F584CDC00A8BEE5 /* CoutdownTimerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoutdownTimerViewController.storyboard; sourceTree = "<group>"; };
 		B40989DC1F17A378001ACF1B /* 1_second.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1_second.mp3; sourceTree = "<group>"; };
 		B40989DD1F17A37E001ACF1B /* long-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "long-beep.mp3"; sourceTree = "<group>"; };
 		B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationControllerTests.swift; sourceTree = "<group>"; };
@@ -297,11 +327,13 @@
 		B97753711DBDFE2FA8572C34 /* ClassicTimerAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerAssembly.swift; sourceTree = "<group>"; };
 		B9EF4D9676673C3A08222941 /* IntervalTimerInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerInteractorOutput.swift; sourceTree = "<group>"; };
 		BFAA7AB0807AC5471FA131C3 /* IntervalTimerSettingRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingRouterTests.swift; sourceTree = "<group>"; };
+		C07706EB2835EF345B5F1D2F /* CoutdownTimerInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerInteractorInput.swift; sourceTree = "<group>"; };
 		C4FDFFB2043BF21EB50A836B /* Pods_FuryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D0C483857BC6611306E657 /* ClassicTimerInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerInteractor.swift; sourceTree = "<group>"; };
 		C6DF84E1ECAA76C22368BF95 /* ClassicTimerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerViewController.swift; sourceTree = "<group>"; };
 		C7E54422F7B9A793CAE97F16 /* IntervalTimerSettingViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingViewInput.swift; sourceTree = "<group>"; };
 		CF972ED134A4CE693762E1A1 /* ClassicTimerRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerRouter.swift; sourceTree = "<group>"; };
+		D3F7E2FA289E6323D294291C /* CoutdownTimerViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerViewInput.swift; sourceTree = "<group>"; };
 		D4959DD81F4687C600E794BC /* IntervalTimerSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntervalTimerSettingViewController.storyboard; sourceTree = "<group>"; };
 		D4959DDB1F4689C700E794BC /* LetsGoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsGoButton.swift; sourceTree = "<group>"; };
 		D4959DDE1F468B3400E794BC /* UIColor+FURYAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FURYAdditions.swift"; sourceTree = "<group>"; };
@@ -320,7 +352,9 @@
 		D6A7BE91DD9CE1B135939F50 /* Pods-FuryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuryTests/Pods-FuryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7EAC64A30BEAE871FFF6CDE /* IntervalTimerSettingInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingInteractorInput.swift; sourceTree = "<group>"; };
 		DD3A9AD5E33268E657769B2A /* ClassicTimerInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerInteractorOutput.swift; sourceTree = "<group>"; };
+		E4E073441B5D5115198FF133 /* CoutdownTimerConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerConfiguratorTests.swift; sourceTree = "<group>"; };
 		E74E186E60DD03274E7AA01D /* IntervalTimerViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerViewTests.swift; sourceTree = "<group>"; };
+		E9808392823B9D8C4056FD18 /* CoutdownTimerViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerViewOutput.swift; sourceTree = "<group>"; };
 		EA5E738D9F8B431C6431A8E9 /* ClassicTimerRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerRouterTests.swift; sourceTree = "<group>"; };
 		EAD17CDBBCA329B65F412AAA /* IntervalTimerRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerRouterTests.swift; sourceTree = "<group>"; };
 		EFCF5C04DA0E35EADB04445D /* IntervalTimerViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerViewInput.swift; sourceTree = "<group>"; };
@@ -395,6 +429,14 @@
 			path = IntervalTimerSetting;
 			sourceTree = "<group>";
 		};
+		337BF1634FAAFDA769A9174B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B1F6BF6EDC3C050A4F0E4A70 /* CoutdownTimerInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		36C2D213DC29EE70A138BB0B /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +461,7 @@
 				B4868BA61F5701A30066200D /* CustomNavigation */,
 				D4959DE31F46958D00E794BC /* IntervalTimerStorry */,
 				884310ADB7CF15C185499A38 /* ClassicTimer */,
+				53646765FCFF2207BE4846A9 /* CoutdownTimer */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -450,6 +493,18 @@
 				56B75B0ED02E13EAC6143E70 /* IntervalTimerInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		53646765FCFF2207BE4846A9 /* CoutdownTimer */ = {
+			isa = PBXGroup;
+			children = (
+				DE3DEE48D5F412301C17DB2C /* View */,
+				73705270E4227DC87F849C59 /* Presenter */,
+				B0A39CFDEA4270ED9A3588C4 /* Interactor */,
+				731BFC99A1B6E70CDA6D38DA /* Router */,
+				767F5D381DACCF65FC2E02F1 /* Assembly */,
+			);
+			path = CoutdownTimer;
 			sourceTree = "<group>";
 		};
 		53F52710CE9261B95F3119FB /* Router */ = {
@@ -484,6 +539,32 @@
 			isa = PBXGroup;
 			children = (
 				B97753711DBDFE2FA8572C34 /* ClassicTimerAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		731BFC99A1B6E70CDA6D38DA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6BCC0ADEF7CB2DF83C69587C /* CoutdownTimerRouterInput.swift */,
+				4FB25671B775E739C7F3DA92 /* CoutdownTimerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		73705270E4227DC87F849C59 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9C15117C0843AC6648239F8B /* CoutdownTimerModuleInput.swift */,
+				62D17604FC5A65E9F243C0FE /* CoutdownTimerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		767F5D381DACCF65FC2E02F1 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				3768FF57353B495A4B1F6740 /* CoutdownTimerAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -571,6 +652,18 @@
 			path = ClassicTimer;
 			sourceTree = "<group>";
 		};
+		89E0FD4961AC727DDCD7E847 /* CoutdownTimer */ = {
+			isa = PBXGroup;
+			children = (
+				BB2DEE76C8A7477F24938068 /* Configurator */,
+				C96FAFF868B8000928083617 /* View */,
+				337BF1634FAAFDA769A9174B /* Interactor */,
+				DA6EC7701FEC2EA46BC24DF2 /* Presenter */,
+				EA8C006DD043A79B1A4DF188 /* Router */,
+			);
+			path = CoutdownTimer;
+			sourceTree = "<group>";
+		};
 		94FBD50EDE769466173A43E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -606,6 +699,16 @@
 				96947A30242E0990190C470A /* Pods-FuryUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0A39CFDEA4270ED9A3588C4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C07706EB2835EF345B5F1D2F /* CoutdownTimerInteractorInput.swift */,
+				887689546723919C1883D7DF /* CoutdownTimerInteractorOutput.swift */,
+				0C61D3AF3AC9880509D6A976 /* CoutdownTimerInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		B2D5E098FFFA78002C1A46D8 /* ClassicTimer */ = {
@@ -848,6 +951,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BB2DEE76C8A7477F24938068 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				E4E073441B5D5115198FF133 /* CoutdownTimerConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C96FAFF868B8000928083617 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B8B03796B64BF334CE396BF /* CoutdownTimerViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CFB954719AA34214B4A40B81 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -927,6 +1046,25 @@
 			path = BottomCoordinator;
 			sourceTree = "<group>";
 		};
+		DA6EC7701FEC2EA46BC24DF2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				928656134D51E2EB0E47FB86 /* CoutdownTimerPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DE3DEE48D5F412301C17DB2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3F7E2FA289E6323D294291C /* CoutdownTimerViewInput.swift */,
+				E9808392823B9D8C4056FD18 /* CoutdownTimerViewOutput.swift */,
+				89C77FB0179A4E29653778CB /* CoutdownTimerViewController.swift */,
+				B4050BC91F584CDC00A8BEE5 /* CoutdownTimerViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DF846F8D19A54F8DD3E4DC1D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -953,6 +1091,14 @@
 				337AE1392BD7E9FC40078E00 /* IntervalTimerPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EA8C006DD043A79B1A4DF188 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				157E2817D1E89CBFDE07CAD2 /* CoutdownTimerRouterTests.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		EC78B3E5E1C6BFBC6FE3CB4A /* View */ = {
@@ -997,6 +1143,7 @@
 				5660F5E98AB7A3625EC45A8C /* IntervalTimerSetting */,
 				FA9C76BFF4A707B93A27B454 /* IntervalTimer */,
 				B2D5E098FFFA78002C1A46D8 /* ClassicTimer */,
+				89E0FD4961AC727DDCD7E847 /* CoutdownTimer */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -1183,6 +1330,7 @@
 				B4753A2F1EB9F144008B3A1D /* Roboto-ThinItalic.ttf in Resources */,
 				B4753A231EB9F144008B3A1D /* Apache License.txt in Resources */,
 				B40CDC0C1F1B683F00B2187A /* 1_second.mp3 in Resources */,
+				B4050BCA1F584CDC00A8BEE5 /* CoutdownTimerViewController.storyboard in Resources */,
 				B4753A051EB9F136008B3A1D /* Oswald-ExtraLight.ttf in Resources */,
 				B4753A0F1EB9F136008B3A1D /* SIL Open Font License.txt in Resources */,
 				D4BD40051F4FC62700BC782C /* ClassicTimerViewController.storyboard in Resources */,
@@ -1440,6 +1588,17 @@
 				E9A64220996722A9928F17C9 /* ClassicTimerRouterInput.swift in Sources */,
 				B8C72946842FD8F9D1EEA54F /* ClassicTimerRouter.swift in Sources */,
 				7A3894E929D77561414A5E27 /* ClassicTimerAssembly.swift in Sources */,
+				869C950FD2C99A60F0CA33F6 /* CoutdownTimerViewInput.swift in Sources */,
+				5D45F8CFB9C65AB52A0F79FF /* CoutdownTimerViewOutput.swift in Sources */,
+				6788E00B2BB626002592A201 /* CoutdownTimerViewController.swift in Sources */,
+				CF1ACEF9B68747480B6EDA2B /* CoutdownTimerModuleInput.swift in Sources */,
+				ACB1C2D4A33580366DD1DF59 /* CoutdownTimerPresenter.swift in Sources */,
+				2DD475923B2D621D84BA9FD0 /* CoutdownTimerInteractorInput.swift in Sources */,
+				13678F411C7D714A2BFA092A /* CoutdownTimerInteractorOutput.swift in Sources */,
+				CC7EDFABB7F84EBBCE3F5ECF /* CoutdownTimerInteractor.swift in Sources */,
+				7A788699FFD5FD31F7C48738 /* CoutdownTimerRouterInput.swift in Sources */,
+				18156A97236338A6D4522609 /* CoutdownTimerRouter.swift in Sources */,
+				2B6149C097C174AC315359AF /* CoutdownTimerAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1466,6 +1625,11 @@
 				8DF963AFF68572ADDE28D3E3 /* ClassicTimerInteractorTests.swift in Sources */,
 				C234264C5E0F73B944FCCB19 /* ClassicTimerPresenterTests.swift in Sources */,
 				9A0C80CC3FB9ACB501085EA2 /* ClassicTimerRouterTests.swift in Sources */,
+				C0634B5ADA5C9799CDFEB819 /* CoutdownTimerConfiguratorTests.swift in Sources */,
+				33AE6E4BA3FC34AD86A6C5DB /* CoutdownTimerViewTests.swift in Sources */,
+				917E3D1A724E622C59D9DCDF /* CoutdownTimerInteractorTests.swift in Sources */,
+				E8E9969366B0A6C8D26D07C5 /* CoutdownTimerPresenterTests.swift in Sources */,
+				479F3FA12A648AB34B2AB525 /* CoutdownTimerRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

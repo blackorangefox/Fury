@@ -685,7 +685,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY RESULT IS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAv-I2-aJ1">
-                                <rect key="frame" x="164" y="107.5" width="153.5" height="26"/>
+                                <rect key="frame" x="163.5" y="108" width="153.5" height="26"/>
                                 <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -800,6 +800,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A3m-Pm-SCe">
                                 <rect key="frame" x="0.0" y="77" width="667" height="74"/>
                                 <subviews>
+                                    <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F7z-Dg-WeD">
+                                        <rect key="frame" x="293" y="-78" width="80" height="229"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="qII-bA-OX0"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="zAH-4U-bb5"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8se-8b-Lu1">
+                                        <rect key="frame" x="293" y="-78" width="80" height="229"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Now-8j-NtO"/>
+                                            <constraint firstAttribute="width" constant="80" id="ymB-1S-wX2"/>
+                                        </constraints>
+                                    </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIN ∙ SEC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAd-Zl-FH8">
                                         <rect key="frame" x="163.5" y="41" width="68" height="15"/>
                                         <constraints>
@@ -828,33 +844,11 @@
                                     <constraint firstItem="YAd-Zl-FH8" firstAttribute="top" secondItem="fhV-ri-z5r" secondAttribute="bottom" constant="1" id="vFs-N9-Yza"/>
                                 </constraints>
                             </view>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8se-8b-Lu1">
-                                <rect key="frame" x="273.5" y="0.0" width="80" height="229"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Now-8j-NtO"/>
-                                    <constraint firstAttribute="width" constant="80" id="ymB-1S-wX2"/>
-                                </constraints>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F7z-Dg-WeD">
-                                <rect key="frame" x="353.5" y="0.0" width="80" height="229"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="qII-bA-OX0"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="zAH-4U-bb5"/>
-                                </constraints>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.062965318559999997" green="0.066727966070000005" blue="0.070717096330000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="8se-8b-Lu1" firstAttribute="top" secondItem="u4k-Dy-Qvf" secondAttribute="topMargin" id="1Dn-Mh-T5R"/>
                             <constraint firstItem="A3m-Pm-SCe" firstAttribute="centerY" secondItem="u4k-Dy-Qvf" secondAttribute="centerY" id="B3i-vv-RVw"/>
-                            <constraint firstAttribute="bottom" secondItem="F7z-Dg-WeD" secondAttribute="bottom" id="Ku2-ax-9gc"/>
                             <constraint firstItem="A3m-Pm-SCe" firstAttribute="leading" secondItem="u4k-Dy-Qvf" secondAttribute="leading" id="NJP-YT-QcZ"/>
-                            <constraint firstItem="K3r-2D-Qvr" firstAttribute="top" secondItem="8se-8b-Lu1" secondAttribute="bottom" id="dBA-SN-25V"/>
-                            <constraint firstItem="F7z-Dg-WeD" firstAttribute="centerX" secondItem="u4k-Dy-Qvf" secondAttribute="centerX" constant="60" id="gmf-is-BSx"/>
-                            <constraint firstItem="F7z-Dg-WeD" firstAttribute="leading" secondItem="8se-8b-Lu1" secondAttribute="trailing" id="j1l-qc-HP5"/>
-                            <constraint firstItem="F7z-Dg-WeD" firstAttribute="top" secondItem="u4k-Dy-Qvf" secondAttribute="top" id="rIG-ez-AH4"/>
                             <constraint firstAttribute="trailing" secondItem="A3m-Pm-SCe" secondAttribute="trailing" id="ufX-Zr-Q46"/>
                         </constraints>
                     </view>
