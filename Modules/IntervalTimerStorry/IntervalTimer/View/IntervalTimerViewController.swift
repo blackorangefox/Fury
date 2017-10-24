@@ -81,6 +81,7 @@ class IntervalTimerViewController: UIViewController, IntervalTimerViewInput {
     }
     
     @IBAction func finishButton(_ sender: Any) {
+        output.finishButton()
     }
     
     @IBAction func continuePress(_ sender: Any) {

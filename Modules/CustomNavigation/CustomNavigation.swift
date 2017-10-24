@@ -24,6 +24,7 @@ class CustomNavigation: UIViewController, CustomNavigationProtocol, RootContaine
         super.viewDidLoad()
         classicTimerController = initClassicTimerController()
         intervalTimerController = initIntervalTimerController()
+        countdownTimerController = initCountdownTimerControlle()
         
         self.addSubview(classicTimerController, container: mainContainer)
         currentViewController = classicTimerController
@@ -47,6 +48,11 @@ class CustomNavigation: UIViewController, CustomNavigationProtocol, RootContaine
     
     func initIntervalTimerController() -> UINavigationController {
         let controller = GlobalAssembly.resolve(type: IntervalTimerSettingViewInput.self) as! UIViewController
+        return createNavigation(vc: controller)
+    }
+    
+    func initCountdownTimerControlle() -> UINavigationController {
+        let controller = GlobalAssembly.resolve(type: CoutdownTimerViewInput.self) as! UIViewController
         return createNavigation(vc: controller)
     }
     

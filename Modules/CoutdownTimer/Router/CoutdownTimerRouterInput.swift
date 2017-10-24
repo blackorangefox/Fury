@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol CoutdownTimerRouterInput {
 
-	weak var view: CoutdownTimerViewController? { get set }
+	weak var view: UIViewController? { get set }
 
 }

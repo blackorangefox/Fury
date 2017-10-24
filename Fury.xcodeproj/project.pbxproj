@@ -777,6 +777,7 @@
 				B410823B1ED2F6FC00D285AC /* Music */,
 				B42404041EC48C19000EE6DC /* Extension */,
 				B47539A91EB9EF72008B3A1D /* Fonts */,
+				B45D6E691F13D50F00A725D8 /* Service */,
 				B47539781EB4DDE0008B3A1D /* Fury */,
 				B475398D1EB4DDE0008B3A1D /* FuryTests */,
 				B47539981EB4DDE0008B3A1D /* FuryUITests */,
@@ -801,7 +802,6 @@
 		B47539781EB4DDE0008B3A1D /* Fury */ = {
 			isa = PBXGroup;
 			children = (
-				B45D6E691F13D50F00A725D8 /* Service */,
 				B4A89C691EBC68AF00A78DC7 /* NavigationContainer */,
 				B4753A3F1EB9FCE8008B3A1D /* MainContainer */,
 				B4753A3C1EB9FB18008B3A1D /* BottomContainer */,
@@ -1779,6 +1779,7 @@
 				DEVELOPMENT_TEAM = 8U3EZY8K9K;
 				INFOPLIST_FILE = Fury/Info.plist;
 				INSTALL_GROUP = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nova9.Fury;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1798,6 +1799,7 @@
 				DEVELOPMENT_TEAM = 8U3EZY8K9K;
 				INFOPLIST_FILE = Fury/Info.plist;
 				INSTALL_GROUP = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.nova9.Fury;
 				PRODUCT_NAME = "$(TARGET_NAME)";

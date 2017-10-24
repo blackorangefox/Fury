@@ -10,5 +10,10 @@ import UIKit
 class IntervalTimerRouter: IntervalTimerRouterInput {
 	
 	var viewController : UIViewController?
+    
+    func closeView() {
+        viewController?.dismiss(animated: true, completion: nil)
+    }
 	
 }
+

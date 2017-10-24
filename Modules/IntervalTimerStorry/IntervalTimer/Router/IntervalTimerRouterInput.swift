@@ -12,4 +12,5 @@ protocol IntervalTimerRouterInput {
 
 	weak var viewController: UIViewController? { get set }
 
+    func closeView()
 }

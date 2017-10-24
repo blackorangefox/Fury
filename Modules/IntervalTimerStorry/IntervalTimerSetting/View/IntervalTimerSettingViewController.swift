@@ -24,6 +24,10 @@ class IntervalTimerSettingViewController: UIViewController, IntervalTimerSetting
     let secondLapDS = IntervatSettingDDM(startFromZero: true)
 
     // MARK: Life cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()

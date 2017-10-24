@@ -16,8 +16,8 @@ static func configure() {
         let cont = defaultContainer()
 
         cont.register(CoutdownTimerViewInput.self) { resolver in
-            let story = UIStoryboard.init(name: "CoutdownTimerView", bundle: nil)
-            let controller = story.instantiateViewController(withIdentifier: "CoutdownTimerView") as! CoutdownTimerViewController
+            let story = UIStoryboard.init(name: "CoutdownTimerViewController", bundle: nil)
+            let controller = story.instantiateViewController(withIdentifier: "CoutdownTimerViewController") as! CoutdownTimerViewController
             controller.output = resolver.resolve(CoutdownTimerViewOutput.self, argument: (controller as CoutdownTimerViewInput))
             return controller
         }.inObjectScope(.transient)

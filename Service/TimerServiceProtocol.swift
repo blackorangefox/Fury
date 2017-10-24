@@ -12,8 +12,6 @@ protocol TimerServiceProtocol {
     var delegate: TimerServiceDelegate! {get set}
     
     func startWith(time: Date, type: TimerType)
-    func applicationDidBecomeActive()
-    func applicationDidEnterBackground()
     func resume()
     func pause()
 }

@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Coutdown Timer View Controller-->
         <scene sceneID="usY-cx-uwf">
             <objects>
-                <viewController id="Frc-QL-nB2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoutdownTimerViewController" id="Frc-QL-nB2" customClass="CoutdownTimerViewController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="xlI-0L-3AI">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

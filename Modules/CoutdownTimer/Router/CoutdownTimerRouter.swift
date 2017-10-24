@@ -6,8 +6,10 @@
 //  Copyright © 2017 nova9. All rights reserved.
 //
 
+import UIKit
+
 class CoutdownTimerRouter: CoutdownTimerRouterInput {
 	
-	var view : CoutdownTimerViewController?
+	var view : UIViewController?
 	
 }

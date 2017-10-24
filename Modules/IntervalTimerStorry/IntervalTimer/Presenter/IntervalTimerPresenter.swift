@@ -43,6 +43,10 @@ class IntervalTimerPresenter: IntervalTimerModuleInput, IntervalTimerViewOutput,
         timerService.resume()
     }
     
+    func finishButton() {
+        router.closeView()
+    }
+    
     //MARK - TimerServiceDelegate
     
     func timerFinish() {

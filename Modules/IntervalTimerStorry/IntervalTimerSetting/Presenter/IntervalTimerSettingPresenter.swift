@@ -38,7 +38,7 @@ class IntervalTimerSettingPresenter: IntervalTimerSettingModuleInput, IntervalTi
     }
     
     func setVolume() {
-        (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(1, animated: true)
+      //  (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(1, animated: false)
     }
     
     func classicButtonPress() {

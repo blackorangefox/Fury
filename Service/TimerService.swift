@@ -40,38 +40,39 @@ class TimerService: TimerServiceProtocol {
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
     }
     
-    func applicationDidEnterBackground() {
-        if isTimerRunning {
-            let timeToSleep = Date()
-            UserDefaults.standard.set(currenTime, forKey: "currenTime")
-            UserDefaults.standard.set(timeToSleep, forKey: "timeToSleep")
-            print(format.string(from: timeToSleep))
-            timer.invalidate()
-        }
-    }
+//    func applicationDidEnterBackground() {
+//        if isTimerRunning {
+//            let timeToSleep = Date()
+//            UserDefaults.standard.set(currenTime, forKey: "currenTime")
+//            UserDefaults.standard.set(timeToSleep, forKey: "timeToSleep")
+//            print(format.string(from: timeToSleep))
+//            timer.invalidate()
+//
+//        }
+//    }
     
-    func applicationDidBecomeActive() {
-        if isTimerRunning {
-            
-            let timeToSleep: Date = UserDefaults.standard.object(forKey: "timeToSleep") as! Date
-            self.currenTime = UserDefaults.standard.object(forKey: "currenTime") as! Date
-        
-            let timeDidBecome = Date()
-            print("timeToSleep - \(format.string(from: timeToSleep))")
-            print("timeDidBecome - \(format.string(from: timeDidBecome))")
-            print("currenTime - \(format.string(from: currenTime))")
-            
-            let difirent = timeDidBecome - timeToSleep
-            switch self.type! {
-            case .countdown, .interval:                
-                currenTime.addTimeInterval(-difirent)
-            default:
-                currenTime.addTimeInterval(difirent)
-            }
-            print("new currenTime - \(format.string(from: currenTime))")
-            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-        }
-    }
+//    func applicationDidBecomeActive() {
+//        if isTimerRunning {
+//
+//            let timeToSleep: Date = UserDefaults.standard.object(forKey: "timeToSleep") as! Date
+//            self.currenTime = UserDefaults.standard.object(forKey: "currenTime") as! Date
+//
+//            let timeDidBecome = Date()
+//            print("timeToSleep - \(format.string(from: timeToSleep))")
+//            print("timeDidBecome - \(format.string(from: timeDidBecome))")
+//            print("currenTime - \(format.string(from: currenTime))")
+//
+//            let difirent = timeDidBecome - timeToSleep
+//            switch self.type! {
+//            case .countdown, .interval:
+//                currenTime.addTimeInterval(-difirent)
+//            default:
+//                currenTime.addTimeInterval(difirent)
+//            }
+//            print("new currenTime - \(format.string(from: currenTime))")
+//            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+//        }
+//    }
     
     func resume() {
         startWith(time: currenTime, type: type)
@@ -88,6 +89,7 @@ class TimerService: TimerServiceProtocol {
         currenTime.addTimeInterval(-0.01)
         if self.format.string(from: currenTime!) == "00:00:00" {
             timer.invalidate()
+            isTimerRunning = false
             delegate.timerFinish()
             return
         }

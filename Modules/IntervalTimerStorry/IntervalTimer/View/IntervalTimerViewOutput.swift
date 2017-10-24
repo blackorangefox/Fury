@@ -16,4 +16,5 @@ protocol IntervalTimerViewOutput {
     func viewIsReady()
     func pauseButtonPress()
     func continuePress()
+    func finishButton()
 }
