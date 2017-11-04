@@ -31,7 +31,7 @@ class IntervatSettingDDM: NSObject, UIPickerViewDataSource, UIPickerViewDelegate
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let color = (row == pickerView.selectedRow(inComponent: component)) ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.3)
-        return NSAttributedString(string: "\(row)", attributes: [NSForegroundColorAttributeName: color])
+        return NSAttributedString(string: "\(row)", attributes: [NSAttributedStringKey.foregroundColor: color])
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -47,7 +47,7 @@ class IntervatSettingDDM: NSObject, UIPickerViewDataSource, UIPickerViewDelegate
         let font = (row == pickerView.selectedRow(inComponent: component)) ? UIFont(name: "Roboto-Bold", size: 48.0)! : UIFont(name: "Roboto-Bold", size: 36.0)!
         let color = (row == pickerView.selectedRow(inComponent: component)) ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.3)
         let titleString = startFromZero ? "\(row)" : "\(row+1)"
-        let title = NSAttributedString(string: titleString, attributes: [NSFontAttributeName: font])
+        let title = NSAttributedString(string: titleString, attributes: [NSAttributedStringKey.font: font])
         label?.attributedText = title
         label?.textColor = color
         label?.textAlignment = .center

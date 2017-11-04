@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -73,7 +73,7 @@
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="77" translatesAutoresizingMaskIntoConstraints="NO" id="RGG-cc-tc5">
-                                <rect key="frame" x="0.0" y="82" width="667" height="229"/>
+                                <rect key="frame" x="-24" y="82" width="715" height="229"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="154"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -166,7 +166,7 @@
                             <constraint firstItem="RGG-cc-tc5" firstAttribute="top" secondItem="1Rz-2Y-gb7" secondAttribute="bottom" id="76E-7z-Rv6"/>
                             <constraint firstItem="Ejp-Zb-Ca3" firstAttribute="trailing" secondItem="xSB-fw-mlZ" secondAttribute="trailing" id="7um-Cq-lgf"/>
                             <constraint firstItem="psh-ed-fmi" firstAttribute="leading" secondItem="xSB-fw-mlZ" secondAttribute="leading" id="9fN-F5-tLz"/>
-                            <constraint firstItem="RGG-cc-tc5" firstAttribute="trailing" secondItem="xSB-fw-mlZ" secondAttribute="trailing" id="F4i-fW-dsh"/>
+                            <constraint firstItem="RGG-cc-tc5" firstAttribute="trailing" secondItem="xSB-fw-mlZ" secondAttribute="trailing" constant="24" id="F4i-fW-dsh"/>
                             <constraint firstItem="nzb-MY-Kb2" firstAttribute="top" secondItem="RGG-cc-tc5" secondAttribute="bottom" id="G7e-9o-Gxf"/>
                             <constraint firstAttribute="bottom" secondItem="LKQ-6X-3OE" secondAttribute="bottom" constant="-65" id="HaM-Gg-7TD"/>
                             <constraint firstItem="nzb-MY-Kb2" firstAttribute="leading" secondItem="xSB-fw-mlZ" secondAttribute="leading" id="Jk6-cD-3Z3"/>
@@ -175,7 +175,7 @@
                             <constraint firstItem="psh-ed-fmi" firstAttribute="trailing" secondItem="xSB-fw-mlZ" secondAttribute="trailing" id="SNk-3O-V3Y"/>
                             <constraint firstItem="1Rz-2Y-gb7" firstAttribute="trailing" secondItem="xSB-fw-mlZ" secondAttribute="trailing" id="TnV-sX-DXz"/>
                             <constraint firstItem="nzb-MY-Kb2" firstAttribute="trailing" secondItem="xSB-fw-mlZ" secondAttribute="trailing" id="W9N-OM-0GE"/>
-                            <constraint firstItem="RGG-cc-tc5" firstAttribute="leading" secondItem="xSB-fw-mlZ" secondAttribute="leading" id="Zhc-79-knk"/>
+                            <constraint firstItem="xSB-fw-mlZ" firstAttribute="leading" secondItem="RGG-cc-tc5" secondAttribute="leading" constant="24" id="Zhc-79-knk"/>
                             <constraint firstItem="Ejp-Zb-Ca3" firstAttribute="top" secondItem="1Rz-2Y-gb7" secondAttribute="bottom" id="dkf-Do-zBI"/>
                             <constraint firstItem="LKQ-6X-3OE" firstAttribute="trailing" secondItem="xSB-fw-mlZ" secondAttribute="trailing" id="feO-Oo-oiy"/>
                             <constraint firstItem="nzb-MY-Kb2" firstAttribute="bottom" secondItem="xSB-fw-mlZ" secondAttribute="bottom" id="hCP-Nr-UdR"/>

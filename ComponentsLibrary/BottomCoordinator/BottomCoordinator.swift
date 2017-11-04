@@ -13,10 +13,11 @@ protocol BottomViewControllerDelegate: class {
     func pauseButtonPress()
     func finishButtonPress()
     func continueButtonPress()
+    func resetButtonPress()
 }
 
 class BottomCoordinator: UIViewController, RootContainerControllerProtocol, LetsGoViewDelegate, PauseViewDelegate, FinishOrContinueViewDelegate, FinishViewDelegate {
-    
+ 
     weak var delegate: BottomViewControllerDelegate!
     var letsGoView: LetsGoView!
     var pauseView: PauseView!
@@ -81,4 +82,9 @@ class BottomCoordinator: UIViewController, RootContainerControllerProtocol, Lets
     func continueButtonPress() {
         self.delegate.continueButtonPress()
     }
+    
+    func resetButtonPress() {
+        self.delegate.resetButtonPress()
+    }
+    
 }

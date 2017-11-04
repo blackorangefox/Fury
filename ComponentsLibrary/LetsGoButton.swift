@@ -13,6 +13,6 @@ import UIKit
     
     override func draw(_ rect: CGRect) {
         self.backgroundColor = UIColor.furyYellowGreen
-        self.titleLabel?.attributedText = NSAttributedString(string: "LET’S GO", attributes: [NSFontAttributeName: UIFont.furyTextStyle3Font()!])
+        self.titleLabel?.attributedText = NSAttributedString(string: "LET’S GO", attributes: [NSAttributedStringKey.font: UIFont.furyTextStyle3Font()!])
     }
 }

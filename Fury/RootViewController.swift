@@ -94,6 +94,10 @@ class RootViewController: UIViewController, RootContainerControllerProtocol, Bot
     func timerFinish() {
         //bottomViewController.timerFinish()
     }
+    
+    func resetButtonPress() {
+        
+    }
 
     func openIntervatController() {
         self.navigationMainController.changeToIntervanNavigationController()

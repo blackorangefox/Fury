@@ -13,6 +13,7 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
     
     @IBOutlet weak var bottomContainer: UIView!
     @IBOutlet weak var timeLabel: UILabel!
+    
     var output: ClassicTimerViewOutput!
     var bottomViewController: BottomCoordinator!
     
@@ -20,7 +21,9 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
+        timeLabel.adjustsFontSizeToFitWidth = true
         setBottonView()
+        timeLabel.sizeToFit()
     }
     
     func setBottonView() {
@@ -73,5 +76,9 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
     
     func continueButtonPress() {
         output.continueButtonPress()
+    }
+    
+    func resetButtonPress() {
+        output.resetButtonPress()
     }
 }

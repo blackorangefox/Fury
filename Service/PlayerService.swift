@@ -29,7 +29,7 @@ class PlayerService {
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setCategory(AVAudioSessionCategoryPlayback, with: [AVAudioSessionCategoryOptions.mixWithOthers]) //Causes audio from other sessions to be ducked (reduced in volume) while audio from this session plays
         try! audioSession.setActive(true)
-        AVPlayerItemDidPlayToEndTimeNotification
+        //
         if let path = Bundle.main.path(forResource: name, ofType: "mp3") {
             let filePath = NSURL(fileURLWithPath:path)
             songPlayer = try! AVAudioPlayer.init(contentsOf: filePath as URL)

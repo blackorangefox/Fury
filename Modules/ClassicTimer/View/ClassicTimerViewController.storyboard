@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="landscape">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,45 +20,109 @@
             <objects>
                 <viewController storyboardIdentifier="ClassicTimerViewController" id="db9-ID-aEY" customClass="ClassicTimerViewController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3T4-eL-gWE">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFC-Um-rjg">
-                                <rect key="frame" x="0.0" y="311" width="667" height="64"/>
+                                <rect key="frame" x="0.0" y="546" width="375" height="232"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="8Bn-xm-g0m"/>
+                                    <constraint firstAttribute="height" constant="232" id="8Bn-xm-g0m"/>
+                                    <constraint firstAttribute="height" constant="88" id="ISS-Yi-ZNO"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8Bn-xm-g0m"/>
+                                        <exclude reference="ISS-Yi-ZNO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ISS-Yi-ZNO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="ISS-Yi-ZNO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8Bn-xm-g0m"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="8Bn-xm-g0m"/>
+                                    </mask>
+                                </variation>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="77" translatesAutoresizingMaskIntoConstraints="NO" id="FgB-xo-q1F">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="311"/>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="154"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="wsD-28-FVg">
+                                <rect key="frame" x="24" y="282" width="327" height="120.33333333333331"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="269"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="154"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="172"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="91"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="324"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.062745098040000002" green="0.066666666669999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FgB-xo-q1F" firstAttribute="leading" secondItem="qFO-rO-hnO" secondAttribute="leading" id="4IH-S7-pXJ"/>
-                            <constraint firstItem="FgB-xo-q1F" firstAttribute="top" secondItem="qFO-rO-hnO" secondAttribute="top" id="Ahh-ec-t73"/>
+                            <constraint firstItem="qFO-rO-hnO" firstAttribute="trailing" secondItem="wsD-28-FVg" secondAttribute="trailing" constant="24" id="3aX-8t-Q93"/>
+                            <constraint firstItem="wsD-28-FVg" firstAttribute="centerY" secondItem="3T4-eL-gWE" secondAttribute="centerY" id="DqB-PM-gss"/>
+                            <constraint firstItem="wsD-28-FVg" firstAttribute="centerY" secondItem="3T4-eL-gWE" secondAttribute="centerY" constant="-64" id="Hcl-gQ-Jea"/>
                             <constraint firstItem="LFC-Um-rjg" firstAttribute="leading" secondItem="qFO-rO-hnO" secondAttribute="leading" id="STM-zB-V2d"/>
                             <constraint firstItem="LFC-Um-rjg" firstAttribute="bottom" secondItem="qFO-rO-hnO" secondAttribute="bottom" id="UiE-4s-zDh"/>
-                            <constraint firstItem="LFC-Um-rjg" firstAttribute="top" secondItem="FgB-xo-q1F" secondAttribute="bottom" id="o0k-fj-HZu"/>
-                            <constraint firstItem="qFO-rO-hnO" firstAttribute="trailing" secondItem="FgB-xo-q1F" secondAttribute="trailing" id="sJE-wC-JKJ"/>
+                            <constraint firstItem="wsD-28-FVg" firstAttribute="leading" secondItem="qFO-rO-hnO" secondAttribute="leading" constant="24" id="r12-Do-pHk"/>
+                            <constraint firstItem="wsD-28-FVg" firstAttribute="centerY" secondItem="3T4-eL-gWE" secondAttribute="centerY" id="tB8-W4-MWW"/>
                             <constraint firstItem="qFO-rO-hnO" firstAttribute="trailing" secondItem="LFC-Um-rjg" secondAttribute="trailing" id="xgL-hy-JnT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qFO-rO-hnO"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DqB-PM-gss"/>
+                                <exclude reference="tB8-W4-MWW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="DqB-PM-gss"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="tB8-W4-MWW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="tB8-W4-MWW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="bottomContainer" destination="LFC-Um-rjg" id="JVQ-Xh-VaY"/>
-                        <outlet property="timeLabel" destination="FgB-xo-q1F" id="fxZ-FP-cae"/>
+                        <outlet property="timeLabel" destination="wsD-28-FVg" id="73Q-5D-b6D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHc-ay-dZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-251" y="-329"/>
+            <point key="canvasLocation" x="-979.22535211267609" y="-427.5"/>
         </scene>
     </scenes>
 </document>

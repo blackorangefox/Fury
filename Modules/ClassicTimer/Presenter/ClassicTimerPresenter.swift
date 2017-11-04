@@ -44,7 +44,7 @@ class ClassicTimerPresenter: ClassicTimerModuleInput, ClassicTimerViewOutput, Cl
     }
     
     func finishButtonPress() {
-        
+    
     }
     
     func continueButtonPress() {
@@ -54,5 +54,9 @@ class ClassicTimerPresenter: ClassicTimerModuleInput, ClassicTimerViewOutput, Cl
     
     func intervalButtonPress() {
         router.openIntervalTimer()
+    }
+    
+    func resetButtonPress() {
+        letsGoButtonPress()
     }
 }

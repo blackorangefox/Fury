@@ -9,12 +9,11 @@
 import UIKit
 
 class ClassicTimerRouter: ClassicTimerRouterInput {
-	
-	var view : UIViewController?
-	
-    // контрллеры постоянно плодяться - раходуется память
+    
     func openIntervalTimer() {
-        let newView = GlobalAssembly.resolve(type: IntervalTimerSettingViewInput.self) as! UIViewController
-        view?.present(newView, animated: true, completion: nil)
+        
     }
+    
+	var view : UIViewController?
+
 }

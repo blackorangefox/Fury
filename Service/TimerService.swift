@@ -27,6 +27,7 @@ class TimerService: TimerServiceProtocol {
     
     
     func startWith(time: Date, type: TimerType) {
+        timer.invalidate()
         self.currenTime = time
         format.dateFormat = "mm:ss:SS"
         self.type = type
@@ -73,11 +74,12 @@ class TimerService: TimerServiceProtocol {
 //            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
 //        }
 //    }
-    
+     
     func resume() {
         startWith(time: currenTime, type: type)
         self.isTimerRunning = true
     }
+    
     
     func pause() {
         timer.invalidate()
@@ -85,6 +87,7 @@ class TimerService: TimerServiceProtocol {
     }
     
     //MARK: - Private
+    
     @objc private func updateCountdownTime() {
         currenTime.addTimeInterval(-0.01)
         if self.format.string(from: currenTime!) == "00:00:00" {
@@ -96,6 +99,7 @@ class TimerService: TimerServiceProtocol {
         print("currenTime - \(format.string(from: currenTime))")
         delegate.newTime(time: currenTime)
     }
+    
     
     @objc private func updateClassicTime() {
         currenTime.addTimeInterval(0.01)
