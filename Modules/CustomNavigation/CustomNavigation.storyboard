@@ -6,15 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Oswald-Bold.ttf">
-            <string>Oswald-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Custom Navigation-->
         <scene sceneID="LzL-H0-K2Z">
@@ -34,57 +28,51 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0b-Jt-4pv">
                                 <rect key="frame" x="0.0" y="44" width="375" height="62"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XA-g5-szw">
-                                        <rect key="frame" x="12" y="10" width="108" height="37"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jtn-P6-trT">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="108" id="JL9-BE-2EX"/>
-                                            <constraint firstAttribute="height" constant="37" id="KL5-We-YMo"/>
+                                            <constraint firstAttribute="height" constant="62" id="QvV-oN-xsU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
-                                        <state key="normal" title="CLASSIC">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="classicTimerButtonPress:" destination="Pn1-3K-TZU" eventType="touchUpInside" id="OCx-g8-sfE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkL-T5-iv3">
-                                        <rect key="frame" x="144" y="10" width="117" height="37"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="117" id="Vim-wv-awx"/>
-                                            <constraint firstAttribute="height" constant="37" id="vDP-r0-3rV"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
-                                        <state key="normal" title="INTERVAL">
-                                            <color key="titleColor" red="0.76078431369999999" green="1" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="intervalTimerButtonPress:" destination="Pn1-3K-TZU" eventType="touchUpInside" id="Vpb-DF-1f1"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocZ-9h-jz5">
-                                        <rect key="frame" x="285" y="10" width="151" height="37"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="vfZ-Dy-RDt"/>
-                                            <constraint firstAttribute="width" constant="151" id="vls-dP-4mc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="28"/>
-                                        <state key="normal" title="COUNTDOWN">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="countdownTimerButtonPress:" destination="Pn1-3K-TZU" eventType="touchUpInside" id="u2n-L4-m5l"/>
-                                        </connections>
-                                    </button>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="sWQ-YG-06u">
+                                            <size key="itemSize" width="282" height="62"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomNavigationCell" id="27M-AG-Qj7" customClass="CustomNavigationCell" customModule="Fury" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="282" height="62"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="282" height="62"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpV-lK-VtE">
+                                                            <rect key="frame" x="107.66666666666666" y="15.999999999999998" width="66.666666666666657" height="31.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                            <color key="textColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="ZpV-lK-VtE" firstAttribute="centerX" secondItem="27M-AG-Qj7" secondAttribute="centerX" id="Lhc-Zt-ASh"/>
+                                                    <constraint firstItem="ZpV-lK-VtE" firstAttribute="centerY" secondItem="27M-AG-Qj7" secondAttribute="centerY" id="YWv-QH-FwA"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="titleLabel" destination="ZpV-lK-VtE" id="CUd-Z0-KHa"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="ocZ-9h-jz5" firstAttribute="leading" secondItem="EkL-T5-iv3" secondAttribute="trailing" constant="24" id="EoT-Dq-zvQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="EkL-T5-iv3" secondAttribute="bottom" constant="15" id="HqB-M8-eQ8"/>
-                                    <constraint firstItem="1XA-g5-szw" firstAttribute="leading" secondItem="C0b-Jt-4pv" secondAttribute="leadingMargin" constant="4" id="aVJ-dZ-QIc"/>
-                                    <constraint firstAttribute="bottom" secondItem="ocZ-9h-jz5" secondAttribute="bottom" constant="15" id="tIc-ai-7ip"/>
-                                    <constraint firstItem="EkL-T5-iv3" firstAttribute="leading" secondItem="1XA-g5-szw" secondAttribute="trailing" constant="24" id="u49-l6-RfH"/>
-                                    <constraint firstAttribute="bottom" secondItem="1XA-g5-szw" secondAttribute="bottom" constant="15" id="u7s-rc-QZ8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jtn-P6-trT" secondAttribute="trailing" id="An2-ep-cZ1"/>
+                                    <constraint firstItem="Jtn-P6-trT" firstAttribute="leading" secondItem="C0b-Jt-4pv" secondAttribute="leading" id="crf-oE-waS"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jtn-P6-trT" secondAttribute="bottom" id="rad-Du-j5A"/>
                                     <constraint firstAttribute="height" constant="62" id="ygi-c8-y5g"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -115,15 +103,13 @@
                         <viewLayoutGuide key="safeArea" id="rNj-Rq-voB"/>
                     </view>
                     <connections>
-                        <outlet property="classicTimerButton" destination="1XA-g5-szw" id="Zer-Gw-cjL"/>
-                        <outlet property="countdownTimerButton" destination="ocZ-9h-jz5" id="j1o-vV-SmQ"/>
-                        <outlet property="intervalTimerButton" destination="EkL-T5-iv3" id="jHE-zG-0lR"/>
+                        <outlet property="collectionView" destination="Jtn-P6-trT" id="LR7-Jy-jiB"/>
                         <outlet property="mainContainer" destination="kkh-nJ-6WN" id="V3N-qt-6j5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1C-Vn-YRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-759.5" y="69"/>
+            <point key="canvasLocation" x="-973.5" y="62"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="19G-ao-5Pi">
