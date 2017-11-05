@@ -32,11 +32,7 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
         bottomViewController.delegate = self
         self.addSubview(self.bottomViewController, container: bottomContainer)
     }
-    
-    @IBAction func intervalButtonPress(_ sender: Any) {
-        output.intervalButtonPress()
-    }
-    
+        
     // MARK: ClassicTimerViewInput
     func setupInitialState() {
     }
@@ -46,6 +42,7 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
     }
     
     func showLetGoButton() {
+        timeLabel.text = "00:00:00"
         bottomViewController.showLetGoButton()
     }
     
@@ -71,7 +68,7 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
     }
     
     func finishButtonPress() {
-        output.finishButtonPress()
+        output.finishButtonPress(with: timeLabel.text!)
     }
     
     func continueButtonPress() {

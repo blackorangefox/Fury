@@ -16,8 +16,7 @@ protocol ClassicTimerViewOutput {
     func viewIsReady()
     func letsGoButtonPress()
     func pauseButtonPress()
-    func finishButtonPress()
+    func finishButtonPress(with time: String)
     func continueButtonPress()
-    func intervalButtonPress()
     func resetButtonPress()
 }

@@ -35,7 +35,7 @@ class ClassicTimerPresenter: ClassicTimerModuleInput, ClassicTimerViewOutput, Cl
     }
     
     func timerFinish() {
-        
+        view.showFinishOrContinueButton()
     }
     
     func pauseButtonPress() {
@@ -43,17 +43,14 @@ class ClassicTimerPresenter: ClassicTimerModuleInput, ClassicTimerViewOutput, Cl
         view.showFinishOrContinueButton()
     }
     
-    func finishButtonPress() {
-    
+    func finishButtonPress(with time: String) {
+        view.showLetGoButton()
+        router.openFinishView(with: time)
     }
     
     func continueButtonPress() {
         timerService.resume()
         view.showPauseButton()
-    }
-    
-    func intervalButtonPress() {
-        router.openIntervalTimer()
     }
     
     func resetButtonPress() {

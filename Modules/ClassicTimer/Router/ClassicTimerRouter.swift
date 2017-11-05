@@ -9,11 +9,14 @@
 import UIKit
 
 class ClassicTimerRouter: ClassicTimerRouterInput {
+
+	var view : UIViewController!
     
-    func openIntervalTimer() {
-        
+    func openFinishView(with time: String) {
+        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let controller = story.instantiateViewController(withIdentifier: "ResultController") as! ResultController
+        controller.ruselt = time
+        view!.present(controller, animated: true, completion: nil)
     }
-    
-	var view : UIViewController?
 
 }

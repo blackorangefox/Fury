@@ -11,7 +11,6 @@ import UIKit
 
 protocol ClassicTimerRouterInput {
 
-	weak var view: UIViewController? { get set }
-    
-    func openIntervalTimer()
+	weak var view: UIViewController! { get set }
+    func openFinishView(with time: String)
 }
