@@ -31,7 +31,7 @@ class IntervalTimerPresenter: IntervalTimerModuleInput, IntervalTimerViewOutput,
             timeArray = createTimeArrayWithoutRest(lapTime: intervalTimerStory.roundTime, laps: laps)
         }
         
-        timerService.startWith(time: intervalTimerStory.roundTime, type: intervalTimerStory.type)
+        //timerService.startWith(time: intervalTimerStory.roundTime, type: intervalTimerStory.type)
         timerService.delegate = self
     }
     
@@ -54,7 +54,7 @@ class IntervalTimerPresenter: IntervalTimerModuleInput, IntervalTimerViewOutput,
         view.newTime(time: "00:00:00")
         if counter < timeArray.count {
             let time = self.timeArray[counter]
-            timerService.startWith(time: time, type: .countdown)
+         //   timerService.startWith(time: time, type: .countdown)
             view.nextSegment()
         }else {
             view.timerFinish()

@@ -6,9 +6,10 @@ target 'Fury' do
   use_frameworks!
   pod 'Firebase/Core'
   pod 'Swinject'
-  pod 'SwinjectStoryboard', '~> 1.0.0'
-  pod 'SwiftDate', '~> 4.0'
+  pod 'SwinjectStoryboard'
+  pod 'SwiftDate'
   pod 'Hero'
+  pod 'SwifterSwift'
   # Pods for Fury
 
   target 'FuryTests' do

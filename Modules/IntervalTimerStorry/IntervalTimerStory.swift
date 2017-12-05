@@ -12,5 +12,5 @@ class IntervalTimerStory: IntervalTimerStoryProtocol {
     var laps: Int!
     var roundTime: Date!
     var restDate: Date!
-    var type: TimerType!
+   // var type: TimerType!
 }

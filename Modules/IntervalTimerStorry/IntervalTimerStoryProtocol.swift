@@ -12,5 +12,5 @@ protocol IntervalTimerStoryProtocol {
     var laps: Int! {get set}
     var roundTime: Date! {get set}
     var restDate: Date! {get set}
-    var type: TimerType! {get set}
+
 }

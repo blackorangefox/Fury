@@ -8,11 +8,7 @@
 
 import UIKit
 
-enum TimerType {
-    case classic
-    case interval
-    case countdown
-}
+
 
 class RootViewController: UIViewController, RootContainerControllerProtocol, BottomViewControllerDelegate, NavigationMainControllerDelegate, MainViewCoordinatorDelegate  {
 
@@ -22,7 +18,6 @@ class RootViewController: UIViewController, RootContainerControllerProtocol, Bot
     var bottomViewController: BottomCoordinator!
     var mainViewController: MainViewCoordinator!
     var navigationMainController: NavigationMainCoordinator!
-    var timerType: TimerType!
     
     override func viewDidLoad() {
         startConfiguration()
@@ -43,7 +38,7 @@ class RootViewController: UIViewController, RootContainerControllerProtocol, Bot
         mainViewController.view.translatesAutoresizingMaskIntoConstraints = false
         self.addChildViewController(mainViewController)
         //self.addSubview(subView: self.mainViewController!.view, toView: self.mainContainer)
-        mainViewController.openTimeByType(timerType: .classic)
+       // mainViewController.openTimeByType(timerType: .classic)
         
         navigationMainController = self.storyboard?.instantiateViewController(withIdentifier: "NavigationMainController") as! NavigationMainCoordinator
         navigationMainController.delegate = self
@@ -73,20 +68,20 @@ class RootViewController: UIViewController, RootContainerControllerProtocol, Bot
     
     //MARK: - NavigationMainControllerDelegate
     func classicButtonPress() {
-        timerType = .classic
-        mainViewController.openTimeByType(timerType: timerType)
+        //timerType = .classic
+        //mainViewController.openTimeByType(timerType: timerType)
        // bottomViewController.startConfiguration()
     }
     
     func intervalButtonPress() {
-        timerType = .interval
-        mainViewController.openTimeByType(timerType: timerType)
+       // timerType = .interval
+       // mainViewController.openTimeByType(timerType: timerType)
        // bottomViewController.startConfiguration()
     }
     
     func countdownButtonPress() {
-        timerType = .countdown
-        mainViewController.openTimeByType(timerType: timerType)
+       // timerType = .countdown
+       // mainViewController.openTimeByType(timerType: timerType)
        // bottomViewController.startConfiguration()
     }
 

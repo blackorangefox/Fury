@@ -24,19 +24,12 @@ static func configure() {
 
         cont.register(ClassicTimerViewOutput.self, factory: { (resolver: Resolver, view: ClassicTimerViewInput) in
             let presenter = ClassicTimerPresenter()
-            presenter.interactor = resolver.resolve(ClassicTimerInteractorInput.self, argument: (presenter as ClassicTimerInteractorOutput))
             presenter.router = resolver.resolve(ClassicTimerRouterInput.self, argument: (view as! UIViewController))
             presenter.timerService = resolver.resolve(TimerServiceProtocol.self)
             presenter.view = view
             return presenter
         }).inObjectScope(.transient)
-
-        cont.register(ClassicTimerInteractorInput.self) { (resolver: Resolver, presenter: ClassicTimerInteractorOutput) in
-            let interactor = ClassicTimerInteractor()
-            interactor.output = presenter
-            return interactor
-        }.inObjectScope(.transient)
-
+    
         cont.register(ClassicTimerRouterInput.self) { (resolver: Resolver, view: UIViewController) in
             let router = ClassicTimerRouter()
             router.view = view

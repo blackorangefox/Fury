@@ -1,3 +1,11 @@
+// SwiftDate
+// Manage Date/Time & Timezone in Swift
+//
+// Created by: Daniele Margutti
+// Email: <hello@danielemargutti.com>
+// Web: <http://www.danielemargutti.com>
+//
+// Licensed under MIT License.
 
 import Foundation
 
@@ -44,10 +52,10 @@ public class DOTNETDateTimeFormatter {
 				return nil
 			}
 			
-            guard let milliseconds = TimeInterval((string as NSString).substring(with: match.rangeAt(1))) else { return nil }
+			guard let milliseconds = TimeInterval((string as NSString).substring(with: match.range(at: 1))) else { return nil }
 			
 			// Parse timezone
-            let raw_tz = ((string as NSString).substring(with: match.rangeAt(2)) as NSString)
+			let raw_tz = ((string as NSString).substring(with: match.range(at: 2)) as NSString)
 			guard raw_tz.length > 1 else {
 				return nil
 			}

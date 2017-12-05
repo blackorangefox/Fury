@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController storyboardIdentifier="ClassicTimerViewController" id="db9-ID-aEY" customClass="ClassicTimerViewController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3T4-eL-gWE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFC-Um-rjg">
-                                <rect key="frame" x="0.0" y="546" width="375" height="232"/>
+                                <rect key="frame" x="0.0" y="435" width="375" height="232"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="232" id="8Bn-xm-g0m"/>
                                     <constraint firstAttribute="height" constant="88" id="ISS-Yi-ZNO"/>
@@ -57,7 +57,7 @@
                                 </variation>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="wsD-28-FVg">
-                                <rect key="frame" x="24" y="282" width="327" height="120.33333333333331"/>
+                                <rect key="frame" x="24" y="209.5" width="327" height="120"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -77,6 +77,12 @@
                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="324"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9G-3d-KG5">
+                                <rect key="frame" x="166" y="20" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.062745098040000002" green="0.066666666669999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -84,7 +90,9 @@
                             <constraint firstItem="wsD-28-FVg" firstAttribute="centerY" secondItem="3T4-eL-gWE" secondAttribute="centerY" id="DqB-PM-gss"/>
                             <constraint firstItem="wsD-28-FVg" firstAttribute="centerY" secondItem="3T4-eL-gWE" secondAttribute="centerY" constant="-64" id="Hcl-gQ-Jea"/>
                             <constraint firstItem="LFC-Um-rjg" firstAttribute="leading" secondItem="qFO-rO-hnO" secondAttribute="leading" id="STM-zB-V2d"/>
+                            <constraint firstItem="L9G-3d-KG5" firstAttribute="top" secondItem="qFO-rO-hnO" secondAttribute="top" id="UCF-61-AR9"/>
                             <constraint firstItem="LFC-Um-rjg" firstAttribute="bottom" secondItem="qFO-rO-hnO" secondAttribute="bottom" id="UiE-4s-zDh"/>
+                            <constraint firstItem="L9G-3d-KG5" firstAttribute="centerX" secondItem="3T4-eL-gWE" secondAttribute="centerX" id="o1d-dV-5ys"/>
                             <constraint firstItem="wsD-28-FVg" firstAttribute="leading" secondItem="qFO-rO-hnO" secondAttribute="leading" constant="24" id="r12-Do-pHk"/>
                             <constraint firstItem="wsD-28-FVg" firstAttribute="centerY" secondItem="3T4-eL-gWE" secondAttribute="centerY" id="tB8-W4-MWW"/>
                             <constraint firstItem="qFO-rO-hnO" firstAttribute="trailing" secondItem="LFC-Um-rjg" secondAttribute="trailing" id="xgL-hy-JnT"/>
@@ -117,12 +125,13 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="bottomContainer" destination="LFC-Um-rjg" id="JVQ-Xh-VaY"/>
+                        <outlet property="setsLabel" destination="L9G-3d-KG5" id="WaE-jD-OKJ"/>
                         <outlet property="timeLabel" destination="wsD-28-FVg" id="73Q-5D-b6D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHc-ay-dZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-979.22535211267609" y="-427.5"/>
+            <point key="canvasLocation" x="-980" y="-427.83251231527095"/>
         </scene>
     </scenes>
 </document>

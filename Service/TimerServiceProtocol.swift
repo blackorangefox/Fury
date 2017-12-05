@@ -11,7 +11,7 @@ import Foundation
 protocol TimerServiceProtocol {
     var delegate: TimerServiceDelegate! {get set}
     
-    func startWith(time: Date, type: TimerType)
+   // func startWith(time: Date, type: TimerType)
     func resume()
     func pause()
 }

@@ -38,4 +38,12 @@ extension UIFont {
     class func furyTextStyle3Font() -> UIFont? {
         return UIFont(name: "RobotoCondensed-Bold", size: 26.0)
     }
+    
+    @nonobjc class var furyTextStyle6: UIFont {
+        return UIFont(name: "RobotoCondensed-Regular", size: 48.0)!
+    }
+    
+    @nonobjc class var furyTextStyle7: UIFont {
+        return UIFont(name: "RobotoCondensed-Regular", size: 38.0)!
+    }
 }

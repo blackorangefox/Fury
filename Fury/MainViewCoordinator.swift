@@ -30,7 +30,7 @@ class MainViewCoordinator: UIViewController, RootContainerControllerProtocol, Se
     private let formater = DateFormatter()
     private var timeArray: [Date] = []
     private var iterator = 0
-    private var timerType: TimerType!
+    //private var timerType: TimerType!
     private let playerService = PlayerService()
     private var isFinishTimer: Bool = false
     
@@ -48,7 +48,7 @@ class MainViewCoordinator: UIViewController, RootContainerControllerProtocol, Se
                 self.show(finishController, sender: nil)
             }
         }
-        openTimeByType(timerType: .classic)
+      //  openTimeByType(timerType: .classic)
     }
     
     func isNeedShowSurvey() -> Bool {
@@ -65,23 +65,23 @@ class MainViewCoordinator: UIViewController, RootContainerControllerProtocol, Se
         return false
     }
     
-    public func openTimeByType(timerType: TimerType) {
-        self.timerType = timerType
-        switch timerType {
-        case .interval:
-            showSettingIntervalMainViewController()
-        case .countdown:
-            showCountdowController()
-        default:
-            showTimerController()
-        }
-    }
+//    public func openTimeByType(timerType: TimerType) {
+//        self.timerType = timerType
+//        switch timerType {
+//        case .interval:
+//            showSettingIntervalMainViewController()
+//        case .countdown:
+//            showCountdowController()
+//        default:
+//            showTimerController()
+//        }
+//    }
     
     //MARK: Bottom event
     func letsGoButtonPress() {
         if currentViewController is TimerViewController {
             let time = formater.date(from: "00:00:00")
-            self.startTimer(time: time!, state: .classic)
+            //self.startTimer(time: time!, state: .classic)
             return
         }
         self.currentViewController.letsGoButtonPress()
@@ -96,14 +96,14 @@ class MainViewCoordinator: UIViewController, RootContainerControllerProtocol, Se
     }
     
     func finishButtonPress() {
-        if timerType == TimerType.classic {
-            let resultController = self.storyboard?.instantiateViewController(withIdentifier: "ResultController") as! ResultController
-            resultController.ruselt = timerViewController.timerLabel.text
-            self.present(resultController, animated: false, completion: nil)
-        } else {
-            let finishController = self.storyboard?.instantiateViewController(withIdentifier: "FinishController") as! FinishController
-            self.present(finishController, animated: false, completion: nil)
-        }
+//        if timerType == TimerType.classic {
+//            let resultController = self.storyboard?.instantiateViewController(withIdentifier: "ResultController") as! ResultController
+//            resultController.ruselt = timerViewController.timerLabel.text
+//            self.present(resultController, animated: false, completion: nil)
+//        } else {
+//            let finishController = self.storyboard?.instantiateViewController(withIdentifier: "FinishController") as! FinishController
+//            self.present(finishController, animated: false, completion: nil)
+//        }
         isFinishTimer = true
     }
     
@@ -119,7 +119,7 @@ class MainViewCoordinator: UIViewController, RootContainerControllerProtocol, Se
         }
         let time = self.timeArray.first!
         iterator = iterator + 1
-        self.startTimer(time: time, state: .countdown)
+        //self.startTimer(time: time, state: .countdown)
     }
     
     //MARK: - TimerViewControllerDelegate
@@ -127,7 +127,7 @@ class MainViewCoordinator: UIViewController, RootContainerControllerProtocol, Se
         if self.iterator < self.timeArray.count {
             let time = self.timeArray[iterator]
             iterator = iterator + 1
-            self.timerViewController.startWith(time: time, type: .countdown)
+          //  self.timerViewController.startWith(time: time, type: .countdown)
             self.delegate.nextSegment()
         }else {
             delegate.timerFinish()
@@ -141,7 +141,7 @@ class MainViewCoordinator: UIViewController, RootContainerControllerProtocol, Se
     
     //MARK: - CountdowControllerDelegate
     func setting(time: Date) {
-        self.startTimer(time: time, state: .countdown)
+       // self.startTimer(time: time, state: .countdown)
     }
     
     //MARK: - PreStartControllerDelegate

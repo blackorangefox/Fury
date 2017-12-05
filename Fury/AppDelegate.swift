@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         GlobalAssembly.configure()
         
         timerService = GlobalAssembly.resolve(type: TimerServiceProtocol.self)
-        let vc = GlobalAssembly.resolve(type: CustomNavigationProtocol.self) as! UIViewController
+        let vc = GlobalAssembly.resolve(type: ClassicTimerViewInput.self) as! UIViewController
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
         

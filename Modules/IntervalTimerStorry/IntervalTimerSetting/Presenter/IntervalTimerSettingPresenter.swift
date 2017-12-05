@@ -31,7 +31,7 @@ class IntervalTimerSettingPresenter: IntervalTimerSettingModuleInput, IntervalTi
             intervalTimerStory.laps = laps
             intervalTimerStory.roundTime = format.date(from: roundTime)
             intervalTimerStory.restDate = format.date(from: restTime)
-            intervalTimerStory.type = .countdown
+            //intervalTimerStory.type = .countdown
             setVolume()
             router.openIntervalTimer()
         }

@@ -37,15 +37,19 @@ class IntervalTimerSettingViewController: UIViewController, IntervalTimerSetting
         
         secRest.delegate = secondsRestDS
         secRest.dataSource = secondsRestDS
+        secRest.showsSelectionIndicator = false
         
         minRest.delegate = minutsRestDS
         minRest.dataSource = minutsRestDS
+        minRest.showsSelectionIndicator = false
         
         secondTime.delegate = secondLapDS
         secondTime.dataSource = secondLapDS
+        secondTime.showsSelectionIndicator = false
         
         minTime.delegate = minutsLapDS
         minTime.dataSource = minutsLapDS
+        minTime.showsSelectionIndicator = false
     }
 
     @IBAction func letsGoButtonPress(_ sender: Any) {

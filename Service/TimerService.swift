@@ -15,6 +15,9 @@ protocol TimerServiceDelegate {
 }
 
 class TimerService: TimerServiceProtocol {
+
+    
+    
     
     private var timer = Timer()
     private var currenTime : Date!
@@ -22,24 +25,24 @@ class TimerService: TimerServiceProtocol {
     var delegate: TimerServiceDelegate!
     var aSelector : Selector!
     private var timeOutSleep: Date!
-    private var type: TimerType!
+    //private var type: TimerType!
     private var isTimerRunning = false
     
     
-    func startWith(time: Date, type: TimerType) {
-        timer.invalidate()
-        self.currenTime = time
-        format.dateFormat = "mm:ss:SS"
-        self.type = type
-        switch type {
-        case .countdown, .interval:
-            aSelector = #selector(TimerService.updateCountdownTime)
-        default:
-            aSelector = #selector(TimerService.updateClassicTime)
-        }
-        isTimerRunning = true
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
-    }
+//    func startWith(time: Date, type: TimerType) {
+//        timer.invalidate()
+//        self.currenTime = time
+//        format.dateFormat = "mm:ss:SS"
+//        self.type = type
+//        switch type {
+//        case .countdown, .interval:
+//            aSelector = #selector(TimerService.updateCountdownTime)
+//        default:
+//            aSelector = #selector(TimerService.updateClassicTime)
+//        }
+//        isTimerRunning = true
+//        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+//    }
     
 //    func applicationDidEnterBackground() {
 //        if isTimerRunning {
@@ -76,7 +79,7 @@ class TimerService: TimerServiceProtocol {
 //    }
      
     func resume() {
-        startWith(time: currenTime, type: type)
+       // startWith(time: currenTime, type: type)
         self.isTimerRunning = true
     }
     

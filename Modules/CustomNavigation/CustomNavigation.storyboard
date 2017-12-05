@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoCondensed-Bold.ttf">
+            <string>RobotoCondensed-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Custom Navigation-->
         <scene sceneID="LzL-H0-K2Z">
@@ -49,8 +54,8 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpV-lK-VtE">
-                                                            <rect key="frame" x="107.66666666666666" y="15.999999999999998" width="66.666666666666657" height="31.333333333333329"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                            <rect key="frame" x="111.66666666666667" y="12.666666666666664" width="59.333333333333329" height="37"/>
+                                                            <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="28"/>
                                                             <color key="textColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
