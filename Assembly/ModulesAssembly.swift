@@ -20,6 +20,7 @@ class ModulesAssembly: BaseAssembly {
         ClassicTimerAssembly.configure()
         CoutdownTimerAssembly.configure()
         MainViewAssembly.configure()
+        PreViewTimerAssembly.configure()
         
         container.register(CustomNavigationProtocol.self) { resolver in
             let story = UIStoryboard.init(name: "CustomNavigation", bundle: nil)

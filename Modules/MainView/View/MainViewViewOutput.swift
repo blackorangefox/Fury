@@ -14,4 +14,5 @@ protocol MainViewViewOutput {
     */
 
     func viewIsReady()
+    func openTimer(type: timerType)
 }

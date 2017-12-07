@@ -15,4 +15,8 @@ class MainViewPresenter: MainViewModuleInput, MainViewViewOutput, MainViewIntera
     func viewIsReady() {
 
     }
+    
+    func openTimer(type: timerType) {
+        router.open(type: type)
+    }
 }

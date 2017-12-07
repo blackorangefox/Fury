@@ -82,4 +82,15 @@ extension MainViewViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return .leastNormalMagnitude
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var type: timerType = .classic
+        if indexPath.section == 1 {
+            type = .interval
+        }
+        if indexPath.section == 2 {
+            type = .countdown
+        }
+        self.output.openTimer(type: type)
+    }
 }
