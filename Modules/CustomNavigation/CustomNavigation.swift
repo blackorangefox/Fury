@@ -146,7 +146,7 @@ extension CustomNavigation: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func selectCell(cell: CustomNavigationCell) {
-        cell.titleLabel.textColor = UIColor.furyYellowGreen
+       // cell.titleLabel.textColor = UIColor.furyYellowGreen
     }
     
     func deSelect(cell: CustomNavigationCell) {

@@ -10,6 +10,7 @@ import UIKit
 import UserNotifications
 import SwifterSwift
 import SwiftDate
+import Mixpanel
 
 enum TimerType {
     case countDown
@@ -233,16 +234,19 @@ extension ClassicTimerViewController: BottomViewControllerDelegate {
     
     func finishButtonPress() {
         stopTimer()
+        Mixpanel.mainInstance().track(event: "FINISH press")
         output.finishButtonPress(with: timeLabel.text!)
     }
     
     func continueButtonPress() {
         print("---CONTINEU---")
         continueIntervalTimer()
+        Mixpanel.mainInstance().track(event: "continue press")
         output.continueButtonPress()
     }
     
     func resetButtonPress() {
+        Mixpanel.mainInstance().track(event: "RESET press")
         output.resetButtonPress()
     }
 }

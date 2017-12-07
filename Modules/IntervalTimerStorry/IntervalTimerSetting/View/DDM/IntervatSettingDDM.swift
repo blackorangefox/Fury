@@ -29,11 +29,11 @@ class IntervatSettingDDM: NSObject, UIPickerViewDataSource, UIPickerViewDelegate
         return startFromZero ? "\(row)" : "\(row+1)"
     }
     
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let flag = isRowSelect(pickerView, viewForRow: row, forComponent: component)
-        let color = flag ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.4)
-        return NSAttributedString(string: "\(row)", attributes: [NSAttributedStringKey.foregroundColor: color])
-    }
+   // func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+     //   let flag = isRowSelect(pickerView, viewForRow: row, forComponent: component)
+        //let color = flag ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.4)
+     //   return NSAttributedString(string: "\(row)", attributes: [NSAttributedStringKey.foregroundColor: color])
+  //  }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 40
@@ -53,12 +53,12 @@ class IntervatSettingDDM: NSObject, UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     func configure(label: UILabel, isRowSelect flag: Bool, viewForRow row: Int) -> UILabel {
-        let font = flag ? UIFont.furyTextStyle6 : UIFont.furyTextStyle7
-        let color = flag ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.4)
+        //let font = flag ? UIFont.furyTextStyle6 : UIFont.furyTextStyle7
+        //let color = flag ? UIColor.furyYellowGreen : UIColor.white.withAlphaComponent(0.4)
         let titleString = startFromZero ?  String(format: "%02d", row) : String(format: "%02d", row+1)
-        let title = NSAttributedString(string: titleString, attributes: [NSAttributedStringKey.font: font])
-        label.attributedText = title
-        label.textColor = color
+     //   let title = NSAttributedString(string: titleString, attributes: [NSAttributedStringKey.font: font])
+      //  label.attributedText = title
+    //    label.textColor = color
         label.textAlignment = .center
         label.minimumScaleFactor = 0.5
         label.adjustsFontSizeToFitWidth = true

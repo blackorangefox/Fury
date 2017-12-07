@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="yqB-Dz-Fhn">
+            <objects>
+                <viewController id="svT-6U-jKe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2sL-ON-AEk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iyl-jF-o0A">
+                                <rect key="frame" x="24" y="24" width="327" height="619"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csB-5R-w3u">
+                                        <rect key="frame" x="271" y="12" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="dPL-tj-5YA"/>
+                                            <constraint firstAttribute="width" constant="44" id="h5r-LX-FvI"/>
+                                        </constraints>
+                                        <state key="normal" image="cross"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="csB-5R-w3u" firstAttribute="top" secondItem="Iyl-jF-o0A" secondAttribute="top" constant="12" id="3xo-du-VUK"/>
+                                    <constraint firstAttribute="trailing" secondItem="csB-5R-w3u" secondAttribute="trailing" constant="12" id="PSt-C9-NB1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Iyl-jF-o0A" firstAttribute="top" secondItem="RFG-6O-5Ay" secondAttribute="top" constant="4" id="19e-LV-RNG"/>
+                            <constraint firstItem="RFG-6O-5Ay" firstAttribute="trailing" secondItem="Iyl-jF-o0A" secondAttribute="trailing" constant="24" id="NkD-oc-Ro0"/>
+                            <constraint firstItem="RFG-6O-5Ay" firstAttribute="bottom" secondItem="Iyl-jF-o0A" secondAttribute="bottom" constant="24" id="OoM-Vc-ltZ"/>
+                            <constraint firstItem="Iyl-jF-o0A" firstAttribute="leading" secondItem="RFG-6O-5Ay" secondAttribute="leading" constant="24" id="WjI-om-lLP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RFG-6O-5Ay"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2Y-8i-zQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325.60000000000002" y="-83.208395802098963"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cross" width="31" height="31"/>
+        <namedColor name="backgroundColor">
+            <color red="0.13699999451637268" green="0.1289999932050705" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

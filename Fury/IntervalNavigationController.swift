@@ -51,13 +51,13 @@ extension IntervalNavigationController: UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IntervalNavigationCell", for: indexPath) as! IntervalNavigationCell
         cell.titleLabel.text = titleArray[indexPath.row]
-        cell.titleLabel.textColor = UIColor.furyWhite5
+       // cell.titleLabel.textColor = UIColor.furyWhite5
         return cell
     }
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as? IntervalNavigationCell
-        cell?.titleLabel.textColor = UIColor.furyYellowGreen
+      //  cell?.titleLabel.textColor = UIColor.furyYellowGreen
     }
 
 

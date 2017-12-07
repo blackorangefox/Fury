@@ -19,6 +19,7 @@ class ModulesAssembly: BaseAssembly {
         IntervalTimerAssembly.configure()
         ClassicTimerAssembly.configure()
         CoutdownTimerAssembly.configure()
+        MainViewAssembly.configure()
         
         container.register(CustomNavigationProtocol.self) { resolver in
             let story = UIStoryboard.init(name: "CustomNavigation", bundle: nil)

@@ -12,7 +12,7 @@ import UIKit
 @IBDesignable class LetsGoButton: UIButton {
     
     override func draw(_ rect: CGRect) {
-        self.backgroundColor = UIColor.furyYellowGreen
-        self.titleLabel?.attributedText = NSAttributedString(string: "LET’S GO", attributes: [NSAttributedStringKey.font: UIFont.furyTextStyle3Font()!])
+        //self.backgroundColor = UIColor.furyYellowGreen
+        //self.titleLabel?.attributedText = NSAttributedString(string: "LET’S GO", attributes: [NSAttributedStringKey.font: UIFont.furyTextStyle3Font()!])
     }
 }
