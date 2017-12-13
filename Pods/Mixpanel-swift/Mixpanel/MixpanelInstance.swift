@@ -237,6 +237,7 @@ open class MixpanelInstance: CustomDebugStringConvertible, FlushDelegate, AEDele
     #if DECIDE
     let decideInstance: Decide
     let automaticEvents = AutomaticEvents()
+    let connectIntegrations = ConnectIntegrations()
     #endif // DECIDE
 
     #if !os(OSX)
@@ -275,6 +276,7 @@ open class MixpanelInstance: CustomDebugStringConvertible, FlushDelegate, AEDele
                     trackPushNotification(notification, event: "$app_open")
                 }
             }
+            connectIntegrations.mixpanel = self
         #endif // DECIDE
     }
     #else
@@ -311,10 +313,10 @@ open class MixpanelInstance: CustomDebugStringConvertible, FlushDelegate, AEDele
                                            name: .CTRadioAccessTechnologyDidChange,
                                            object: nil)
             #if DECIDE
-            notificationCenter.addObserver(self,
-                                           selector: #selector(executeTweaks),
-                                           name: Notification.Name("MPExecuteTweaks"),
-                                           object: nil)
+                notificationCenter.addObserver(self,
+                                               selector: #selector(executeTweaks),
+                                               name: Notification.Name("MPExecuteTweaks"),
+                                               object: nil)
             #endif
         #endif // os(iOS)
         if !MixpanelInstance.isiOSAppExtension() {
@@ -352,15 +354,15 @@ open class MixpanelInstance: CustomDebugStringConvertible, FlushDelegate, AEDele
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self,
                                        selector: #selector(applicationWillTerminate(_:)),
-                                       name: .NSApplicationWillTerminate,
+                                       name: NSApplication.willTerminateNotification,
                                        object: nil)
         notificationCenter.addObserver(self,
                                        selector: #selector(applicationWillResignActive(_:)),
-                                       name: .NSApplicationWillResignActive,
+                                       name: NSApplication.willResignActiveNotification,
                                        object: nil)
         notificationCenter.addObserver(self,
                                        selector: #selector(applicationDidBecomeActive(_:)),
-                                       name: .NSApplicationDidBecomeActive,
+                                       name: NSApplication.didBecomeActiveNotification,
                                        object: nil)
     }
     #endif // os(OSX)
@@ -412,6 +414,10 @@ open class MixpanelInstance: CustomDebugStringConvertible, FlushDelegate, AEDele
                                 self.markVariantRun(variant)
                             }
                         }
+
+                        if decideResponse.integrations.count > 0 {
+                            self.connectIntegrations.setupIntegrations(decideResponse.integrations)
+                        }
                     }
                 }
             }
@@ -424,7 +430,8 @@ open class MixpanelInstance: CustomDebugStringConvertible, FlushDelegate, AEDele
         if flushOnBackground {
             flush()
         }
-        networkQueue.async() {
+
+        networkQueue.async {
             self.archive()
         }
         #endif
@@ -443,7 +450,7 @@ open class MixpanelInstance: CustomDebugStringConvertible, FlushDelegate, AEDele
             flush()
         }
 
-        networkQueue.async() {
+        networkQueue.async {
             self.archive()
             #if DECIDE
             self.readWriteLock.write {
@@ -461,7 +468,7 @@ open class MixpanelInstance: CustomDebugStringConvertible, FlushDelegate, AEDele
         guard let sharedApplication = MixpanelInstance.sharedUIApplication() else {
             return
         }
-        trackingQueue.async() {
+        trackingQueue.async {
             if self.taskId != UIBackgroundTaskInvalid {
                 sharedApplication.endBackgroundTask(self.taskId)
                 self.taskId = UIBackgroundTaskInvalid
@@ -487,7 +494,7 @@ open class MixpanelInstance: CustomDebugStringConvertible, FlushDelegate, AEDele
     #endif // os(OSX)
 
     @objc private func applicationWillTerminate(_ notification: Notification) {
-        networkQueue.async() {
+        networkQueue.async {
             self.archive()
         }
     }
@@ -555,7 +562,7 @@ open class MixpanelInstance: CustomDebugStringConvertible, FlushDelegate, AEDele
 
     @objc func setCurrentRadio() {
         let currentRadio = AutomaticProperties.getCurrentRadio()
-        trackingQueue.async() {
+        trackingQueue.async {
             AutomaticProperties.properties["$radio"] = currentRadio
         }
     }
@@ -621,7 +628,7 @@ extension MixpanelInstance {
             return
         }
 
-        trackingQueue.async() {
+        trackingQueue.async {
             // identify only changes the distinct id if it doesn't match either the existing or the alias;
             // if it's new, blow away the alias as well.
             if distinctId != self.alias {
@@ -668,7 +675,6 @@ extension MixpanelInstance {
      createAlias: and then identify: (with their new user ID)
      when they log in the next time. This will keep your signup funnels working
      correctly.
-
      This makes the current id and 'Alias' interchangeable distinct ids.
      Mixpanel.
      mixpanelInstance.createAlias("Alias", mixpanelInstance.distinctId)
@@ -693,7 +699,7 @@ extension MixpanelInstance {
         }
 
         if alias != distinctId {
-            trackingQueue.async() {
+            trackingQueue.async {
                 self.alias = alias
                 self.archiveProperties()
                 Persistence.storeIdentity(token: self.apiToken,
@@ -716,7 +722,7 @@ extension MixpanelInstance {
      */
     open func reset() {
         flush();
-        trackingQueue.async() {
+        trackingQueue.async {
             self.networkQueue.sync {
                 self.readWriteLock.write {
                     Persistence.deleteMPUserDefaultsData(token: self.apiToken)
@@ -733,6 +739,8 @@ extension MixpanelInstance {
                     self.decideInstance.decideFetched = false
                     self.decideInstance.ABTestingInstance.variants = Set()
                     self.decideInstance.codelessInstance.codelessBindings = Set()
+                    self.connectIntegrations.reset()
+                    MixpanelTweaks.defaultStore.reset()
                     #endif // DECIDE
                 }
                 self.archive()
@@ -867,7 +875,7 @@ extension MixpanelInstance {
     func trackIntegration() {
         let defaultsKey = "trackedKey"
         if !UserDefaults.standard.bool(forKey: defaultsKey) {
-            trackingQueue.async() {
+            trackingQueue.async {
                 Network.trackIntegration(apiToken: self.apiToken, serverURL: BasePath.DefaultMixpanelAPI) {
                     (success) in
                     if success {
@@ -894,13 +902,11 @@ extension MixpanelInstance {
      - parameter completion: an optional completion handler for when the flush has completed.
      */
     open func flush(completion: (() -> Void)? = nil) {
-        
-        networkQueue.async() {
-            
+        networkQueue.async {
             if let shouldFlush = self.delegate?.mixpanelWillFlush(self), !shouldFlush {
                 return
             }
-            
+
             self.readWriteLock.write {
                 self.flushEventsQueue = self.eventsQueue
                 self.people.flushPeopleQueue = self.people.peopleQueue
@@ -909,7 +915,6 @@ extension MixpanelInstance {
                 self.people.peopleQueue.removeAll()
             }
 
-            
             #if DECIDE
             self.flushInstance.flushEventsQueue(&self.flushEventsQueue,
                                                 automaticEventsEnabled: self.decideInstance.automaticEventsEnabled)
@@ -922,14 +927,13 @@ extension MixpanelInstance {
             self.readWriteLock.write {
                 self.eventsQueue = self.flushEventsQueue + self.eventsQueue
                 self.people.peopleQueue = self.people.flushPeopleQueue + self.people.peopleQueue
-                    
                 self.flushEventsQueue.removeAll()
                 self.people.flushPeopleQueue.removeAll()
             }
 
             self.archive()
-            
-            
+
+
 
             if let completion = completion {
                 DispatchQueue.main.async(execute: completion)
@@ -955,7 +959,7 @@ extension MixpanelInstance {
      */
     open func track(event: String?, properties: Properties? = nil) {
         let epochInterval = Date().timeIntervalSince1970
-        trackingQueue.async() {
+        trackingQueue.async {
             self.trackInstance.track(event: event,
                                      properties: properties,
                                      eventsQueue: &self.eventsQueue,
@@ -1024,7 +1028,7 @@ extension MixpanelInstance {
      */
     open func time(event: String) {
         let startTime = Date().timeIntervalSince1970
-        trackingQueue.async() {
+        trackingQueue.async {
             self.trackInstance.time(event: event, timedEvents: &self.timedEvents, startTime: startTime)
         }
     }
@@ -1045,7 +1049,7 @@ extension MixpanelInstance {
      Clears all current event timers.
      */
     open func clearTimedEvents() {
-        trackingQueue.async() {
+        trackingQueue.async {
             self.trackInstance.clearTimedEvents(&self.timedEvents)
         }
     }
@@ -1126,7 +1130,7 @@ extension MixpanelInstance {
     }
 
     func dispatchAndTrack(closure: @escaping () -> Void) {
-        trackingQueue.async() {
+        trackingQueue.async {
             closure()
             self.archiveProperties()
         }
@@ -1141,10 +1145,9 @@ extension MixpanelInstance: InAppNotificationsDelegate {
         self.trackingQueue.async {
             self.networkQueue.async {
                 self.decideInstance.checkDecide(forceFetch: forceFetch,
-                                            distinctId: self.people.distinctId ?? self.distinctId,
-                                            token: self.apiToken,
-                                            completion: completion)
-        
+                                                distinctId: self.people.distinctId ?? self.distinctId,
+                                                token: self.apiToken,
+                                                completion: completion)
             }
         }
     }
@@ -1166,7 +1169,6 @@ extension MixpanelInstance: InAppNotificationsDelegate {
         Logger.info(message: "Marking variant \(variant.ID) shown for experiment \(variant.experimentID)")
         let shownVariant = ["\(variant.experimentID)": variant.ID]
         people.merge(properties: ["$experiments": shownVariant])
-        
         trackingQueue.async {
             var superPropertiesCopy = self.superProperties
             var shownVariants = superPropertiesCopy["$experiments"] as? [String: Any] ?? [:]
@@ -1177,7 +1179,6 @@ extension MixpanelInstance: InAppNotificationsDelegate {
         }
         track(event: "$experiment_started", properties: ["$experiment_id": variant.experimentID,
                                                          "$variant_id": variant.ID])
-
     }
 
     func executeCachedVariants() {
@@ -1222,7 +1223,6 @@ extension MixpanelInstance: InAppNotificationsDelegate {
                     self.markVariantRun(variant)
                 }
             }
-
             DispatchQueue.main.async {
                 if let callback = callback {
                     callback()
@@ -1281,10 +1281,10 @@ extension MixpanelInstance: InAppNotificationsDelegate {
             }
         }
     }
-    
+
     /**
      Returns the payload of a notification if available
-     
+
      - note: You do not need to call this method on the main thread.
      */
     open func fetchNotificationPayload(completion: @escaping ([String: AnyObject]?) -> Void){

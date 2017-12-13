@@ -14,52 +14,35 @@ protocol PreStartControllerDelegate: class {
 class PreStartController: UIViewController {
     
     weak var delegate: PreStartControllerDelegate!
-    
-    @IBOutlet weak var numberLabel: UILabel!
     private let playerService = PlayerService()
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.contentOffset = CGPoint(x: 0, y: -self.view.height)
+    }
+}
+
+extension PreStartController: UICollectionViewDelegate {
+    
+}
+
+extension PreStartController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
     }
     
-    func startCountdown(_ count: Int) {
-        animateWithString(count)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PreStartCell", for: indexPath) as! PreStartCell
+        cell.label.text = "\(indexPath.row)"
+        return cell
     }
     
-    func animateWithString(_ count: Int) {
-        if count == 0 {
-            numberLabel.text = "GO"
-            self.playerService.playStartWork()
-        }else {
-            numberLabel.text = "\(count)"
-            playMusic(count)
-        }
-        
-        numberLabel.transform = numberLabel.transform.scaledBy(x: 0.3, y: 0.3);
-        numberLabel.contentScaleFactor = 1
-        UIView.animate(withDuration: 1.0, animations: {
-            self.numberLabel.transform = self.numberLabel.transform.scaledBy(x: 3, y: 3);
-        }) { (complition) in
-            if complition {
-                if self.numberLabel.text == "GO" {
-                    self.removeFromSuperview()
-                    return
-                }
-                self.numberLabel.transform = CGAffineTransform.identity
-                self.animateWithString(count - 1)
-            }
-        }
-    }
-    
-    func playMusic(_ count: Int) {
-        if count <= 3 && count != 0 {
-            self.playerService.playOneSecond()
-        }
-    }
-    
-    func removeFromSuperview() {
-        self.dismiss(animated: false, completion: {
-            self.delegate.countdownFinish()
-        })
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.width, height: self.view.height/2+20)
     }
 }

@@ -25,9 +25,7 @@ class IntervalTimerSettingRouter: IntervalTimerSettingRouterInput, PreStartContr
         let story = UIStoryboard.init(name: "Main", bundle: nil)
         let preScreen  = story.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
         preScreen.delegate = self
-        viewController?.present(preScreen, animated: false) {
-            preScreen.startCountdown(10)
-        }
+        
     }
     
     func countdownFinish() {

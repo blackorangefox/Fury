@@ -21,6 +21,7 @@ class ModulesAssembly: BaseAssembly {
         CoutdownTimerAssembly.configure()
         MainViewAssembly.configure()
         PreViewTimerAssembly.configure()
+        ResultScreenAssembly.configure()
         
         container.register(CustomNavigationProtocol.self) { resolver in
             let story = UIStoryboard.init(name: "CustomNavigation", bundle: nil)

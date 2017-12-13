@@ -62,7 +62,6 @@ open class People {
                 r["$distinct_id"] = distinctId
                 self.addPeopleObject(r)
             } else {
-                
                 self.lock.write {
                     self.unidentifiedQueue.append(r)
                     if self.unidentifiedQueue.count > QueueConstants.queueSize {
@@ -74,7 +73,6 @@ open class People {
             self.lock.read{
                 Persistence.archivePeople(self.flushPeopleQueue + self.peopleQueue, token: self.apiToken)
             }
-            
         }
 
         if MixpanelInstance.isiOSAppExtension() {

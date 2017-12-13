@@ -25,6 +25,7 @@ class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var gradientView: UIView!
+    
     var output: PreViewTimerViewOutput!
     var type: timerType = .classic
 
@@ -38,6 +39,11 @@ class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        style()
     }
     
     func style() {
@@ -56,7 +62,7 @@ class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
             logoImage.image = UIImage(named: "countdown")
             playButton.setBackgroundColor(color: UIColor.furyBrightLavender, forState: .normal)
         }
-        gradientLayer.frame = self.view.bounds
+        gradientLayer.frame = self.gradientView.bounds
         gradientView.layer.insertSublayer(gradientLayer, at: 0)
     }
 
@@ -66,7 +72,7 @@ class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
     }
     
     @IBAction func playButtonPress(_ sender: Any) {
-        
+        output.playButtonPress()
     }
     
     // MARK: PreViewTimerViewInput

@@ -38,7 +38,7 @@ class AutomaticProperties {
         #endif // os(iOS)
 
         #else
-        if let size = NSScreen.main()?.frame.size {
+        if let size = NSScreen.main?.frame.size {
             p["$screen_height"]     = Int(size.height)
             p["$screen_width"]      = Int(size.width)
         }
@@ -85,7 +85,7 @@ class AutomaticProperties {
         if radio == nil {
             radio = "None"
         } else if radio!.hasPrefix(prefix) {
-            radio = (radio! as NSString).substring(from: prefix.characters.count)
+            radio = (radio! as NSString).substring(from: prefix.count)
         }
         return radio
     }

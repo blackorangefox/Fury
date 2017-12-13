@@ -15,4 +15,8 @@ class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, Pr
     func viewIsReady() {
 
     }
+    
+    func playButtonPress() {
+        router.openPreStartController()
+    }
 }

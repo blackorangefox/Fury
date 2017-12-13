@@ -7,11 +7,12 @@
 //
 
 protocol PreViewTimerViewOutput {
-
+    
     /**
-        @author Mikhail Fokin
-        Notify presenter that view is ready
-    */
-
+     @author Mikhail Fokin
+     Notify presenter that view is ready
+     */
+    
     func viewIsReady()
+    func playButtonPress()
 }

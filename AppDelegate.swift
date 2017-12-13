@@ -26,8 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         GlobalAssembly.configure()
         
         timerService = GlobalAssembly.resolve(type: TimerServiceProtocol.self)
-        let vc = GlobalAssembly.resolve(type: MainViewViewInput.self) as! UIViewController
-        self.window?.rootViewController = vc
+       let vc = GlobalAssembly.resolve(type: ResultScreenViewInput.self) as! UIViewController
+        
+       // let story = UIStoryboard.init(name: "Main", bundle: nil)
+      //  let preScreen  = story.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
+        
+        self.window?.rootViewController = vc//preScreen
         self.window?.makeKeyAndVisible()
         
         FirebaseApp.configure()

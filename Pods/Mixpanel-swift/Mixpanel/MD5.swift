@@ -253,9 +253,9 @@ extension Collection where Self.Iterator.Element == UInt8, Self.Index == Int {
         return result
     }
 
-    func toInteger<T: Integer>() -> T where T: ByteConvertible, T: BitshiftOperationsType {
+    func toInteger<T: SignedInteger>() -> T where T: ByteConvertible, T: BitshiftOperationsType {
         if self.isEmpty {
-            return 0
+            return 0 as! T
         }
 
         var bytes = self.reversed() //FIXME: check it this is equivalent of Array(...)
@@ -270,7 +270,7 @@ extension Collection where Self.Iterator.Element == UInt8, Self.Index == Int {
             return T(truncatingBitPattern: UInt64(bytes[0]))
         }
 
-        var result: T = 0
+        var result: T = 0 as! T
         for byte in bytes.reversed() {
             result = result << 8 | T(byte)
         }
@@ -390,7 +390,7 @@ extension CSArrayType where Iterator.Element == UInt8 {
     func toHexString() -> String {
         return self.lazy.reduce("") {
             var s = String($1, radix: 16)
-            if s.characters.count == 1 {
+            if s.count == 1 {
                 s = "0" + s
             }
             return $0 + s

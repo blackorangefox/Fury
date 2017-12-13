@@ -17,7 +17,6 @@ func += <K, V> (left: inout [K:V], right: [K:V]) {
 class Track {
     let apiToken: String
     let lock: ReadWriteLock
-    
     init(apiToken: String, lock: ReadWriteLock) {
         self.apiToken = apiToken
         self.lock = lock
@@ -31,7 +30,7 @@ class Track {
                distinctId: String,
                epochInterval: Double) {
         var ev = event
-        if ev == nil || ev!.characters.isEmpty {
+        if ev == nil || ev!.isEmpty {
             Logger.info(message: "mixpanel track called with empty event parameter. using 'mp_event'")
             ev = "mp_event"
         }
@@ -56,7 +55,6 @@ class Track {
         }
 
         let trackEvent: InternalProperties = ["event": ev!, "properties": p]
-        
         self.lock.write {
             eventsQueue.append(trackEvent)
             if eventsQueue.count > QueueConstants.queueSize {
@@ -86,7 +84,6 @@ class Track {
                     }
                 }
         }
-        
     }
 
     func unregisterSuperProperty(_ propertyName: String, superProperties: inout InternalProperties) {

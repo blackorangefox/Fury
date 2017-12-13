@@ -26,6 +26,7 @@
 	<string>To save your results</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Oswald-Medium.ttf</string>
 		<string>Montserrat-Bold.otf</string>
 		<string>RobotoCondensed-Bold.ttf</string>
 		<string>RobotoCondensed-Regular.ttf</string>
