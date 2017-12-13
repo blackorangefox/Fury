@@ -15,6 +15,7 @@ class MainViewRouter: MainViewRouterInput {
         let controller = GlobalAssembly.resolve(type: PreViewTimerViewInput.self) as! PreViewTimerViewController
         controller.type = type
         let navigation = UINavigationController(rootViewController: controller)
+        navigation.isHeroEnabled = true
         view?.present(navigation, animated: true, completion: nil)
     }
 }

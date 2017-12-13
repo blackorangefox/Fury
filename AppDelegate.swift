@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         GlobalAssembly.configure()
         
         timerService = GlobalAssembly.resolve(type: TimerServiceProtocol.self)
-       let vc = GlobalAssembly.resolve(type: ResultScreenViewInput.self) as! UIViewController
+       let vc = GlobalAssembly.resolve(type: MainViewViewInput.self) as! UIViewController
         
        // let story = UIStoryboard.init(name: "Main", bundle: nil)
       //  let preScreen  = story.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController

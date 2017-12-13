@@ -64,12 +64,16 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="logoImage" destination="4lE-3F-2Ik" id="aif-c0-rXB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
@@ -81,6 +85,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xvV-s8-mAL"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="controllerTitle" destination="9X3-gi-cDW" id="lIS-cm-TCl"/>
                         <outlet property="tableView" destination="7lZ-vc-dqc" id="rD8-lk-5Yr"/>

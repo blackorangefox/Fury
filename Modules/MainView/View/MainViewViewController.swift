@@ -57,12 +57,18 @@ extension MainViewViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TimerTypeCell") as! TimerTypeCell
         if indexPath.section == 0 {
             cell.type = .classic
+            cell.heroID = "classicView"
+            cell.logoImage.heroID = "classicLogo"
         }
         if indexPath.section == 1 {
             cell.type = .interval
+            cell.heroID = "intervalView"
+            cell.logoImage.heroID = "intervalLogo"
         }
         if indexPath.section == 2 {
             cell.type = .countdown
+            cell.heroID = "countdownView"
+            cell.logoImage.heroID = "countdownLogo"
         }
         return cell
     }
