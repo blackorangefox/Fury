@@ -12,9 +12,6 @@
         <array key="Oswald-Medium.ttf">
             <string>Oswald-Medium</string>
         </array>
-        <array key="Roboto-Bold.ttf">
-            <string>Roboto-Bold</string>
-        </array>
         <array key="RobotoCondensed-Bold.ttf">
             <string>RobotoCondensed-Bold</string>
         </array>
@@ -80,126 +77,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ydc-ah-uVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="796" y="-3162.3688155922041"/>
-        </scene>
-        <!--Result Controller-->
-        <scene sceneID="hOs-hc-RwY">
-            <objects>
-                <viewController storyboardIdentifier="ResultController" id="0eo-xz-gSw" customClass="ResultController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6Xu-Dz-pdp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ujk-jx-emP">
-                                <rect key="frame" x="61" y="222" width="292" height="292"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="292" id="Lqx-mE-zb5"/>
-                                    <constraint firstAttribute="height" constant="292" id="exy-zG-KqH"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="46" translatesAutoresizingMaskIntoConstraints="NO" id="oqJ-bp-4Xh">
-                                <rect key="frame" x="61" y="307.33333333333331" width="292" height="121.33333333333331"/>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="92"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY RESULT IS:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAv-I2-aJ1">
-                                <rect key="frame" x="143.66666666666666" y="313.33333333333331" width="126.99999999999997" height="29.333333333333314"/>
-                                <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRZ-4A-P2D">
-                                <rect key="frame" x="266" y="568" width="54" height="54"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="54" id="Nrp-0D-5Aw"/>
-                                    <constraint firstAttribute="height" constant="54" id="RaL-Sk-8bm"/>
-                                </constraints>
-                                <state key="normal" image="next"/>
-                                <connections>
-                                    <action selector="nextButtonPress:" destination="0eo-xz-gSw" eventType="touchUpInside" id="XyM-WF-Wsh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyd-lh-t8X">
-                                <rect key="frame" x="96" y="568" width="54" height="54"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="Bq1-lk-Mb0"/>
-                                    <constraint firstAttribute="width" constant="54" id="K6R-zu-4j9"/>
-                                </constraints>
-                                <state key="normal" image="add"/>
-                                <connections>
-                                    <action selector="sharedButtonPress:" destination="0eo-xz-gSw" eventType="touchUpInside" id="Iab-fh-U3L"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.065908752381801605" green="0.065973833203315735" blue="0.07137800008058548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Xyd-lh-t8X" firstAttribute="centerX" secondItem="6Xu-Dz-pdp" secondAttribute="centerX" constant="-230" id="6Vf-72-hAa"/>
-                            <constraint firstItem="Xyd-lh-t8X" firstAttribute="centerX" secondItem="6Xu-Dz-pdp" secondAttribute="centerX" constant="-84" id="8I2-fb-mvy"/>
-                            <constraint firstItem="fRZ-4A-P2D" firstAttribute="centerY" secondItem="6Xu-Dz-pdp" secondAttribute="centerY" id="DQQ-zp-Qtb"/>
-                            <constraint firstItem="fRZ-4A-P2D" firstAttribute="top" secondItem="ujk-jx-emP" secondAttribute="bottom" constant="54" id="Dfn-mK-MMP">
-                                <variation key="heightClass=regular-widthClass=regular" constant="110"/>
-                            </constraint>
-                            <constraint firstItem="fRZ-4A-P2D" firstAttribute="centerY" secondItem="Xyd-lh-t8X" secondAttribute="centerY" id="F7c-xE-9pu"/>
-                            <constraint firstItem="ujk-jx-emP" firstAttribute="centerY" secondItem="6Xu-Dz-pdp" secondAttribute="centerY" id="Hl3-WF-UZg"/>
-                            <constraint firstItem="hAv-I2-aJ1" firstAttribute="centerX" secondItem="apJ-BK-ur3" secondAttribute="centerX" id="HpF-jB-pb9"/>
-                            <constraint firstItem="oqJ-bp-4Xh" firstAttribute="centerY" secondItem="6Xu-Dz-pdp" secondAttribute="centerY" id="RZp-fQ-73A"/>
-                            <constraint firstItem="fRZ-4A-P2D" firstAttribute="centerX" secondItem="6Xu-Dz-pdp" secondAttribute="centerX" constant="230" id="Rsm-af-5jR"/>
-                            <constraint firstItem="fRZ-4A-P2D" firstAttribute="centerX" secondItem="6Xu-Dz-pdp" secondAttribute="centerX" constant="86" id="fpp-kp-NO6"/>
-                            <constraint firstItem="hAv-I2-aJ1" firstAttribute="centerY" secondItem="6Xu-Dz-pdp" secondAttribute="centerY" constant="-40" id="i5J-o5-ET9"/>
-                            <constraint firstItem="oqJ-bp-4Xh" firstAttribute="width" secondItem="ujk-jx-emP" secondAttribute="width" id="oms-R0-8Zh"/>
-                            <constraint firstItem="oqJ-bp-4Xh" firstAttribute="centerX" secondItem="apJ-BK-ur3" secondAttribute="centerX" id="r7I-Lw-nrj"/>
-                            <constraint firstItem="ujk-jx-emP" firstAttribute="centerX" secondItem="apJ-BK-ur3" secondAttribute="centerX" id="rdJ-Ci-lO8"/>
-                            <constraint firstItem="oqJ-bp-4Xh" firstAttribute="centerY" secondItem="6Xu-Dz-pdp" secondAttribute="centerY" id="rja-ju-qbx"/>
-                            <constraint firstItem="Xyd-lh-t8X" firstAttribute="centerY" secondItem="fRZ-4A-P2D" secondAttribute="centerY" id="xru-oy-3Vv"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="apJ-BK-ur3"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="6Vf-72-hAa"/>
-                                <exclude reference="8I2-fb-mvy"/>
-                                <exclude reference="DQQ-zp-Qtb"/>
-                                <exclude reference="Dfn-mK-MMP"/>
-                                <exclude reference="F7c-xE-9pu"/>
-                                <exclude reference="Rsm-af-5jR"/>
-                                <exclude reference="fpp-kp-NO6"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="6Vf-72-hAa"/>
-                                <include reference="DQQ-zp-Qtb"/>
-                                <include reference="Rsm-af-5jR"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="6Vf-72-hAa"/>
-                                <include reference="DQQ-zp-Qtb"/>
-                                <include reference="Rsm-af-5jR"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="8I2-fb-mvy"/>
-                                <include reference="Dfn-mK-MMP"/>
-                                <include reference="fpp-kp-NO6"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="8I2-fb-mvy"/>
-                                <include reference="Dfn-mK-MMP"/>
-                                <include reference="fpp-kp-NO6"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="ruseltTitle" destination="oqJ-bp-4Xh" id="8nV-gy-O1U"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="azw-9a-UMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="136" y="-3161"/>
         </scene>
         <!--Finish Controller-->
         <scene sceneID="4TP-GL-3Iq">
@@ -408,9 +285,4 @@ it won’t take more than 3 minutes.</string>
             <point key="canvasLocation" x="796.875" y="-3870.4225352112676"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="add" width="54" height="54"/>
-        <image name="logo" width="334" height="334"/>
-        <image name="next" width="54" height="54"/>
-    </resources>
 </document>

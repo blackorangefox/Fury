@@ -15,7 +15,7 @@ protocol BottomViewControllerDelegate: class {
     func resetButtonPress()
 }
 
-class BottomCoordinator: UIViewController, RootContainerControllerProtocol, PauseViewDelegate, FinishOrContinueViewDelegate, FinishViewDelegate {
+class BottomCoordinator: UIViewController, PauseViewDelegate, FinishOrContinueViewDelegate {
  
     weak var delegate: BottomViewControllerDelegate!
     var pauseView: PauseView!

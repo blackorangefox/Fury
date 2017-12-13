@@ -15,18 +15,10 @@ class ModulesAssembly: BaseAssembly {
         
         let container = defaultContainer()
         
-        IntervalTimerSettingAssembly.configure()
-        IntervalTimerAssembly.configure()
-        ClassicTimerAssembly.configure()
-        CoutdownTimerAssembly.configure()
+        TimerAssembly.configure()
         MainViewAssembly.configure()
         PreViewTimerAssembly.configure()
         ResultScreenAssembly.configure()
-        
-        container.register(CustomNavigationProtocol.self) { resolver in
-            let story = UIStoryboard.init(name: "CustomNavigation", bundle: nil)
-            let controller = story.instantiateViewController(withIdentifier: "CustomNavigation") as! CustomNavigation
-            return controller
-            }.inObjectScope(.transient)
+    
     }
 }

@@ -12,8 +12,8 @@ import Swinject
 class StoriesAssembly: BaseAssembly {
     static func configure() {
         
-        defaultContainer().register(IntervalTimerStoryProtocol.self) { _ in
-            IntervalTimerStory()
+        defaultContainer().register(TimerStoryProtocol.self) { _ in
+            TimerStory()
             }.inObjectScope(.container)
     }
 }

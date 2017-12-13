@@ -5,14 +5,10 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Oswald-Bold.ttf">
-            <string>Oswald-Bold</string>
-        </array>
         <array key="RobotoCondensed-Bold.ttf">
             <string>RobotoCondensed-Bold</string>
         </array>
@@ -48,7 +44,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpX-iD-zUj">
                                 <rect key="frame" x="202" y="680" width="620" height="64"/>
-                                <color key="backgroundColor" name="pinkRed"/>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="620" id="5bb-oC-xa6"/>
                                     <constraint firstAttribute="height" constant="64" id="hbt-Jj-Olz"/>
@@ -300,178 +296,6 @@
             </objects>
             <point key="canvasLocation" x="283" y="326"/>
         </scene>
-        <!--Lets Go View-->
-        <scene sceneID="9gJ-LW-Jj9">
-            <objects>
-                <viewController storyboardIdentifier="LetsGoView" id="njm-j1-HRa" customClass="LetsGoView" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Y2j-9P-7Vw"/>
-                        <viewControllerLayoutGuide type="bottom" id="oaN-Aq-KlS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lYT-nm-Igp">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVM-fc-9U2">
-                                <rect key="frame" x="202" y="680" width="620" height="64"/>
-                                <color key="backgroundColor" red="0.76078431369999999" green="1" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="620" id="3Wl-3k-FiD"/>
-                                    <constraint firstAttribute="height" constant="64" id="oTS-sg-n8W"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="26"/>
-                                <state key="normal" title="LET’S GO">
-                                    <color key="titleColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="3Wl-3k-FiD"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="3Wl-3k-FiD"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="LetsGoButtonPress:" destination="njm-j1-HRa" eventType="touchUpInside" id="oPX-f9-239"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="qVM-fc-9U2" firstAttribute="centerX" secondItem="lYT-nm-Igp" secondAttribute="centerX" id="0hu-oJ-UXE"/>
-                            <constraint firstItem="qVM-fc-9U2" firstAttribute="leading" secondItem="TpR-gL-pRn" secondAttribute="leading" constant="24" id="TOr-OX-H8L"/>
-                            <constraint firstItem="TpR-gL-pRn" firstAttribute="bottom" secondItem="qVM-fc-9U2" secondAttribute="bottom" constant="24" id="cC1-8x-Qtj"/>
-                            <constraint firstItem="TpR-gL-pRn" firstAttribute="trailing" secondItem="qVM-fc-9U2" secondAttribute="trailing" constant="24" id="kCp-Mp-8ag"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="TpR-gL-pRn"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="kCp-Mp-8ag"/>
-                                <exclude reference="0hu-oJ-UXE"/>
-                                <exclude reference="TOr-OX-H8L"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="kCp-Mp-8ag"/>
-                                <include reference="TOr-OX-H8L"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="kCp-Mp-8ag"/>
-                                <include reference="TOr-OX-H8L"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="kCp-Mp-8ag"/>
-                                <include reference="TOr-OX-H8L"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="0hu-oJ-UXE"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6HT-rf-LCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-368" y="325"/>
-        </scene>
-        <!--Finish View-->
-        <scene sceneID="SnT-f8-aPD">
-            <objects>
-                <viewController storyboardIdentifier="FinishView" id="okp-94-DmD" customClass="FinishView" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7tg-zl-Jky"/>
-                        <viewControllerLayoutGuide type="bottom" id="kZK-9k-Upq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Nem-Qh-9XX">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXd-CY-apb">
-                                <rect key="frame" x="192" y="680" width="640" height="64"/>
-                                <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="640" id="cEF-FR-0RH"/>
-                                    <constraint firstAttribute="height" constant="64" id="xGR-HN-MF5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="26"/>
-                                <state key="normal" title="FINISH">
-                                    <color key="titleColor" red="0.80983877179999997" green="0.99423289299999995" blue="0.38411530849999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="cEF-FR-0RH"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="cEF-FR-0RH"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="finishButtonPress:" destination="okp-94-DmD" eventType="touchUpInside" id="oGc-Mb-rnH"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="qXd-CY-apb" firstAttribute="leading" secondItem="xLW-JQ-0d4" secondAttribute="leading" constant="24" id="0F5-E0-iNa"/>
-                            <constraint firstItem="xLW-JQ-0d4" firstAttribute="trailing" secondItem="qXd-CY-apb" secondAttribute="trailing" constant="24" id="eyz-pQ-GaE"/>
-                            <constraint firstItem="xLW-JQ-0d4" firstAttribute="bottom" secondItem="qXd-CY-apb" secondAttribute="bottom" constant="24" id="o9d-cK-VVQ"/>
-                            <constraint firstItem="qXd-CY-apb" firstAttribute="centerX" secondItem="Nem-Qh-9XX" secondAttribute="centerX" id="q6K-57-1gG"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="xLW-JQ-0d4"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="eyz-pQ-GaE"/>
-                                <exclude reference="0F5-E0-iNa"/>
-                                <exclude reference="q6K-57-1gG"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="eyz-pQ-GaE"/>
-                                <include reference="0F5-E0-iNa"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="eyz-pQ-GaE"/>
-                                <include reference="0F5-E0-iNa"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="eyz-pQ-GaE"/>
-                                <include reference="0F5-E0-iNa"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="constraints">
-                                <include reference="q6K-57-1gG"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wCt-Uk-aHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-369" y="983"/>
-        </scene>
         <!--Bottom Coordinator-->
         <scene sceneID="Eaa-ZE-dAY">
             <objects>
@@ -492,9 +316,4 @@
             <point key="canvasLocation" x="135" y="-382"/>
         </scene>
     </scenes>
-    <resources>
-        <namedColor name="pinkRed">
-            <color red="1" green="0.059000000357627869" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>
