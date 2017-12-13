@@ -28,9 +28,9 @@ class IntervalTimerSettingPresenter: IntervalTimerSettingModuleInput, IntervalTi
             format.dateFormat = "mm:ss"
             format.timeZone = TimeZone(abbreviation: "UTC");
             
-            intervalTimerStory.laps = laps
-            intervalTimerStory.roundTime = format.date(from: roundTime)
-            intervalTimerStory.restDate = format.date(from: restTime)
+           // intervalTimerStory.laps = laps
+           // intervalTimerStory.roundTime = format.date(from: roundTime)
+//intervalTimerStory.restDate = format.date(from: restTime)
             //intervalTimerStory.type = .countdown
             setVolume()
             router.openIntervalTimer()

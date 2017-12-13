@@ -9,50 +9,37 @@
 import UIKit
 
 protocol BottomViewControllerDelegate: class {
-    func letsGoButtonPress()
     func pauseButtonPress()
     func finishButtonPress()
     func continueButtonPress()
     func resetButtonPress()
 }
 
-class BottomCoordinator: UIViewController, RootContainerControllerProtocol, LetsGoViewDelegate, PauseViewDelegate, FinishOrContinueViewDelegate, FinishViewDelegate {
+class BottomCoordinator: UIViewController, RootContainerControllerProtocol, PauseViewDelegate, FinishOrContinueViewDelegate, FinishViewDelegate {
  
     weak var delegate: BottomViewControllerDelegate!
-    var letsGoView: LetsGoView!
     var pauseView: PauseView!
-    var finishView: FinishView!
     var finishOrContinueView: FinishOrContinueView!
     weak var currentViewController: UIViewController!
+    var type: timerType = .classic
     
     override func viewDidLoad() {
         let storyboard = UIStoryboard.init(name: "BottomCoordinator", bundle: nil)
-        letsGoView = storyboard.instantiateViewController(withIdentifier: "LetsGoView") as! LetsGoView
-        letsGoView.delegate = self
         
         pauseView = storyboard.instantiateViewController(withIdentifier: "PauseView") as! PauseView
         pauseView.delegate = self
-        
-        finishView = storyboard.instantiateViewController(withIdentifier: "FinishView") as! FinishView
-        finishView.delegate = self
+        pauseView.type = type
         
         finishOrContinueView = storyboard.instantiateViewController(withIdentifier: "FinishOrContinueView") as! FinishOrContinueView
         finishOrContinueView.delegate = self
+        finishOrContinueView.type = type
         
-        self.addSubview(letsGoView, container: self.view)
-        currentViewController = letsGoView
-    }
-    
-    func showLetGoButton() {
-        changeControllerTo(vc: letsGoView)
+        self.addSubview(pauseView, container: self.view)
+        currentViewController = pauseView
     }
     
     func showPauseButton() {
        changeControllerTo(vc: pauseView)
-    }
-    
-    func showFinishButton() {
-        changeControllerTo(vc: finishView)
     }
     
     func showFinishOrContinueButton() {
@@ -62,11 +49,6 @@ class BottomCoordinator: UIViewController, RootContainerControllerProtocol, Lets
     func changeControllerTo(vc: UIViewController) {
         embeddedTransition(oldViewController: currentViewController, toViewController: vc, container: self.view)
         self.currentViewController = vc
-    }
-    
-    //MARK: - LetsGoViewDelegate
-    func letsGoButtonPress() {
-        self.delegate.letsGoButtonPress()
     }
     
     //MARK: - PauseViewDelegate

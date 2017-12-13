@@ -14,11 +14,13 @@ protocol PauseViewDelegate: class {
 
 class PauseView: UIViewController {
     
+    @IBOutlet weak var button: UIButton!
     weak var delegate: PauseViewDelegate!
-
+    
+    var type: timerType = .classic
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 

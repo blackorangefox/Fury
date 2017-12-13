@@ -13,8 +13,9 @@ class PreViewTimerRouter: PreViewTimerRouterInput {
 	var view : PreViewTimerViewController?
 	
     func openPreStartController() {
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let preScreen  = story.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
-        view?.navigationController?.pushViewController(preScreen, animated: true)
+        //let story = UIStoryboard.init(name: "Main", bundle: nil)
+        //let preScreen  = story.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
+        let controller = GlobalAssembly.resolve(type: ClassicTimerViewInput.self) as! UIViewController
+        view?.navigationController?.pushViewController(controller, animated: true)
     }
 }

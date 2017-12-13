@@ -26,6 +26,7 @@ static func configure() {
             let presenter = PreViewTimerPresenter()
             presenter.interactor = resolver.resolve(PreViewTimerInteractorInput.self, argument: (presenter as PreViewTimerInteractorOutput))
             presenter.router = resolver.resolve(PreViewTimerRouterInput.self, argument: (view as! UIViewController))
+            presenter.flowStory = resolver.resolve(IntervalTimerStoryProtocol.self)
             presenter.view = view
             return presenter
         }).inObjectScope(.transient)

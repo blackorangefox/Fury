@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,7 +38,9 @@
                                     <color key="titleColor" red="1" green="0.074509803921568626" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="resetButtonPress:" destination="LjC-uZ-BoQ" eventType="touchUpInside" id="3h8-s7-efu"/>
@@ -46,7 +48,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VpX-iD-zUj">
                                 <rect key="frame" x="202" y="680" width="620" height="64"/>
-                                <color key="backgroundColor" red="0.76078431369999999" green="1" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="pinkRed"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="620" id="5bb-oC-xa6"/>
                                     <constraint firstAttribute="height" constant="64" id="hbt-Jj-Olz"/>
@@ -56,7 +58,9 @@
                                     <color key="titleColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -80,7 +84,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="continueButtonPress:" destination="LjC-uZ-BoQ" eventType="touchUpInside" id="YLF-La-gMj"/>
@@ -195,6 +201,11 @@
                         </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="continueButton" destination="vlD-ic-6at" id="Btx-m7-vRf"/>
+                        <outlet property="finishButton" destination="VpX-iD-zUj" id="Ay4-dv-aaR"/>
+                        <outlet property="resetButton" destination="izX-SL-0YI" id="FQV-rZ-m1U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqS-Zu-yC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,9 +230,9 @@
                                     <constraint firstAttribute="height" constant="64" id="GL9-H7-QFG"/>
                                     <constraint firstAttribute="width" constant="640" id="cYM-DG-den"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="22"/>
                                 <state key="normal" title="PAUSE">
-                                    <color key="titleColor" red="0.80983877179999997" green="0.99423289299999995" blue="0.38411530849999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
@@ -281,6 +292,9 @@
                         </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="button" destination="sBE-4T-to7" id="saK-gq-Q8o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlp-t2-hAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -478,4 +492,9 @@
             <point key="canvasLocation" x="135" y="-382"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="pinkRed">
+            <color red="1" green="0.059000000357627869" blue="0.32199999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

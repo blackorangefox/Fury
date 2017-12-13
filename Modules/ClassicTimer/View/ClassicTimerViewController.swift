@@ -20,8 +20,8 @@ enum TimerType {
 class ClassicTimerViewController: UIViewController, RootContainerControllerProtocol, ClassicTimerViewInput {
     
     @IBOutlet weak var bottomContainer: UIView!
-    @IBOutlet weak var setsLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var colectionView: UICollectionView!
     
     var output: ClassicTimerViewOutput!
     var bottomViewController: BottomCoordinator!
@@ -30,23 +30,24 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
     var currentIndex = 0
     var currentdate: [Date] = []
     var timeWhenStartPause = Date()
+    var titleArray: [String] = []
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-        setBottonView()
-                createIntervalTimer(sets: 10,
-                                    workMinuts: 0,
-                                    workSeconds: 10,
-                                    restMinuts: 0,
-                                    restSeconds: 5)
-        //createCountDownTimer(minuts: 10, second: 00)
-        //createClassicTimer()
+        colectionView.dataSource = self
+        colectionView.delegate = self
+        let increment = IndexPath(row: 0, section: 0)
+        colectionView.performBatchUpdates(nil) { _ in
+            self.collectionView(self.colectionView, didSelectItemAt: increment)
+        }
     }
     
-    func setBottonView() {
+    func setBottonView(type: timerType) {
         let storyboard = UIStoryboard.init(name: "BottomCoordinator", bundle: nil)
         bottomViewController = storyboard.instantiateViewController(withIdentifier: "BottomViewController") as! BottomCoordinator
+        bottomViewController.type = type
         bottomViewController.delegate = self
         self.addSubview(self.bottomViewController, container: bottomContainer)
     }
@@ -61,7 +62,7 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
     func createCountDownTimer(minuts: Int, seconds: Int, miliseconds: Int = 0) {
         self.timeWhenTimerStart = addingTime(time: Date(), minuts: minuts, seconds: seconds, miliseconds: miliseconds)
         let aSelector = #selector(ClassicTimerViewController.updateCountDownTimer)
-       createTimer(selector: aSelector)
+        createTimer(selector: aSelector)
     }
     
     func createIntervalTimer(sets: Int, workMinuts: Int, workSeconds: Int, restMinuts: Int, restSeconds: Int) {
@@ -80,6 +81,7 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
         if newTime <= 0 {
             timeLabel.text = "00:00:00"
             currentIndex += 1
+            nextSegment()
             if currentIndex == currentdate.count {
                 stopTimer()
                 return
@@ -88,7 +90,15 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
             return
         }
         updateLabel(newTime: newTime)
-        setsLabel.text = "\(currentIndex)"
+    }
+    
+    func nextSegment() {
+        let oldIndexpath = IndexPath(row: currentIndex-1, section: 0)
+        self.collectionView(colectionView, didDeselectItemAt: oldIndexpath)
+        let increment = IndexPath(row: currentIndex, section: 0)
+        colectionView.layoutIfNeeded()
+        colectionView.scrollToItem(at: increment, at: .centeredHorizontally, animated: true)
+        self.collectionView(colectionView, didSelectItemAt: increment)
     }
     
     @objc func updateClasicTimer() {
@@ -117,24 +127,33 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
         stopTimer()
     }
     
+    func resetTimer(type: timerType) {
+        timeWhenTimerStart = Date()
+        currentIndex = 0
+        currentdate = []
+        if type == .interval {
+            let increment = IndexPath(row: 0, section: 0)
+            colectionView.layoutIfNeeded()
+            colectionView.scrollToItem(at: increment, at: .centeredHorizontally, animated: true)
+        }
+    }
+    
     // MARK: ClassicTimerViewInput
-    func setupInitialState() {}
+    func setupInitialState(type: timerType) {
+        setBottonView(type: type)
+    }
+    
+    func updateLapsTitle(titles: [String]) {
+        titleArray = titles
+        colectionView.reloadData()
+    }
     
     func newTime(time: String) {
         timeLabel.text = time
     }
     
-    func showLetGoButton() {
-        timeLabel.text = "00:00:00"
-        bottomViewController.showLetGoButton()
-    }
-    
     func showPauseButton() {
         bottomViewController.showPauseButton()
-    }
-    
-    func showFinishButton() {
-        bottomViewController.showFinishButton()
     }
     
     func showFinishOrContinueButton() {
@@ -221,10 +240,6 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
 
 extension ClassicTimerViewController: BottomViewControllerDelegate {
     
-    func letsGoButtonPress() {
-        output.letsGoButtonPress()
-    }
-    
     func pauseButtonPress() {
         stopTimer()
         self.timeWhenStartPause = Date()
@@ -247,6 +262,32 @@ extension ClassicTimerViewController: BottomViewControllerDelegate {
     
     func resetButtonPress() {
         Mixpanel.mainInstance().track(event: "RESET press")
+        stopTimer()
         output.resetButtonPress()
+    }
+}
+
+extension ClassicTimerViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int  {
+        return titleArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IntervalNavigationCell", for: indexPath) as! IntervalNavigationCell
+        cell.titleLabel.text = titleArray[indexPath.row]
+        cell.titleLabel.textColor = UIColor.lightText
+        return cell
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? IntervalNavigationCell
+        cell?.titleLabel.textColor = UIColor.white
+    }
+    
+    
+    public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? IntervalNavigationCell
+        cell?.titleLabel.textColor = UIColor.lightText
     }
 }

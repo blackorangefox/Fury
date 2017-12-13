@@ -21,15 +21,15 @@ class IntervalTimerPresenter: IntervalTimerModuleInput, IntervalTimerViewOutput,
     private var counter: Int = 0
     
     func viewIsReady() {
-        let isRest = !intervalTimerStory.restDate.isEmpty(dateFormat: "mm:ss")
-        let laps = intervalTimerStory.laps!
-        if isRest {
-            view.updateLapsTitle(titles: createTitleWithRest(laps: laps))
-            timeArray = createTimeArrayWithRest(lapTime: intervalTimerStory.roundTime, laps: laps, restTime: intervalTimerStory.restDate)
-        }else {
-            view.updateLapsTitle(titles: createTitleWithoutRest(laps: laps))
-            timeArray = createTimeArrayWithoutRest(lapTime: intervalTimerStory.roundTime, laps: laps)
-        }
+       // let isRest = !intervalTimerStory.restDate.isEmpty(dateFormat: "mm:ss")
+       // let laps = intervalTimerStory.laps!
+//        if isRest {
+//            view.updateLapsTitle(titles: createTitleWithRest(laps: laps))
+//            timeArray = createTimeArrayWithRest(lapTime: intervalTimerStory.roundTime, laps: laps, restTime: intervalTimerStory.restDate)
+//        }else {
+//            view.updateLapsTitle(titles: createTitleWithoutRest(laps: laps))
+//            timeArray = createTimeArrayWithoutRest(lapTime: intervalTimerStory.roundTime, laps: laps)
+//        }
         
         //timerService.startWith(time: intervalTimerStory.roundTime, type: intervalTimerStory.type)
         timerService.delegate = self

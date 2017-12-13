@@ -13,10 +13,13 @@ protocol ClassicTimerViewInput: class {
         Setup initial state of the view
     */
 
-    func setupInitialState()
-    func showLetGoButton()
+    func setupInitialState(type: timerType)
     func showPauseButton()
-    func showFinishButton()
     func showFinishOrContinueButton()
     func newTime(time: String)
+    func updateLapsTitle(titles: [String])
+    func createClassicTimer(minuts: Int, seconds: Int, miliseconds: Int)
+    func createCountDownTimer(minuts: Int, seconds: Int, miliseconds: Int)
+    func createIntervalTimer(sets: Int, workMinuts: Int, workSeconds: Int, restMinuts: Int, restSeconds: Int)
+    func resetTimer(type: timerType)
 }

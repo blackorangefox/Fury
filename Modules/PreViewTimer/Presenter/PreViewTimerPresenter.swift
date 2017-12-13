@@ -11,12 +11,14 @@ class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, Pr
     weak var view: PreViewTimerViewInput!
     var interactor: PreViewTimerInteractorInput!
     var router: PreViewTimerRouterInput!
+    var flowStory: IntervalTimerStoryProtocol!
 
     func viewIsReady() {
 
     }
     
-    func playButtonPress() {
+    func playButtonPress(type: timerType) {
+        flowStory.type = type
         router.openPreStartController()
     }
 }

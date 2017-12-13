@@ -95,7 +95,7 @@ class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
     }
     
     @IBAction func playButtonPress(_ sender: Any) {
-        output.playButtonPress()
+        output.playButtonPress(type: type)
     }
     
     // MARK: PreViewTimerViewInput

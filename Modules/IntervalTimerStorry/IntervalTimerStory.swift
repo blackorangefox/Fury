@@ -9,8 +9,10 @@
 import Foundation
 
 class IntervalTimerStory: IntervalTimerStoryProtocol {
-    var laps: Int!
-    var roundTime: Date!
-    var restDate: Date!
-   // var type: TimerType!
+    var sets: Int = 10
+    var workMinuts: Int = 0
+    var workSeconds: Int = 10
+    var restMinuts: Int = 0
+    var restSeconds: Int = 5
+    var type: timerType = .interval
 }

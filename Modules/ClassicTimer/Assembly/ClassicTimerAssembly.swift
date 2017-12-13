@@ -26,6 +26,7 @@ static func configure() {
             let presenter = ClassicTimerPresenter()
             presenter.router = resolver.resolve(ClassicTimerRouterInput.self, argument: (view as! UIViewController))
             presenter.timerService = resolver.resolve(TimerServiceProtocol.self)
+            presenter.flowStory = resolver.resolve(IntervalTimerStoryProtocol.self)
             presenter.view = view
             return presenter
         }).inObjectScope(.transient)
