@@ -19,6 +19,11 @@ class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, Pr
     
     func playButtonPress(type: timerType) {
         flowStory.type = type
-        router.openPreStartController()
+        switch type {
+        case .countdown, .interval:
+            break
+        default:
+            router.openPreStartController(type: flowStory.type)
+        }
     }
 }

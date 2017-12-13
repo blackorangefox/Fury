@@ -608,7 +608,7 @@
 			children = (
 				B4422EC51FD8678F000ABC64 /* RecordVideo */,
 				D4959DE31F46958D00E794BC /* TimerStorry */,
-				884310ADB7CF15C185499A38 /* ClassicTimer */,
+				884310ADB7CF15C185499A38 /* Timer */,
 				46423D0CC969785CB4F18C01 /* MainView */,
 				7D8CFAA626A640A460288ADB /* PreViewTimer */,
 				F7D5C1A50A8AEFDB3F5C730C /* ResultScreen */,
@@ -773,7 +773,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		884310ADB7CF15C185499A38 /* ClassicTimer */ = {
+		884310ADB7CF15C185499A38 /* Timer */ = {
 			isa = PBXGroup;
 			children = (
 				DF846F8D19A54F8DD3E4DC1D /* View */,
@@ -781,7 +781,7 @@
 				7939734DB92A60FBAB2A8075 /* Router */,
 				6577F68E8E436FDC064CDBAC /* Assembly */,
 			);
-			path = ClassicTimer;
+			path = Timer;
 			sourceTree = "<group>";
 		};
 		89E0FD4961AC727DDCD7E847 /* CoutdownTimer */ = {
