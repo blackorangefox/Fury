@@ -11,5 +11,5 @@ import Foundation
 protocol ResultScreenRouterInput {
 
 	weak var view: ResultScreenViewController? { get set }
-
+    func openMainView()
 }

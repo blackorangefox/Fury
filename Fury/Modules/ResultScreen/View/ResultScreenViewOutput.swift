@@ -14,4 +14,5 @@ protocol ResultScreenViewOutput {
     */
 
     func viewIsReady()
+    func okButtonPress()
 }

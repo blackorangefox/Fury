@@ -27,10 +27,25 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
         output.viewIsReady()
         resultLabel.text = result
         style()
+        herocu()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    func herocu() {
+        switch type {
+        case .classic:
+            gradientView.heroID = "classicView"
+            logoImage.heroID = "classicLogo"
+        case .interval:
+            gradientView.heroID = "intervalView"
+            logoImage.heroID = "intervalLogo"
+        case .countdown:
+            gradientView.heroID = "countdownView"
+            logoImage.heroID = "countdownLogo"
+        }
     }
     
     func style() {
@@ -59,8 +74,10 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
         gradientLayer.frame = CGRect(x: 0, y: 0, width: screenRect.width-48, height: screenRect.width-48)
         gradientView.layer.insertSublayer(gradientLayer, at: 0)
     }
+    
 
     @IBAction func okButtonPress(_ sender: Any) {
+        output.okButtonPress()
     }
     
     @IBOutlet weak var shareButtonPress: UIButton!

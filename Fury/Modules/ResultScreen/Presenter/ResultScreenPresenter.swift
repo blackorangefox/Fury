@@ -15,4 +15,16 @@ class ResultScreenPresenter: ResultScreenModuleInput, ResultScreenViewOutput, Re
     func viewIsReady() {
 
     }
+    
+    func okButtonPress() {
+        if needShowSurveyControlle() {
+            
+        } else {
+            router.openMainView()
+        }
+    }
+    
+    func needShowSurveyControlle() -> Bool {
+        return false
+    }
 }
