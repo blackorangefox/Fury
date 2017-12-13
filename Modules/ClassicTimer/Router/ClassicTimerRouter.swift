@@ -12,11 +12,11 @@ class ClassicTimerRouter: ClassicTimerRouterInput {
 
 	var view : UIViewController!
     
-    func openFinishView(with time: String) {
-        let story = UIStoryboard.init(name: "Main", bundle: nil)
-        let controller = story.instantiateViewController(withIdentifier: "ResultController") as! ResultController
-        controller.ruselt = time
-        view!.present(controller, animated: true, completion: nil)
+    func openFinishView(with time: String, type: timerType) {
+        let controller = GlobalAssembly.resolve(type: ResultScreenViewInput.self) as! ResultScreenViewController
+        controller.type = type
+        controller.result = time
+        view.navigationController?.pushViewController(controller)
     }
 
 }

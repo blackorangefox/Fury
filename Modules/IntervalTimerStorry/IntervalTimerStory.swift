@@ -13,6 +13,6 @@ class IntervalTimerStory: IntervalTimerStoryProtocol {
     var workMinuts: Int = 0
     var workSeconds: Int = 10
     var restMinuts: Int = 0
-    var restSeconds: Int = 5
+    var restSeconds: Int = 0
     var type: timerType = .interval
 }

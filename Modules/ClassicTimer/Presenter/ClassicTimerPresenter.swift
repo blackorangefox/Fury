@@ -66,8 +66,8 @@ class ClassicTimerPresenter: ClassicTimerModuleInput, ClassicTimerViewOutput {
         view.showFinishOrContinueButton()
     }
     
-    func finishButtonPress(with time: String) {
-        router.openFinishView(with: time)
+    func finishButtonPress(with result: String) {
+        router.openFinishView(with: result, type: flowStory.type)
     }
     
     func continueButtonPress() {

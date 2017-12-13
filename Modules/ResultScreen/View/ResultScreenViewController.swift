@@ -25,15 +25,12 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
+        resultLabel.text = result
+        style()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        style()
     }
     
     func style() {
@@ -58,7 +55,8 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
             shareButton.setBackgroundColor(color: UIColor.furyBrightLavender, forState: .normal)
             subTitleLabel.text = "COMPLETED"
         }
-        gradientLayer.frame = self.gradientView.bounds
+        let screenRect = UIScreen.main.bounds
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: screenRect.width-48, height: screenRect.width-48)
         gradientView.layer.insertSublayer(gradientLayer, at: 0)
     }
 

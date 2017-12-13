@@ -31,6 +31,9 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
     var currentdate: [Date] = []
     var timeWhenStartPause = Date()
     var titleArray: [String] = []
+    var type: timerType = .classic
+    var countdoenTimerStart = Date()
+    var timerFinish: TimeInterval!
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -44,14 +47,13 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
         }
     }
     
-    func setBottonView(type: timerType) {
-        let storyboard = UIStoryboard.init(name: "BottomCoordinator", bundle: nil)
-        bottomViewController = storyboard.instantiateViewController(withIdentifier: "BottomViewController") as! BottomCoordinator
-        bottomViewController.type = type
-        bottomViewController.delegate = self
-        self.addSubview(self.bottomViewController, container: bottomContainer)
+    func showPauseButton() {
+        bottomViewController.showPauseButton()
     }
     
+    func showFinishOrContinueButton() {
+        bottomViewController.showFinishOrContinueButton()
+    }
     
     func createClassicTimer(minuts: Int = 0, seconds: Int = 0, miliseconds: Int = 0)  {
         self.timeWhenTimerStart = addingTime(time: Date(), minuts: -minuts, seconds: -seconds, miliseconds: -miliseconds)
@@ -60,17 +62,24 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
     }
     
     func createCountDownTimer(minuts: Int, seconds: Int, miliseconds: Int = 0) {
+        countdoenTimerStart = Date()
         self.timeWhenTimerStart = addingTime(time: Date(), minuts: minuts, seconds: seconds, miliseconds: miliseconds)
         let aSelector = #selector(ClassicTimerViewController.updateCountDownTimer)
         createTimer(selector: aSelector)
     }
     
     func createIntervalTimer(sets: Int, workMinuts: Int, workSeconds: Int, restMinuts: Int, restSeconds: Int) {
-        currentdate = createWorkAndRestTimeArray(sets: sets,
-                                                 workMinuts: workMinuts,
-                                                 workSeconds: workSeconds,
-                                                 restMinuts: restMinuts,
-                                                 restSeconds: restSeconds)
+        if restSeconds == 0 && restMinuts == 0 {
+            currentdate = createDateArrayBy(sets: sets,
+                                            workMinuts: workMinuts,
+                                            workSeconds: workSeconds)
+        } else {
+            currentdate = createDateArrayBy(sets: sets,
+                                            workMinuts: workMinuts,
+                                            workSeconds: workSeconds,
+                                            restMinuts: restMinuts,
+                                            restSeconds: restSeconds)
+        }
         self.timeWhenTimerStart = currentdate[currentIndex]
         let aSelector = #selector(ClassicTimerViewController.updateIntervalTimer)
         createTimer(selector: aSelector)
@@ -83,7 +92,7 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
             currentIndex += 1
             nextSegment()
             if currentIndex == currentdate.count {
-                stopTimer()
+                pauseButtonPress()
                 return
             }
             self.timeWhenTimerStart = currentdate[currentIndex]
@@ -110,7 +119,7 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
         let newTime = timeWhenTimerStart - Date()
         if newTime <= 0 {
             timeLabel.text = "00:00:00"
-            stopTimer()
+            pauseButtonPress()
             return
         }
         updateLabel(newTime: newTime)
@@ -140,7 +149,16 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
     
     // MARK: ClassicTimerViewInput
     func setupInitialState(type: timerType) {
+        self.type = type
         setBottonView(type: type)
+    }
+    
+    func setBottonView(type: timerType) {
+        let storyboard = UIStoryboard.init(name: "BottomCoordinator", bundle: nil)
+        bottomViewController = storyboard.instantiateViewController(withIdentifier: "BottomViewController") as! BottomCoordinator
+        bottomViewController.type = type
+        bottomViewController.delegate = self
+        self.addSubview(self.bottomViewController, container: bottomContainer)
     }
     
     func updateLapsTitle(titles: [String]) {
@@ -152,13 +170,7 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
         timeLabel.text = time
     }
     
-    func showPauseButton() {
-        bottomViewController.showPauseButton()
-    }
     
-    func showFinishOrContinueButton() {
-        bottomViewController.showFinishOrContinueButton()
-    }
     
     //MARK: PRIVATE
     private func continueCountDownTimer() {
@@ -211,7 +223,7 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
         return (minuts, seconds, miliseconds)
     }
     
-    private func createWorkAndRestTimeArray(sets: Int, workMinuts: Int, workSeconds: Int, restMinuts: Int, restSeconds: Int) -> [Date] {
+    private func createDateArrayBy(sets: Int, workMinuts: Int, workSeconds: Int, restMinuts: Int, restSeconds: Int) -> [Date] {
         var array: [Date] = []
         array.append(Date())
         for index in 1...sets {
@@ -224,6 +236,18 @@ class ClassicTimerViewController: UIViewController, RootContainerControllerProto
                 newDate = newDate.adding(.second, value: workSeconds)
                 array.append(newDate)
             }
+        }
+        array.remove(at: 0)
+        return array
+    }
+    
+    private func createDateArrayBy(sets: Int, workMinuts: Int, workSeconds: Int) -> [Date] {
+        var array: [Date] = []
+        array.append(Date())
+        for _ in 1...sets {
+            var newDate = array.last!.adding(.minute, value: workMinuts)
+            newDate = newDate.adding(.second, value: workSeconds)
+            array.append(newDate)
         }
         array.remove(at: 0)
         return array
@@ -244,13 +268,22 @@ extension ClassicTimerViewController: BottomViewControllerDelegate {
         stopTimer()
         self.timeWhenStartPause = Date()
         print("---PAUSE---")
+        timerFinish = Date().timeIntervalSince(countdoenTimerStart)
         output.pauseButtonPress()
     }
     
     func finishButtonPress() {
         stopTimer()
         Mixpanel.mainInstance().track(event: "FINISH press")
-        output.finishButtonPress(with: timeLabel.text!)
+        switch type {
+        case .classic:
+            output.finishButtonPress(with: timeLabel.text ?? "00:00:00")
+        case .interval:
+            output.finishButtonPress(with: "\(currentIndex) RNDS")
+        case .countdown:
+            let time = getTimeBy(newTime: timerFinish)
+            output.finishButtonPress(with: String(format: "%02d:%02d:%02d", time.minuts, time.seconds, time.miliseconds))
+        }
     }
     
     func continueButtonPress() {
