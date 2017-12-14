@@ -17,4 +17,9 @@ class PreViewTimerRouter: PreViewTimerRouterInput {
         let preScreen  = story.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
         view?.navigationController?.pushViewController(preScreen, animated: true)
     }
+    
+    func openRoundSetting() {
+        let controller = GlobalAssembly.resolve(type: RoundSettingViewInput.self) as! UIViewController
+        view?.navigationController?.pushViewController(controller, animated: true)
+    }
 }

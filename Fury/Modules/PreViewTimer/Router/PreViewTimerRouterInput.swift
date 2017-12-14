@@ -12,4 +12,5 @@ protocol PreViewTimerRouterInput {
 
 	weak var view: PreViewTimerViewController? { get set }
     func openPreStartController()
+    func openRoundSetting()
 }

@@ -10,44 +10,64 @@
 		00418BB9F2EA65C99B7A2A3C /* ResultScreenViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23B61AFADAFC639F42C02E /* ResultScreenViewOutput.swift */; };
 		0083AF77EB2A1EBAD3C74FFA /* IntervalTimerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74E186E60DD03274E7AA01D /* IntervalTimerViewTests.swift */; };
 		01ADE0F10E7C416BFCC0DC70 /* MainViewInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A014CCA6C9CAF5B676C72 /* MainViewInteractorOutput.swift */; };
+		0786184B2AF82EC47B8DFB63 /* TimeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86D33A11C7EF2649CC4E4C /* TimeSettingViewController.swift */; };
 		07AE87B63EAFA655160DAFA3 /* PreViewTimerInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F23C85D0E38FF715386562 /* PreViewTimerInteractorOutput.swift */; };
+		07F68CFD61D630E8E8E3504B /* RoundSettingInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38DEE7F28672137A0602EB9 /* RoundSettingInteractorInput.swift */; };
 		0A3DCFC51FE115F2E397900D /* PreViewTimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9DA95EF6250C243B53228 /* PreViewTimerInteractor.swift */; };
+		0F6889A00F0D5325DC010B1F /* RoundSettingRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67C8229E47C639CB4F4C66 /* RoundSettingRouterTests.swift */; };
+		184D41DA2E06629872F180DA /* TimeSettingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335A0DAE4555C950090E7315 /* TimeSettingAssembly.swift */; };
 		1D2297FDC082A0617AA285E4 /* MainViewInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265BC32363F8B08744DFE966 /* MainViewInteractorInput.swift */; };
 		1F1028A1873C4BEDC6B50942 /* ResultScreenInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491018F8417F0EC5C58A89F /* ResultScreenInteractorInput.swift */; };
+		215DEABD0F58EED2E23547B2 /* RoundSettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9487B88DF65FA43B6E08C3D5 /* RoundSettingInteractor.swift */; };
 		2196A547D444B35E530B7411 /* IntervalTimerSettingRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA7AB0807AC5471FA131C3 /* IntervalTimerSettingRouterTests.swift */; };
 		24916D92ED45E47F5E5780E1 /* PreViewTimerInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394270DF9A21717240E26711 /* PreViewTimerInteractorInput.swift */; };
 		24D37C5D3AB38BF881E409AF /* PreViewTimerConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FAE9C7BA3D7C06CD342041 /* PreViewTimerConfiguratorTests.swift */; };
 		2A2E5395D8B479EF7A274BDE /* TimerModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA68E93928B1D35E2FF9296 /* TimerModuleInput.swift */; };
 		2B5F63F3F6E5E0A2B3DAE14F /* Pods_FuryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FDFFB2043BF21EB50A836B /* Pods_FuryUITests.framework */; };
+		2C4D81453861FDF01DBFF656 /* TimeSettingInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E70826D779B488BD7613273 /* TimeSettingInteractorOutput.swift */; };
 		2D62D2DD1C8AFDCCBC6F7D16 /* ResultScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DE0E3D832E16CD155B809 /* ResultScreenAssembly.swift */; };
 		2DA7A132B6338901D135B43D /* PreViewTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E6CB40475AAAA17D05BEEF /* PreViewTimerViewController.swift */; };
 		2F74D498BDF9FCF37C214360 /* ResultScreenConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0931483862F5035EB2450B /* ResultScreenConfiguratorTests.swift */; };
 		33AE6E4BA3FC34AD86A6C5DB /* CoutdownTimerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B03796B64BF334CE396BF /* CoutdownTimerViewTests.swift */; };
+		3458A1A0D4AE19692D4F7799 /* RoundSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239EE994CAAE4310146E91B8 /* RoundSettingViewController.swift */; };
 		35AC7C87F53D7102102CFE48 /* ResultScreenInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CFFFE129ADB9C8A48040FD /* ResultScreenInteractorOutput.swift */; };
+		385108B426CBE570A476452C /* TimeSettingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620AB599411F9C0593B55FA /* TimeSettingInteractorTests.swift */; };
 		3A41B530F94D9F3E41952503 /* TimerViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AC27E270F52E9E9C4FAE82 /* TimerViewOutput.swift */; };
 		3CBC2D72B2BD37196ED642FA /* ResultScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60ED60280B489F9B4FEC2A /* ResultScreenInteractor.swift */; };
+		448ACBCB5A7A39545DFE7186 /* RoundSettingModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3613755F7A3FA31721D947C6 /* RoundSettingModuleInput.swift */; };
 		44C32A1F5A0C7E132C444F5A /* PreViewTimerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC988BFD660E7C17CE0DE52 /* PreViewTimerRouterTests.swift */; };
+		4734ED9CA452BBA65931D960 /* RoundSettingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CAC7DC372D31C9487265F6 /* RoundSettingAssembly.swift */; };
 		479F3FA12A648AB34B2AB525 /* CoutdownTimerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157E2817D1E89CBFDE07CAD2 /* CoutdownTimerRouterTests.swift */; };
 		4986EE208C4DC058714A9EEC /* PreViewTimerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE8E4FC54EBBF350487663E /* PreViewTimerAssembly.swift */; };
+		4A9ADC4EC574E637DE63E2CA /* TimeSettingRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BB8EBF71F216ED3ACA270 /* TimeSettingRouterInput.swift */; };
+		4BEB147372A31E504C310F44 /* RoundSettingViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E785413CA535F3F208300 /* RoundSettingViewInput.swift */; };
 		4C58B1CA7BC6654A97854172 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF84E1ECAA76C22368BF95 /* TimerViewController.swift */; };
+		4F5F988B839228AF540F0216 /* TimeSettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CD7D8B65015F53F61260C /* TimeSettingInteractor.swift */; };
 		5280539411DA61E0A4193D34 /* Pods_Fury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4492F19A02CB7A69961D429 /* Pods_Fury.framework */; };
+		5606DCC5BE1C71E69EC707C6 /* RoundSettingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33E499712AAD7AA62C7549 /* RoundSettingPresenterTests.swift */; };
 		566E7BECE818CF57F2C22719 /* ResultScreenViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9E0B042152AEE39CB8F03 /* ResultScreenViewInput.swift */; };
+		5B74A120388DC4D610CB5A02 /* RoundSettingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179ED8EF909B0F6ADA155724 /* RoundSettingViewTests.swift */; };
+		5D42C179C145F0D72C773F79 /* RoundSettingViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DE96AA6C6032D3921BCC57 /* RoundSettingViewOutput.swift */; };
 		5EC53BB33CB9E6134DA616F8 /* MainViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5A8CC8D1503A716698C88D /* MainViewPresenterTests.swift */; };
 		60D8E1D2800D16A97874DF6E /* ClassicTimerConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6724C772BD7CBB02E94EDA19 /* ClassicTimerConfiguratorTests.swift */; };
 		6DBC897D7541D1B4627D1C32 /* MainViewInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2DE4A0E0000E64CFAA1DB0 /* MainViewInteractorTests.swift */; };
 		6DE0C7344EEE8569208E2098 /* IntervalTimerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD17CDBBCA329B65F412AAA /* IntervalTimerRouterTests.swift */; };
 		70A29F208BCD89D9EAF90905 /* ClassicTimerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175FACA00442BECD9F84A94F /* ClassicTimerViewTests.swift */; };
 		71B32A69B47E36BC8E45CD10 /* IntervalTimerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FC94AD57618229E44C794 /* IntervalTimerPresenterTests.swift */; };
+		7454BB0C34E900F2032E986A /* TimeSettingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287678AF1549F9044C6B4631 /* TimeSettingPresenterTests.swift */; };
 		7A3894E929D77561414A5E27 /* TimerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97753711DBDFE2FA8572C34 /* TimerAssembly.swift */; };
+		7D8A966003B412F86C9B89A1 /* TimeSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E399BF8CA891C8F8CBDDC84 /* TimeSettingPresenter.swift */; };
 		80E6C4815BFE8FB4D1F60E21 /* MainViewViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70BD167CC1864898298D96 /* MainViewViewInput.swift */; };
 		829FD878C1C22BE0921B2886 /* MainViewRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED8FB3EB7809B0E37EA767 /* MainViewRouterTests.swift */; };
 		84227DCE32AB18C2FA81BD91 /* MainViewRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135A330A0412517C986A8C5F /* MainViewRouterInput.swift */; };
 		8433A2C81F8E46FBE1926EBE /* PreViewTimerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107EC861166752569FB2C698 /* PreViewTimerViewTests.swift */; };
+		8646E136876C1ED3FECBF795 /* TimeSettingInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4A1719B1AED3A63638B10 /* TimeSettingInteractorInput.swift */; };
 		88B483A5E377429FC29E0585 /* TimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C275D6328C84306FCD06F /* TimerPresenter.swift */; };
 		8930F1F4E92605B34B20E267 /* TimerViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C332B18F4622EF6D1624A0 /* TimerViewInput.swift */; };
 		8B2A66D78762A196F220201D /* PreViewTimerViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B578BEFD852ECEC0A9A6258C /* PreViewTimerViewInput.swift */; };
 		8DF963AFF68572ADDE28D3E3 /* ClassicTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25979BECDE070CF16D0C72A4 /* ClassicTimerInteractorTests.swift */; };
 		917E3D1A724E622C59D9DCDF /* CoutdownTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F6BF6EDC3C050A4F0E4A70 /* CoutdownTimerInteractorTests.swift */; };
+		93DFCACF79132C36EC4B4172 /* RoundSettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC19CB8359DBE62ED6D4585 /* RoundSettingRouter.swift */; };
 		94974BA5E639FF46AE797DDE /* MainViewViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174B20052175101C214619FF /* MainViewViewOutput.swift */; };
 		97C0B09FF322D02F1F36D72F /* PreViewTimerModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8D16DDCC799B078EB1827 /* PreViewTimerModuleInput.swift */; };
 		980C8DB33C3F7EAE95D11E30 /* IntervalTimerSettingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D58324485DA483857494F /* IntervalTimerSettingInteractorTests.swift */; };
@@ -57,6 +77,7 @@
 		9ECE5450B572921BD2A60D8C /* MainViewConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60369A5D36E2FC529976F74A /* MainViewConfiguratorTests.swift */; };
 		A47E93029986DA4366AA2AF1 /* ResultScreenRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17491E9010C261E76700B9 /* ResultScreenRouterInput.swift */; };
 		A8F5F84EC7195124B2622715 /* ResultScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E92326FF6B417F1082B443 /* ResultScreenPresenterTests.swift */; };
+		AA79C9DCAAA6A6B6B9A537AA /* TimeSettingViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9302C0C440F8FFC5BCA9433 /* TimeSettingViewInput.swift */; };
 		AEA83AE26BDF354DAF84252B /* ResultScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC0B9E0C00ADBE60B2DDC01 /* ResultScreenPresenter.swift */; };
 		AFDDBA1688119D1DC3989CB1 /* MainViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077F34082B59996E24E295BA /* MainViewInteractor.swift */; };
 		B03AAC6A0F557DE0522E2DFB /* PreViewTimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B5ED0BD6C2F4352CB256B /* PreViewTimerPresenter.swift */; };
@@ -66,6 +87,8 @@
 		B41082361ECC376900D285AC /* IntervalNavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */; };
 		B415147F1FE281AA00C539B4 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B415147E1FE281AA00C539B4 /* UIView+extention.swift */; };
 		B41514841FE2881600C539B4 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41514831FE2881600C539B4 /* Style.swift */; };
+		B41514861FE2A78100C539B4 /* TimeSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41514851FE2A78100C539B4 /* TimeSettingViewController.storyboard */; };
+		B41514881FE2BA5A00C539B4 /* RoundSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41514871FE2BA5A00C539B4 /* RoundSettingViewController.storyboard */; };
 		B423F36B1ED42B1F0034BFF1 /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423F36A1ED42B1F0034BFF1 /* FinishController.swift */; };
 		B4422EC71FD867A7000ABC64 /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4422EC61FD867A7000ABC64 /* RecordVideoViewController.swift */; };
 		B4422ECA1FD96FBB000ABC64 /* PreStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4422EC91FD96FBA000ABC64 /* PreStartController.swift */; };
@@ -167,13 +190,20 @@
 		B4C920A41FCF45DA0020B522 /* Double+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C920A31FCF45DA0020B522 /* Double+extention.swift */; };
 		B4F9268E1F13D109003C0828 /* Airhorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4F9268D1F13D109003C0828 /* Airhorn.mp3 */; };
 		B4FDDD8C1F292E9A00762382 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDDD8B1F292E9A00762382 /* SurveyController.swift */; };
+		B75458B5114F4C3908411193 /* TimeSettingRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA971BEE5BA164183B1F1F5 /* TimeSettingRouterTests.swift */; };
 		B8C72946842FD8F9D1EEA54F /* TimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF972ED134A4CE693762E1A1 /* TimerRouter.swift */; };
 		BD1A87F2F72C4E29D49D0C40 /* IntervalTimerSettingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E3A4D58E029B0C6A900397 /* IntervalTimerSettingViewTests.swift */; };
+		BFF427E8315C0AA5F228FC96 /* TimeSettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994207A5570A9971D504A9C /* TimeSettingRouter.swift */; };
 		C0634B5ADA5C9799CDFEB819 /* CoutdownTimerConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E073441B5D5115198FF133 /* CoutdownTimerConfiguratorTests.swift */; };
 		C234264C5E0F73B944FCCB19 /* ClassicTimerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208A955F72DEF538440CED2 /* ClassicTimerPresenterTests.swift */; };
+		C2B47B8148489D274B231398 /* TimeSettingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56246950AFE74535DB25806E /* TimeSettingViewTests.swift */; };
+		C2E165B5CCFBC09FAFD16739 /* RoundSettingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E599999E300A92F3282D17 /* RoundSettingInteractorTests.swift */; };
+		C6A168C039445813E1B9426A /* RoundSettingRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6444E15383546772F2DA /* RoundSettingRouterInput.swift */; };
 		C8A21E7B94076BBD3DC3C2CC /* MainViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096C95C28E44175C649E867B /* MainViewAssembly.swift */; };
 		C8BD9A7AAA11975B93539128 /* PreViewTimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7639780245DA6A76B041DA /* PreViewTimerRouter.swift */; };
 		CBB18309DEA7E7A948390433 /* IntervalTimerConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA2A9D312C7E180F70D16D7 /* IntervalTimerConfiguratorTests.swift */; };
+		CC8924062C9F74E8CC2EC02F /* TimeSettingViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DA1CEA834875E9D95FDF47 /* TimeSettingViewOutput.swift */; };
+		D0657B487C9592A48AFE23CB /* RoundSettingInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34176B910DA030820B22DBFA /* RoundSettingInteractorOutput.swift */; };
 		D0C1E80FE279ECFA50129FAB /* ResultScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14558D4A797AD4ECBB36A88 /* ResultScreenViewController.swift */; };
 		D33F3C4CEB393DB4BAA65E4E /* PreViewTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B756B39CFA9150DE1426627C /* PreViewTimerInteractorTests.swift */; };
 		D3DF16F2188C54332B3B0713 /* ResultScreenModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B04AD3D2BF385E45BB35A8 /* ResultScreenModuleInput.swift */; };
@@ -189,6 +219,8 @@
 		D4F3A2401F4FD2F4007EECCC /* BottomCoordinator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F3A23F1F4FD2F4007EECCC /* BottomCoordinator.storyboard */; };
 		DA04C20135DEFFFBBB8DCA1A /* MainViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6897AC1240BF413C769C066 /* MainViewRouter.swift */; };
 		DDC8AE7DDD7C16722224E6A0 /* PreViewTimerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF245204FF72A91CB52E38D8 /* PreViewTimerPresenterTests.swift */; };
+		DE67B73C36DD28CD0A351239 /* RoundSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08324EC29EC61B526663E3FD /* RoundSettingPresenter.swift */; };
+		DF5435BE7186F849DDD84BDF /* TimeSettingConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F530FE05645957EDE549 /* TimeSettingConfiguratorTests.swift */; };
 		DF5EAA1431A2DFE7C54E0D7C /* MainViewViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDB579B8CCB9DFE18C951A9 /* MainViewViewTests.swift */; };
 		E00C90A5EC3509C9614A2163 /* IntervalTimerSettingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834114FCA92A0B9EC54D71B8 /* IntervalTimerSettingPresenterTests.swift */; };
 		E1525A0F35104F96E05DE551 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF5D933C84585C657B75FF7 /* MainViewPresenter.swift */; };
@@ -196,10 +228,12 @@
 		E5C5B0A123C64B602D04112D /* ResultScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9900F9C43CADC04656AA33 /* ResultScreenRouter.swift */; };
 		E70BC2BEADC655E1D09BC374 /* IntervalTimerSettingConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A211601C73CDD4B0230EB1 /* IntervalTimerSettingConfiguratorTests.swift */; };
 		E8E9969366B0A6C8D26D07C5 /* CoutdownTimerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928656134D51E2EB0E47FB86 /* CoutdownTimerPresenterTests.swift */; };
+		E96345DCB243AD4A5829B067 /* TimeSettingModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2AC674D151829945AC6F2 /* TimeSettingModuleInput.swift */; };
 		E9A64220996722A9928F17C9 /* TimerRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCEDCFB5C3E17064E003379 /* TimerRouterInput.swift */; };
 		EFA776E26EF468CC0EFC2CE8 /* IntervalTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AD5D751F015CE1ADF0EC34 /* IntervalTimerInteractorTests.swift */; };
 		F1A726516D02EE3A851C4FF1 /* ResultScreenInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306559E41D716083111C79E8 /* ResultScreenInteractorTests.swift */; };
 		F330A09AF88B76523CF4373F /* ResultScreenViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91588842E97C4DCB3C4727FF /* ResultScreenViewTests.swift */; };
+		FC4BFF2A212F5409C22AE58E /* RoundSettingConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1489BFC840E26ECE08E6DA4C /* RoundSettingConfiguratorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,28 +254,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003BB8EBF71F216ED3ACA270 /* TimeSettingRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingRouterInput.swift; sourceTree = "<group>"; };
 		077F34082B59996E24E295BA /* MainViewInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewInteractor.swift; sourceTree = "<group>"; };
+		08324EC29EC61B526663E3FD /* RoundSettingPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingPresenter.swift; sourceTree = "<group>"; };
 		096C95C28E44175C649E867B /* MainViewAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewAssembly.swift; sourceTree = "<group>"; };
+		0C67C8229E47C639CB4F4C66 /* RoundSettingRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingRouterTests.swift; sourceTree = "<group>"; };
 		0DA2A9D312C7E180F70D16D7 /* IntervalTimerConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerConfiguratorTests.swift; sourceTree = "<group>"; };
 		0EDB579B8CCB9DFE18C951A9 /* MainViewViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewViewTests.swift; sourceTree = "<group>"; };
+		0F33E499712AAD7AA62C7549 /* RoundSettingPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingPresenterTests.swift; sourceTree = "<group>"; };
 		0FE8E4FC54EBBF350487663E /* PreViewTimerAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerAssembly.swift; sourceTree = "<group>"; };
 		107EC861166752569FB2C698 /* PreViewTimerViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerViewTests.swift; sourceTree = "<group>"; };
 		135A330A0412517C986A8C5F /* MainViewRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewRouterInput.swift; sourceTree = "<group>"; };
+		1489BFC840E26ECE08E6DA4C /* RoundSettingConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingConfiguratorTests.swift; sourceTree = "<group>"; };
 		157E2817D1E89CBFDE07CAD2 /* CoutdownTimerRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerRouterTests.swift; sourceTree = "<group>"; };
+		15DA1CEA834875E9D95FDF47 /* TimeSettingViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingViewOutput.swift; sourceTree = "<group>"; };
 		174B20052175101C214619FF /* MainViewViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewViewOutput.swift; sourceTree = "<group>"; };
 		175FACA00442BECD9F84A94F /* ClassicTimerViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerViewTests.swift; sourceTree = "<group>"; };
+		179ED8EF909B0F6ADA155724 /* RoundSettingViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingViewTests.swift; sourceTree = "<group>"; };
+		1994207A5570A9971D504A9C /* TimeSettingRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingRouter.swift; sourceTree = "<group>"; };
 		1E0931483862F5035EB2450B /* ResultScreenConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenConfiguratorTests.swift; sourceTree = "<group>"; };
 		1E5A8CC8D1503A716698C88D /* MainViewPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewPresenterTests.swift; sourceTree = "<group>"; };
 		1FD3DC42351CC8C6464D1525 /* ResultScreenRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenRouterTests.swift; sourceTree = "<group>"; };
 		22F23C85D0E38FF715386562 /* PreViewTimerInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerInteractorOutput.swift; sourceTree = "<group>"; };
+		239EE994CAAE4310146E91B8 /* RoundSettingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingViewController.swift; sourceTree = "<group>"; };
 		25979BECDE070CF16D0C72A4 /* ClassicTimerInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerInteractorTests.swift; sourceTree = "<group>"; };
 		265BC32363F8B08744DFE966 /* MainViewInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewInteractorInput.swift; sourceTree = "<group>"; };
+		287678AF1549F9044C6B4631 /* TimeSettingPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingPresenterTests.swift; sourceTree = "<group>"; };
 		28C332B18F4622EF6D1624A0 /* TimerViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerViewInput.swift; sourceTree = "<group>"; };
 		28E6CB40475AAAA17D05BEEF /* PreViewTimerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerViewController.swift; sourceTree = "<group>"; };
 		2B8B03796B64BF334CE396BF /* CoutdownTimerViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerViewTests.swift; sourceTree = "<group>"; };
 		2FC988BFD660E7C17CE0DE52 /* PreViewTimerRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerRouterTests.swift; sourceTree = "<group>"; };
 		306559E41D716083111C79E8 /* ResultScreenInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenInteractorTests.swift; sourceTree = "<group>"; };
+		31E599999E300A92F3282D17 /* RoundSettingInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingInteractorTests.swift; sourceTree = "<group>"; };
 		32FAE9C7BA3D7C06CD342041 /* PreViewTimerConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerConfiguratorTests.swift; sourceTree = "<group>"; };
+		335A0DAE4555C950090E7315 /* TimeSettingAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingAssembly.swift; sourceTree = "<group>"; };
+		34176B910DA030820B22DBFA /* RoundSettingInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingInteractorOutput.swift; sourceTree = "<group>"; };
+		3613755F7A3FA31721D947C6 /* RoundSettingModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingModuleInput.swift; sourceTree = "<group>"; };
 		394270DF9A21717240E26711 /* PreViewTimerInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerInteractorInput.swift; sourceTree = "<group>"; };
 		3F9900F9C43CADC04656AA33 /* ResultScreenRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenRouter.swift; sourceTree = "<group>"; };
 		40DE0B8B83BF4F6ECAF658A9 /* Pods_FuryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,33 +299,46 @@
 		51AD5D751F015CE1ADF0EC34 /* IntervalTimerInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerInteractorTests.swift; sourceTree = "<group>"; };
 		53CFFFE129ADB9C8A48040FD /* ResultScreenInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenInteractorOutput.swift; sourceTree = "<group>"; };
 		555CC4BFB2DF1E9A24E5331C /* Pods-FuryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuryUITests/Pods-FuryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		56246950AFE74535DB25806E /* TimeSettingViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingViewTests.swift; sourceTree = "<group>"; };
 		59B04AD3D2BF385E45BB35A8 /* ResultScreenModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenModuleInput.swift; sourceTree = "<group>"; };
 		5DB86E4C2200C679B4B1E408 /* Pods-Fury.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fury.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fury/Pods-Fury.debug.xcconfig"; sourceTree = "<group>"; };
+		5E70826D779B488BD7613273 /* TimeSettingInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingInteractorOutput.swift; sourceTree = "<group>"; };
 		60369A5D36E2FC529976F74A /* MainViewConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewConfiguratorTests.swift; sourceTree = "<group>"; };
 		612F38ACE8EE1F282A165558 /* PreViewTimerViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerViewOutput.swift; sourceTree = "<group>"; };
+		6620AB599411F9C0593B55FA /* TimeSettingInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingInteractorTests.swift; sourceTree = "<group>"; };
 		6724C772BD7CBB02E94EDA19 /* ClassicTimerConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerConfiguratorTests.swift; sourceTree = "<group>"; };
 		6D70BD167CC1864898298D96 /* MainViewViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewViewInput.swift; sourceTree = "<group>"; };
+		6E399BF8CA891C8F8CBDDC84 /* TimeSettingPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingPresenter.swift; sourceTree = "<group>"; };
 		7491018F8417F0EC5C58A89F /* ResultScreenInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenInteractorInput.swift; sourceTree = "<group>"; };
 		7CE9DA95EF6250C243B53228 /* PreViewTimerInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerInteractor.swift; sourceTree = "<group>"; };
 		7FA68E93928B1D35E2FF9296 /* TimerModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerModuleInput.swift; sourceTree = "<group>"; };
+		7FA971BEE5BA164183B1F1F5 /* TimeSettingRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingRouterTests.swift; sourceTree = "<group>"; };
 		834114FCA92A0B9EC54D71B8 /* IntervalTimerSettingPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingPresenterTests.swift; sourceTree = "<group>"; };
 		8D60ED60280B489F9B4FEC2A /* ResultScreenInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenInteractor.swift; sourceTree = "<group>"; };
 		8E7639780245DA6A76B041DA /* PreViewTimerRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerRouter.swift; sourceTree = "<group>"; };
 		91588842E97C4DCB3C4727FF /* ResultScreenViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenViewTests.swift; sourceTree = "<group>"; };
 		920C275D6328C84306FCD06F /* TimerPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerPresenter.swift; sourceTree = "<group>"; };
 		928656134D51E2EB0E47FB86 /* CoutdownTimerPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerPresenterTests.swift; sourceTree = "<group>"; };
+		9487B88DF65FA43B6E08C3D5 /* RoundSettingInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingInteractor.swift; sourceTree = "<group>"; };
 		95C8D16DDCC799B078EB1827 /* PreViewTimerModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerModuleInput.swift; sourceTree = "<group>"; };
 		95E3A4D58E029B0C6A900397 /* IntervalTimerSettingViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingViewTests.swift; sourceTree = "<group>"; };
 		9647165800605984508E8409 /* Pods-Fury.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fury.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fury/Pods-Fury.release.xcconfig"; sourceTree = "<group>"; };
 		96947A30242E0990190C470A /* Pods-FuryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuryUITests/Pods-FuryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		990DE0E3D832E16CD155B809 /* ResultScreenAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenAssembly.swift; sourceTree = "<group>"; };
 		99E92326FF6B417F1082B443 /* ResultScreenPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenPresenterTests.swift; sourceTree = "<group>"; };
+		9C86D33A11C7EF2649CC4E4C /* TimeSettingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingViewController.swift; sourceTree = "<group>"; };
 		9F17491E9010C261E76700B9 /* ResultScreenRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenRouterInput.swift; sourceTree = "<group>"; };
 		9F9FC94AD57618229E44C794 /* IntervalTimerPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerPresenterTests.swift; sourceTree = "<group>"; };
+		A38DEE7F28672137A0602EB9 /* RoundSettingInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingInteractorInput.swift; sourceTree = "<group>"; };
 		A407F662F7007661AFE05E89 /* Pods-FuryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuryTests/Pods-FuryTests.release.xcconfig"; sourceTree = "<group>"; };
+		A9302C0C440F8FFC5BCA9433 /* TimeSettingViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingViewInput.swift; sourceTree = "<group>"; };
 		AA2DE4A0E0000E64CFAA1DB0 /* MainViewInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewInteractorTests.swift; sourceTree = "<group>"; };
+		AAA4A1719B1AED3A63638B10 /* TimeSettingInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingInteractorInput.swift; sourceTree = "<group>"; };
+		AC3E785413CA535F3F208300 /* RoundSettingViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingViewInput.swift; sourceTree = "<group>"; };
+		ACC19CB8359DBE62ED6D4585 /* RoundSettingRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingRouter.swift; sourceTree = "<group>"; };
 		ADF5D933C84585C657B75FF7 /* MainViewPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 		AFC0B9E0C00ADBE60B2DDC01 /* ResultScreenPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenPresenter.swift; sourceTree = "<group>"; };
+		AFF2AC674D151829945AC6F2 /* TimeSettingModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingModuleInput.swift; sourceTree = "<group>"; };
 		B14558D4A797AD4ECBB36A88 /* ResultScreenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenViewController.swift; sourceTree = "<group>"; };
 		B1F6BF6EDC3C050A4F0E4A70 /* CoutdownTimerInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerInteractorTests.swift; sourceTree = "<group>"; };
 		B208A955F72DEF538440CED2 /* ClassicTimerPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerPresenterTests.swift; sourceTree = "<group>"; };
@@ -287,6 +348,8 @@
 		B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationControllerTests.swift; sourceTree = "<group>"; };
 		B415147E1FE281AA00C539B4 /* UIView+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
 		B41514831FE2881600C539B4 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		B41514851FE2A78100C539B4 /* TimeSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeSettingViewController.storyboard; sourceTree = "<group>"; };
+		B41514871FE2BA5A00C539B4 /* RoundSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoundSettingViewController.storyboard; sourceTree = "<group>"; };
 		B423F36A1ED42B1F0034BFF1 /* FinishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
 		B4422EC61FD867A7000ABC64 /* RecordVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
 		B4422EC91FD96FBA000ABC64 /* PreStartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreStartController.swift; sourceTree = "<group>"; };
@@ -402,7 +465,10 @@
 		BFAA7AB0807AC5471FA131C3 /* IntervalTimerSettingRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingRouterTests.swift; sourceTree = "<group>"; };
 		C4FDFFB2043BF21EB50A836B /* Pods_FuryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DF84E1ECAA76C22368BF95 /* TimerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		CE3CD7D8B65015F53F61260C /* TimeSettingInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingInteractor.swift; sourceTree = "<group>"; };
 		CF972ED134A4CE693762E1A1 /* TimerRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerRouter.swift; sourceTree = "<group>"; };
+		D1A5F530FE05645957EDE549 /* TimeSettingConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingConfiguratorTests.swift; sourceTree = "<group>"; };
+		D1DE96AA6C6032D3921BCC57 /* RoundSettingViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingViewOutput.swift; sourceTree = "<group>"; };
 		D4959DE41F4695AD00E794BC /* TimerStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStory.swift; sourceTree = "<group>"; };
 		D4959DE71F46970D00E794BC /* GlobalAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAssembly.swift; sourceTree = "<group>"; };
 		D4959DE91F469BC100E794BC /* BaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAssembly.swift; sourceTree = "<group>"; };
@@ -417,10 +483,12 @@
 		E4E073441B5D5115198FF133 /* CoutdownTimerConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerConfiguratorTests.swift; sourceTree = "<group>"; };
 		E6897AC1240BF413C769C066 /* MainViewRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewRouter.swift; sourceTree = "<group>"; };
 		E74E186E60DD03274E7AA01D /* IntervalTimerViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerViewTests.swift; sourceTree = "<group>"; };
+		E9DD6444E15383546772F2DA /* RoundSettingRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingRouterInput.swift; sourceTree = "<group>"; };
 		EA5E738D9F8B431C6431A8E9 /* ClassicTimerRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerRouterTests.swift; sourceTree = "<group>"; };
 		EAD17CDBBCA329B65F412AAA /* IntervalTimerRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerRouterTests.swift; sourceTree = "<group>"; };
 		F28504FDF12472253ACD63A3 /* MainViewViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewViewController.swift; sourceTree = "<group>"; };
 		F62A014CCA6C9CAF5B676C72 /* MainViewInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewInteractorOutput.swift; sourceTree = "<group>"; };
+		F6CAC7DC372D31C9487265F6 /* RoundSettingAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingAssembly.swift; sourceTree = "<group>"; };
 		F84B5B93C1558A0DE8B825CF /* PreViewTimerRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerRouterInput.swift; sourceTree = "<group>"; };
 		FA2D58324485DA483857494F /* IntervalTimerSettingInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingInteractorTests.swift; sourceTree = "<group>"; };
 		FCCEDCFB5C3E17064E003379 /* TimerRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerRouterInput.swift; sourceTree = "<group>"; };
@@ -461,6 +529,14 @@
 				32FAE9C7BA3D7C06CD342041 /* PreViewTimerConfiguratorTests.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		06D107A67E280BD23913A3E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				179ED8EF909B0F6ADA155724 /* RoundSettingViewTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		09AD7EF251D322B19515B59D /* ResultScreen */ = {
@@ -508,6 +584,25 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		1590D033E2CA3B8AA5698078 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9302C0C440F8FFC5BCA9433 /* TimeSettingViewInput.swift */,
+				15DA1CEA834875E9D95FDF47 /* TimeSettingViewOutput.swift */,
+				9C86D33A11C7EF2649CC4E4C /* TimeSettingViewController.swift */,
+				B41514851FE2A78100C539B4 /* TimeSettingViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		162A11A2F1E3F0273D690A7F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7FA971BEE5BA164183B1F1F5 /* TimeSettingRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		1C454E814E98CC5F45F8AFEA /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,10 +634,42 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
+		1F88F572054A08143A11977B /* TimeSetting */ = {
+			isa = PBXGroup;
+			children = (
+				CC87B67D0E59ABD74FF345A8 /* Configurator */,
+				935B28265EBD2E3D7A5269E5 /* View */,
+				829F91A41500FE237D8932F3 /* Interactor */,
+				B006F07FA9EA0A5DAC63BE34 /* Presenter */,
+				162A11A2F1E3F0273D690A7F /* Router */,
+			);
+			path = TimeSetting;
+			sourceTree = "<group>";
+		};
+		2302B2B74E61B47A15A5CD32 /* RoundSetting */ = {
+			isa = PBXGroup;
+			children = (
+				B86B352A4E74D26341A8265C /* Configurator */,
+				06D107A67E280BD23913A3E1 /* View */,
+				52B206EE87442B7C6ACCA2D2 /* Interactor */,
+				29E0111504DB47DA200F334C /* Presenter */,
+				61E154FAA5792986BA93CB89 /* Router */,
+			);
+			path = RoundSetting;
+			sourceTree = "<group>";
+		};
 		283206118B9A7D3F1A93100C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				ADF5D933C84585C657B75FF7 /* MainViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		29E0111504DB47DA200F334C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0F33E499712AAD7AA62C7549 /* RoundSettingPresenterTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -605,6 +732,8 @@
 		3DFE53C6C9176101CF189142 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AA3FF1DD7205212EA9AEEC11 /* RoundSetting */,
+				DAB30873CD8DC98AB3586D70 /* TimeSetting */,
 				B4422EC51FD8678F000ABC64 /* RecordVideo */,
 				D4959DE31F46958D00E794BC /* TimerStorry */,
 				884310ADB7CF15C185499A38 /* Timer */,
@@ -661,10 +790,27 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		52B206EE87442B7C6ACCA2D2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				31E599999E300A92F3282D17 /* RoundSettingInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		53F52710CE9261B95F3119FB /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				EA5E738D9F8B431C6431A8E9 /* ClassicTimerRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5551D0796D19407CAE782A8F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E9DD6444E15383546772F2DA /* RoundSettingRouterInput.swift */,
+				ACC19CB8359DBE62ED6D4585 /* RoundSettingRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -697,6 +843,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		61E154FAA5792986BA93CB89 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0C67C8229E47C639CB4F4C66 /* RoundSettingRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		6495033581C5A419A7C655CD /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +867,17 @@
 				B97753711DBDFE2FA8572C34 /* TimerAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		6BADE7A448459151C814ADB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC3E785413CA535F3F208300 /* RoundSettingViewInput.swift */,
+				D1DE96AA6C6032D3921BCC57 /* RoundSettingViewOutput.swift */,
+				239EE994CAAE4310146E91B8 /* RoundSettingViewController.swift */,
+				B41514871FE2BA5A00C539B4 /* RoundSettingViewController.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		74591ADC3BCAEC72A96C5274 /* Presenter */ = {
@@ -762,6 +927,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		829F91A41500FE237D8932F3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6620AB599411F9C0593B55FA /* TimeSettingInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		880392BCDA4EF40BB2AFD386 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -795,6 +968,23 @@
 			path = CoutdownTimer;
 			sourceTree = "<group>";
 		};
+		8F50493A058B89B133870C0F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AFF2AC674D151829945AC6F2 /* TimeSettingModuleInput.swift */,
+				6E399BF8CA891C8F8CBDDC84 /* TimeSettingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		935B28265EBD2E3D7A5269E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56246950AFE74535DB25806E /* TimeSettingViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A045021367FF48DCB689BABB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -811,6 +1001,37 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		A5C71C78AA6FDAD8A76ABAA3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3613755F7A3FA31721D947C6 /* RoundSettingModuleInput.swift */,
+				08324EC29EC61B526663E3FD /* RoundSettingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A61DC20DA53ABF5680EEA865 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				AAA4A1719B1AED3A63638B10 /* TimeSettingInteractorInput.swift */,
+				5E70826D779B488BD7613273 /* TimeSettingInteractorOutput.swift */,
+				CE3CD7D8B65015F53F61260C /* TimeSettingInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		AA3FF1DD7205212EA9AEEC11 /* RoundSetting */ = {
+			isa = PBXGroup;
+			children = (
+				6BADE7A448459151C814ADB3 /* View */,
+				A5C71C78AA6FDAD8A76ABAA3 /* Presenter */,
+				C55D227A4A0E2D28E7ECF580 /* Interactor */,
+				5551D0796D19407CAE782A8F /* Router */,
+				B4662594AE68E9EB63E062D2 /* Assembly */,
+			);
+			path = RoundSetting;
+			sourceTree = "<group>";
+		};
 		AF93F3228095FF667B711C2B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -822,6 +1043,14 @@
 				96947A30242E0990190C470A /* Pods-FuryUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B006F07FA9EA0A5DAC63BE34 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				287678AF1549F9044C6B4631 /* TimeSettingPresenterTests.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		B12207D740DF185A9B779484 /* Configurator */ = {
@@ -1005,6 +1234,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		B4662594AE68E9EB63E062D2 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				F6CAC7DC372D31C9487265F6 /* RoundSettingAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		B4707E2D54F62AB2D3E6B6E2 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1118,6 +1355,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B86B352A4E74D26341A8265C /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				1489BFC840E26ECE08E6DA4C /* RoundSettingConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		BB2DEE76C8A7477F24938068 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -1141,6 +1386,16 @@
 				1E5A8CC8D1503A716698C88D /* MainViewPresenterTests.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C55D227A4A0E2D28E7ECF580 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A38DEE7F28672137A0602EB9 /* RoundSettingInteractorInput.swift */,
+				34176B910DA030820B22DBFA /* RoundSettingInteractorOutput.swift */,
+				9487B88DF65FA43B6E08C3D5 /* RoundSettingInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		C71E031D5412E30DCA9567C3 /* View */ = {
@@ -1170,6 +1425,14 @@
 				3F9900F9C43CADC04656AA33 /* ResultScreenRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		CC87B67D0E59ABD74FF345A8 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				D1A5F530FE05645957EDE549 /* TimeSettingConfiguratorTests.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		D4959DDA1F46894A00E794BC /* ComponentsLibrary */ = {
@@ -1237,6 +1500,26 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		DAB30873CD8DC98AB3586D70 /* TimeSetting */ = {
+			isa = PBXGroup;
+			children = (
+				1590D033E2CA3B8AA5698078 /* View */,
+				8F50493A058B89B133870C0F /* Presenter */,
+				A61DC20DA53ABF5680EEA865 /* Interactor */,
+				E35B19E8D4E947DE1341C24A /* Router */,
+				DF14C2C152927608FD7D330B /* Assembly */,
+			);
+			path = TimeSetting;
+			sourceTree = "<group>";
+		};
+		DF14C2C152927608FD7D330B /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				335A0DAE4555C950090E7315 /* TimeSettingAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		DF846F8D19A54F8DD3E4DC1D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1265,6 +1548,15 @@
 				077F34082B59996E24E295BA /* MainViewInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E35B19E8D4E947DE1341C24A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				003BB8EBF71F216ED3ACA270 /* TimeSettingRouterInput.swift */,
+				1994207A5570A9971D504A9C /* TimeSettingRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		E561AE4622F35F7E175F4F03 /* Router */ = {
@@ -1382,6 +1674,8 @@
 				1F8352464DA2844EA4F2EE11 /* MainView */,
 				2CABCE58D30116845E2ED0CD /* PreViewTimer */,
 				09AD7EF251D322B19515B59D /* ResultScreen */,
+				1F88F572054A08143A11977B /* TimeSetting */,
+				2302B2B74E61B47A15A5CD32 /* RoundSetting */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -1553,6 +1847,7 @@
 				B4422F111FD97256000ABC64 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */,
 				B4753A281EB9F144008B3A1D /* Roboto-Italic.ttf in Resources */,
 				B4422F0D1FD97256000ABC64 /* MontserratAlternates-Black.otf in Resources */,
+				B41514861FE2A78100C539B4 /* TimeSettingViewController.storyboard in Resources */,
 				B4753A241EB9F144008B3A1D /* Roboto-Black.ttf in Resources */,
 				B4753A2A1EB9F144008B3A1D /* Roboto-LightItalic.ttf in Resources */,
 				B47539811EB4DDE0008B3A1D /* Assets.xcassets in Resources */,
@@ -1580,6 +1875,7 @@
 				B4753A251EB9F144008B3A1D /* Roboto-BlackItalic.ttf in Resources */,
 				B4422F1C1FD97256000ABC64 /* MontserratAlternates-Medium.otf in Resources */,
 				B40CDC0B1F1B683C00B2187A /* long-beep.mp3 in Resources */,
+				B41514881FE2BA5A00C539B4 /* RoundSettingViewController.storyboard in Resources */,
 				B4422F131FD97256000ABC64 /* Montserrat-SemiBold.otf in Resources */,
 				B4422F161FD97256000ABC64 /* MontserratAlternates-LightItalic.otf in Resources */,
 				B4753A001EB9F136008B3A1D /* Oswald-Bold.ttf in Resources */,
@@ -1860,6 +2156,28 @@
 				A47E93029986DA4366AA2AF1 /* ResultScreenRouterInput.swift in Sources */,
 				E5C5B0A123C64B602D04112D /* ResultScreenRouter.swift in Sources */,
 				2D62D2DD1C8AFDCCBC6F7D16 /* ResultScreenAssembly.swift in Sources */,
+				AA79C9DCAAA6A6B6B9A537AA /* TimeSettingViewInput.swift in Sources */,
+				CC8924062C9F74E8CC2EC02F /* TimeSettingViewOutput.swift in Sources */,
+				0786184B2AF82EC47B8DFB63 /* TimeSettingViewController.swift in Sources */,
+				E96345DCB243AD4A5829B067 /* TimeSettingModuleInput.swift in Sources */,
+				7D8A966003B412F86C9B89A1 /* TimeSettingPresenter.swift in Sources */,
+				8646E136876C1ED3FECBF795 /* TimeSettingInteractorInput.swift in Sources */,
+				2C4D81453861FDF01DBFF656 /* TimeSettingInteractorOutput.swift in Sources */,
+				4F5F988B839228AF540F0216 /* TimeSettingInteractor.swift in Sources */,
+				4A9ADC4EC574E637DE63E2CA /* TimeSettingRouterInput.swift in Sources */,
+				BFF427E8315C0AA5F228FC96 /* TimeSettingRouter.swift in Sources */,
+				184D41DA2E06629872F180DA /* TimeSettingAssembly.swift in Sources */,
+				4BEB147372A31E504C310F44 /* RoundSettingViewInput.swift in Sources */,
+				5D42C179C145F0D72C773F79 /* RoundSettingViewOutput.swift in Sources */,
+				3458A1A0D4AE19692D4F7799 /* RoundSettingViewController.swift in Sources */,
+				448ACBCB5A7A39545DFE7186 /* RoundSettingModuleInput.swift in Sources */,
+				DE67B73C36DD28CD0A351239 /* RoundSettingPresenter.swift in Sources */,
+				07F68CFD61D630E8E8E3504B /* RoundSettingInteractorInput.swift in Sources */,
+				D0657B487C9592A48AFE23CB /* RoundSettingInteractorOutput.swift in Sources */,
+				215DEABD0F58EED2E23547B2 /* RoundSettingInteractor.swift in Sources */,
+				C6A168C039445813E1B9426A /* RoundSettingRouterInput.swift in Sources */,
+				93DFCACF79132C36EC4B4172 /* RoundSettingRouter.swift in Sources */,
+				4734ED9CA452BBA65931D960 /* RoundSettingAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1904,6 +2222,16 @@
 				F1A726516D02EE3A851C4FF1 /* ResultScreenInteractorTests.swift in Sources */,
 				A8F5F84EC7195124B2622715 /* ResultScreenPresenterTests.swift in Sources */,
 				9A6482F6EC30F0B86A02E7D4 /* ResultScreenRouterTests.swift in Sources */,
+				DF5435BE7186F849DDD84BDF /* TimeSettingConfiguratorTests.swift in Sources */,
+				C2B47B8148489D274B231398 /* TimeSettingViewTests.swift in Sources */,
+				385108B426CBE570A476452C /* TimeSettingInteractorTests.swift in Sources */,
+				7454BB0C34E900F2032E986A /* TimeSettingPresenterTests.swift in Sources */,
+				B75458B5114F4C3908411193 /* TimeSettingRouterTests.swift in Sources */,
+				FC4BFF2A212F5409C22AE58E /* RoundSettingConfiguratorTests.swift in Sources */,
+				5B74A120388DC4D610CB5A02 /* RoundSettingViewTests.swift in Sources */,
+				C2E165B5CCFBC09FAFD16739 /* RoundSettingInteractorTests.swift in Sources */,
+				5606DCC5BE1C71E69EC707C6 /* RoundSettingPresenterTests.swift in Sources */,
+				0F6889A00F0D5325DC010B1F /* RoundSettingRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

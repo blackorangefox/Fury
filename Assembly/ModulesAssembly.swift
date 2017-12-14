@@ -19,6 +19,7 @@ class ModulesAssembly: BaseAssembly {
         MainViewAssembly.configure()
         PreViewTimerAssembly.configure()
         ResultScreenAssembly.configure()
-    
+        RoundSettingAssembly.configure()
+        TimeSettingAssembly.configure()
     }
 }

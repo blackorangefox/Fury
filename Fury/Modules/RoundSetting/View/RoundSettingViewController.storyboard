@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Round Setting View Controller-->
+        <scene sceneID="51l-0A-LLK">
+            <objects>
+                <viewController storyboardIdentifier="RoundSettingViewController" id="S8w-0U-2wN" customClass="RoundSettingViewController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wQy-7J-9fa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rT-m6-KDz">
+                                <rect key="frame" x="12" y="32" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CIY-pV-Pz7"/>
+                                    <constraint firstAttribute="width" constant="44" id="HfL-nW-gYx"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many rounds?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtB-um-z8L">
+                                <rect key="frame" x="24" y="76" width="327" height="34.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7C-RL-8pl" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="110.5" width="375" height="556.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uM1-hN-Olv" firstAttribute="trailing" secondItem="v7C-RL-8pl" secondAttribute="trailing" id="0Ky-5b-S4Z"/>
+                            <constraint firstItem="uM1-hN-Olv" firstAttribute="bottom" secondItem="v7C-RL-8pl" secondAttribute="bottom" id="3hQ-AF-If2"/>
+                            <constraint firstItem="1rT-m6-KDz" firstAttribute="top" secondItem="uM1-hN-Olv" secondAttribute="top" constant="12" id="5BS-FE-83b"/>
+                            <constraint firstItem="uM1-hN-Olv" firstAttribute="trailing" secondItem="dtB-um-z8L" secondAttribute="trailing" constant="24" id="5PM-sc-b2r"/>
+                            <constraint firstItem="v7C-RL-8pl" firstAttribute="top" secondItem="dtB-um-z8L" secondAttribute="bottom" id="JLv-7w-Zmo"/>
+                            <constraint firstItem="dtB-um-z8L" firstAttribute="top" secondItem="1rT-m6-KDz" secondAttribute="bottom" id="jmc-DQ-Thd"/>
+                            <constraint firstItem="v7C-RL-8pl" firstAttribute="leading" secondItem="uM1-hN-Olv" secondAttribute="leading" id="l2H-Un-fjG"/>
+                            <constraint firstItem="1rT-m6-KDz" firstAttribute="leading" secondItem="uM1-hN-Olv" secondAttribute="leading" constant="12" id="sly-vd-fTm"/>
+                            <constraint firstItem="dtB-um-z8L" firstAttribute="leading" secondItem="uM1-hN-Olv" secondAttribute="leading" constant="24" id="uCG-Fm-Lt8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uM1-hN-Olv"/>
+                    </view>
+                    <connections>
+                        <outlet property="roundPicker" destination="v7C-RL-8pl" id="0vR-fv-XPQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YxD-Fx-uKF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.80000000000001" y="87.706146926536732"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="26" height="24"/>
+        <namedColor name="backgroundColor">
+            <color red="0.13699999451637268" green="0.1289999932050705" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
