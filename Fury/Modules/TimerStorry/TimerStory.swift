@@ -9,10 +9,10 @@
 import Foundation
 
 class TimerStory: TimerStoryProtocol {
+    var style: TimerStyle = TimerStyle(by: .classic)
     var sets: Int = 0
     var workMinuts: Int = 0
     var workSeconds: Int = 0
     var restMinuts: Int = 0
     var restSeconds: Int = 0
-    var type: timerType = .classic
 }

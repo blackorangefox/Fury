@@ -18,7 +18,6 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
     @IBOutlet weak var subTitleLabel: UILabel!
     
     var output: ResultScreenViewOutput!
-    var type: timerType = .countdown
     var result: String = ""
     
     // MARK: Life cycle
@@ -26,15 +25,13 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
         super.viewDidLoad()
         output.viewIsReady()
         resultLabel.text = result
-        style()
-        herocu()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    func herocu() {
+    func setHero(type: TimerType) {
         switch type {
         case .classic:
             gradientView.heroID = "classicView"
@@ -48,34 +45,16 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
         }
     }
     
-    func style() {
-        let gradientLayer = CAGradientLayer()
-        switch type {
-        case .classic:
-            gradientLayer.colors = [UIColor.furyClassicGradientBot.cgColor, UIColor.furyClassicGradientTop.cgColor]
-            logoImage.image = UIImage(named: "classicSmall")
-            okButton.setBackgroundColor(color: UIColor.furyPinkRed, forState: .normal)
-            shareButton.setBackgroundColor(color: UIColor.furyPinkRed, forState: .normal)
-            subTitleLabel.text = "MY RESULT"
-        case .interval:
-            gradientLayer.colors = [UIColor.furyIntervalGradientTop.cgColor, UIColor.furyIntervalGradientBot.cgColor]
-            logoImage.image = UIImage(named: "intervalSmall")
-            okButton.setBackgroundColor(color: UIColor.furyGoldenYellow, forState: .normal)
-            shareButton.setBackgroundColor(color: UIColor.furyGoldenYellow, forState: .normal)
-            subTitleLabel.text = "MY RESULT"
-        case .countdown:
-            gradientLayer.colors = [UIColor.furyCountdownGradientBot.cgColor, UIColor.furyCountdownGradientTop.cgColor]
-            logoImage.image = UIImage(named: "countdownSmall")
-            okButton.setBackgroundColor(color: UIColor.furyBrightLavender, forState: .normal)
-            shareButton.setBackgroundColor(color: UIColor.furyBrightLavender, forState: .normal)
-            subTitleLabel.text = "COMPLETED"
-        }
+    func styleze(by style: TimerStyle) {
         let screenRect = UIScreen.main.bounds
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: screenRect.width-48, height: screenRect.width-48)
-        gradientView.layer.insertSublayer(gradientLayer, at: 0)
+        let size = CGSize(width: screenRect.width-48, height: screenRect.width-48)
+        gradientView.setGradienBackgroundBy(colors: style.gradientColor, size: size)
+        logoImage.image = style.smallLogo
+        okButton.setBackgroundColor(color: style.mainColor, forState: .normal)
+        shareButton.setBackgroundColor(color: style.mainColor, forState: .normal)
+        subTitleLabel.text = style.subTitle
     }
     
-
     @IBAction func okButtonPress(_ sender: Any) {
         output.okButtonPress()
     }

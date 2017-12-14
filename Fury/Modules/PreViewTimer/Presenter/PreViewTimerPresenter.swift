@@ -14,16 +14,15 @@ class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, Pr
     var flowStory: TimerStoryProtocol!
 
     func viewIsReady() {
-
+        view.stylize(by: flowStory.style)
     }
     
-    func playButtonPress(type: timerType) {
-        flowStory.type = type
-        switch type {
+    func playButtonPress() {
+        switch flowStory.style.type {
         case .countdown, .interval:
             break
         default:
-            router.openPreStartController(type: flowStory.type)
+            router.openPreStartController()
         }
     }
 }

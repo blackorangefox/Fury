@@ -12,11 +12,6 @@ import SwifterSwift
 import SwiftDate
 import Mixpanel
 
-enum TimerType {
-    case countDown
-    case infinity
-}
-
 class TimerViewController: UIViewController, TimerViewInput {
     
     @IBOutlet weak var bottomContainer: UIView!
@@ -32,7 +27,7 @@ class TimerViewController: UIViewController, TimerViewInput {
     var dateMassive: [Date] = []
     var timeWhenPausePress = Date()
     var titleArray: [String] = []
-    var type: timerType = .classic
+    var type: TimerType = .classic
     var countdownTimerStart = Date()
     
     // MARK: Life cycle
@@ -136,7 +131,7 @@ class TimerViewController: UIViewController, TimerViewInput {
         stopTimer()
     }
     
-    func resetTimer(type: timerType) {
+    func resetTimer(type: TimerType) {
         timeWhenTimerStart = Date()
         currentIndex = 0
         dateMassive = []
@@ -148,12 +143,12 @@ class TimerViewController: UIViewController, TimerViewInput {
     }
     
     // MARK: ClassicTimerViewInput
-    func setupInitialState(type: timerType) {
+    func setupInitialState(type: TimerType) {
         self.type = type
         setBottonView(type: type)
     }
     
-    func setBottonView(type: timerType) {
+    func setBottonView(type: TimerType) {
         let storyboard = UIStoryboard.init(name: "BottomCoordinator", bundle: nil)
         bottomViewController = storyboard.instantiateViewController(withIdentifier: "BottomViewController") as! BottomCoordinator
         bottomViewController.type = type

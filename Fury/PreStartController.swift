@@ -25,12 +25,37 @@ class PreStartController: UIViewController, iCarouselDataSource, iCarouselDelega
                            "GO"]
     var currentIndex = 1
     var timer: Timer!
-    var type: timerType = .classic
+    var type: TimerType = .classic
     
     @IBOutlet weak var carousel: iCarousel!
-        
+    @IBOutlet weak var gradientView: UIView!
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var bottomGradientViewConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCarousel()
+        showInformationViewIfNeeded()
+        subscribeScreenRotate()
+    
+        switch type {
+        case .classic:
+            gradientView.backgroundColor = UIColor.furyPinkRed
+        case .interval:
+            gradientView.backgroundColor = UIColor.furyGoldenYellow
+        case .countdown:
+            gradientView.backgroundColor = UIColor.furyBrightLavender
+        }
+    }
+    
+    func subscribeScreenRotate() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(PreStartController.rotated),
+                                               name: NSNotification.Name.UIDeviceOrientationDidChange,
+                                               object: nil)
+    }
+    
+    func setupCarousel() {
         carousel.type = .linear
         carousel.isVertical = true
     }
@@ -48,6 +73,7 @@ class PreStartController: UIViewController, iCarouselDataSource, iCarouselDelega
     @objc func updateSelectCell() {
         if self.currentIndex == self.items.count {
             timer.invalidate()
+            closeButtonPress(self)
             let vc = GlobalAssembly.resolve(type: TimerViewInput.self) as! UIViewController
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
@@ -56,9 +82,12 @@ class PreStartController: UIViewController, iCarouselDataSource, iCarouselDelega
         }
     }
     
-    func carouselDidEndScrollingAnimation(_ carousel: iCarousel) {
-        let oldView = carousel.itemView(at: carousel.currentItemIndex-1) as? UILabel
+    func carouselWillBeginScrollingAnimation(_ carousel: iCarousel) {
+        let oldView = carousel.currentItemView as? UILabel
         oldView?.textColor = UIColor.white.withAlphaComponent(0.1)
+    }
+    
+    func carouselDidEndScrollingAnimation(_ carousel: iCarousel) {
         let view = carousel.currentItemView as? UILabel
         if carousel.currentItemIndex == items.count-1 {
             switch type {
@@ -100,6 +129,37 @@ class PreStartController: UIViewController, iCarouselDataSource, iCarouselDelega
         }
         return value
     }
+    
+    @IBAction func closeButtonPress(_ sender: Any) {
+        bottomGradientViewConstraint.constant = -600
+        UIView.animate(withDuration: 0.3) {
+            self.gradientView.layoutIfNeeded()
+        }
+        UserDefaults.standard.set(true, forKey: "alreadyShown")
+    }
+    
+    func showInformationViewIfNeeded() {
+        if !UserDefaults.standard.bool(forKey: "alreadyShown") {
+            bottomGradientViewConstraint.constant = 24
+            UIView.animate(withDuration: 0.3) {
+                self.gradientView.layoutIfNeeded()
+            }
+        } else {
+            bottomGradientViewConstraint.constant = -600
+        }
+    }
+    
+    @objc func rotated() {
+        if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
+            closeButtonPress(self)
+        }
+        
+        if UIDeviceOrientationIsPortrait(UIDevice.current.orientation) {
+            print("Portrait")
+        }
+        
+    }
+    
 }
 
 

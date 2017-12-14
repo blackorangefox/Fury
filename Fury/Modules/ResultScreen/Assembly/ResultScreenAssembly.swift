@@ -27,6 +27,7 @@ static func configure() {
             presenter.interactor = resolver.resolve(ResultScreenInteractorInput.self, argument: (presenter as ResultScreenInteractorOutput))
             presenter.router = resolver.resolve(ResultScreenRouterInput.self, argument: (view as! UIViewController))
             presenter.view = view
+            presenter.flowStory = resolver.resolve(TimerStoryProtocol.self)
             return presenter
         }).inObjectScope(.transient)
 

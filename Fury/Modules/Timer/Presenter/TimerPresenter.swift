@@ -17,12 +17,12 @@ class TimerPresenter: TimerModuleInput, TimerViewOutput {
     var flowStory: TimerStoryProtocol!
 
     func viewIsReady() {
-        view.setupInitialState(type: flowStory.type)
+        view.setupInitialState(type: flowStory.style.type)
         setupTimer()
     }
     
     func setupTimer() {
-        switch flowStory.type {
+        switch flowStory.style.type {
         case .classic:
             view.createClassicTimer(minuts: 0,
                                     seconds: 0,
@@ -43,7 +43,7 @@ class TimerPresenter: TimerModuleInput, TimerViewOutput {
                                       seconds: flowStory.workSeconds,
                                       miliseconds: 0)
         }
-        if flowStory.type == .interval {
+        if flowStory.style.type == .interval {
             if flowStory.restMinuts == 0 && flowStory.restSeconds == 0 {
                 view.updateLapsTitle(titles: createTitleWithoutRest(laps: flowStory.sets))
             } else {
@@ -53,7 +53,7 @@ class TimerPresenter: TimerModuleInput, TimerViewOutput {
     }
 
     func resetButtonPress() {
-        view.resetTimer(type: flowStory.type)
+        view.resetTimer(type: flowStory.style.type)
         setupTimer()
         view.showPauseButton()
     }
@@ -67,7 +67,7 @@ class TimerPresenter: TimerModuleInput, TimerViewOutput {
     }
     
     func finishButtonPress(with result: String) {
-        router.openFinishView(with: result, type: flowStory.type)
+        router.openFinishView(with: result)
     }
     
     func continueButtonPress() {

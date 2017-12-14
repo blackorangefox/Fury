@@ -12,9 +12,11 @@ class ResultScreenPresenter: ResultScreenModuleInput, ResultScreenViewOutput, Re
     weak var view: ResultScreenViewInput!
     var interactor: ResultScreenInteractorInput!
     var router: ResultScreenRouterInput!
+    var flowStory: TimerStoryProtocol!
     
     func viewIsReady() {
-
+        view.styleze(by: flowStory.style)
+        view.setHero(type: flowStory.style.type)
     }
     
     func okButtonPress() {

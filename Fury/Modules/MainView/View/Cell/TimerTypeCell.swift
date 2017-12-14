@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum timerType {
+enum TimerType {
     case classic
     case interval
     case countdown
@@ -17,33 +17,17 @@ enum timerType {
 class TimerTypeCell: UITableViewCell {
     
     @IBOutlet weak var logoImage: UIImageView!
-    var type: timerType = .classic
+    var type: TimerType = .classic
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     override func didMoveToSuperview() {
-        let gradientLayer = CAGradientLayer()
-        switch type {
-        case .classic:
-            gradientLayer.colors = [UIColor.furyClassicGradientBot.cgColor, UIColor.furyClassicGradientTop.cgColor]
-            logoImage.image = UIImage(named: "classic")
-        case .interval:
-            gradientLayer.colors = [UIColor.furyIntervalGradientTop.cgColor, UIColor.furyIntervalGradientBot.cgColor]
-            logoImage.image = UIImage(named: "interval")
-        case .countdown:
-            gradientLayer.colors = [UIColor.furyCountdownGradientBot.cgColor, UIColor.furyCountdownGradientTop.cgColor]
-            logoImage.image = UIImage(named: "countdown")
-        }
-        gradientLayer.frame.size = CGSize(width: UIScreen.main.bounds.width - 48, height: 370)
-        self.layer.insertSublayer(gradientLayer, at: 0)
+        let style = TimerStyle(by: type)
+        logoImage.image = style.bigLogo
+        self.setGradienBackgroundBy(colors: style.gradientColor,
+                                    size: CGSize(width: UIScreen.main.bounds.width - 48,
+                                                 height: 370))
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

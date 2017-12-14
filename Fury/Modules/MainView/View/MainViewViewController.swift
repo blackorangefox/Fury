@@ -90,7 +90,7 @@ extension MainViewViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var type: timerType = .classic
+        var type: TimerType = .classic
         if indexPath.section == 1 {
             type = .interval
         }

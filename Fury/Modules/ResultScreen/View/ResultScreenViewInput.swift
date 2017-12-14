@@ -14,4 +14,6 @@ protocol ResultScreenViewInput: class {
     */
 
     func setupInitialState()
+    func styleze(by style: TimerStyle)
+    func setHero(type: TimerType)
 }

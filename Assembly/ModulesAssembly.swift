@@ -13,7 +13,7 @@ class ModulesAssembly: BaseAssembly {
     
     static func configure() {
         
-        let container = defaultContainer()
+        let _ = defaultContainer()
         
         TimerAssembly.configure()
         MainViewAssembly.configure()

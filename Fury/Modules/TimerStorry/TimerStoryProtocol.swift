@@ -14,5 +14,5 @@ protocol TimerStoryProtocol {
     var workSeconds: Int {get set}
     var restMinuts: Int {get set}
     var restSeconds: Int {get set}
-    var type: timerType {get set}
+    var style: TimerStyle {get set}
 }

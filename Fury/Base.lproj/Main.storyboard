@@ -9,6 +9,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-SemiBold.otf">
+            <string>Montserrat-SemiBold</string>
+        </array>
         <array key="RobotoCondensed-Bold.ttf">
             <string>RobotoCondensed-Bold</string>
         </array>
@@ -22,7 +28,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMt-XB-FDf" customClass="iCarousel">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQw-KD-l9S">
+                                <rect key="frame" x="24" y="518" width="366" height="194"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ct-Yj-0so">
+                                        <rect key="frame" x="310" y="12" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="9JF-BJ-G4l"/>
+                                            <constraint firstAttribute="height" constant="44" id="QQ5-Xw-DbW"/>
+                                        </constraints>
+                                        <state key="normal" image="cross"/>
+                                        <connections>
+                                            <action selector="closeButtonPress:" destination="nhB-am-xkb" eventType="touchUpInside" id="kWl-a7-IMv"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c4-fT-YlX">
+                                        <rect key="frame" x="24.000000000000004" y="21" width="35.333333333333343" height="27"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="8AF-4I-r20">
+                                        <rect key="frame" x="157" y="53" width="52" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="ANo-jn-Qnt"/>
+                                            <constraint firstAttribute="width" constant="52" id="eQp-2d-5ak"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p72-Fm-KVB">
+                                        <rect key="frame" x="51" y="129" width="264" height="44"/>
+                                        <string key="text">You can use fury timer in
+horizontal orientation</string>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1c4-fT-YlX" firstAttribute="top" secondItem="QQw-KD-l9S" secondAttribute="top" constant="21" id="2CW-B7-1sl"/>
+                                    <constraint firstItem="p72-Fm-KVB" firstAttribute="top" secondItem="8AF-4I-r20" secondAttribute="bottom" constant="22" id="9J9-oS-Iyj"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ct-Yj-0so" secondAttribute="trailing" constant="12" id="I61-gX-9V4"/>
+                                    <constraint firstItem="8AF-4I-r20" firstAttribute="top" secondItem="QQw-KD-l9S" secondAttribute="top" constant="53" id="P5e-gY-kB2"/>
+                                    <constraint firstAttribute="height" constant="194" id="Yf7-c0-tlN"/>
+                                    <constraint firstItem="1ct-Yj-0so" firstAttribute="top" secondItem="QQw-KD-l9S" secondAttribute="top" constant="12" id="ay3-Ct-Jrr"/>
+                                    <constraint firstItem="p72-Fm-KVB" firstAttribute="leading" secondItem="QQw-KD-l9S" secondAttribute="leading" constant="51" id="eU1-pu-CxM"/>
+                                    <constraint firstItem="1c4-fT-YlX" firstAttribute="leading" secondItem="QQw-KD-l9S" secondAttribute="leading" constant="24" id="hHc-kk-XC6"/>
+                                    <constraint firstItem="8AF-4I-r20" firstAttribute="centerX" secondItem="QQw-KD-l9S" secondAttribute="centerX" id="oLm-gU-kWB"/>
+                                    <constraint firstAttribute="trailing" secondItem="p72-Fm-KVB" secondAttribute="trailing" constant="51" id="zRw-qH-OQW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMt-XB-FDf" customClass="iCarousel">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -33,15 +96,21 @@
                         </subviews>
                         <color key="backgroundColor" red="0.062965318560600281" green="0.066727966070175171" blue="0.070717096328735352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="eLF-fn-Tad" firstAttribute="bottom" secondItem="QQw-KD-l9S" secondAttribute="bottom" constant="24" id="1dU-Au-L8U"/>
                             <constraint firstItem="LMt-XB-FDf" firstAttribute="top" secondItem="smU-zA-FIF" secondAttribute="top" id="FjT-BX-1Fq"/>
                             <constraint firstItem="LMt-XB-FDf" firstAttribute="trailing" secondItem="eLF-fn-Tad" secondAttribute="trailing" id="ROt-OU-WNl"/>
+                            <constraint firstItem="QQw-KD-l9S" firstAttribute="leading" secondItem="eLF-fn-Tad" secondAttribute="leading" constant="24" id="eju-7R-H0j"/>
                             <constraint firstItem="LMt-XB-FDf" firstAttribute="bottom" secondItem="eLF-fn-Tad" secondAttribute="bottom" id="qZS-uh-kth"/>
+                            <constraint firstItem="eLF-fn-Tad" firstAttribute="trailing" secondItem="QQw-KD-l9S" secondAttribute="trailing" constant="24" id="sdN-8l-FF4"/>
                             <constraint firstItem="LMt-XB-FDf" firstAttribute="leading" secondItem="eLF-fn-Tad" secondAttribute="leading" id="wI3-jz-WDa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eLF-fn-Tad"/>
                     </view>
                     <connections>
+                        <outlet property="bottomGradientViewConstraint" destination="1dU-Au-L8U" id="nVG-M0-aHW"/>
                         <outlet property="carousel" destination="LMt-XB-FDf" id="PD4-8n-fMM"/>
+                        <outlet property="closeButton" destination="1ct-Yj-0so" id="hYP-Pn-wf5"/>
+                        <outlet property="gradientView" destination="QQw-KD-l9S" id="XU6-nT-65n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ydc-ah-uVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -255,4 +324,8 @@ it won’t take more than 3 minutes.</string>
             <point key="canvasLocation" x="796.875" y="-3870.4225352112676"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cross" width="31" height="31"/>
+        <image name="icon" width="52" height="54"/>
+    </resources>
 </document>

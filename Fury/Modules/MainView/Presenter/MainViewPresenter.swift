@@ -6,17 +6,19 @@
 //  Copyright © 2017 nova9. All rights reserved.
 //
 
-class MainViewPresenter: MainViewModuleInput, MainViewViewOutput, MainViewInteractorOutput {
+class MainViewPresenter:  MainViewViewOutput, MainViewInteractorOutput {
 
     weak var view: MainViewViewInput!
     var interactor: MainViewInteractorInput!
     var router: MainViewRouterInput!
+    var flowStory: TimerStoryProtocol!
 
     func viewIsReady() {
 
     }
     
-    func openTimer(type: timerType) {
-        router.open(type: type)
+    func openTimer(type: TimerType) {
+        flowStory.style = TimerStyle(by: type)
+        router.open()
     }
 }

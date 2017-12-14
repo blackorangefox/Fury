@@ -12,9 +12,8 @@ class TimerRouter: TimerRouterInput {
 
 	var view : UIViewController!
     
-    func openFinishView(with time: String, type: timerType) {
+    func openFinishView(with time: String) {
         let controller = GlobalAssembly.resolve(type: ResultScreenViewInput.self) as! ResultScreenViewController
-        controller.type = type
         controller.result = time
         view.navigationController?.pushViewController(controller)
     }

@@ -13,7 +13,7 @@ protocol TimerViewInput: class {
         Setup initial state of the view
     */
 
-    func setupInitialState(type: timerType)
+    func setupInitialState(type: TimerType)
     func showPauseButton()
     func showFinishOrContinueButton()
     func newTime(time: String)
@@ -21,5 +21,5 @@ protocol TimerViewInput: class {
     func createClassicTimer(minuts: Int, seconds: Int, miliseconds: Int)
     func createCountDownTimer(minuts: Int, seconds: Int, miliseconds: Int)
     func createIntervalTimer(sets: Int, workMinuts: Int, workSeconds: Int, restMinuts: Int, restSeconds: Int)
-    func resetTimer(type: timerType)
+    func resetTimer(type: TimerType)
 }

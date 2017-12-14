@@ -17,7 +17,7 @@ protocol FinishOrContinueViewDelegate: class {
 class FinishOrContinueView: UIViewController {
     
     weak var delegate: FinishOrContinueViewDelegate!
-    var type: timerType = .classic
+    var type: TimerType = .classic
 
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var finishButton: UIButton!

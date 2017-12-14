@@ -27,7 +27,7 @@ class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
     @IBOutlet weak var gradientView: UIView!
     
     var output: PreViewTimerViewOutput!
-    var type: timerType = .classic
+    var style: TimerStyle!
     
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         get { return .portrait }
@@ -41,8 +41,6 @@ class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-        style()
-        herocu()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,7 +54,7 @@ class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
     }
     
     func herocu() {
-        switch type {
+        switch style.type {
         case .classic:
             gradientView.heroID = "classicView"
             logoImage.heroID = "classicLogo"
@@ -68,25 +66,14 @@ class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
             logoImage.heroID = "countdownLogo"
         }
     }
-    func style() {
-        let gradientLayer = CAGradientLayer()
-        switch type {
-        case .classic:
-            gradientLayer.colors = [UIColor.furyClassicGradientBot.cgColor, UIColor.furyClassicGradientTop.cgColor]
-            logoImage.image = UIImage(named: "classic")
-            playButton.setBackgroundColor(color: UIColor.furyPinkRed, forState: .normal)
-        case .interval:
-            gradientLayer.colors = [UIColor.furyIntervalGradientTop.cgColor, UIColor.furyIntervalGradientBot.cgColor]
-            logoImage.image = UIImage(named: "interval")
-            playButton.setBackgroundColor(color: UIColor.furyGoldenYellow, forState: .normal)
-        case .countdown:
-            gradientLayer.colors = [UIColor.furyCountdownGradientBot.cgColor, UIColor.furyCountdownGradientTop.cgColor]
-            logoImage.image = UIImage(named: "countdown")
-            playButton.setBackgroundColor(color: UIColor.furyBrightLavender, forState: .normal)
-        }
+    func stylize(by style: TimerStyle) {
+        self.style = style
+        herocu()
         let screenRect = UIScreen.main.bounds
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: screenRect.width-48, height: screenRect.height-48)
-        gradientView.layer.insertSublayer(gradientLayer, at: 0)
+        let size = CGSize(width: screenRect.width-48, height: screenRect.height-48)
+        playButton.setBackgroundColor(color: style.mainColor, forState: .normal)
+        gradientView.setGradienBackgroundBy(colors: style.gradientColor, size: size)
+        logoImage.image = style.bigLogo
     }
     
     @IBAction func closeButtonPress(_ sender: Any) {
@@ -95,7 +82,7 @@ class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
     }
     
     @IBAction func playButtonPress(_ sender: Any) {
-        output.playButtonPress(type: type)
+        output.playButtonPress()
     }
     
     // MARK: PreViewTimerViewInput

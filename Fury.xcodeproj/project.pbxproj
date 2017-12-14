@@ -38,7 +38,6 @@
 		6DE0C7344EEE8569208E2098 /* IntervalTimerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD17CDBBCA329B65F412AAA /* IntervalTimerRouterTests.swift */; };
 		70A29F208BCD89D9EAF90905 /* ClassicTimerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175FACA00442BECD9F84A94F /* ClassicTimerViewTests.swift */; };
 		71B32A69B47E36BC8E45CD10 /* IntervalTimerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9FC94AD57618229E44C794 /* IntervalTimerPresenterTests.swift */; };
-		7934B789C408044259227C35 /* MainViewModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F14414FDEB5D8EC706E90F /* MainViewModuleInput.swift */; };
 		7A3894E929D77561414A5E27 /* TimerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97753711DBDFE2FA8572C34 /* TimerAssembly.swift */; };
 		80E6C4815BFE8FB4D1F60E21 /* MainViewViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70BD167CC1864898298D96 /* MainViewViewInput.swift */; };
 		829FD878C1C22BE0921B2886 /* MainViewRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED8FB3EB7809B0E37EA767 /* MainViewRouterTests.swift */; };
@@ -65,8 +64,9 @@
 		B40CDC0B1F1B683C00B2187A /* long-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B40989DD1F17A37E001ACF1B /* long-beep.mp3 */; };
 		B40CDC0C1F1B683F00B2187A /* 1_second.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B40989DC1F17A378001ACF1B /* 1_second.mp3 */; };
 		B41082361ECC376900D285AC /* IntervalNavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */; };
+		B415147F1FE281AA00C539B4 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B415147E1FE281AA00C539B4 /* UIView+extention.swift */; };
+		B41514841FE2881600C539B4 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41514831FE2881600C539B4 /* Style.swift */; };
 		B423F36B1ED42B1F0034BFF1 /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423F36A1ED42B1F0034BFF1 /* FinishController.swift */; };
-		B42404061EC48C30000EE6DC /* Font+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42404051EC48C30000EE6DC /* Font+extension.swift */; };
 		B4422EC71FD867A7000ABC64 /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4422EC61FD867A7000ABC64 /* RecordVideoViewController.swift */; };
 		B4422ECA1FD96FBB000ABC64 /* PreStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4422EC91FD96FBA000ABC64 /* PreStartController.swift */; };
 		B4422ECD1FD96FDE000ABC64 /* IntervalNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4422ECB1FD96FDE000ABC64 /* IntervalNavigationCell.swift */; };
@@ -257,7 +257,6 @@
 		612F38ACE8EE1F282A165558 /* PreViewTimerViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerViewOutput.swift; sourceTree = "<group>"; };
 		6724C772BD7CBB02E94EDA19 /* ClassicTimerConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerConfiguratorTests.swift; sourceTree = "<group>"; };
 		6D70BD167CC1864898298D96 /* MainViewViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewViewInput.swift; sourceTree = "<group>"; };
-		73F14414FDEB5D8EC706E90F /* MainViewModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewModuleInput.swift; sourceTree = "<group>"; };
 		7491018F8417F0EC5C58A89F /* ResultScreenInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenInteractorInput.swift; sourceTree = "<group>"; };
 		7CE9DA95EF6250C243B53228 /* PreViewTimerInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerInteractor.swift; sourceTree = "<group>"; };
 		7FA68E93928B1D35E2FF9296 /* TimerModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerModuleInput.swift; sourceTree = "<group>"; };
@@ -286,8 +285,9 @@
 		B40989DC1F17A378001ACF1B /* 1_second.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1_second.mp3; sourceTree = "<group>"; };
 		B40989DD1F17A37E001ACF1B /* long-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "long-beep.mp3"; sourceTree = "<group>"; };
 		B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationControllerTests.swift; sourceTree = "<group>"; };
+		B415147E1FE281AA00C539B4 /* UIView+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
+		B41514831FE2881600C539B4 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		B423F36A1ED42B1F0034BFF1 /* FinishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
-		B42404051EC48C30000EE6DC /* Font+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+extension.swift"; sourceTree = "<group>"; };
 		B4422EC61FD867A7000ABC64 /* RecordVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
 		B4422EC91FD96FBA000ABC64 /* PreStartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreStartController.swift; sourceTree = "<group>"; };
 		B4422ECB1FD96FDE000ABC64 /* IntervalNavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationCell.swift; sourceTree = "<group>"; };
@@ -542,7 +542,6 @@
 		283206118B9A7D3F1A93100C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				73F14414FDEB5D8EC706E90F /* MainViewModuleInput.swift */,
 				ADF5D933C84585C657B75FF7 /* MainViewPresenter.swift */,
 			);
 			path = Presenter;
@@ -863,13 +862,21 @@
 			name = Music;
 			sourceTree = "<group>";
 		};
+		B41514821FE2880B00C539B4 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				B41514831FE2881600C539B4 /* Style.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		B42404041EC48C19000EE6DC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				B42404051EC48C30000EE6DC /* Font+extension.swift */,
 				B4A53F9C1ED6D15500838F86 /* Date+extension.swift */,
 				B4C920A31FCF45DA0020B522 /* Double+extention.swift */,
 				B4A7359A1FE19566004223CF /* UIViewController+extention.swift */,
+				B415147E1FE281AA00C539B4 /* UIView+extention.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -1041,6 +1048,7 @@
 		B47539781EB4DDE0008B3A1D /* Fury */ = {
 			isa = PBXGroup;
 			children = (
+				B41514821FE2880B00C539B4 /* Style */,
 				3DFE53C6C9176101CF189142 /* Modules */,
 				B4C160EF1FDECBCE00CAC90A /* Cell */,
 				B4422EC91FD96FBA000ABC64 /* PreStartController.swift */,
@@ -1785,7 +1793,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4753A431EBA0A05008B3A1D /* BottomCoordinator.swift in Sources */,
-				B42404061EC48C30000EE6DC /* Font+extension.swift in Sources */,
 				D4959DEE1F469CB900E794BC /* StoriesAssembly.swift in Sources */,
 				B4A53F9D1ED6D15500838F86 /* Date+extension.swift in Sources */,
 				D4959DE81F46970D00E794BC /* GlobalAssembly.swift in Sources */,
@@ -1813,6 +1820,7 @@
 				4C58B1CA7BC6654A97854172 /* TimerViewController.swift in Sources */,
 				2A2E5395D8B479EF7A274BDE /* TimerModuleInput.swift in Sources */,
 				88B483A5E377429FC29E0585 /* TimerPresenter.swift in Sources */,
+				B41514841FE2881600C539B4 /* Style.swift in Sources */,
 				E9A64220996722A9928F17C9 /* TimerRouterInput.swift in Sources */,
 				B4422F221FD9732B000ABC64 /* UIFont+FURYAdditions.swift in Sources */,
 				B8C72946842FD8F9D1EEA54F /* TimerRouter.swift in Sources */,
@@ -1822,9 +1830,9 @@
 				94974BA5E639FF46AE797DDE /* MainViewViewOutput.swift in Sources */,
 				E18CEBD27CE3718ADB197763 /* MainViewViewController.swift in Sources */,
 				B4422F201FD97303000ABC64 /* UIColor+FURYAdditions.swift in Sources */,
-				7934B789C408044259227C35 /* MainViewModuleInput.swift in Sources */,
 				E1525A0F35104F96E05DE551 /* MainViewPresenter.swift in Sources */,
 				1D2297FDC082A0617AA285E4 /* MainViewInteractorInput.swift in Sources */,
+				B415147F1FE281AA00C539B4 /* UIView+extention.swift in Sources */,
 				01ADE0F10E7C416BFCC0DC70 /* MainViewInteractorOutput.swift in Sources */,
 				AFDDBA1688119D1DC3989CB1 /* MainViewInteractor.swift in Sources */,
 				84227DCE32AB18C2FA81BD91 /* MainViewRouterInput.swift in Sources */,

@@ -17,7 +17,7 @@ class PauseView: UIViewController {
     @IBOutlet weak var button: UIButton!
     weak var delegate: PauseViewDelegate!
     
-    var type: timerType = .classic
+    var type: TimerType = .classic
     
     override func viewDidLoad() {
         super.viewDidLoad()

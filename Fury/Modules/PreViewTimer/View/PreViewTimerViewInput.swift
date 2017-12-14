@@ -14,4 +14,5 @@ protocol PreViewTimerViewInput: class {
     */
 
     func setupInitialState()
+    func stylize(by style: TimerStyle)
 }

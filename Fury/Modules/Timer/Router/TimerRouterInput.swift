@@ -12,5 +12,5 @@ import UIKit
 protocol TimerRouterInput {
 
 	weak var view: UIViewController! { get set }
-    func openFinishView(with time: String, type: timerType)
+    func openFinishView(with time: String)
 }

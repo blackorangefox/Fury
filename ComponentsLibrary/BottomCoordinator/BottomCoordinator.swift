@@ -21,7 +21,7 @@ class BottomCoordinator: UIViewController, PauseViewDelegate, FinishOrContinueVi
     var pauseView: PauseView!
     var finishOrContinueView: FinishOrContinueView!
     weak var currentViewController: UIViewController!
-    var type: timerType = .classic
+    var type: TimerType = .classic
     
     override func viewDidLoad() {
         let storyboard = UIStoryboard.init(name: "BottomCoordinator", bundle: nil)

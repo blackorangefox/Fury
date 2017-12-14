@@ -11,5 +11,5 @@ import Foundation
 protocol MainViewRouterInput {
 
 	weak var view: MainViewViewController? { get set }
-    func open(type: timerType)
+    func open()
 }
