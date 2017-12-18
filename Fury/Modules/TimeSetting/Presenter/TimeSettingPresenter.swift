@@ -11,8 +11,16 @@ class TimeSettingPresenter: TimeSettingModuleInput, TimeSettingViewOutput, TimeS
     weak var view: TimeSettingViewInput!
     var interactor: TimeSettingInteractorInput!
     var router: TimeSettingRouterInput!
-
+     var flowStory: TimerStoryProtocol!
+    
     func viewIsReady() {
-
+        view.stylez(style: flowStory.style)
+        view.setTitle(text: "Set round time")
+    }
+    
+    func selectWorkTime(minuts: Int,
+                        seconds: Int) {
+        flowStory.workMinuts = minuts
+        flowStory.workSeconds = seconds
     }
 }

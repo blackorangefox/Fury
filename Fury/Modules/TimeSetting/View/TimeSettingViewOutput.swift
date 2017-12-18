@@ -14,4 +14,6 @@ protocol TimeSettingViewOutput {
     */
 
     func viewIsReady()
+    func selectWorkTime(minuts: Int,
+                        seconds: Int)
 }

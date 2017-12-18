@@ -20,6 +20,10 @@ extension UIFont {
 	@nonobjc class var furyPickerNumbersActive: UIFont {
 		return UIFont(name: "Oswald-Medium", size: 156.0)!
 	}
+    
+    @nonobjc class var furySmallPickerNumbersActive: UIFont {
+        return UIFont(name: "Oswald-Medium", size: 96.0)!
+    }
 
 	@nonobjc class var furyTimerVertical: UIFont {
 		return UIFont(name: "RobotoCondensed-Bold", size: 94.0)!

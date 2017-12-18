@@ -7,11 +7,13 @@
 //
 
 protocol TimeSettingViewInput: class {
-
+    
     /**
-        @author Mikhail Fokin
-        Setup initial state of the view
-    */
-
+     @author Mikhail Fokin
+     Setup initial state of the view
+     */
+    
     func setupInitialState()
+    func stylez(style: TimerStyle)
+    func setTitle(text: String)
 }

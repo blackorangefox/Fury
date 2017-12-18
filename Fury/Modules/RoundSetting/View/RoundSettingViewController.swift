@@ -12,25 +12,19 @@ import iCarousel
 class RoundSettingViewController: UIViewController, RoundSettingViewInput {
 
     var output: RoundSettingViewOutput!
-    var items: [Int] = []
+    
     
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var setsPicker: iCarousel!
+    let ddm = CarouselDDM(startIndex: 1)
     
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-        setsPicker.delegate = self
-        setsPicker.dataSource = self
+        setsPicker.delegate = ddm
+        setsPicker.dataSource = ddm
         setupCarousel()
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        for i in 1...100 {
-            items.append(i)
-        }
     }
     
     func setupCarousel() {
@@ -55,7 +49,17 @@ class RoundSettingViewController: UIViewController, RoundSettingViewInput {
     }
 }
 
-extension RoundSettingViewController: iCarouselDataSource, iCarouselDelegate {
+class CarouselDDM: NSObject, iCarouselDataSource, iCarouselDelegate {
+    
+    var items: [String] = []
+    var font: UIFont
+    
+    init(startIndex: Int, font: UIFont = UIFont.furyPickerNumbersActive) {
+        for i in startIndex...100 {
+            items.append(String(format: "%02d", i))
+        }
+        self.font = font
+    }
     
     func carouselWillBeginScrollingAnimation(_ carousel: iCarousel) {
         let oldView = carousel.currentItemView as? UILabel
@@ -83,10 +87,10 @@ extension RoundSettingViewController: iCarouselDataSource, iCarouselDelegate {
             let screenRect = UIScreen.main.bounds
             label = UILabel(frame: CGRect(x: 0, y: 0, width: screenRect.width, height: carousel.height/3))
             label.textAlignment = .center
-            label.font = UIFont.furyPickerNumbersActive
+            label.font = font
             label.textColor = UIColor.white.withAlphaComponent(0.1)
         }
-        label.text = "\(items[index])"
+        label.text = items[index]
         return label
     }
     

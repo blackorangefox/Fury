@@ -26,6 +26,7 @@ static func configure() {
             let presenter = TimeSettingPresenter()
             presenter.interactor = resolver.resolve(TimeSettingInteractorInput.self, argument: (presenter as TimeSettingInteractorOutput))
             presenter.router = resolver.resolve(TimeSettingRouterInput.self, argument: (view as! UIViewController))
+            presenter.flowStory = resolver.resolve(TimerStoryProtocol.self)
             presenter.view = view
             return presenter
         }).inObjectScope(.transient)
