@@ -22,7 +22,7 @@ class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, Pr
         case  .interval:
             router.openRoundSetting()
         case .countdown:
-            break
+            router.openSetTime()
         default:
             router.openPreStartController()
         }

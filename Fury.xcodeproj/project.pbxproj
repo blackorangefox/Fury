@@ -50,7 +50,6 @@
 		5606DCC5BE1C71E69EC707C6 /* RoundSettingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33E499712AAD7AA62C7549 /* RoundSettingPresenterTests.swift */; };
 		566E7BECE818CF57F2C22719 /* ResultScreenViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9E0B042152AEE39CB8F03 /* ResultScreenViewInput.swift */; };
 		5B74A120388DC4D610CB5A02 /* RoundSettingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179ED8EF909B0F6ADA155724 /* RoundSettingViewTests.swift */; };
-		5BEB3677E5C7C5DA49571D2A /* RestTimeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7330811E5B94D71D836257BA /* RestTimeSettingViewController.swift */; };
 		5D26B37CC3C3142254FE4A79 /* RestTimeSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42203E2A63E52B295CA6AC3 /* RestTimeSettingPresenter.swift */; };
 		5D42C179C145F0D72C773F79 /* RoundSettingViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DE96AA6C6032D3921BCC57 /* RoundSettingViewOutput.swift */; };
 		5EC53BB33CB9E6134DA616F8 /* MainViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5A8CC8D1503A716698C88D /* MainViewPresenterTests.swift */; };
@@ -63,7 +62,6 @@
 		7454BB0C34E900F2032E986A /* TimeSettingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287678AF1549F9044C6B4631 /* TimeSettingPresenterTests.swift */; };
 		7A3894E929D77561414A5E27 /* TimerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97753711DBDFE2FA8572C34 /* TimerAssembly.swift */; };
 		7D8A966003B412F86C9B89A1 /* TimeSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E399BF8CA891C8F8CBDDC84 /* TimeSettingPresenter.swift */; };
-		7FE3C160CA66B41AD14271E2 /* RestTimeSettingViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C772365F0B7BFEA696981A03 /* RestTimeSettingViewOutput.swift */; };
 		80E6C4815BFE8FB4D1F60E21 /* MainViewViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70BD167CC1864898298D96 /* MainViewViewInput.swift */; };
 		829FD878C1C22BE0921B2886 /* MainViewRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED8FB3EB7809B0E37EA767 /* MainViewRouterTests.swift */; };
 		84227DCE32AB18C2FA81BD91 /* MainViewRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135A330A0412517C986A8C5F /* MainViewRouterInput.swift */; };
@@ -86,7 +84,6 @@
 		9ECE5450B572921BD2A60D8C /* MainViewConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60369A5D36E2FC529976F74A /* MainViewConfiguratorTests.swift */; };
 		A009F59F9BFD09A3C763633D /* RestTimeSettingInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E99D4B92C7A86544C8882 /* RestTimeSettingInteractorInput.swift */; };
 		A47E93029986DA4366AA2AF1 /* ResultScreenRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17491E9010C261E76700B9 /* ResultScreenRouterInput.swift */; };
-		A8671E91AB2DD309AECC099A /* RestTimeSettingViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E47EA724E3D6B2D306C73 /* RestTimeSettingViewInput.swift */; };
 		A89BC19D369B879A66237544 /* RestTimeSettingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8095CF10BDBB6D0263151D1 /* RestTimeSettingViewTests.swift */; };
 		A8F5F84EC7195124B2622715 /* ResultScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E92326FF6B417F1082B443 /* ResultScreenPresenterTests.swift */; };
 		AA79C9DCAAA6A6B6B9A537AA /* TimeSettingViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9302C0C440F8FFC5BCA9433 /* TimeSettingViewInput.swift */; };
@@ -330,7 +327,6 @@
 		6724C772BD7CBB02E94EDA19 /* ClassicTimerConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerConfiguratorTests.swift; sourceTree = "<group>"; };
 		6D70BD167CC1864898298D96 /* MainViewViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewViewInput.swift; sourceTree = "<group>"; };
 		6E399BF8CA891C8F8CBDDC84 /* TimeSettingPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingPresenter.swift; sourceTree = "<group>"; };
-		7330811E5B94D71D836257BA /* RestTimeSettingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestTimeSettingViewController.swift; sourceTree = "<group>"; };
 		7491018F8417F0EC5C58A89F /* ResultScreenInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenInteractorInput.swift; sourceTree = "<group>"; };
 		7CE9DA95EF6250C243B53228 /* PreViewTimerInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerInteractor.swift; sourceTree = "<group>"; };
 		7FA68E93928B1D35E2FF9296 /* TimerModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerModuleInput.swift; sourceTree = "<group>"; };
@@ -369,7 +365,6 @@
 		B14558D4A797AD4ECBB36A88 /* ResultScreenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenViewController.swift; sourceTree = "<group>"; };
 		B1F6BF6EDC3C050A4F0E4A70 /* CoutdownTimerInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerInteractorTests.swift; sourceTree = "<group>"; };
 		B208A955F72DEF538440CED2 /* ClassicTimerPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerPresenterTests.swift; sourceTree = "<group>"; };
-		B23E47EA724E3D6B2D306C73 /* RestTimeSettingViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestTimeSettingViewInput.swift; sourceTree = "<group>"; };
 		B3ED8FB3EB7809B0E37EA767 /* MainViewRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewRouterTests.swift; sourceTree = "<group>"; };
 		B40989DC1F17A378001ACF1B /* 1_second.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1_second.mp3; sourceTree = "<group>"; };
 		B40989DD1F17A37E001ACF1B /* long-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "long-beep.mp3"; sourceTree = "<group>"; };
@@ -493,7 +488,6 @@
 		BFAA7AB0807AC5471FA131C3 /* IntervalTimerSettingRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingRouterTests.swift; sourceTree = "<group>"; };
 		C4FDFFB2043BF21EB50A836B /* Pods_FuryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DF84E1ECAA76C22368BF95 /* TimerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		C772365F0B7BFEA696981A03 /* RestTimeSettingViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestTimeSettingViewOutput.swift; sourceTree = "<group>"; };
 		CE3CD7D8B65015F53F61260C /* TimeSettingInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingInteractor.swift; sourceTree = "<group>"; };
 		CF972ED134A4CE693762E1A1 /* TimerRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerRouter.swift; sourceTree = "<group>"; };
 		D1A5F530FE05645957EDE549 /* TimeSettingConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingConfiguratorTests.swift; sourceTree = "<group>"; };
@@ -742,7 +736,6 @@
 			children = (
 				4ADC9E42EA49D4D5BDC84942 /* RestTimeSettingInteractorTests.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -773,6 +766,7 @@
 		3DFE53C6C9176101CF189142 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A5772DDAB5293A2B75075AB5 /* RestTimeSetting */,
 				AA3FF1DD7205212EA9AEEC11 /* RoundSetting */,
 				DAB30873CD8DC98AB3586D70 /* TimeSetting */,
 				B4422EC51FD8678F000ABC64 /* RecordVideo */,
@@ -806,7 +800,6 @@
 			children = (
 				46C262B5C066E0242E3A25C9 /* RestTimeSettingRouterTests.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -907,7 +900,6 @@
 				8E87B9989ED6FE5971E118F2 /* RestTimeSettingModuleInput.swift */,
 				A42203E2A63E52B295CA6AC3 /* RestTimeSettingPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -935,7 +927,6 @@
 				E725594CD2825E2D57B490A1 /* RestTimeSettingRouterInput.swift */,
 				534461EE58B8BA38CB78510C /* RestTimeSettingRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -964,7 +955,6 @@
 			children = (
 				90A7D372DC865B0C58192313 /* RestTimeSettingPresenterTests.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -1071,7 +1061,6 @@
 				9ECB494C54CC042415A89789 /* RestTimeSettingInteractorOutput.swift */,
 				87C92462417816F9EE7DD6A5 /* RestTimeSettingInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -1080,7 +1069,6 @@
 			children = (
 				2F32809C04A25FAE43281719 /* RestTimeSettingConfiguratorTests.swift */,
 			);
-			name = Configurator;
 			path = Configurator;
 			sourceTree = "<group>";
 		};
@@ -1100,27 +1088,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		A31F8906755AA0A4208FA715 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B23E47EA724E3D6B2D306C73 /* RestTimeSettingViewInput.swift */,
-				C772365F0B7BFEA696981A03 /* RestTimeSettingViewOutput.swift */,
-				7330811E5B94D71D836257BA /* RestTimeSettingViewController.swift */,
-			);
-			name = View;
-			path = View;
-			sourceTree = "<group>";
-		};
 		A5772DDAB5293A2B75075AB5 /* RestTimeSetting */ = {
 			isa = PBXGroup;
 			children = (
-				A31F8906755AA0A4208FA715 /* View */,
 				637C6C793FB9B772ED43BCFD /* Presenter */,
 				9577C018056DDAB4D621DA11 /* Interactor */,
 				69C3F325EB8B9E64BC4108C2 /* Router */,
 				C3B7BB6D609253D460AD4D74 /* Assembly */,
 			);
-			name = RestTimeSetting;
 			path = RestTimeSetting;
 			sourceTree = "<group>";
 		};
@@ -1164,7 +1139,6 @@
 				780FC4A226F897904FE02F5E /* Presenter */,
 				4171C0208F21B80D14A4A145 /* Router */,
 			);
-			name = RestTimeSetting;
 			path = RestTimeSetting;
 			sourceTree = "<group>";
 		};
@@ -1405,7 +1379,6 @@
 				AF93F3228095FF667B711C2B /* Pods */,
 				880392BCDA4EF40BB2AFD386 /* Frameworks */,
 				FBCD48D6FE22BCD20C421B67 /* UnitTests */,
-				C362BBD6A092492622DDFF7F /* Modules */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1489,7 +1462,6 @@
 			children = (
 				D8095CF10BDBB6D0263151D1 /* RestTimeSettingViewTests.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1534,21 +1506,11 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		C362BBD6A092492622DDFF7F /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				A5772DDAB5293A2B75075AB5 /* RestTimeSetting */,
-			);
-			name = Modules;
-			path = Modules;
-			sourceTree = "<group>";
-		};
 		C3B7BB6D609253D460AD4D74 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
 				6215D6A3F92530505534F9C9 /* RestTimeSettingAssembly.swift */,
 			);
-			name = Assembly;
 			path = Assembly;
 			sourceTree = "<group>";
 		};
@@ -2343,9 +2305,6 @@
 				C6A168C039445813E1B9426A /* RoundSettingRouterInput.swift in Sources */,
 				93DFCACF79132C36EC4B4172 /* RoundSettingRouter.swift in Sources */,
 				4734ED9CA452BBA65931D960 /* RoundSettingAssembly.swift in Sources */,
-				A8671E91AB2DD309AECC099A /* RestTimeSettingViewInput.swift in Sources */,
-				7FE3C160CA66B41AD14271E2 /* RestTimeSettingViewOutput.swift in Sources */,
-				5BEB3677E5C7C5DA49571D2A /* RestTimeSettingViewController.swift in Sources */,
 				964123DCBB5A72D3B5724530 /* RestTimeSettingModuleInput.swift in Sources */,
 				5D26B37CC3C3142254FE4A79 /* RestTimeSettingPresenter.swift in Sources */,
 				A009F59F9BFD09A3C763633D /* RestTimeSettingInteractorInput.swift in Sources */,

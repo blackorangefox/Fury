@@ -1,14 +1,14 @@
 //
-//  TimeSettingTimeSettingRouter.swift
+//  RestTimeSettingRestTimeSettingRouter.swift
 //  fury
 //
-//  Created by Mikhail Fokin on 14/12/2017.
+//  Created by Mikhail Fokin on 18/12/2017.
 //  Copyright © 2017 nova9. All rights reserved.
 //
 import UIKit
 
-class TimeSettingRouter: TimeSettingRouterInput {
-
+class RestTimeSettingRouter: RestTimeSettingRouterInput {
+	
 	var view : TimeSettingViewController?
     
     func openPrestert() {
@@ -16,10 +16,4 @@ class TimeSettingRouter: TimeSettingRouterInput {
         let preScreen  = story.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
         view?.navigationController?.pushViewController(preScreen, animated: true)
     }
-    
-    func openSetRestTime() {
-        let controller = GlobalAssembly.resolve(type: TimeSettingViewInput.self, name: "RestTime") as! UIViewController
-        view?.navigationController?.pushViewController(controller, animated: true)
-    }
-	
 }

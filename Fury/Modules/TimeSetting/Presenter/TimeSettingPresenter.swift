@@ -22,5 +22,10 @@ class TimeSettingPresenter: TimeSettingModuleInput, TimeSettingViewOutput, TimeS
                         seconds: Int) {
         flowStory.workMinuts = minuts
         flowStory.workSeconds = seconds
+        if flowStory.style.type == .interval {
+            router.openSetRestTime()
+        }else {
+            router.openPrestert()
+        }
     }
 }

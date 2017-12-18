@@ -21,5 +21,6 @@ class ModulesAssembly: BaseAssembly {
         ResultScreenAssembly.configure()
         RoundSettingAssembly.configure()
         TimeSettingAssembly.configure()
+        RestTimeSettingAssembly.configure()
     }
 }

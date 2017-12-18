@@ -22,4 +22,9 @@ class PreViewTimerRouter: PreViewTimerRouterInput {
         let controller = GlobalAssembly.resolve(type: RoundSettingViewInput.self) as! UIViewController
         view?.navigationController?.pushViewController(controller, animated: true)
     }
+    
+    func openSetTime() {
+        let controller = GlobalAssembly.resolve(type: TimeSettingViewInput.self) as! UIViewController
+        view?.navigationController?.pushViewController(controller, animated: true)
+    }
 }

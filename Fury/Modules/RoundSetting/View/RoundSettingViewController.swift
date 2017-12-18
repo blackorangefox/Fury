@@ -41,7 +41,7 @@ class RoundSettingViewController: UIViewController, RoundSettingViewInput {
     }
     
     @IBAction func nextButtonPress(_ sender: Any) {
-        output.selectSets(sets: self.setsPicker.currentItemIndex)
+        output.selectSets(sets: self.setsPicker.currentItemIndex+1)
     }
     
     // MARK: RoundSettingViewInput

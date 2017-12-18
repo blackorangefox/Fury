@@ -15,17 +15,18 @@ class RestTimeSettingAssembly: BaseAssembly {
 static func configure() {
         let cont = defaultContainer()
 
-        cont.register(RestTimeSettingViewInput.self) { resolver in
-            let story = UIStoryboard.init(name: "RestTimeSettingView", bundle: nil)
-            let controller = story.instantiateViewController(withIdentifier: "RestTimeSettingView") as! RestTimeSettingViewController
-            controller.output = resolver.resolve(RestTimeSettingViewOutput.self, argument: (controller as RestTimeSettingViewInput))
+    cont.register(TimeSettingViewInput.self, name: "RestTime") { resolver in
+            let story = UIStoryboard.init(name: "TimeSettingViewController", bundle: nil)
+            let controller = story.instantiateViewController(withIdentifier: "TimeSettingViewController") as! TimeSettingViewController
+        controller.output = resolver.resolve(TimeSettingViewOutput.self, name: "RestTime", argument: (controller as TimeSettingViewInput))
             return controller
         }.inObjectScope(.transient)
 
-        cont.register(RestTimeSettingViewOutput.self, factory: { (resolver: Resolver, view: RestTimeSettingViewInput) in
+    cont.register(TimeSettingViewOutput.self, name: "RestTime", factory: { (resolver: Resolver, view: TimeSettingViewInput) in
             let presenter = RestTimeSettingPresenter()
             presenter.interactor = resolver.resolve(RestTimeSettingInteractorInput.self, argument: (presenter as RestTimeSettingInteractorOutput))
             presenter.router = resolver.resolve(RestTimeSettingRouterInput.self, argument: (view as! UIViewController))
+            presenter.flowStory = resolver.resolve(TimerStoryProtocol.self)
             presenter.view = view
             return presenter
         }).inObjectScope(.transient)
@@ -38,7 +39,7 @@ static func configure() {
 
         cont.register(RestTimeSettingRouterInput.self) { (resolver: Resolver, view: UIViewController) in
             let router = RestTimeSettingRouter()
-            router.view = view
+            router.view = view as? TimeSettingViewController
             return router
         }.inObjectScope(.transient)
     }
