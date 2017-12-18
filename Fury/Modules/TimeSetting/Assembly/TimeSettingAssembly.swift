@@ -16,8 +16,8 @@ static func configure() {
         let cont = defaultContainer()
 
         cont.register(TimeSettingViewInput.self) { resolver in
-            let story = UIStoryboard.init(name: "TimeSettingView", bundle: nil)
-            let controller = story.instantiateViewController(withIdentifier: "TimeSettingView") as! TimeSettingViewController
+            let story = UIStoryboard.init(name: "TimeSettingViewController", bundle: nil)
+            let controller = story.instantiateViewController(withIdentifier: "TimeSettingViewController") as! TimeSettingViewController
             controller.output = resolver.resolve(TimeSettingViewOutput.self, argument: (controller as TimeSettingViewInput))
             return controller
         }.inObjectScope(.transient)
@@ -38,7 +38,7 @@ static func configure() {
 
         cont.register(TimeSettingRouterInput.self) { (resolver: Resolver, view: UIViewController) in
             let router = TimeSettingRouter()
-            router.view = view as! TimeSettingViewController
+            router.view = view as? TimeSettingViewController
             return router
         }.inObjectScope(.transient)
     }

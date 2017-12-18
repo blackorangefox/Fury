@@ -14,4 +14,5 @@ protocol RoundSettingViewOutput {
     */
 
     func viewIsReady()
+    func selectSets(sets: Int)
 }

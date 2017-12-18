@@ -11,5 +11,5 @@ import Foundation
 protocol RoundSettingRouterInput {
 
 	weak var view: RoundSettingViewController? { get set }
-
+    func openSetWorkTime()
 }

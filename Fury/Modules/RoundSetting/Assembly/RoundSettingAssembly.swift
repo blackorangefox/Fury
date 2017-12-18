@@ -27,6 +27,7 @@ static func configure() {
             presenter.interactor = resolver.resolve(RoundSettingInteractorInput.self, argument: (presenter as RoundSettingInteractorOutput))
             presenter.router = resolver.resolve(RoundSettingRouterInput.self, argument: (view as! UIViewController))
             presenter.view = view
+            presenter.flowStory = resolver.resolve(TimerStoryProtocol.self)
             return presenter
         }).inObjectScope(.transient)
 

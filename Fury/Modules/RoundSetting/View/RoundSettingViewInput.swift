@@ -14,4 +14,5 @@ protocol RoundSettingViewInput: class {
     */
 
     func setupInitialState()
+    func stylez(style: TimerStyle)
 }

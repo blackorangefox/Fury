@@ -14,14 +14,15 @@ class RoundSettingViewController: UIViewController, RoundSettingViewInput {
     var output: RoundSettingViewOutput!
     var items: [Int] = []
     
-    @IBOutlet weak var roundPicker: iCarousel!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var setsPicker: iCarousel!
     
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-        roundPicker.delegate = self
-        roundPicker.dataSource = self
+        setsPicker.delegate = self
+        setsPicker.dataSource = self
         setupCarousel()
     }
     
@@ -33,10 +34,22 @@ class RoundSettingViewController: UIViewController, RoundSettingViewInput {
     }
     
     func setupCarousel() {
-        roundPicker.type = .linear
-        roundPicker.isVertical = true
+        setsPicker.type = .linear
+        setsPicker.isVertical = true
+    }
+    
+    func stylez(style: TimerStyle) {
+        nextButton.setBackgroundColor(color: style.mainColor, forState: .normal)
     }
 
+    @IBAction func backButtonPress(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextButtonPress(_ sender: Any) {
+        output.selectSets(sets: self.setsPicker.currentItemIndex)
+    }
+    
     // MARK: RoundSettingViewInput
     func setupInitialState() {
     }

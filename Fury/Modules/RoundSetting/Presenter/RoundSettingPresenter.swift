@@ -11,8 +11,14 @@ class RoundSettingPresenter: RoundSettingModuleInput, RoundSettingViewOutput, Ro
     weak var view: RoundSettingViewInput!
     var interactor: RoundSettingInteractorInput!
     var router: RoundSettingRouterInput!
+    var flowStory: TimerStoryProtocol!
 
     func viewIsReady() {
-
+        view.stylez(style: flowStory.style)
+    }
+    
+    func selectSets(sets: Int) {
+        flowStory.sets = sets
+        router.openSetWorkTime()
     }
 }
