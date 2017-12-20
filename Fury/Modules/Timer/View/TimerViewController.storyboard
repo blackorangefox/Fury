@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -22,11 +22,11 @@
             <objects>
                 <viewController storyboardIdentifier="TimerViewController" id="db9-ID-aEY" customClass="TimerViewController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3T4-eL-gWE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HTk-ZF-uya">
-                                <rect key="frame" x="0.0" y="76" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="26" width="667" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="0xi-3k-Fai"/>
@@ -69,7 +69,7 @@
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFC-Um-rjg">
-                                <rect key="frame" x="0.0" y="435" width="375" height="232"/>
+                                <rect key="frame" x="0.0" y="287" width="667" height="88"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="232" id="8Bn-xm-g0m"/>
@@ -103,7 +103,7 @@
                                 </variation>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="wsD-28-FVg">
-                                <rect key="frame" x="24" y="219.5" width="327" height="120.5"/>
+                                <rect key="frame" x="24" y="71" width="619" height="216"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -183,6 +183,7 @@
                     <connections>
                         <outlet property="bottomContainer" destination="LFC-Um-rjg" id="JVQ-Xh-VaY"/>
                         <outlet property="colectionView" destination="HTk-ZF-uya" id="lBX-9F-eZk"/>
+                        <outlet property="heightCollectionViewConstraint" destination="0xi-3k-Fai" id="HEK-3k-zEL"/>
                         <outlet property="timeLabel" destination="wsD-28-FVg" id="73Q-5D-b6D"/>
                     </connections>
                 </viewController>

@@ -17,6 +17,7 @@ class TimerViewController: UIViewController, TimerViewInput {
     @IBOutlet weak var bottomContainer: UIView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var colectionView: UICollectionView!
+    @IBOutlet weak var heightCollectionViewConstraint: NSLayoutConstraint!
     
     var output: TimerViewOutput!
     var bottomViewController: BottomCoordinator!
