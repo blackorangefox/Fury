@@ -20,22 +20,21 @@ class SurveyController: UIViewController {
         get { return .portrait }
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         sureButton.setBackgroundColor(color: style.mainColor, forState: .normal)
     }
     
     @IBAction func notNowButtonPress(_ sender: Any) {
-        UserDefaults.standard.set(Date(), forKey: "TimeForSurvey")
-        self.dismiss(animated: false, completion: nil)
+        UserDefaults.standard.set(Date(), forKey: "when_show_survey")
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func yesButtonPress(_ sender: Any) {
         if let url = URL(string: "https://dmitrykurash.typeform.com/to/lXywEJ") {
             UIApplication.shared.open(url, options: [:])
         }
-        UserDefaults.standard.set(true, forKey: "AlwaysShowSurvey")
-        self.dismiss(animated: false, completion: nil)
+        UserDefaults.standard.set(true, forKey: "user_survey")
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
 }

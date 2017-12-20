@@ -12,4 +12,5 @@ protocol ResultScreenRouterInput {
 
 	weak var view: ResultScreenViewController? { get set }
     func openMainView()
+    func openSurveyView(style: TimerStyle)
 }

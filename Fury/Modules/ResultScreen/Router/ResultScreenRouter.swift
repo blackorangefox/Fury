@@ -14,4 +14,11 @@ class ResultScreenRouter: ResultScreenRouterInput {
     func openMainView() {
         view?.navigationController?.dismiss(animated: true, completion: nil)
     }
+    
+    func openSurveyView(style: TimerStyle) {
+        let story = UIStoryboard.init(name: "Main", bundle: nil)
+        let controller  = story.instantiateViewController(withIdentifier: "SurveyController") as! SurveyController
+        controller.style = style
+        view?.navigationController?.pushViewController(controller, animated: true)
+    }
 }
