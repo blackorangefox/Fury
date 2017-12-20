@@ -30,6 +30,8 @@ class TimerViewController: UIViewController, TimerViewInput {
     var type: TimerType = .classic
     var countdownTimerStart = Date()
     
+     private let playerService = PlayerService()
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +84,7 @@ class TimerViewController: UIViewController, TimerViewInput {
     
     @objc func updateIntervalTimer() {
         let newTime = timeWhenTimerStart - Date()
+        checkNeedPlaySount(newTime: newTime)
         if newTime <= 0 {
             timeLabel.text = "00:00:00"
             currentIndex += 1
@@ -105,6 +108,16 @@ class TimerViewController: UIViewController, TimerViewInput {
         self.collectionView(colectionView, didSelectItemAt: increment)
     }
     
+    func checkNeedPlaySount(newTime: TimeInterval) {
+        let stringTime = getTimeToString(newTime: newTime)
+        if stringTime == "00:03:00" || stringTime == "00:02:00" || stringTime == "00:01:00" {
+            playerService.playOneSecond()
+        }
+        if stringTime == "00:00:00" {
+            playerService.playStartOrFinisRound()
+        }
+    }
+    
     @objc func updateClasicTimer() {
         let newTime = Date().timeIntervalSince(timeWhenTimerStart)
         updateLabel(newTime: newTime)
@@ -112,6 +125,7 @@ class TimerViewController: UIViewController, TimerViewInput {
     
     @objc func updateCountDownTimer() {
         let newTime = timeWhenTimerStart - Date()
+        checkNeedPlaySount(newTime: newTime)
         if newTime <= 0 {
             timeLabel.text = "00:00:00"
             pauseButtonPress()
@@ -165,8 +179,6 @@ class TimerViewController: UIViewController, TimerViewInput {
         timeLabel.text = time
     }
     
-    
-    
     //MARK: PRIVATE
     private func continueCountDownTimer() {
         let time = timeOnScreen()
@@ -206,9 +218,17 @@ class TimerViewController: UIViewController, TimerViewInput {
     }
     
     private func updateLabel(newTime: TimeInterval) {
+        timeLabel.text = getTimeToString(newTime: newTime)
+        //print(timeLabel.text!)
+    }
+    
+    private func getTimeToString(newTime: TimeInterval) -> String {
         let time = getTimeBy(newTime: newTime)
-        timeLabel.text = String(format: "%02d:%02d:%02d", time.minuts, time.seconds, time.miliseconds)
-        print(timeLabel.text!)
+        return getTimeToString(minuts: time.minuts, seconds: time.seconds, miliseconds: time.miliseconds)
+    }
+    
+    private func getTimeToString(minuts: Int, seconds: Int, miliseconds: Int)-> String {
+        return String(format: "%02d:%02d:%02d", minuts, seconds, miliseconds)
     }
     
     private func getTimeBy(newTime: TimeInterval) -> (minuts: Int, seconds: Int, miliseconds: Int) {
