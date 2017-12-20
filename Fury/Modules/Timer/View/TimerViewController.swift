@@ -242,7 +242,7 @@ class TimerViewController: UIViewController, TimerViewInput {
     private func createDateArrayBy(sets: Int, workMinuts: Int, workSeconds: Int, restMinuts: Int, restSeconds: Int) -> [Date] {
         var array: [Date] = []
         array.append(Date())
-        for index in 1...sets {
+        for index in 1...sets*2-1{
             if index % 2 == 0 {
                 var newDate = array.last!.adding(.minute, value: restMinuts)
                 newDate = newDate.adding(.second, value: restSeconds)
@@ -297,7 +297,7 @@ extension TimerViewController: BottomViewControllerDelegate {
             output.finishButtonPress(with: "\(currentIndex) RNDS")
         case .countdown:
             let time = getTimeBy(newTime: timeWhenPausePress.timeIntervalSince(countdownTimerStart))
-            output.finishButtonPress(with: String(format: "%02d:%02d:%02d", time.minuts, time.seconds, time.miliseconds))
+            output.finishButtonPress(with: String(format: "%02d:%02d", time.minuts, time.seconds))
         }
     }
     
