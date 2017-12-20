@@ -9,7 +9,7 @@
 import UIKit
 
 class ResultScreenViewController: UIViewController, ResultScreenViewInput {
-
+    
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
@@ -63,7 +63,28 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
         output.okButtonPress()
     }
     
-    @IBOutlet weak var shareButtonPress: UIButton!
+    @IBAction func sharedButtonPress(_ sender: Any) {
+        UIGraphicsBeginImageContextWithOptions(gradientView.frame.size, true, 0.0)
+        gradientView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        
+        var objectsToShare = [AnyObject]()
+        
+        objectsToShare.append("My result" as AnyObject)
+        
+        if let shareImageObj = image{
+            objectsToShare.append(shareImageObj)
+        }
+        
+        
+        let activityViewController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        
+        present(activityViewController, animated: true, completion: nil)
+    }
+    
     // MARK: ResultScreenViewInput
     func setupInitialState() {
     }

@@ -55,6 +55,9 @@
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sharedButtonPress:" destination="Yya-PC-AXu" eventType="touchUpInside" id="NnZ-pB-tLV"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blV-tp-XUa">
                                 <rect key="frame" x="24" y="44" width="327" height="327"/>
@@ -137,7 +140,6 @@
                         <outlet property="okButton" destination="9s2-cF-sNs" id="eko-OE-eln"/>
                         <outlet property="resultLabel" destination="n60-Gg-Fx0" id="pMj-ec-LDp"/>
                         <outlet property="shareButton" destination="47v-Wo-5gk" id="xpL-L5-ftZ"/>
-                        <outlet property="shareButtonPress" destination="47v-Wo-5gk" id="MaX-Hl-Hyq"/>
                         <outlet property="subTitleLabel" destination="flH-Fk-4tk" id="jGr-LV-fmK"/>
                     </connections>
                 </viewController>
