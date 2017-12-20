@@ -112,7 +112,7 @@ class TimerViewController: UIViewController, TimerViewInput {
     func checkNeedPlaySount(newTime: TimeInterval) {
         let stringTime = getTimeToString(newTime: newTime)
         if stringTime == "00:03:00" || stringTime == "00:02:00" || stringTime == "00:01:00" {
-            playerService.playOneSecond()
+           // playerService.playOneSecond()
         }
         if stringTime == "00:00:00" {
             playerService.playStartOrFinisRound()

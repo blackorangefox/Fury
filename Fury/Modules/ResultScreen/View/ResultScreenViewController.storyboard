@@ -62,20 +62,43 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blV-tp-XUa">
                                 <rect key="frame" x="24" y="44" width="327" height="327"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="classicSmall" translatesAutoresizingMaskIntoConstraints="NO" id="YtB-mh-HRR">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="classic" translatesAutoresizingMaskIntoConstraints="NO" id="YtB-mh-HRR">
                                         <rect key="frame" x="99" y="24" width="128" height="163"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="163" id="BYE-1O-pjJ"/>
                                             <constraint firstAttribute="width" constant="128" id="HJq-5Q-VlD"/>
+                                            <constraint firstAttribute="height" constant="359" id="LnM-2z-MVB"/>
+                                            <constraint firstAttribute="width" constant="282" id="irw-FE-PJm"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="BYE-1O-pjJ"/>
+                                                <exclude reference="HJq-5Q-VlD"/>
+                                                <exclude reference="LnM-2z-MVB"/>
+                                                <exclude reference="irw-FE-PJm"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="BYE-1O-pjJ"/>
+                                                <include reference="HJq-5Q-VlD"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="LnM-2z-MVB"/>
+                                                <include reference="irw-FE-PJm"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="64" translatesAutoresizingMaskIntoConstraints="NO" id="n60-Gg-Fx0">
                                         <rect key="frame" x="23" y="187" width="281" height="106"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="106" id="rSR-pq-V6p"/>
+                                            <constraint firstAttribute="height" constant="233" id="y1X-cf-jyW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="80"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,6 +106,23 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="rSR-pq-V6p"/>
+                                                <exclude reference="y1X-cf-jyW"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="rSR-pq-V6p"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="176"/>
+                                            <mask key="constraints">
+                                                <include reference="y1X-cf-jyW"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY RESULT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flH-Fk-4tk">
                                         <rect key="frame" x="128" y="293" width="70.5" height="15"/>
@@ -92,6 +132,9 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="26"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,8 +143,10 @@
                                     <constraint firstItem="YtB-mh-HRR" firstAttribute="top" secondItem="blV-tp-XUa" secondAttribute="top" constant="24" id="8cD-KM-WCT"/>
                                     <constraint firstItem="YtB-mh-HRR" firstAttribute="centerX" secondItem="blV-tp-XUa" secondAttribute="centerX" id="8gu-to-xHW"/>
                                     <constraint firstAttribute="width" secondItem="blV-tp-XUa" secondAttribute="height" multiplier="1:1" id="AH1-8W-rAf"/>
-                                    <constraint firstItem="flH-Fk-4tk" firstAttribute="top" secondItem="n60-Gg-Fx0" secondAttribute="bottom" id="Cfd-nU-c6i"/>
+                                    <constraint firstItem="flH-Fk-4tk" firstAttribute="top" secondItem="n60-Gg-Fx0" secondAttribute="bottom" constant="22" id="Cfd-nU-c6i"/>
                                     <constraint firstAttribute="trailing" secondItem="n60-Gg-Fx0" secondAttribute="trailing" constant="23" id="d4R-DE-dVr"/>
+                                    <constraint firstItem="flH-Fk-4tk" firstAttribute="top" secondItem="n60-Gg-Fx0" secondAttribute="bottom" id="fTG-Cu-hgv"/>
+                                    <constraint firstItem="YtB-mh-HRR" firstAttribute="top" secondItem="blV-tp-XUa" secondAttribute="top" constant="52" id="hAE-yh-ifs"/>
                                     <constraint firstItem="n60-Gg-Fx0" firstAttribute="leading" secondItem="blV-tp-XUa" secondAttribute="leading" constant="23" id="otF-eY-Xy1"/>
                                     <constraint firstItem="n60-Gg-Fx0" firstAttribute="top" secondItem="YtB-mh-HRR" secondAttribute="bottom" id="yNq-Ld-SPH"/>
                                 </constraints>
@@ -111,6 +156,26 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8cD-KM-WCT"/>
+                                        <exclude reference="hAE-yh-ifs"/>
+                                        <exclude reference="Cfd-nU-c6i"/>
+                                        <exclude reference="fTG-Cu-hgv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8cD-KM-WCT"/>
+                                        <include reference="fTG-Cu-hgv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="hAE-yh-ifs"/>
+                                        <include reference="Cfd-nU-c6i"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor"/>
@@ -149,7 +214,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="classicSmall" width="128" height="163"/>
+        <image name="classic" width="256" height="328"/>
         <namedColor name="backgroundColor">
             <color red="0.13699999451637268" green="0.1289999932050705" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -26,14 +26,14 @@
             <objects>
                 <viewController storyboardIdentifier="PreStartController" id="nhB-am-xkb" customClass="PreStartController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="smU-zA-FIF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQw-KD-l9S">
-                                <rect key="frame" x="24" y="518" width="366" height="194"/>
+                                <rect key="frame" x="24" y="806" width="720" height="194"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ct-Yj-0so">
-                                        <rect key="frame" x="310" y="12" width="44" height="44"/>
+                                        <rect key="frame" x="664" y="12" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="9JF-BJ-G4l"/>
                                             <constraint firstAttribute="height" constant="44" id="QQ5-Xw-DbW"/>
@@ -44,20 +44,20 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c4-fT-YlX">
-                                        <rect key="frame" x="24.000000000000004" y="21" width="35.333333333333343" height="27"/>
+                                        <rect key="frame" x="24" y="21" width="35.5" height="27"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="8AF-4I-r20">
-                                        <rect key="frame" x="157" y="53" width="52" height="54"/>
+                                        <rect key="frame" x="334" y="53" width="52" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="ANo-jn-Qnt"/>
                                             <constraint firstAttribute="width" constant="52" id="eQp-2d-5ak"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p72-Fm-KVB">
-                                        <rect key="frame" x="51" y="129" width="264" height="44"/>
+                                        <rect key="frame" x="10" y="129" width="700" height="44"/>
                                         <string key="text">You can use fury timer in
 horizontal orientation</string>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
@@ -73,10 +73,10 @@ horizontal orientation</string>
                                     <constraint firstItem="8AF-4I-r20" firstAttribute="top" secondItem="QQw-KD-l9S" secondAttribute="top" constant="53" id="P5e-gY-kB2"/>
                                     <constraint firstAttribute="height" constant="194" id="Yf7-c0-tlN"/>
                                     <constraint firstItem="1ct-Yj-0so" firstAttribute="top" secondItem="QQw-KD-l9S" secondAttribute="top" constant="12" id="ay3-Ct-Jrr"/>
-                                    <constraint firstItem="p72-Fm-KVB" firstAttribute="leading" secondItem="QQw-KD-l9S" secondAttribute="leading" constant="51" id="eU1-pu-CxM"/>
+                                    <constraint firstItem="p72-Fm-KVB" firstAttribute="leading" secondItem="QQw-KD-l9S" secondAttribute="leading" constant="10" id="eU1-pu-CxM"/>
                                     <constraint firstItem="1c4-fT-YlX" firstAttribute="leading" secondItem="QQw-KD-l9S" secondAttribute="leading" constant="24" id="hHc-kk-XC6"/>
                                     <constraint firstItem="8AF-4I-r20" firstAttribute="centerX" secondItem="QQw-KD-l9S" secondAttribute="centerX" id="oLm-gU-kWB"/>
-                                    <constraint firstAttribute="trailing" secondItem="p72-Fm-KVB" secondAttribute="trailing" constant="51" id="zRw-qH-OQW"/>
+                                    <constraint firstAttribute="trailing" secondItem="p72-Fm-KVB" secondAttribute="trailing" constant="10" id="zRw-qH-OQW"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -87,7 +87,7 @@ horizontal orientation</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMt-XB-FDf" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -119,11 +119,11 @@ horizontal orientation</string>
             <objects>
                 <viewController storyboardIdentifier="FinishController" id="h3x-Kf-f83" customClass="FinishController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tS8-aY-W2o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tD-J6-RsS">
-                                <rect key="frame" x="24" y="648" width="366" height="64"/>
+                                <rect key="frame" x="24" y="936" width="720" height="64"/>
                                 <color key="backgroundColor" red="0.087449230253696442" green="0.087530605494976044" blue="0.092729054391384125" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="WAF-t1-YfF"/>
@@ -140,7 +140,7 @@ horizontal orientation</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STILL ALIVE! YOU DID IT!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIZ-S7-6iU">
-                                <rect key="frame" x="24" y="32" width="366" height="142.66666666666666"/>
+                                <rect key="frame" x="24" y="32" width="720" height="142.5"/>
                                 <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="54"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -167,11 +167,11 @@ horizontal orientation</string>
             <objects>
                 <viewController storyboardIdentifier="SurveyController" id="wXm-Kb-62B" customClass="SurveyController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VRs-Ok-WIn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need your advise" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fi0-bP-amf">
-                                <rect key="frame" x="24" y="32" width="366" height="90"/>
+                                <rect key="frame" x="24" y="32" width="720" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="SVC-9o-uNb">
                                         <variation key="heightClass=compact-widthClass=compact" constant="90"/>
@@ -180,15 +180,21 @@ horizontal orientation</string>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="38"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, fill a short survey, it’ll help us improve the app. It won’t take more than 2 minutes!" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5vx-tk-Aoj">
-                                <rect key="frame" x="24" y="145" width="366" height="66"/>
+                                <rect key="frame" x="24" y="145" width="720" height="59"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wR-wE-WWZ">
-                                <rect key="frame" x="24" y="648" width="366" height="64"/>
+                                <rect key="frame" x="64" y="936" width="640" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="640" id="CUh-58-tcC"/>
                                     <constraint firstAttribute="height" constant="64" id="hwg-yG-BQT"/>
@@ -218,7 +224,7 @@ horizontal orientation</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n5-KQ-0y4">
-                                <rect key="frame" x="24" y="576" width="366" height="64"/>
+                                <rect key="frame" x="64" y="864" width="640" height="64"/>
                                 <color key="backgroundColor" name="opacityButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="UqM-h8-NvP"/>
@@ -249,11 +255,14 @@ horizontal orientation</string>
                             <constraint firstItem="3wR-wE-WWZ" firstAttribute="leading" secondItem="9n5-KQ-0y4" secondAttribute="leading" id="V0x-fx-Isg"/>
                             <constraint firstItem="3wR-wE-WWZ" firstAttribute="trailing" secondItem="5vx-tk-Aoj" secondAttribute="trailing" id="Vcg-3S-JPC"/>
                             <constraint firstItem="3wR-wE-WWZ" firstAttribute="leading" secondItem="fi0-bP-amf" secondAttribute="leading" id="WQr-gb-gUW"/>
+                            <constraint firstItem="KCK-Hq-qCi" firstAttribute="trailing" secondItem="fi0-bP-amf" secondAttribute="trailing" constant="24" id="WgF-hc-rda"/>
+                            <constraint firstItem="KCK-Hq-qCi" firstAttribute="trailing" secondItem="5vx-tk-Aoj" secondAttribute="trailing" constant="24" id="XkV-Dy-IbK"/>
                             <constraint firstItem="3wR-wE-WWZ" firstAttribute="top" secondItem="9n5-KQ-0y4" secondAttribute="bottom" constant="8" id="dfb-N0-veh"/>
                             <constraint firstItem="KCK-Hq-qCi" firstAttribute="trailing" secondItem="3wR-wE-WWZ" secondAttribute="trailing" constant="24" id="djF-Lp-2Ic"/>
-                            <constraint firstItem="5vx-tk-Aoj" firstAttribute="leading" secondItem="fi0-bP-amf" secondAttribute="leading" id="hnO-DC-Rr7"/>
+                            <constraint firstItem="5vx-tk-Aoj" firstAttribute="leading" secondItem="VRs-Ok-WIn" secondAttribute="leading" constant="24" id="gwc-7O-AMp"/>
                             <constraint firstItem="fi0-bP-amf" firstAttribute="top" secondItem="KCK-Hq-qCi" secondAttribute="top" constant="12" id="jeC-4e-HBw"/>
                             <constraint firstItem="9n5-KQ-0y4" firstAttribute="leading" secondItem="KCK-Hq-qCi" secondAttribute="leading" constant="24" id="mIZ-Zz-oQC"/>
+                            <constraint firstItem="fi0-bP-amf" firstAttribute="leading" secondItem="KCK-Hq-qCi" secondAttribute="leading" constant="24" id="nZa-3b-4jl"/>
                             <constraint firstItem="KCK-Hq-qCi" firstAttribute="bottom" secondItem="3wR-wE-WWZ" secondAttribute="bottom" constant="24" id="puq-KJ-Ikc"/>
                             <constraint firstItem="5vx-tk-Aoj" firstAttribute="top" secondItem="fi0-bP-amf" secondAttribute="bottom" constant="23" id="q5X-lC-dIJ">
                                 <variation key="heightClass=compact-widthClass=compact" constant="9"/>

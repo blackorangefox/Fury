@@ -53,7 +53,7 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
         let screenRect = UIScreen.main.bounds
         let size = CGSize(width: screenRect.width-48, height: screenRect.width-48)
         gradientView.setGradienBackgroundBy(colors: style.gradientColor, size: size)
-        logoImage.image = style.smallLogo
+        logoImage.image = style.bigLogo
         okButton.setBackgroundColor(color: style.mainColor, forState: .normal)
         shareButton.setBackgroundColor(color: style.mainColor, forState: .normal)
         subTitleLabel.text = style.subTitle

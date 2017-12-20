@@ -63,7 +63,6 @@ class CarouselDDM: NSObject, iCarouselDataSource, iCarouselDelegate {
             label.textColor = UIColor.white.withAlphaComponent(0.1)
         }
         label.text = items[index]
-        print(label.text!)
         return label
     }
     

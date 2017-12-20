@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         UIApplication.shared.isIdleTimerDisabled = true
         GlobalAssembly.configure()
         
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         timerService = GlobalAssembly.resolve(type: TimerServiceProtocol.self)
        let vc = GlobalAssembly.resolve(type: MainViewViewInput.self) as! UIViewController
         
