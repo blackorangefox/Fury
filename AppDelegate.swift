@@ -40,7 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
            UserDefaults.standard.set(Date(), forKey: "TimeForSurvey")
         }
         Mixpanel.initialize(token: "45945acf55ce497604e2dc20e6952d30")
-        
         return true
     } 
 

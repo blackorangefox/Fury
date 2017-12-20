@@ -11,7 +11,7 @@ import iCarousel
 
 class PreStartController: UIViewController {
  
-    private let playerService = PlayerService()
+    
     var items: [String] = ["10",
                            "9",
                            "8",
@@ -27,6 +27,8 @@ class PreStartController: UIViewController {
     var timer: Timer!
     var style: TimerStyle!
     var ddm: CarouselDDM!
+    
+    private let playerService = PlayerService()
     
     @IBOutlet weak var carousel: iCarousel!
     @IBOutlet weak var gradientView: UIView!
@@ -69,11 +71,17 @@ class PreStartController: UIViewController {
     
     @objc func updateSelectCell() {
         if self.currentIndex == self.items.count {
+            playerService.playStartWork()
+            print("play start work on "+(carousel.currentItemView as! UILabel).text!)
             timer.invalidate()
             closeButtonPress(self)
             let vc = GlobalAssembly.resolve(type: TimerViewInput.self) as! UIViewController
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
+            if self.currentIndex > self.items.count-4 {
+                playerService.playOneSecond()
+                print("play beep on "+(carousel.currentItemView as! UILabel).text!)
+            }
             self.carousel.scrollToItem(at: self.currentIndex, animated: true)
             self.currentIndex += 1
         }

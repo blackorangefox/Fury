@@ -198,6 +198,7 @@
 		B4A7359B1FE19566004223CF /* UIViewController+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A7359A1FE19566004223CF /* UIViewController+extention.swift */; };
 		B4C160F11FDECBF800CAC90A /* PreStartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C160F01FDECBF800CAC90A /* PreStartCell.swift */; };
 		B4C920A41FCF45DA0020B522 /* Double+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C920A31FCF45DA0020B522 /* Double+extention.swift */; };
+		B4DB7DCC1FEA9941000A0AF1 /* Button+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB7DCB1FEA9941000A0AF1 /* Button+extention.swift */; };
 		B4F9268E1F13D109003C0828 /* Airhorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4F9268D1F13D109003C0828 /* Airhorn.mp3 */; };
 		B4FDDD8C1F292E9A00762382 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDDD8B1F292E9A00762382 /* SurveyController.swift */; };
 		B75458B5114F4C3908411193 /* TimeSettingRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA971BEE5BA164183B1F1F5 /* TimeSettingRouterTests.swift */; };
@@ -481,6 +482,7 @@
 		B4A7359A1FE19566004223CF /* UIViewController+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extention.swift"; sourceTree = "<group>"; };
 		B4C160F01FDECBF800CAC90A /* PreStartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreStartCell.swift; sourceTree = "<group>"; };
 		B4C920A31FCF45DA0020B522 /* Double+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extention.swift"; sourceTree = "<group>"; };
+		B4DB7DCB1FEA9941000A0AF1 /* Button+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+extention.swift"; sourceTree = "<group>"; };
 		B4F9268D1F13D109003C0828 /* Airhorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Airhorn.mp3; sourceTree = "<group>"; };
 		B4FDDD8B1F292E9A00762382 /* SurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyController.swift; sourceTree = "<group>"; };
 		B578BEFD852ECEC0A9A6258C /* PreViewTimerViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerViewInput.swift; sourceTree = "<group>"; };
@@ -1225,6 +1227,7 @@
 				B4C920A31FCF45DA0020B522 /* Double+extention.swift */,
 				B4A7359A1FE19566004223CF /* UIViewController+extention.swift */,
 				B415147E1FE281AA00C539B4 /* UIView+extention.swift */,
+				B4DB7DCB1FEA9941000A0AF1 /* Button+extention.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -2264,6 +2267,7 @@
 				94974BA5E639FF46AE797DDE /* MainViewViewOutput.swift in Sources */,
 				E18CEBD27CE3718ADB197763 /* MainViewViewController.swift in Sources */,
 				B4422F201FD97303000ABC64 /* UIColor+FURYAdditions.swift in Sources */,
+				B4DB7DCC1FEA9941000A0AF1 /* Button+extention.swift in Sources */,
 				E1525A0F35104F96E05DE551 /* MainViewPresenter.swift in Sources */,
 				1D2297FDC082A0617AA285E4 /* MainViewInteractorInput.swift in Sources */,
 				B415147F1FE281AA00C539B4 /* UIView+extention.swift in Sources */,
