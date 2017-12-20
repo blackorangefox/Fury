@@ -9,7 +9,7 @@
 import UIKit
 import iCarousel
 
-class PreStartController: UIViewController, iCarouselDataSource, iCarouselDelegate {
+class PreStartController: UIViewController {
  
     private let playerService = PlayerService()
     var items: [String] = ["10",
@@ -25,7 +25,8 @@ class PreStartController: UIViewController, iCarouselDataSource, iCarouselDelega
                            "GO"]
     var currentIndex = 1
     var timer: Timer!
-    var type: TimerType = .classic
+    var style: TimerStyle!
+    var ddm: CarouselDDM!
     
     @IBOutlet weak var carousel: iCarousel!
     @IBOutlet weak var gradientView: UIView!
@@ -37,15 +38,7 @@ class PreStartController: UIViewController, iCarouselDataSource, iCarouselDelega
         setupCarousel()
         showInformationViewIfNeeded()
         subscribeScreenRotate()
-    
-        switch type {
-        case .classic:
-            gradientView.backgroundColor = UIColor.furyPinkRed
-        case .interval:
-            gradientView.backgroundColor = UIColor.furyGoldenYellow
-        case .countdown:
-            gradientView.backgroundColor = UIColor.furyBrightLavender
-        }
+        gradientView.backgroundColor = style.mainColor
     }
     
     func subscribeScreenRotate() {
@@ -56,6 +49,10 @@ class PreStartController: UIViewController, iCarouselDataSource, iCarouselDelega
     }
     
     func setupCarousel() {
+        ddm = CarouselDDM(items: items)
+        ddm.style = style
+        carousel.delegate = ddm
+        carousel.dataSource = ddm
         carousel.type = .linear
         carousel.isVertical = true
     }
@@ -80,54 +77,6 @@ class PreStartController: UIViewController, iCarouselDataSource, iCarouselDelega
             self.carousel.scrollToItem(at: self.currentIndex, animated: true)
             self.currentIndex += 1
         }
-    }
-    
-    func carouselWillBeginScrollingAnimation(_ carousel: iCarousel) {
-        let oldView = carousel.currentItemView as? UILabel
-        oldView?.textColor = UIColor.white.withAlphaComponent(0.1)
-    }
-    
-    func carouselDidEndScrollingAnimation(_ carousel: iCarousel) {
-        let view = carousel.currentItemView as? UILabel
-        if carousel.currentItemIndex == items.count-1 {
-            switch type {
-            case .classic:
-                view?.textColor = UIColor.furyPinkRed
-            case .interval:
-                view?.textColor = UIColor.furyGoldenYellow
-            case .countdown:
-                view?.textColor = UIColor.furyBrightLavender
-            }
-        } else {
-            view?.textColor = .white
-        }
-    }
-    
-    func numberOfItems(in carousel: iCarousel) -> Int {
-        return items.count
-    }
-    
-    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        var label: UILabel
-        if let view = view as? UILabel {
-            label = view
-            label.textColor = UIColor.white.withAlphaComponent(0.1)
-        } else {
-            let screenRect = UIScreen.main.bounds
-            label = UILabel(frame: CGRect(x: 0, y: 0, width: screenRect.width, height: screenRect.height/2))
-            label.textAlignment = .center
-            label.font = UIFont.furyCountdownNumbers
-            label.textColor = UIColor.white.withAlphaComponent(0.1)
-        }
-        label.text = items[index]
-        return label
-    }
-    
-    func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
-        if (option == .spacing) {
-            return value * 1.1
-        }
-        return value
     }
     
     @IBAction func closeButtonPress(_ sender: Any) {
@@ -159,7 +108,6 @@ class PreStartController: UIViewController, iCarouselDataSource, iCarouselDelega
         }
         
     }
-    
 }
 
 

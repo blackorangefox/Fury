@@ -24,7 +24,7 @@ class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, Pr
         case .countdown:
             router.openSetTime()
         default:
-            router.openPreStartController()
+            router.openPrestert(style: flowStory.style)
         }
     }
 }

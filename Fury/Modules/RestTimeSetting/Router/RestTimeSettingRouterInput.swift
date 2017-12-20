@@ -11,6 +11,6 @@ import Foundation
 protocol RestTimeSettingRouterInput {
 
 	weak var view: TimeSettingViewController? { get set }
-    func openPrestert()
+    func openPrestert(style: TimerStyle)
     
 }

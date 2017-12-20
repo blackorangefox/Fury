@@ -20,7 +20,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Data Source-->
+        <!--Pre Start Controller-->
         <scene sceneID="elA-FS-N3m">
             <objects>
                 <viewController storyboardIdentifier="PreStartController" id="nhB-am-xkb" customClass="PreStartController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,10 +88,6 @@ horizontal orientation</string>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMt-XB-FDf" customClass="iCarousel">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="nhB-am-xkb" id="8SV-vp-iue"/>
-                                    <outlet property="delegate" destination="nhB-am-xkb" id="5OX-vf-6bG"/>
-                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.062965318560600281" green="0.066727966070175171" blue="0.070717096328735352" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -173,38 +169,38 @@ horizontal orientation</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE NEED YOUR ADVISE." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fi0-bP-amf">
-                                <rect key="frame" x="24" y="32" width="366" height="127"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need your advise" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fi0-bP-amf">
+                                <rect key="frame" x="24" y="32" width="366" height="90"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="127" id="SVC-9o-uNb">
+                                    <constraint firstAttribute="height" constant="90" id="SVC-9o-uNb">
                                         <variation key="heightClass=compact-widthClass=compact" constant="90"/>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="53"/>
-                                <color key="textColor" red="0.80983877182006836" green="0.9942328929901123" blue="0.3841153085231781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5vx-tk-Aoj">
-                                <rect key="frame" x="24" y="182" width="366" height="84.666666666666686"/>
-                                <string key="text">Please fill a short survey, we promise –
-it won’t take more than 3 minutes.</string>
-                                <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="32"/>
-                                <color key="textColor" red="0.80983877182006836" green="0.9942328929901123" blue="0.3841153085231781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, fill a short survey, it’ll help us improve the app. It won’t take more than 2 minutes!" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5vx-tk-Aoj">
+                                <rect key="frame" x="24" y="145" width="366" height="66"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wR-wE-WWZ">
                                 <rect key="frame" x="24" y="648" width="366" height="64"/>
-                                <color key="backgroundColor" red="0.80983877182006836" green="0.9942328929901123" blue="0.3841153085231781" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="640" id="CUh-58-tcC"/>
                                     <constraint firstAttribute="height" constant="64" id="hwg-yG-BQT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="26"/>
-                                <state key="normal" title="YES">
+                                <state key="normal" title="SURE">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -227,7 +223,7 @@ it won’t take more than 3 minutes.</string>
                                     <constraint firstAttribute="height" constant="64" id="UqM-h8-NvP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="RobotoCondensed-Bold" family="Roboto Condensed" pointSize="26"/>
-                                <state key="normal" title="NOT NOW">
+                                <state key="normal" title="NO">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>

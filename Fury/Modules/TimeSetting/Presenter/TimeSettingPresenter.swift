@@ -25,7 +25,7 @@ class TimeSettingPresenter: TimeSettingModuleInput, TimeSettingViewOutput, TimeS
         if flowStory.style.type == .interval {
             router.openSetRestTime()
         }else {
-            router.openPrestert()
+            router.openPrestert(style: flowStory.style)
         }
     }
 }

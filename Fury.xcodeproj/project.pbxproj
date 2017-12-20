@@ -94,6 +94,7 @@
 		B40CDC0B1F1B683C00B2187A /* long-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B40989DD1F17A37E001ACF1B /* long-beep.mp3 */; };
 		B40CDC0C1F1B683F00B2187A /* 1_second.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B40989DC1F17A378001ACF1B /* 1_second.mp3 */; };
 		B41082361ECC376900D285AC /* IntervalNavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */; };
+		B411D4781FE8F49A006F4E7F /* CarouselDDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B411D4771FE8F49A006F4E7F /* CarouselDDM.swift */; };
 		B415147F1FE281AA00C539B4 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B415147E1FE281AA00C539B4 /* UIView+extention.swift */; };
 		B41514841FE2881600C539B4 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41514831FE2881600C539B4 /* Style.swift */; };
 		B41514861FE2A78100C539B4 /* TimeSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41514851FE2A78100C539B4 /* TimeSettingViewController.storyboard */; };
@@ -369,6 +370,7 @@
 		B40989DC1F17A378001ACF1B /* 1_second.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1_second.mp3; sourceTree = "<group>"; };
 		B40989DD1F17A37E001ACF1B /* long-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "long-beep.mp3"; sourceTree = "<group>"; };
 		B41082351ECC376900D285AC /* IntervalNavigationControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationControllerTests.swift; sourceTree = "<group>"; };
+		B411D4771FE8F49A006F4E7F /* CarouselDDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselDDM.swift; sourceTree = "<group>"; };
 		B415147E1FE281AA00C539B4 /* UIView+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
 		B41514831FE2881600C539B4 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		B41514851FE2A78100C539B4 /* TimeSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeSettingViewController.storyboard; sourceTree = "<group>"; };
@@ -770,7 +772,6 @@
 				AA3FF1DD7205212EA9AEEC11 /* RoundSetting */,
 				DAB30873CD8DC98AB3586D70 /* TimeSetting */,
 				B4422EC51FD8678F000ABC64 /* RecordVideo */,
-				D4959DE31F46958D00E794BC /* TimerStorry */,
 				884310ADB7CF15C185499A38 /* Timer */,
 				46423D0CC969785CB4F18C01 /* MainView */,
 				7D8CFAA626A640A460288ADB /* PreViewTimer */,
@@ -1201,6 +1202,14 @@
 			name = Music;
 			sourceTree = "<group>";
 		};
+		B411D4791FE8F4C0006F4E7F /* DDM */ = {
+			isa = PBXGroup;
+			children = (
+				B411D4771FE8F49A006F4E7F /* CarouselDDM.swift */,
+			);
+			path = DDM;
+			sourceTree = "<group>";
+		};
 		B41514821FE2880B00C539B4 /* Style */ = {
 			isa = PBXGroup;
 			children = (
@@ -1395,7 +1404,9 @@
 		B47539781EB4DDE0008B3A1D /* Fury */ = {
 			isa = PBXGroup;
 			children = (
+				B411D4791FE8F4C0006F4E7F /* DDM */,
 				B41514821FE2880B00C539B4 /* Style */,
+				D4959DE31F46958D00E794BC /* TimerStorry */,
 				3DFE53C6C9176101CF189142 /* Modules */,
 				B4C160EF1FDECBCE00CAC90A /* Cell */,
 				B4422EC91FD96FBA000ABC64 /* PreStartController.swift */,
@@ -2304,6 +2315,7 @@
 				215DEABD0F58EED2E23547B2 /* RoundSettingInteractor.swift in Sources */,
 				C6A168C039445813E1B9426A /* RoundSettingRouterInput.swift in Sources */,
 				93DFCACF79132C36EC4B4172 /* RoundSettingRouter.swift in Sources */,
+				B411D4781FE8F49A006F4E7F /* CarouselDDM.swift in Sources */,
 				4734ED9CA452BBA65931D960 /* RoundSettingAssembly.swift in Sources */,
 				964123DCBB5A72D3B5724530 /* RestTimeSettingModuleInput.swift in Sources */,
 				5D26B37CC3C3142254FE4A79 /* RestTimeSettingPresenter.swift in Sources */,

@@ -21,6 +21,6 @@ class RestTimeSettingPresenter: RestTimeSettingModuleInput, TimeSettingViewOutpu
     func selectWorkTime(minuts: Int, seconds: Int) {
         flowStory.restMinuts = minuts
         flowStory.restSeconds = seconds
-        router.openPrestert()
+        router.openPrestert(style: flowStory.style)
     }
 }
