@@ -13,10 +13,14 @@ class RoundSettingViewController: UIViewController, RoundSettingViewInput {
 
     var output: RoundSettingViewOutput!
     
-    
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var setsPicker: iCarousel!
     let ddm = CarouselDDM(startIndex: 1)
+    
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        get { return .portrait }
+    }
+
     
     // MARK: Life cycle
     override func viewDidLoad() {

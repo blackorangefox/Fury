@@ -11,8 +11,19 @@ import Foundation
 
 class SurveyController: UIViewController {
 
+    @IBOutlet weak var sureButton: UIButton!
+    @IBOutlet weak var NoButton: UIButton!
+    
+    var style: TimerStyle!
+    
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        get { return .portrait }
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        sureButton.setBackgroundColor(color: style.mainColor, forState: .normal)
     }
     
     @IBAction func notNowButtonPress(_ sender: Any) {

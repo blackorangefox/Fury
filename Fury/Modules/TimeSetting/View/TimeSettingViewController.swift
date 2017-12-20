@@ -17,8 +17,14 @@ class TimeSettingViewController: UIViewController, TimeSettingViewInput {
     @IBOutlet weak var minPicker: iCarousel!
     @IBOutlet weak var secPicker: iCarousel!
     @IBOutlet weak var nextButton: UIButton!
+    
     let minutDDM = CarouselDDM(startIndex: 0, font: UIFont.furySmallPickerNumbersActive)
     let secindDDM = CarouselDDM(startIndex: 0, font: UIFont.furySmallPickerNumbersActive)
+    
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        get { return .portrait }
+    }
+
     
     // MARK: Life cycle
     override func viewDidLoad() {
