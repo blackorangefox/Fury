@@ -27,7 +27,7 @@ class PlayerService {
     }
     
     private func playSound(name: String, loop: Int) {
-        (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(1, animated: false)
+        //(MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(1, animated: false)
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setCategory(AVAudioSessionCategoryPlayback, with: [AVAudioSessionCategoryOptions.mixWithOthers]) //Causes audio from other sessions to be ducked (reduced in volume) while audio from this session plays
         try! audioSession.setActive(true)

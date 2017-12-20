@@ -89,11 +89,11 @@ class TimerViewController: UIViewController, TimerViewInput {
         if newTime <= 0 {
             timeLabel.text = "00:00:00"
             currentIndex += 1
-            nextSegment()
             if currentIndex == dateMassive.count {
                 pauseButtonPress()
                 return
             }
+            nextSegment()
             self.timeWhenTimerStart = dateMassive[currentIndex]
             return
         }
@@ -303,6 +303,11 @@ extension TimerViewController: BottomViewControllerDelegate {
     
     func continueButtonPress() {
         print("---CONTINEU---")
+        //если таймер закончил свою работу
+        if currentIndex == dateMassive.count && timeLabel.text == "00:00:00" {
+            return
+        }
+        
         switch type {
             case .classic:
                 continueClassicTimer()
