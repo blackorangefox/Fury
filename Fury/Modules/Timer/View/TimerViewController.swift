@@ -41,7 +41,7 @@ class TimerViewController: UIViewController, TimerViewInput {
             self.collectionView(self.colectionView, didSelectItemAt: increment)
         }
     }
-    
+        
     func showPauseButton() {
         bottomViewController.showPauseButton()
     }

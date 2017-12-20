@@ -14,6 +14,7 @@ class MainViewViewController: UIViewController, MainViewViewInput {
     @IBOutlet weak var tableView: UITableView!
     
     var output: MainViewViewOutput!
+    
     override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         get { return .portrait }
     }

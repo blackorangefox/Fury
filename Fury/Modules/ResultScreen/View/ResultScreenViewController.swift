@@ -20,6 +20,10 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
     var output: ResultScreenViewOutput!
     var result: String = ""
     
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        get { return .portrait }
+    }
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()

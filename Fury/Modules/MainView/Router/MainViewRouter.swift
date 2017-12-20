@@ -8,13 +8,22 @@
 import UIKit
 
 class MainViewRouter: MainViewRouterInput {
-	
-	var view : MainViewViewController?
-	
+    
+    var view : MainViewViewController?
+    
     func open() {
         let controller = GlobalAssembly.resolve(type: PreViewTimerViewInput.self) as! PreViewTimerViewController
-        let navigation = UINavigationController(rootViewController: controller)
+        let navigation = CustomNavigationController(rootViewController: controller)
         navigation.isHeroEnabled = true
         view?.present(navigation, animated: true, completion: nil)
+    }
+}
+
+class CustomNavigationController: UINavigationController {
+    
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        get {
+            return topViewController!.supportedInterfaceOrientations
+        }
     }
 }
