@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="landscape">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -22,11 +22,11 @@
             <objects>
                 <viewController storyboardIdentifier="TimerViewController" id="db9-ID-aEY" customClass="TimerViewController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3T4-eL-gWE">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HTk-ZF-uya">
-                                <rect key="frame" x="0.0" y="26" width="667" height="45"/>
+                                <rect key="frame" x="0.0" y="76" width="1024" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="0xi-3k-Fai"/>
@@ -69,7 +69,7 @@
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFC-Um-rjg">
-                                <rect key="frame" x="0.0" y="287" width="667" height="88"/>
+                                <rect key="frame" x="0.0" y="1134" width="1024" height="232"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="232" id="8Bn-xm-g0m"/>
@@ -103,7 +103,7 @@
                                 </variation>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="wsD-28-FVg">
-                                <rect key="frame" x="24" y="71" width="619" height="216"/>
+                                <rect key="frame" x="24" y="469.5" width="976" height="427.5"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -144,7 +144,6 @@
                         <viewLayoutGuide key="safeArea" id="qFO-rO-hnO"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="7di-JI-10s"/>
                                 <exclude reference="rUr-iR-sVL"/>
                                 <exclude reference="5jL-Ip-kSe"/>
                                 <exclude reference="DqB-PM-gss"/>
@@ -167,7 +166,6 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="7di-JI-10s"/>
                                 <include reference="oDg-IE-PfT"/>
                             </mask>
                         </variation>
