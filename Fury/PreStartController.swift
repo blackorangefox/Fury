@@ -81,7 +81,7 @@ class PreStartController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
             if self.currentIndex > self.items.count-4 {
-                playerService.playOneSecond()
+               // playerService.playOneSecond()
                 print("play sound "+Date().timeString(ofStyle: .full))
             }
         

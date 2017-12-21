@@ -24,6 +24,14 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
         get { return .portrait }
     }
     
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        get { return .portrait }
+    }
+    
+    override var shouldAutorotate: Bool {
+        get {return false}
+    }
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +41,7 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
     }
     
     func setHero(type: TimerType) {

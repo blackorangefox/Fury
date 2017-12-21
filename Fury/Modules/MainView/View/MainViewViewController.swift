@@ -20,12 +20,21 @@ class MainViewViewController: UIViewController, MainViewViewInput {
         get { return .portrait }
     }
     
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        get { return .portrait }
+    }
+    
+    override var shouldAutorotate: Bool {
+        get {return false}
+    }
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
         setupTable()
         stylize()
+        subscribeScreenRotate()
     }
     
     func setupTable() {
@@ -36,6 +45,13 @@ class MainViewViewController: UIViewController, MainViewViewInput {
     func stylize() {
         controllerTitle.text = "Choose\ntimer type"
         controllerTitle.font = UIFont.furyHeadline1
+    }
+    
+    func subscribeScreenRotate() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(MainViewViewController.rotated),
+                                               name: NSNotification.Name.UIDeviceOrientationDidChange,
+                                               object: nil)
     }
 
     // MARK: MainViewViewInput
@@ -73,6 +89,10 @@ extension MainViewViewController: UITableViewDataSource {
             cell.logoImage.heroID = "countdownLogo"
         }
         return cell
+    }
+    
+    @objc func rotated() {
+        tableView.reloadData()
     }
     
 }
