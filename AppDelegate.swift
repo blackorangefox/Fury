@@ -43,7 +43,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         Mixpanel.initialize(token: "45945acf55ce497604e2dc20e6952d30")
         return true
-    } 
+    }
+    
+    func checkFirstOpenApp() {
+        if !UserDefaults.standard.bool(forKey: "AlreadyOpen") {
+            UserDefaults.standard.set(true, forKey: "AlreadyOpen")
+            UserDefaults.standard.set(0, forKey: "CounterStartTimer")
+        }
+    }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

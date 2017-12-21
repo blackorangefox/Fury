@@ -8,6 +8,7 @@
 
 import UIKit
 import iCarousel
+import Mixpanel
 
 class RoundSettingViewController: UIViewController, RoundSettingViewInput {
 
@@ -21,7 +22,6 @@ class RoundSettingViewController: UIViewController, RoundSettingViewInput {
         get { return .portrait }
     }
 
-    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,11 @@ class RoundSettingViewController: UIViewController, RoundSettingViewInput {
         setsPicker.delegate = ddm
         setsPicker.dataSource = ddm
         setupCarousel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Mixpanel.mainInstance().track(event: "Open Set setting")
     }
     
     func setupCarousel() {

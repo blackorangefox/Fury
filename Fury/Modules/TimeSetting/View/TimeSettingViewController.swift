@@ -25,7 +25,6 @@ class TimeSettingViewController: UIViewController, TimeSettingViewInput {
         get { return .portrait }
     }
 
-    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -5,6 +5,7 @@
 //  Created by Mikhail Fokin on 14/12/2017.
 //  Copyright © 2017 nova9. All rights reserved.
 //
+import Mixpanel
 
 class TimeSettingPresenter: TimeSettingModuleInput, TimeSettingViewOutput, TimeSettingInteractorOutput {
 
@@ -16,6 +17,7 @@ class TimeSettingPresenter: TimeSettingModuleInput, TimeSettingViewOutput, TimeS
     func viewIsReady() {
         view.stylez(style: flowStory.style)
         view.setTitle(text: "Set round time")
+         Mixpanel.mainInstance().track(event: "Open set round time")
     }
     
     func selectWorkTime(minuts: Int,

@@ -11,6 +11,7 @@ import UserNotifications
 import SwifterSwift
 import SwiftDate
 import Mixpanel
+import Foundation
 
 class TimerViewController: UIViewController, TimerViewInput {
     
@@ -43,6 +44,8 @@ class TimerViewController: UIViewController, TimerViewInput {
         colectionView.performBatchUpdates(nil) { _ in
             self.collectionView(self.colectionView, didSelectItemAt: increment)
         }
+        let counter = UserDefaults.standard.integer(forKey: "CounterStartTimer")
+        UserDefaults.standard.set(counter+1, forKey: "CounterStartTimer")
     }
         
     func showPauseButton() {

@@ -26,8 +26,9 @@ class SurveyController: UIViewController {
     }
     
     @IBAction func notNowButtonPress(_ sender: Any) {
-        UserDefaults.standard.set(Date(), forKey: "when_show_survey")
+        UserDefaults.standard.set(0, forKey: "CounterStartTimer")
         self.navigationController?.dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func yesButtonPress(_ sender: Any) {

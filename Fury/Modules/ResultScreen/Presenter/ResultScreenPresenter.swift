@@ -28,13 +28,8 @@ class ResultScreenPresenter: ResultScreenModuleInput, ResultScreenViewOutput, Re
     }
     
     func needShowSurveyControlle() -> Bool {
-        if UserDefaults.standard.bool(forKey: "user_survey") {
-            return false
-        }
-        guard let whenShowSurvey = UserDefaults.standard.date(forKey: "when_show_survey") else {
-            return true
-        }
-        if whenShowSurvey.adding(.day, value: 7) > Date() {
+        let counter = UserDefaults.standard.integer(forKey: "CounterStartTimer")
+        if counter >= 3 && !UserDefaults.standard.bool(forKey: "user_survey") sur{
             return true
         }
         return false
