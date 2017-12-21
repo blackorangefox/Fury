@@ -43,6 +43,8 @@ class PreStartController: UIViewController {
         gradientView.backgroundColor = style.mainColor
     }
     
+    
+    
     func subscribeScreenRotate() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(PreStartController.rotated),
@@ -62,6 +64,7 @@ class PreStartController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let aSelector = #selector(PreStartController.updateSelectCell)
+        //playerService.playOneSecond()
         self.timer = Timer.scheduledTimer(timeInterval: 1,
                                           target: self,
                                           selector: aSelector,
@@ -77,12 +80,13 @@ class PreStartController: UIViewController {
             let vc = GlobalAssembly.resolve(type: TimerViewInput.self) as! UIViewController
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
-            self.carousel.scrollToItem(at: self.currentIndex, animated: true)
-            print("Chnage item "+Date().timeString(ofStyle: .full)+" "+(carousel.currentItemView as! UILabel).text!)
             if self.currentIndex > self.items.count-4 {
-                //playerService.playOneSecond()
+                playerService.playOneSecond()
                 print("play sound "+Date().timeString(ofStyle: .full))
             }
+        
+            self.carousel.scrollToItem(at: self.currentIndex, animated: true)
+            print("Chnage item "+Date().timeString(ofStyle: .full)+" "+(carousel.currentItemView as! UILabel).text!)
             self.currentIndex += 1
         }
     }

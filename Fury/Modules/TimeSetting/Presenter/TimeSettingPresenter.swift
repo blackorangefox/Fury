@@ -17,7 +17,6 @@ class TimeSettingPresenter: TimeSettingModuleInput, TimeSettingViewOutput, TimeS
     func viewIsReady() {
         view.stylez(style: flowStory.style)
         view.setTitle(text: "Set round time")
-         Mixpanel.mainInstance().track(event: "Open set round time")
     }
     
     func selectWorkTime(minuts: Int,
@@ -27,6 +26,7 @@ class TimeSettingPresenter: TimeSettingModuleInput, TimeSettingViewOutput, TimeS
         if flowStory.style.type == .interval {
             router.openSetRestTime()
         }else {
+            Mixpanel.mainInstance().track(event: "Start countdown timer")
             router.openPrestert(style: flowStory.style)
         }
     }

@@ -26,6 +26,7 @@ class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, Pr
         case .countdown:
             router.openSetTime()
         default:
+            Mixpanel.mainInstance().track(event: "Start classic timer")
             router.openPrestert(style: flowStory.style)
         }
     }

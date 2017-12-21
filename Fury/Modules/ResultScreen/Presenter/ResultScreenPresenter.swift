@@ -29,7 +29,7 @@ class ResultScreenPresenter: ResultScreenModuleInput, ResultScreenViewOutput, Re
     
     func needShowSurveyControlle() -> Bool {
         let counter = UserDefaults.standard.integer(forKey: "CounterStartTimer")
-        if counter >= 3 && !UserDefaults.standard.bool(forKey: "user_survey") sur{
+        if counter >= 6 && !UserDefaults.standard.bool(forKey: "user_survey"){
             return true
         }
         return false

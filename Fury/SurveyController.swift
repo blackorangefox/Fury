@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Mixpanel
 
 class SurveyController: UIViewController {
 
@@ -26,12 +27,14 @@ class SurveyController: UIViewController {
     }
     
     @IBAction func notNowButtonPress(_ sender: Any) {
+        Mixpanel.mainInstance().track(event: "No Survey")
         UserDefaults.standard.set(0, forKey: "CounterStartTimer")
         self.navigationController?.dismiss(animated: true, completion: nil)
         
     }
     
     @IBAction func yesButtonPress(_ sender: Any) {
+        Mixpanel.mainInstance().track(event: "Yes Survey")
         if let url = URL(string: "https://dmitrykurash.typeform.com/to/lXywEJ") {
             UIApplication.shared.open(url, options: [:])
         }
