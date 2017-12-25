@@ -25,7 +25,6 @@ static func configure() {
         cont.register(TimerViewOutput.self, factory: { (resolver: Resolver, view: TimerViewInput) in
             let presenter = TimerPresenter()
             presenter.router = resolver.resolve(TimerRouterInput.self, argument: (view as! UIViewController))
-            presenter.timerService = resolver.resolve(TimerServiceProtocol.self)
             presenter.flowStory = resolver.resolve(TimerStoryProtocol.self)
             presenter.view = view
             return presenter

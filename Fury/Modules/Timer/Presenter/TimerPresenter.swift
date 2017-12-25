@@ -12,7 +12,6 @@ class TimerPresenter: TimerModuleInput, TimerViewOutput {
     
     weak var view: TimerViewInput!
     var router: TimerRouterInput!
-    var timerService: TimerServiceProtocol!
     private let formater = DateFormatter()
     var flowStory: TimerStoryProtocol!
 

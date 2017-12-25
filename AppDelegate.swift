@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     var window: UIWindow?
     let container = Container()
-    var timerService: TimerServiceProtocol!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UIApplication.shared.isIdleTimerDisabled = true
@@ -27,13 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         UIApplication.shared.statusBarStyle = .lightContent
         
-        timerService = GlobalAssembly.resolve(type: TimerServiceProtocol.self)
        let vc = GlobalAssembly.resolve(type: MainViewViewInput.self) as! UIViewController
         
-       // let story = UIStoryboard.init(name: "Main", bundle: nil)
-      //  let preScreen  = story.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
-        
-        self.window?.rootViewController = vc//preScreen
+        self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
         
         FirebaseApp.configure()

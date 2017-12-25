@@ -11,9 +11,5 @@ import Swinject
 
 class ServiceAssembly: BaseAssembly {
     static func configure() {
-        
-        defaultContainer().register(TimerServiceProtocol.self) { _ in
-            TimerService()
-            }.inObjectScope(.container)
     }
 }

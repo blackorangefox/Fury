@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Fury/Modules/MainView/View/Cell/TimerTypeCell.swift"
-            timestampString = "535576103.097476"
+            timestampString = "535898916.047342"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "rotated()"
             landmarkType = "7">
          </BreakpointContent>

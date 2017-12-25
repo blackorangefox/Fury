@@ -8,12 +8,6 @@
 
 import UIKit
 
-enum TimerType {
-    case classic
-    case interval
-    case countdown
-}
-
 class TimerTypeCell: UITableViewCell {
     
     @IBOutlet weak var logoImage: UIImageView!
