@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum TimerType {
+    case classic
+    case interval
+    case countdown
+}
+
 struct TimerStyle {
     var gradientColor: [Any]
     var mainColor: UIColor

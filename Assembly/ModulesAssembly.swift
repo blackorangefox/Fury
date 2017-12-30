@@ -22,5 +22,6 @@ class ModulesAssembly: BaseAssembly {
         RoundSettingAssembly.configure()
         TimeSettingAssembly.configure()
         RestTimeSettingAssembly.configure()
+        RecordVideoAssembly.configure()
     }
 }

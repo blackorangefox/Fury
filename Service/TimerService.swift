@@ -8,11 +8,7 @@
 
 import Foundation
 
-enum TimerType {
-    case classic
-    case interval
-    case countdown
-}
+
 
 protocol TimerServiceDelegate: class {
     
