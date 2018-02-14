@@ -10,6 +10,7 @@ import UIKit
 
 class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
     
+    @IBOutlet var mainView: UIView!
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
@@ -33,8 +34,9 @@ class PreViewTimerViewController: UIViewController, PreViewTimerViewInput {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        mainView.backgroundColor = UIColor.furyBackgroundColor
     }
     
     override func viewDidAppear(_ animated: Bool) {

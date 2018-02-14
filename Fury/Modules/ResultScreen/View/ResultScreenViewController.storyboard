@@ -4,9 +4,9 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -178,8 +178,7 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="backgroundColor"/>
-                        <color key="tintColor" name="backgroundColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="TGF-Bj-3EA" firstAttribute="trailing" secondItem="9s2-cF-sNs" secondAttribute="trailing" constant="24" id="BGS-jI-9VW"/>
                             <constraint firstItem="blV-tp-XUa" firstAttribute="top" secondItem="TGF-Bj-3EA" secondAttribute="top" constant="24" id="L4u-Bi-A7P"/>
@@ -215,8 +214,5 @@
     </scenes>
     <resources>
         <image name="classic" width="256" height="328"/>
-        <namedColor name="backgroundColor">
-            <color red="0.13699999451637268" green="0.1289999932050705" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>

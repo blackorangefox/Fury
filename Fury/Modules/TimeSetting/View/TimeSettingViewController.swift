@@ -38,6 +38,11 @@ class TimeSettingViewController: UIViewController, TimeSettingViewInput {
         setupCarousel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.backgroundColor = UIColor.furyBackgroundColor
+    }
+    
     func setTitle(text: String) {
         titleLabel.text = text
     }

@@ -42,6 +42,7 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+        self.view.backgroundColor = UIColor.furyBackgroundColor
     }
     
     func setHero(type: TimerType) {
@@ -64,7 +65,9 @@ class ResultScreenViewController: UIViewController, ResultScreenViewInput {
         gradientView.setGradienBackgroundBy(colors: style.gradientColor, size: size)
         logoImage.image = style.bigLogo
         okButton.setBackgroundColor(color: style.mainColor, forState: .normal)
+        okButton.setTitleColor(UIColor.furyBackgroundColor, for: .normal)
         shareButton.setBackgroundColor(color: style.mainColor, forState: .normal)
+        shareButton.setTitleColor(UIColor.furyBackgroundColor, for: .normal)
         subTitleLabel.text = style.subTitle
     }
     

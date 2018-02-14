@@ -24,6 +24,12 @@ class SurveyController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sureButton.setBackgroundColor(color: style.mainColor, forState: .normal)
+        NoButton.setBackgroundColor(color: UIColor.furyOpacityButton, forState: .normal)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        view.backgroundColor = UIColor.furyBackgroundColor
     }
     
     @IBAction func notNowButtonPress(_ sender: Any) {

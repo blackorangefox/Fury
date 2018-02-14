@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,6 +54,7 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="4lE-3F-2Ik" firstAttribute="centerY" secondItem="2u2-qG-s3R" secondAttribute="centerY" id="fcb-OY-Ds0"/>
                                                 <constraint firstItem="4lE-3F-2Ik" firstAttribute="centerX" secondItem="2u2-qG-s3R" secondAttribute="centerX" id="nNK-b4-Z1L"/>
@@ -76,7 +77,7 @@
                                 </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" name="backgroundColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="xvV-s8-mAL" firstAttribute="trailing" secondItem="7lZ-vc-dqc" secondAttribute="trailing" constant="24" id="DNZ-RS-Edn"/>
                             <constraint firstItem="xvV-s8-mAL" firstAttribute="bottom" secondItem="7lZ-vc-dqc" secondAttribute="bottom" id="bPs-Cu-GZS"/>
@@ -90,6 +91,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="controllerTitle" destination="9X3-gi-cDW" id="lIS-cm-TCl"/>
+                        <outlet property="mainView" destination="IMi-J7-LpH" id="87z-uD-h0r"/>
                         <outlet property="tableView" destination="7lZ-vc-dqc" id="rD8-lk-5Yr"/>
                     </connections>
                 </viewController>
@@ -98,9 +100,4 @@
             <point key="canvasLocation" x="310.14492753623193" y="14.673913043478262"/>
         </scene>
     </scenes>
-    <resources>
-        <namedColor name="backgroundColor">
-            <color red="0.13699999451637268" green="0.1289999932050705" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>

@@ -8,48 +8,85 @@
 import UIKit
 
 extension UIColor {
-
-	@nonobjc class var furyClassicGradientTop: UIColor { 
-		return UIColor(named: "classicGradientTop")!
-	}
-
-	@nonobjc class var furyIntervalGradientTop: UIColor { 
-		return UIColor(named: "intervalGradientTop")!
-	}
-
-	@nonobjc class var furyCountdownGradientTop: UIColor { 
-		return UIColor(named: "countdownGradientTop")!
-	}
-
-	@nonobjc class var furyPinkRed: UIColor { 
-		return UIColor(named: "pinkRed")!
-	}
-
-	@nonobjc class var furyGoldenYellow: UIColor { 
-		return UIColor(named: "goldenYellow")!
-	}
-
-	@nonobjc class var furyBrightLavender: UIColor { 
-		return UIColor(named: "brightLavender")!
-	}
-
-	@nonobjc class var furyOpacityButton: UIColor { 
-		return UIColor(named: "opacityButton")!
-	}
-
-	@nonobjc class var furyBackgroundColor: UIColor { 
-		return UIColor(named: "backgroundColor")!
-	}
-
-	@nonobjc class var furyCountdownGradientBot: UIColor { 
-		return UIColor(named: "countdownGradientBot")!
-	}
-
-	@nonobjc class var furyClassicGradientBot: UIColor { 
-		return UIColor(named: "classicGradientBot")!
-	}
-
-	@nonobjc class var furyIntervalGradientBot: UIColor { 
-		return UIColor(named: "intervalGradientBot")!
-	}
+    
+    @nonobjc class var furyClassicGradientTop: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "classicGradientTop")!
+        } else {
+            return UIColor(red: 41.0/255.0, green: 214.0/255.0, blue: 255.0/255.0, alpha: 1)
+        }
+    }
+    
+    @nonobjc class var furyIntervalGradientTop: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "intervalGradientTop")!
+        } else {
+            return UIColor(red: 252.0/255.0, green: 69.0/255.0, blue: 69.0/255.0, alpha: 1)
+        }
+    }
+    
+    @nonobjc class var furyCountdownGradientTop: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "countdownGradientTop")!
+        } else {
+            return UIColor(red: 29.0/255.0, green: 227.0/255.0, blue: 160.0/255.0, alpha: 1.0)
+        }	}
+    
+    @nonobjc class var furyPinkRed: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "pinkRed")!
+        } else {
+            return UIColor(red: 255.0/255.0, green: 15.0/255.0, blue: 82.0/255.0, alpha: 1.0)
+        }	}
+    
+    @nonobjc class var furyGoldenYellow: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "goldenYellow")!
+        } else {
+            return UIColor(red: 255.0/255.0, green: 202.0/255.0, blue: 21.0/255.0, alpha: 1.0)
+        }	}
+    
+    @nonobjc class var furyBrightLavender: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "brightLavender")!
+        } else {
+            return UIColor(red: 193.0/255.0, green: 77.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        }	}
+    
+    @nonobjc class var furyOpacityButton: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "opacityButton")!
+        } else {
+            return UIColor(red: 193.0/255.0, green: 77.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        }	}
+    
+    @nonobjc class var furyBackgroundColor: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "backgroundColor")!
+        } else {
+            return UIColor(red: 35.0/255.0, green: 33.0/255.0, blue: 34.0/255.0, alpha: 1.0)
+        }	}
+    
+    @nonobjc class var furyCountdownGradientBot: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "countdownGradientBot")!
+        } else {
+            return UIColor(red: 221.0/255.0, green: 255.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+        }	}
+    
+    @nonobjc class var furyClassicGradientBot: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "classicGradientBot")!
+        } else {
+            return UIColor(red: 128.0/255.0, green: 16.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        }	}
+    
+    @nonobjc class var furyIntervalGradientBot: UIColor {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "intervalGradientBot")!
+        } else {
+            return UIColor(red: 243.0/255.0, green: 53.0/255.0, blue: 190.0/255.0, alpha: 1.0)
+        }	}
+    
+    
 }

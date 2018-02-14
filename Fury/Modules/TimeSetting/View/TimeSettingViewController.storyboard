@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -90,7 +90,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="backgroundColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="Gq8-D9-mgJ" firstAttribute="top" secondItem="yi9-CR-uUc" secondAttribute="bottom" id="2ad-X4-p5T"/>
                             <constraint firstItem="6Uh-eu-dUh" firstAttribute="leading" secondItem="HSe-zm-LH2" secondAttribute="trailing" constant="18" id="2fS-qB-9jv"/>
@@ -129,8 +129,5 @@
     </scenes>
     <resources>
         <image name="back" width="26" height="24"/>
-        <namedColor name="backgroundColor">
-            <color red="0.13699999451637268" green="0.1289999932050705" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>

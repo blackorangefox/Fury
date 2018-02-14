@@ -13,6 +13,7 @@ class MainViewViewController: UIViewController, MainViewViewInput {
 
     @IBOutlet weak var controllerTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var mainView: UIView!
     
     var output: MainViewViewOutput!
     
@@ -35,6 +36,11 @@ class MainViewViewController: UIViewController, MainViewViewInput {
         setupTable()
         stylize()
         subscribeScreenRotate()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.mainView.backgroundColor = UIColor.furyBackgroundColor
     }
     
     func setupTable() {
