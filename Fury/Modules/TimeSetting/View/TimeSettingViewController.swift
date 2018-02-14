@@ -53,6 +53,10 @@ class TimeSettingViewController: UIViewController, TimeSettingViewInput {
     func stylez(style: TimerStyle) {
         nextButton.setBackgroundColor(color: style.mainColor, forState: .normal)
     }
+    
+    func setByttonTitle(text: String) {
+        nextButton.setTitle(text, for: .normal)
+    }
 
     @IBAction func backButtonPress(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

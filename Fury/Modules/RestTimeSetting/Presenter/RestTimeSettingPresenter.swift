@@ -17,6 +17,7 @@ class RestTimeSettingPresenter: RestTimeSettingModuleInput, TimeSettingViewOutpu
     func viewIsReady() {
         view.stylez(style: flowStory.style)
         view.setTitle(text: "Set rest time")
+        view.setByttonTitle(text: "START")
         Mixpanel.mainInstance().track(event: "Open rest time setting")
     }
     

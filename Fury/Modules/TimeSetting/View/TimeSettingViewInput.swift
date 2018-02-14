@@ -16,4 +16,5 @@ protocol TimeSettingViewInput: class {
     func setupInitialState()
     func stylez(style: TimerStyle)
     func setTitle(text: String)
+    func setByttonTitle(text: String)
 }
