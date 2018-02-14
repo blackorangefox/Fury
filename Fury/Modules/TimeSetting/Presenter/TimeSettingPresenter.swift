@@ -17,6 +17,9 @@ class TimeSettingPresenter: TimeSettingModuleInput, TimeSettingViewOutput, TimeS
     func viewIsReady() {
         view.stylez(style: flowStory.style)
         view.setTitle(text: "Set round time")
+        if flowStory.style.type != .interval {
+            view.setByttonTitle(text: "START")
+        }
     }
     
     func selectWorkTime(minuts: Int,
