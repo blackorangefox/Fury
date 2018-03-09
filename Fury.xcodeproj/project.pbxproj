@@ -14,11 +14,8 @@
 		07AE87B63EAFA655160DAFA3 /* PreViewTimerInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F23C85D0E38FF715386562 /* PreViewTimerInteractorOutput.swift */; };
 		07F68CFD61D630E8E8E3504B /* RoundSettingInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38DEE7F28672137A0602EB9 /* RoundSettingInteractorInput.swift */; };
 		0A3DCFC51FE115F2E397900D /* PreViewTimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9DA95EF6250C243B53228 /* PreViewTimerInteractor.swift */; };
-		0B309506B368657EAD41CE09 /* RecordVideoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2C71D391C829E8CFDEB66D /* RecordVideoAssembly.swift */; };
 		0F6889A00F0D5325DC010B1F /* RoundSettingRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67C8229E47C639CB4F4C66 /* RoundSettingRouterTests.swift */; };
-		14FB7558C07FD4D4502C0D6E /* RecordVideoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4E67EE58AB0D3D6F26F5B3 /* RecordVideoRouterInput.swift */; };
 		184D41DA2E06629872F180DA /* TimeSettingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335A0DAE4555C950090E7315 /* TimeSettingAssembly.swift */; };
-		185CA86FC7BBE48BA9DD795C /* RecordVideoModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BFE367A3C0693BD3850D4B /* RecordVideoModuleInput.swift */; };
 		1D2297FDC082A0617AA285E4 /* MainViewInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265BC32363F8B08744DFE966 /* MainViewInteractorInput.swift */; };
 		1F1028A1873C4BEDC6B50942 /* ResultScreenInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491018F8417F0EC5C58A89F /* ResultScreenInteractorInput.swift */; };
 		206ECDEF0DCF26E8FC126C79 /* RestTimeSettingInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECB494C54CC042415A89789 /* RestTimeSettingInteractorOutput.swift */; };
@@ -27,7 +24,6 @@
 		240B05A5137BAE32A5225A2E /* RestTimeSettingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A7D372DC865B0C58192313 /* RestTimeSettingPresenterTests.swift */; };
 		24916D92ED45E47F5E5780E1 /* PreViewTimerInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394270DF9A21717240E26711 /* PreViewTimerInteractorInput.swift */; };
 		24D37C5D3AB38BF881E409AF /* PreViewTimerConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FAE9C7BA3D7C06CD342041 /* PreViewTimerConfiguratorTests.swift */; };
-		26E93D56F8F7C02A44F23CC0 /* RecordVideoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05C7C507CBE5CFF33896DA2 /* RecordVideoInteractorOutput.swift */; };
 		2A2E5395D8B479EF7A274BDE /* TimerModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA68E93928B1D35E2FF9296 /* TimerModuleInput.swift */; };
 		2B5F63F3F6E5E0A2B3DAE14F /* Pods_FuryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FDFFB2043BF21EB50A836B /* Pods_FuryUITests.framework */; };
 		2C4D81453861FDF01DBFF656 /* TimeSettingInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E70826D779B488BD7613273 /* TimeSettingInteractorOutput.swift */; };
@@ -36,7 +32,6 @@
 		2F74D498BDF9FCF37C214360 /* ResultScreenConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0931483862F5035EB2450B /* ResultScreenConfiguratorTests.swift */; };
 		33AE6E4BA3FC34AD86A6C5DB /* CoutdownTimerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B03796B64BF334CE396BF /* CoutdownTimerViewTests.swift */; };
 		3458A1A0D4AE19692D4F7799 /* RoundSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239EE994CAAE4310146E91B8 /* RoundSettingViewController.swift */; };
-		34E467E0CCDDF4A8CDA41163 /* RecordVideoInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F8CCA37632CCEAA36F0684 /* RecordVideoInteractorInput.swift */; };
 		35AC7C87F53D7102102CFE48 /* ResultScreenInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CFFFE129ADB9C8A48040FD /* ResultScreenInteractorOutput.swift */; };
 		385108B426CBE570A476452C /* TimeSettingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6620AB599411F9C0593B55FA /* TimeSettingInteractorTests.swift */; };
 		3A41B530F94D9F3E41952503 /* TimerViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AC27E270F52E9E9C4FAE82 /* TimerViewOutput.swift */; };
@@ -51,10 +46,8 @@
 		4BEB147372A31E504C310F44 /* RoundSettingViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E785413CA535F3F208300 /* RoundSettingViewInput.swift */; };
 		4C58B1CA7BC6654A97854172 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DF84E1ECAA76C22368BF95 /* TimerViewController.swift */; };
 		4F5F988B839228AF540F0216 /* TimeSettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CD7D8B65015F53F61260C /* TimeSettingInteractor.swift */; };
-		4F8A501C8AAADB29C9633396 /* RecordVideoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7567A7512012E64FAE84B35B /* RecordVideoRouter.swift */; };
 		5280539411DA61E0A4193D34 /* Pods_Fury.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4492F19A02CB7A69961D429 /* Pods_Fury.framework */; };
 		5606DCC5BE1C71E69EC707C6 /* RoundSettingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F33E499712AAD7AA62C7549 /* RoundSettingPresenterTests.swift */; };
-		565DE0196D4B6C1F4F1854F5 /* RecordVideoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94807FDAAE6CE853F13730A /* RecordVideoInteractor.swift */; };
 		566E7BECE818CF57F2C22719 /* ResultScreenViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9E0B042152AEE39CB8F03 /* ResultScreenViewInput.swift */; };
 		5B74A120388DC4D610CB5A02 /* RoundSettingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179ED8EF909B0F6ADA155724 /* RoundSettingViewTests.swift */; };
 		5D26B37CC3C3142254FE4A79 /* RestTimeSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42203E2A63E52B295CA6AC3 /* RestTimeSettingPresenter.swift */; };
@@ -88,10 +81,8 @@
 		980C8DB33C3F7EAE95D11E30 /* IntervalTimerSettingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D58324485DA483857494F /* IntervalTimerSettingInteractorTests.swift */; };
 		9960D2F84007D87786DEEAEA /* RecordVideoRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB9F627292271467089DE7 /* RecordVideoRouterTests.swift */; };
 		9A0C80CC3FB9ACB501085EA2 /* ClassicTimerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5E738D9F8B431C6431A8E9 /* ClassicTimerRouterTests.swift */; };
-		9A275AB995CA227E10CB53AC /* RecordVideoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91C4B477D569BCC61C9A78F /* RecordVideoViewOutput.swift */; };
 		9A6482F6EC30F0B86A02E7D4 /* ResultScreenRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD3DC42351CC8C6464D1525 /* ResultScreenRouterTests.swift */; };
 		9CC5280F2C2706AB39C8BECB /* PreViewTimerViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F38ACE8EE1F282A165558 /* PreViewTimerViewOutput.swift */; };
-		9D51C4B1757DFA1F24EC8FE8 /* RecordVideoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E815C5654D199B73131A5104 /* RecordVideoViewInput.swift */; };
 		9ECE5450B572921BD2A60D8C /* MainViewConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60369A5D36E2FC529976F74A /* MainViewConfiguratorTests.swift */; };
 		A009F59F9BFD09A3C763633D /* RestTimeSettingInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85E99D4B92C7A86544C8882 /* RestTimeSettingInteractorInput.swift */; };
 		A47E93029986DA4366AA2AF1 /* ResultScreenRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17491E9010C261E76700B9 /* ResultScreenRouterInput.swift */; };
@@ -109,6 +100,7 @@
 		B41514841FE2881600C539B4 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41514831FE2881600C539B4 /* Style.swift */; };
 		B41514861FE2A78100C539B4 /* TimeSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41514851FE2A78100C539B4 /* TimeSettingViewController.storyboard */; };
 		B41514881FE2BA5A00C539B4 /* RoundSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41514871FE2BA5A00C539B4 /* RoundSettingViewController.storyboard */; };
+		B4189C6120519C0500F3C741 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4189C6020519C0500F3C741 /* Logger.swift */; };
 		B423F36B1ED42B1F0034BFF1 /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423F36A1ED42B1F0034BFF1 /* FinishController.swift */; };
 		B42787FDFEA1DC44A1163710 /* RecordVideoConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A0D5D52A3EF8E39EB9222 /* RecordVideoConfiguratorTests.swift */; };
 		B4422ECA1FD96FBB000ABC64 /* PreStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4422EC91FD96FBA000ABC64 /* PreStartController.swift */; };
@@ -213,14 +205,12 @@
 		B4C4F1B21FF11EE20000DD7F /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4F1B01FF11EE20000DD7F /* Reusable.swift */; };
 		B4C4F1B31FF11EE20000DD7F /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4F1B11FF11EE20000DD7F /* NibLoadable.swift */; };
 		B4C4F1B51FF11F5D0000DD7F /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4F1B41FF11F5D0000DD7F /* UITableView+Reusable.swift */; };
-		B4C4F1B71FF1302B0000DD7F /* RecordVideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C4F1B61FF1302B0000DD7F /* RecordVideoViewController.storyboard */; };
 		B4C920A41FCF45DA0020B522 /* Double+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C920A31FCF45DA0020B522 /* Double+extention.swift */; };
 		B4DB7DCC1FEA9941000A0AF1 /* Button+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB7DCB1FEA9941000A0AF1 /* Button+extention.swift */; };
 		B4F9268E1F13D109003C0828 /* Airhorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4F9268D1F13D109003C0828 /* Airhorn.mp3 */; };
 		B4FDDD8C1F292E9A00762382 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDDD8B1F292E9A00762382 /* SurveyController.swift */; };
 		B75458B5114F4C3908411193 /* TimeSettingRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA971BEE5BA164183B1F1F5 /* TimeSettingRouterTests.swift */; };
 		B8C72946842FD8F9D1EEA54F /* TimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF972ED134A4CE693762E1A1 /* TimerRouter.swift */; };
-		B8F37124A15C967A209577DA /* RecordVideoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B153913A3738FA0D1E7A0455 /* RecordVideoPresenter.swift */; };
 		BD1A87F2F72C4E29D49D0C40 /* IntervalTimerSettingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E3A4D58E029B0C6A900397 /* IntervalTimerSettingViewTests.swift */; };
 		BFF427E8315C0AA5F228FC96 /* TimeSettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1994207A5570A9971D504A9C /* TimeSettingRouter.swift */; };
 		C0634B5ADA5C9799CDFEB819 /* CoutdownTimerConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E073441B5D5115198FF133 /* CoutdownTimerConfiguratorTests.swift */; };
@@ -257,7 +247,6 @@
 		E00C90A5EC3509C9614A2163 /* IntervalTimerSettingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834114FCA92A0B9EC54D71B8 /* IntervalTimerSettingPresenterTests.swift */; };
 		E1525A0F35104F96E05DE551 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF5D933C84585C657B75FF7 /* MainViewPresenter.swift */; };
 		E18CEBD27CE3718ADB197763 /* MainViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28504FDF12472253ACD63A3 /* MainViewViewController.swift */; };
-		E4AEC5C88F3015D50D42288A /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF4C7D491E8EED1403F5C7 /* RecordVideoViewController.swift */; };
 		E5C5B0A123C64B602D04112D /* ResultScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9900F9C43CADC04656AA33 /* ResultScreenRouter.swift */; };
 		E70BC2BEADC655E1D09BC374 /* IntervalTimerSettingConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A211601C73CDD4B0230EB1 /* IntervalTimerSettingConfiguratorTests.swift */; };
 		E8E9969366B0A6C8D26D07C5 /* CoutdownTimerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928656134D51E2EB0E47FB86 /* CoutdownTimerPresenterTests.swift */; };
@@ -357,7 +346,6 @@
 		5DB86E4C2200C679B4B1E408 /* Pods-Fury.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fury.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fury/Pods-Fury.debug.xcconfig"; sourceTree = "<group>"; };
 		5E70826D779B488BD7613273 /* TimeSettingInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingInteractorOutput.swift; sourceTree = "<group>"; };
 		60369A5D36E2FC529976F74A /* MainViewConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewConfiguratorTests.swift; sourceTree = "<group>"; };
-		60BFE367A3C0693BD3850D4B /* RecordVideoModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoModuleInput.swift; sourceTree = "<group>"; };
 		612F38ACE8EE1F282A165558 /* PreViewTimerViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerViewOutput.swift; sourceTree = "<group>"; };
 		6215D6A3F92530505534F9C9 /* RestTimeSettingAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestTimeSettingAssembly.swift; sourceTree = "<group>"; };
 		6620AB599411F9C0593B55FA /* TimeSettingInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingInteractorTests.swift; sourceTree = "<group>"; };
@@ -365,7 +353,6 @@
 		6D70BD167CC1864898298D96 /* MainViewViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewViewInput.swift; sourceTree = "<group>"; };
 		6E399BF8CA891C8F8CBDDC84 /* TimeSettingPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingPresenter.swift; sourceTree = "<group>"; };
 		7491018F8417F0EC5C58A89F /* ResultScreenInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenInteractorInput.swift; sourceTree = "<group>"; };
-		7567A7512012E64FAE84B35B /* RecordVideoRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoRouter.swift; sourceTree = "<group>"; };
 		7CE9DA95EF6250C243B53228 /* PreViewTimerInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerInteractor.swift; sourceTree = "<group>"; };
 		7F603C4B1AD602640277D0D1 /* RecordVideoViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoViewTests.swift; sourceTree = "<group>"; };
 		7FA68E93928B1D35E2FF9296 /* TimerModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerModuleInput.swift; sourceTree = "<group>"; };
@@ -402,9 +389,7 @@
 		ADF5D933C84585C657B75FF7 /* MainViewPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 		AFC0B9E0C00ADBE60B2DDC01 /* ResultScreenPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenPresenter.swift; sourceTree = "<group>"; };
 		AFF2AC674D151829945AC6F2 /* TimeSettingModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingModuleInput.swift; sourceTree = "<group>"; };
-		B05C7C507CBE5CFF33896DA2 /* RecordVideoInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoInteractorOutput.swift; sourceTree = "<group>"; };
 		B14558D4A797AD4ECBB36A88 /* ResultScreenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenViewController.swift; sourceTree = "<group>"; };
-		B153913A3738FA0D1E7A0455 /* RecordVideoPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoPresenter.swift; sourceTree = "<group>"; };
 		B1F6BF6EDC3C050A4F0E4A70 /* CoutdownTimerInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerInteractorTests.swift; sourceTree = "<group>"; };
 		B208A955F72DEF538440CED2 /* ClassicTimerPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerPresenterTests.swift; sourceTree = "<group>"; };
 		B3ED8FB3EB7809B0E37EA767 /* MainViewRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewRouterTests.swift; sourceTree = "<group>"; };
@@ -415,6 +400,7 @@
 		B41514831FE2881600C539B4 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		B41514851FE2A78100C539B4 /* TimeSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeSettingViewController.storyboard; sourceTree = "<group>"; };
 		B41514871FE2BA5A00C539B4 /* RoundSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoundSettingViewController.storyboard; sourceTree = "<group>"; };
+		B4189C6020519C0500F3C741 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B423F36A1ED42B1F0034BFF1 /* FinishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
 		B4422EC91FD96FBA000ABC64 /* PreStartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreStartController.swift; sourceTree = "<group>"; };
 		B4422ECB1FD96FDE000ABC64 /* IntervalNavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationCell.swift; sourceTree = "<group>"; };
@@ -526,7 +512,6 @@
 		B4C4F1B01FF11EE20000DD7F /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		B4C4F1B11FF11EE20000DD7F /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		B4C4F1B41FF11F5D0000DD7F /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
-		B4C4F1B61FF1302B0000DD7F /* RecordVideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordVideoViewController.storyboard; sourceTree = "<group>"; };
 		B4C920A31FCF45DA0020B522 /* Double+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extention.swift"; sourceTree = "<group>"; };
 		B4DB7DCB1FEA9941000A0AF1 /* Button+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+extention.swift"; sourceTree = "<group>"; };
 		B4EA58FE1FF55D51000138AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -540,16 +525,12 @@
 		B4FDDD8B1F292E9A00762382 /* SurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyController.swift; sourceTree = "<group>"; };
 		B578BEFD852ECEC0A9A6258C /* PreViewTimerViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerViewInput.swift; sourceTree = "<group>"; };
 		B756B39CFA9150DE1426627C /* PreViewTimerInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerInteractorTests.swift; sourceTree = "<group>"; };
-		B91C4B477D569BCC61C9A78F /* RecordVideoViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoViewOutput.swift; sourceTree = "<group>"; };
 		B97753711DBDFE2FA8572C34 /* TimerAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerAssembly.swift; sourceTree = "<group>"; };
 		BB8A0D5D52A3EF8E39EB9222 /* RecordVideoConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoConfiguratorTests.swift; sourceTree = "<group>"; };
 		BC2B5ED0BD6C2F4352CB256B /* PreViewTimerPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerPresenter.swift; sourceTree = "<group>"; };
-		BC2C71D391C829E8CFDEB66D /* RecordVideoAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoAssembly.swift; sourceTree = "<group>"; };
-		BDEF4C7D491E8EED1403F5C7 /* RecordVideoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
 		BFAA7AB0807AC5471FA131C3 /* IntervalTimerSettingRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingRouterTests.swift; sourceTree = "<group>"; };
 		C4FDFFB2043BF21EB50A836B /* Pods_FuryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DF84E1ECAA76C22368BF95 /* TimerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		C94807FDAAE6CE853F13730A /* RecordVideoInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoInteractor.swift; sourceTree = "<group>"; };
 		CE3CD7D8B65015F53F61260C /* TimeSettingInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingInteractor.swift; sourceTree = "<group>"; };
 		CF972ED134A4CE693762E1A1 /* TimerRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerRouter.swift; sourceTree = "<group>"; };
 		D1A5F530FE05645957EDE549 /* TimeSettingConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingConfiguratorTests.swift; sourceTree = "<group>"; };
@@ -566,13 +547,11 @@
 		D6A7BE91DD9CE1B135939F50 /* Pods-FuryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuryTests/Pods-FuryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D8095CF10BDBB6D0263151D1 /* RestTimeSettingViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestTimeSettingViewTests.swift; sourceTree = "<group>"; };
 		DF245204FF72A91CB52E38D8 /* PreViewTimerPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerPresenterTests.swift; sourceTree = "<group>"; };
-		E3F8CCA37632CCEAA36F0684 /* RecordVideoInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoInteractorInput.swift; sourceTree = "<group>"; };
 		E4E073441B5D5115198FF133 /* CoutdownTimerConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerConfiguratorTests.swift; sourceTree = "<group>"; };
 		E66349EE23456E996F9A74B4 /* RecordVideoPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoPresenterTests.swift; sourceTree = "<group>"; };
 		E6897AC1240BF413C769C066 /* MainViewRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewRouter.swift; sourceTree = "<group>"; };
 		E725594CD2825E2D57B490A1 /* RestTimeSettingRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestTimeSettingRouterInput.swift; sourceTree = "<group>"; };
 		E74E186E60DD03274E7AA01D /* IntervalTimerViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerViewTests.swift; sourceTree = "<group>"; };
-		E815C5654D199B73131A5104 /* RecordVideoViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoViewInput.swift; sourceTree = "<group>"; };
 		E85E99D4B92C7A86544C8882 /* RestTimeSettingInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestTimeSettingInteractorInput.swift; sourceTree = "<group>"; };
 		E9DD6444E15383546772F2DA /* RoundSettingRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingRouterInput.swift; sourceTree = "<group>"; };
 		EA5E738D9F8B431C6431A8E9 /* ClassicTimerRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerRouterTests.swift; sourceTree = "<group>"; };
@@ -584,7 +563,6 @@
 		FA2D58324485DA483857494F /* IntervalTimerSettingInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntervalTimerSettingInteractorTests.swift; sourceTree = "<group>"; };
 		FCCEDCFB5C3E17064E003379 /* TimerRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerRouterInput.swift; sourceTree = "<group>"; };
 		FD23B61AFADAFC639F42C02E /* ResultScreenViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResultScreenViewOutput.swift; sourceTree = "<group>"; };
-		FD4E67EE58AB0D3D6F26F5B3 /* RecordVideoRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoRouterInput.swift; sourceTree = "<group>"; };
 		FEDB9F627292271467089DE7 /* RecordVideoRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RecordVideoRouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -751,15 +729,6 @@
 			path = RoundSetting;
 			sourceTree = "<group>";
 		};
-		267AB409B169EC7031B57F83 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				FD4E67EE58AB0D3D6F26F5B3 /* RecordVideoRouterInput.swift */,
-				7567A7512012E64FAE84B35B /* RecordVideoRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		283206118B9A7D3F1A93100C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -842,7 +811,6 @@
 		3DFE53C6C9176101CF189142 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B734E76E2FAD2A26193CC155 /* RecordVideo */,
 				A5772DDAB5293A2B75075AB5 /* RestTimeSetting */,
 				AA3FF1DD7205212EA9AEEC11 /* RoundSetting */,
 				DAB30873CD8DC98AB3586D70 /* TimeSetting */,
@@ -908,16 +876,6 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		51C80B52F0E2047B558FB47E /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				E3F8CCA37632CCEAA36F0684 /* RecordVideoInteractorInput.swift */,
-				B05C7C507CBE5CFF33896DA2 /* RecordVideoInteractorOutput.swift */,
-				C94807FDAAE6CE853F13730A /* RecordVideoInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
 		52B206EE87442B7C6ACCA2D2 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -943,15 +901,6 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		55A7266D4651190B1BD55B9B /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				60BFE367A3C0693BD3850D4B /* RecordVideoModuleInput.swift */,
-				B153913A3738FA0D1E7A0455 /* RecordVideoPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
 		5660F5E98AB7A3625EC45A8C /* IntervalTimerSetting */ = {
 			isa = PBXGroup;
 			children = (
@@ -968,17 +917,6 @@
 			isa = PBXGroup;
 			children = (
 				91588842E97C4DCB3C4727FF /* ResultScreenViewTests.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5BDF1D21328A2B1D4EF695D5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E815C5654D199B73131A5104 /* RecordVideoViewInput.swift */,
-				B91C4B477D569BCC61C9A78F /* RecordVideoViewOutput.swift */,
-				BDEF4C7D491E8EED1403F5C7 /* RecordVideoViewController.swift */,
-				B4C4F1B61FF1302B0000DD7F /* RecordVideoViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1061,14 +999,6 @@
 				90A7D372DC865B0C58192313 /* RestTimeSettingPresenterTests.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		7825467AB2BCFF1B8890C1CF /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				BC2C71D391C829E8CFDEB66D /* RecordVideoAssembly.swift */,
-			);
-			path = Assembly;
 			sourceTree = "<group>";
 		};
 		784E28D7949C86A1B46A8E49 /* Router */ = {
@@ -1634,18 +1564,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B734E76E2FAD2A26193CC155 /* RecordVideo */ = {
-			isa = PBXGroup;
-			children = (
-				5BDF1D21328A2B1D4EF695D5 /* View */,
-				55A7266D4651190B1BD55B9B /* Presenter */,
-				51C80B52F0E2047B558FB47E /* Interactor */,
-				267AB409B169EC7031B57F83 /* Router */,
-				7825467AB2BCFF1B8890C1CF /* Assembly */,
-			);
-			path = RecordVideo;
-			sourceTree = "<group>";
-		};
 		B7CA7D7D4587580203B5D218 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1755,6 +1673,7 @@
 			children = (
 				B4422F211FD9732B000ABC64 /* UIFont+FURYAdditions.swift */,
 				B4422F1F1FD97303000ABC64 /* UIColor+FURYAdditions.swift */,
+				B4189C6020519C0500F3C741 /* Logger.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -2233,7 +2152,6 @@
 				B4422EFA1FD97256000ABC64 /* MontserratAlternates-Italic.otf in Resources */,
 				B4753A231EB9F144008B3A1D /* Apache License.txt in Resources */,
 				B4422F191FD97256000ABC64 /* Montserrat-ExtraBold.otf in Resources */,
-				B4C4F1B71FF1302B0000DD7F /* RecordVideoViewController.storyboard in Resources */,
 				B40CDC0C1F1B683F00B2187A /* 1_second.mp3 in Resources */,
 				B4422F141FD97256000ABC64 /* MontserratAlternates-MediumItalic.otf in Resources */,
 				B4753A051EB9F136008B3A1D /* Oswald-ExtraLight.ttf in Resources */,
@@ -2387,6 +2305,7 @@
 				"${BUILT_PRODUCTS_DIR}/Mixpanel-swift/Mixpanel.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
@@ -2399,6 +2318,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mixpanel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
@@ -2456,6 +2376,7 @@
 				8930F1F4E92605B34B20E267 /* TimerViewInput.swift in Sources */,
 				3A41B530F94D9F3E41952503 /* TimerViewOutput.swift in Sources */,
 				4C58B1CA7BC6654A97854172 /* TimerViewController.swift in Sources */,
+				B4189C6120519C0500F3C741 /* Logger.swift in Sources */,
 				2A2E5395D8B479EF7A274BDE /* TimerModuleInput.swift in Sources */,
 				88B483A5E377429FC29E0585 /* TimerPresenter.swift in Sources */,
 				B4C4F1B51FF11F5D0000DD7F /* UITableView+Reusable.swift in Sources */,
@@ -2535,17 +2456,6 @@
 				EFE899B5E54B3302C06C0500 /* RestTimeSettingRouterInput.swift in Sources */,
 				EF715648FD092AADDCA3FBFC /* RestTimeSettingRouter.swift in Sources */,
 				C83D8AF7DB002FA8F1F4F89C /* RestTimeSettingAssembly.swift in Sources */,
-				9D51C4B1757DFA1F24EC8FE8 /* RecordVideoViewInput.swift in Sources */,
-				9A275AB995CA227E10CB53AC /* RecordVideoViewOutput.swift in Sources */,
-				E4AEC5C88F3015D50D42288A /* RecordVideoViewController.swift in Sources */,
-				185CA86FC7BBE48BA9DD795C /* RecordVideoModuleInput.swift in Sources */,
-				B8F37124A15C967A209577DA /* RecordVideoPresenter.swift in Sources */,
-				34E467E0CCDDF4A8CDA41163 /* RecordVideoInteractorInput.swift in Sources */,
-				26E93D56F8F7C02A44F23CC0 /* RecordVideoInteractorOutput.swift in Sources */,
-				565DE0196D4B6C1F4F1854F5 /* RecordVideoInteractor.swift in Sources */,
-				14FB7558C07FD4D4502C0D6E /* RecordVideoRouterInput.swift in Sources */,
-				4F8A501C8AAADB29C9633396 /* RecordVideoRouter.swift in Sources */,
-				0B309506B368657EAD41CE09 /* RecordVideoAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
