@@ -12,6 +12,7 @@ target 'Fury' do
   pod 'SwifterSwift'
   pod 'Mixpanel-swift'
   pod 'iCarousel'
+  pod 'SwiftySound'
   # Pods for Fury
 
   target 'FuryTests' do

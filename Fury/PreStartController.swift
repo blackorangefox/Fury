@@ -8,42 +8,39 @@
 
 import UIKit
 import iCarousel
+import SwiftySound
 
-class PreStartController: UIViewController {
+
+final class PreStartController: UIViewController {
     
     
-    var items: [String] = ["10",
-                           "9",
-                           "8",
-                           "7",
-                           "6",
-                           "5",
-                           "4",
-                           "3",
-                           "2",
-                           "1",
-                           "GO",
-                           ""]
-    var currentIndex = 0
-    var timer: Timer!
+    private var items: [String] = ["GO",
+                                   "1",
+                                   "2",
+                                   "3",
+                                   "4",
+                                   "5",
+                                   "6",
+                                   "7",
+                                   "8",
+                                   "9",
+                                   "10"]
+    private var currentIndex = 0
+    private var timer: Timer!
     var style: TimerStyle!
-    var ddm: CarouselDDM!
     
     private let playerService = PlayerService()
-    @IBOutlet weak var countDownTable: UITableView!
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var bottomGradientViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var countdownLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCarousel()
+        currentIndex = items.count-1
         showInformationViewIfNeeded()
         subscribeScreenRotate()
-        // gradientView.backgroundColor = style.mainColor
     }
-    
-    
     
     func subscribeScreenRotate() {
         NotificationCenter.default.addObserver(self,
@@ -52,44 +49,36 @@ class PreStartController: UIViewController {
                                                object: nil)
     }
     
-    func setupCarousel() {
-        countDownTable.delegate = self
-        countDownTable.dataSource = self
-        countDownTable.register(cellType: NumberCell.self)
-        let contentOffset = CGPoint(x: 0, y: -UIScreen.main.bounds.height/3)
-        DispatchQueue.main.async {
-            self.countDownTable.setContentOffset(contentOffset, animated: false)
-        }
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let aSelector = #selector(PreStartController.updateSelectCell)
-        self.timer = Timer.scheduledTimer(timeInterval: 1,
-                                          target: self,
-                                          selector: aSelector,
-                                          userInfo: nil,
-                                          repeats: true)
+        createTimer()
+        
     }
     
     @objc func updateSelectCell() {
-        self.currentIndex += 1
-        if self.currentIndex == self.items.count-2 {
-            print("Play final")
+        var backgroundTask = UIApplication.shared.beginBackgroundTask()
+        self.currentIndex -= 1
+        countdownLabel.pushTransition(0.5)
+        countdownLabel.text = items[currentIndex]
+        switch currentIndex {
+        case 3,2,1:
+            playerService.playOneSecond()
+            Logger.log(message: "default playOneSecond", event: .i)
+        case 0:
             playerService.playStartWork()
-            let indePath = IndexPath(item: currentIndex, section: 0)
-            countDownTable.scrollToRow(at: indePath, at: .middle, animated: true)
-            timer.invalidate()
             closeButtonPress(self)
+            timer.invalidate()
             let vc = GlobalAssembly.resolve(type: TimerViewInput.self) as! UIViewController
             self.navigationController?.pushViewController(vc, animated: true)
-        } else {
-            if self.currentIndex > self.items.count-6 {
-                playerService.playOneSecond()
-                print("Play sound")
-          }
-            let indePath = IndexPath(item: currentIndex, section: 0)
-            countDownTable.scrollToRow(at: indePath, at: .middle, animated: true)
+            Logger.log(message: "default playStartWork", event: .i)
+        default:
+            Logger.log(message: "default " + currentIndex.description, event: .i)
+        }
+        if backgroundTask != UIBackgroundTaskInvalid {
+            if UIApplication.shared.applicationState == .active {
+                UIApplication.shared.endBackgroundTask(backgroundTask)
+                backgroundTask = UIBackgroundTaskInvalid
+            }
         }
     }
     
@@ -101,7 +90,13 @@ class PreStartController: UIViewController {
         UserDefaults.standard.set(true, forKey: "alreadyShown")
     }
     
-    func showInformationViewIfNeeded() {
+    @objc func rotated() {
+        if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
+            closeButtonPress(self)
+        }
+    }
+    
+    private func showInformationViewIfNeeded() {
         if !UserDefaults.standard.bool(forKey: "alreadyShown") {
             bottomGradientViewConstraint.constant = 24
             UIView.animate(withDuration: 0.3) {
@@ -112,36 +107,27 @@ class PreStartController: UIViewController {
         }
     }
     
-    @objc func rotated() {
-        if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
-            closeButtonPress(self)
-        }
-        
-        if UIDeviceOrientationIsPortrait(UIDevice.current.orientation) {
-            print("Portrait")
-        }
-        
+    private func createTimer() {
+        let aSelector = #selector(PreStartController.updateSelectCell)
+        timer = Timer.scheduledTimer(timeInterval: 1,
+                                          target: self,
+                                          selector: aSelector,
+                                          userInfo: nil,
+                                          repeats: true)
+        let mainRunLoop = RunLoop()
+        mainRunLoop.add(timer, forMode: .defaultRunLoopMode)
     }
 }
 
-extension PreStartController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIScreen.main.bounds.height/3
+extension UIView {
+    func pushTransition(_ duration:CFTimeInterval) {
+        let animation:CATransition = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:
+            kCAMediaTimingFunctionEaseInEaseOut)
+        animation.type = kCATransitionPush
+        animation.subtype = kCATransitionFromBottom
+        animation.duration = duration
+        layer.add(animation, forKey: kCATransitionPush)
     }
 }
 
-extension PreStartController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NumberCell") as! NumberCell
-        cell.numberLabel.text = items[indexPath.row]
-        cell.numberLabel.textAlignment = .center
-        cell.numberLabel.font = UIFont.furyPickerNumbersActive
-        cell.numberLabel.textColor = UIColor.white.withAlphaComponent(0.1)
-        return cell
-    }
-}
