@@ -12,6 +12,7 @@ import SwifterSwift
 import SwiftDate
 import Mixpanel
 import Foundation
+import SwiftySound
 
 class TimerViewController: UIViewController, TimerViewInput {
     
@@ -115,7 +116,7 @@ class TimerViewController: UIViewController, TimerViewInput {
     func checkNeedPlaySount(newTime: TimeInterval) {
         let stringTime = getTimeToString(newTime: newTime)
         if stringTime == "00:03:00" || stringTime == "00:02:00" || stringTime == "00:01:00" {
-           // playerService.playOneSecond()
+            playerService.playOneSecond()
         }
         if stringTime == "00:00:00" {
             playerService.playStartOrFinisRound()
@@ -278,6 +279,8 @@ class TimerViewController: UIViewController, TimerViewInput {
                                           selector: selector,
                                           userInfo: nil,
                                           repeats: true)
+        let mainRunLoop = RunLoop()
+        mainRunLoop.add(timer, forMode: .defaultRunLoopMode)
     }
 }
 

@@ -52,24 +52,33 @@ final class PreStartController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createTimer()
+        
     }
     
     @objc func updateSelectCell() {
-        Sound.stopAll()
+        var backgroundTask = UIApplication.shared.beginBackgroundTask()
         self.currentIndex -= 1
         countdownLabel.pushTransition(0.5)
         countdownLabel.text = items[currentIndex]
         switch currentIndex {
         case 3,2,1:
             playerService.playOneSecond()
+            Logger.log(message: "default playOneSecond", event: .i)
         case 0:
             playerService.playStartWork()
             closeButtonPress(self)
             timer.invalidate()
             let vc = GlobalAssembly.resolve(type: TimerViewInput.self) as! UIViewController
             self.navigationController?.pushViewController(vc, animated: true)
+            Logger.log(message: "default playStartWork", event: .i)
         default:
             Logger.log(message: "default " + currentIndex.description, event: .i)
+        }
+        if backgroundTask != UIBackgroundTaskInvalid {
+            if UIApplication.shared.applicationState == .active {
+                UIApplication.shared.endBackgroundTask(backgroundTask)
+                backgroundTask = UIBackgroundTaskInvalid
+            }
         }
     }
     

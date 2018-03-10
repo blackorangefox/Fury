@@ -101,6 +101,7 @@
 		B41514861FE2A78100C539B4 /* TimeSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41514851FE2A78100C539B4 /* TimeSettingViewController.storyboard */; };
 		B41514881FE2BA5A00C539B4 /* RoundSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41514871FE2BA5A00C539B4 /* RoundSettingViewController.storyboard */; };
 		B4189C6120519C0500F3C741 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4189C6020519C0500F3C741 /* Logger.swift */; };
+		B4189C632053D9BD00F3C741 /* Gramm-Laskovyi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4189C622053D9BD00F3C741 /* Gramm-Laskovyi.mp3 */; };
 		B423F36B1ED42B1F0034BFF1 /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423F36A1ED42B1F0034BFF1 /* FinishController.swift */; };
 		B42787FDFEA1DC44A1163710 /* RecordVideoConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A0D5D52A3EF8E39EB9222 /* RecordVideoConfiguratorTests.swift */; };
 		B4422ECA1FD96FBB000ABC64 /* PreStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4422EC91FD96FBA000ABC64 /* PreStartController.swift */; };
@@ -401,6 +402,7 @@
 		B41514851FE2A78100C539B4 /* TimeSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeSettingViewController.storyboard; sourceTree = "<group>"; };
 		B41514871FE2BA5A00C539B4 /* RoundSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoundSettingViewController.storyboard; sourceTree = "<group>"; };
 		B4189C6020519C0500F3C741 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B4189C622053D9BD00F3C741 /* Gramm-Laskovyi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Gramm-Laskovyi.mp3"; sourceTree = "<group>"; };
 		B423F36A1ED42B1F0034BFF1 /* FinishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
 		B4422EC91FD96FBA000ABC64 /* PreStartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreStartController.swift; sourceTree = "<group>"; };
 		B4422ECB1FD96FDE000ABC64 /* IntervalNavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationCell.swift; sourceTree = "<group>"; };
@@ -1253,6 +1255,7 @@
 		B410823B1ED2F6FC00D285AC /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				B4189C622053D9BD00F3C741 /* Gramm-Laskovyi.mp3 */,
 				B40989DD1F17A37E001ACF1B /* long-beep.mp3 */,
 				B40989DC1F17A378001ACF1B /* 1_second.mp3 */,
 				B4F9268D1F13D109003C0828 /* Airhorn.mp3 */,
@@ -2026,7 +2029,7 @@
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.HealthKit = {
 								enabled = 0;
@@ -2114,6 +2117,7 @@
 				B4753A031EB9F136008B3A1D /* Oswald-DemiBold.ttf in Resources */,
 				B4422F0A1FD97256000ABC64 /* Montserrat-ExtraLight.otf in Resources */,
 				B4422F1B1FD97256000ABC64 /* MontserratAlternates-Thin.otf in Resources */,
+				B4189C632053D9BD00F3C741 /* Gramm-Laskovyi.mp3 in Resources */,
 				B4422EFB1FD97256000ABC64 /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
 				B475397F1EB4DDE0008B3A1D /* Main.storyboard in Resources */,
 				B4753A2C1EB9F144008B3A1D /* Roboto-MediumItalic.ttf in Resources */,
