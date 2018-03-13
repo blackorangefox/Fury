@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import iCarousel
 import SwiftySound
 
 
@@ -117,6 +116,7 @@ final class PreStartController: UIViewController {
         let mainRunLoop = RunLoop()
         mainRunLoop.add(timer, forMode: .defaultRunLoopMode)
     }
+
 }
 
 extension UIView {

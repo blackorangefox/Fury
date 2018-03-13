@@ -14,10 +14,13 @@ class TimerPresenter: TimerModuleInput, TimerViewOutput {
     var router: TimerRouterInput!
     private let formater = DateFormatter()
     var flowStory: TimerStoryProtocol!
-
+    
     func viewIsReady() {
         view.setupInitialState(type: flowStory.style.type)
         setupTimer()
+        
+        let title = "Opend timer controller for"
+        AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
     }
     
     func setupTimer() {
@@ -50,26 +53,42 @@ class TimerPresenter: TimerModuleInput, TimerViewOutput {
             }
         }
     }
-
+    
     func resetButtonPress() {
+        let title = "reset"
+        AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+        
         view.resetTimer(type: flowStory.style.type)
         setupTimer()
         view.showPauseButton()
     }
     
     func timerFinish() {
+        let title = "timer finished"
+        AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+        
         view.showFinishOrContinueButton()
     }
     
     func pauseButtonPress() {
+        let title = "pause button press"
+        AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+        
+        
         view.showFinishOrContinueButton()
     }
     
     func finishButtonPress(with result: String) {
+        let title = "finish button press"
+        AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+        
         router.openFinishView(with: result)
     }
     
     func continueButtonPress() {
+        let title = "continue button press"
+        AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+    
         view.showPauseButton()
     }
     

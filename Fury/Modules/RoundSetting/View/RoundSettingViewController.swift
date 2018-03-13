@@ -8,7 +8,6 @@
 
 import UIKit
 import iCarousel
-import Mixpanel
 
 class RoundSettingViewController: UIViewController, RoundSettingViewInput {
 
@@ -33,7 +32,6 @@ class RoundSettingViewController: UIViewController, RoundSettingViewInput {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        Mixpanel.mainInstance().track(event: "Open Sets setting")
         self.view.backgroundColor = UIColor.furyBackgroundColor
     }
     
