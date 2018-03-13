@@ -7,7 +7,17 @@
 //
 
 class PreViewTimerInteractor: PreViewTimerInteractorInput {
-
+    
     weak var output: PreViewTimerInteractorOutput!
-
+    
+    func analiticCloseButtonPress(type: TimerType) {
+        let title = "press close button on pre-view screnn"
+        AnaliticServer.createAnalitic(title: title, type: type)
+    }
+    
+    func analiticNextController(type: TimerType) {
+        let title = "press play button on pre-view screnn"
+        AnaliticServer.createAnalitic(title: title, type: type)
+    }
+    
 }

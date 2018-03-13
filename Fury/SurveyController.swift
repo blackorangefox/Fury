@@ -25,6 +25,8 @@ class SurveyController: UIViewController {
         super.viewDidLoad()
         sureButton.setBackgroundColor(color: style.mainColor, forState: .normal)
         NoButton.setBackgroundColor(color: UIColor.furyOpacityButton, forState: .normal)
+        let title = "Opend Survey controller"
+        AnaliticServer.createAnalitic(title: title)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,14 +35,16 @@ class SurveyController: UIViewController {
     }
     
     @IBAction func notNowButtonPress(_ sender: Any) {
-        Mixpanel.mainInstance().track(event: "No Survey")
+        let title = "press not now on Survey controller"
+        AnaliticServer.createAnalitic(title: title)
         UserDefaults.standard.set(0, forKey: "CounterStartTimer")
         self.navigationController?.dismiss(animated: true, completion: nil)
         
     }
     
     @IBAction func yesButtonPress(_ sender: Any) {
-        Mixpanel.mainInstance().track(event: "Yes Survey")
+        let title = "press yes on Survey controller"
+        AnaliticServer.createAnalitic(title: title)
         if let url = URL(string: "https://dmitrykurash.typeform.com/to/lXywEJ") {
             UIApplication.shared.open(url, options: [:])
         }

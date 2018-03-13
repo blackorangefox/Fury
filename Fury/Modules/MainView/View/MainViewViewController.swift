@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Mixpanel
 
 class MainViewViewController: UIViewController, MainViewViewInput {
 
@@ -122,12 +121,10 @@ extension MainViewViewController: UITableViewDelegate {
         switch indexPath.section {
         case 1:
             type = .interval
-            Mixpanel.mainInstance().track(event: "open interval timer")
         case 2:
             type = .countdown
-            Mixpanel.mainInstance().track(event: "open countdown timer")
         default:
-            Mixpanel.mainInstance().track(event: "open classic timer")
+            type = .classic
         }
         self.output.openTimer(type: type)
     }

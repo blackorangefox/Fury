@@ -19,6 +19,7 @@ class MainViewPresenter:  MainViewViewOutput, MainViewInteractorOutput {
     
     func openTimer(type: TimerType) {
         flowStory.style = TimerStyle(by: type)
+        interactor.sentAnalitic(type: type)
         router.open()
     }
 }

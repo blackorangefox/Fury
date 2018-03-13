@@ -20,6 +20,9 @@ class TimeSettingPresenter: TimeSettingModuleInput, TimeSettingViewOutput, TimeS
         if flowStory.style.type != .interval {
             view.setByttonTitle(text: "START")
         }
+        
+        let title = "Opened work time set for"
+        AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
     }
     
     func selectWorkTime(minuts: Int,
@@ -27,10 +30,13 @@ class TimeSettingPresenter: TimeSettingModuleInput, TimeSettingViewOutput, TimeS
         flowStory.workMinuts = minuts
         flowStory.workSeconds = seconds
         if flowStory.style.type == .interval {
+            let title = "Will open rest time set for"
+            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
             router.openSetRestTime()
         }else {
-            Mixpanel.mainInstance().track(event: "Start countdown timer")
-            router.openPrestert(style: flowStory.style)
+            let title = "Will open pre-start for"
+            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+            router.openPrestart(style: flowStory.style)
         }
     }
 }

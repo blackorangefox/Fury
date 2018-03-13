@@ -12,7 +12,7 @@ class PreViewTimerRouter: PreViewTimerRouterInput {
 	
 	var view : PreViewTimerViewController?
 	
-    func openPrestert(style: TimerStyle) {
+    func openPrestart(style: TimerStyle) {
         let story = UIStoryboard.init(name: "Main", bundle: nil)
         let preScreen  = story.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
         preScreen.style = style
@@ -24,7 +24,7 @@ class PreViewTimerRouter: PreViewTimerRouterInput {
         view?.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func openSetTime() {
+    func openSetWorkTime() {
         let controller = GlobalAssembly.resolve(type: TimeSettingViewInput.self) as! UIViewController
         view?.navigationController?.pushViewController(controller, animated: true)
     }
