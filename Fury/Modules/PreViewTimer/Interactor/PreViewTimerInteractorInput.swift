@@ -10,5 +10,4 @@ import Foundation
 
 protocol PreViewTimerInteractorInput {
     func analiticCloseButtonPress(type: TimerType)
-    func analiticNextController(type: TimerType)
 }

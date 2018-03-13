@@ -6,7 +6,6 @@
 //  Copyright © 2017 nova9. All rights reserved.
 //
 
-import Mixpanel
 import Firebase
 
 class MainViewInteractor: MainViewInteractorInput {

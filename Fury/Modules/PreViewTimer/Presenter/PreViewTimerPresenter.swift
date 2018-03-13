@@ -6,8 +6,6 @@
 //  Copyright © 2017 nova9. All rights reserved.
 //
 
-import Mixpanel
-
 class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, PreViewTimerInteractorOutput {
 
     weak var view: PreViewTimerViewInput!
@@ -20,7 +18,7 @@ class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, Pr
     }
     
     func closeButtonPress() {
-        interactor.analiticCloseButtonPress(type: flowStory.style)
+        interactor.analiticCloseButtonPress(type: flowStory.style.type)
     }
     
     func playButtonPress() {
