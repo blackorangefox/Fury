@@ -93,8 +93,6 @@
 		AFDDBA1688119D1DC3989CB1 /* MainViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077F34082B59996E24E295BA /* MainViewInteractor.swift */; };
 		B03AAC6A0F557DE0522E2DFB /* PreViewTimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B5ED0BD6C2F4352CB256B /* PreViewTimerPresenter.swift */; };
 		B2CDE9DDDC4E1ACF734966B3 /* Pods_FuryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40DE0B8B83BF4F6ECAF658A9 /* Pods_FuryTests.framework */; };
-		B40CDC0B1F1B683C00B2187A /* long-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B40989DD1F17A37E001ACF1B /* long-beep.mp3 */; };
-		B40CDC0C1F1B683F00B2187A /* 1_second.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B40989DC1F17A378001ACF1B /* 1_second.mp3 */; };
 		B411D4781FE8F49A006F4E7F /* CarouselDDM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B411D4771FE8F49A006F4E7F /* CarouselDDM.swift */; };
 		B415147F1FE281AA00C539B4 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B415147E1FE281AA00C539B4 /* UIView+extention.swift */; };
 		B41514841FE2881600C539B4 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41514831FE2881600C539B4 /* Style.swift */; };
@@ -114,7 +112,6 @@
 		B45D6E6B1F13D52C00A725D8 /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45D6E6A1F13D52C00A725D8 /* PlayerService.swift */; };
 		B475397A1EB4DDE0008B3A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47539791EB4DDE0008B3A1D /* AppDelegate.swift */; };
 		B475397F1EB4DDE0008B3A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B475397D1EB4DDE0008B3A1D /* Main.storyboard */; };
-		B47539811EB4DDE0008B3A1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47539801EB4DDE0008B3A1D /* Assets.xcassets */; };
 		B47539841EB4DDE0008B3A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47539821EB4DDE0008B3A1D /* LaunchScreen.storyboard */; };
 		B475398F1EB4DDE0008B3A1D /* FuryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B475398E1EB4DDE0008B3A1D /* FuryTests.swift */; };
 		B475399A1EB4DDE0008B3A1D /* FuryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47539991EB4DDE0008B3A1D /* FuryUITests.swift */; };
@@ -170,8 +167,6 @@
 		B4C4F1B51FF11F5D0000DD7F /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4F1B41FF11F5D0000DD7F /* UITableView+Reusable.swift */; };
 		B4C920A41FCF45DA0020B522 /* Double+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C920A31FCF45DA0020B522 /* Double+extention.swift */; };
 		B4DB7DCC1FEA9941000A0AF1 /* Button+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DB7DCB1FEA9941000A0AF1 /* Button+extention.swift */; };
-		B4F9268E1F13D109003C0828 /* Airhorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4F9268D1F13D109003C0828 /* Airhorn.mp3 */; };
-		B4FDDD8C1F292E9A00762382 /* SurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FDDD8B1F292E9A00762382 /* SurveyController.swift */; };
 		B75458B5114F4C3908411193 /* TimeSettingRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA971BEE5BA164183B1F1F5 /* TimeSettingRouterTests.swift */; };
 		B8C72946842FD8F9D1EEA54F /* TimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF972ED134A4CE693762E1A1 /* TimerRouter.swift */; };
 		BD1A87F2F72C4E29D49D0C40 /* IntervalTimerSettingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E3A4D58E029B0C6A900397 /* IntervalTimerSettingViewTests.swift */; };
@@ -229,6 +224,10 @@
 		D44288A7206197040063AE0A /* Montserrat-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4428883206197040063AE0A /* Montserrat-LightItalic.otf */; };
 		D44288A8206197040063AE0A /* Montserrat-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4428884206197040063AE0A /* Montserrat-ExtraBoldItalic.otf */; };
 		D44288A9206197040063AE0A /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4428885206197040063AE0A /* Montserrat-Regular.otf */; };
+		D44288B420619BEC0063AE0A /* Airhorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44288B120619BEC0063AE0A /* Airhorn.mp3 */; };
+		D44288B520619BEC0063AE0A /* long-beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44288B220619BEC0063AE0A /* long-beep.mp3 */; };
+		D44288B620619BEC0063AE0A /* 1_second.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44288B320619BEC0063AE0A /* 1_second.mp3 */; };
+		D44288B820619C620063AE0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D44288B720619C620063AE0A /* Assets.xcassets */; };
 		D4959DE51F4695AD00E794BC /* TimerStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4959DE41F4695AD00E794BC /* TimerStory.swift */; };
 		D4959DE81F46970D00E794BC /* GlobalAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4959DE71F46970D00E794BC /* GlobalAssembly.swift */; };
 		D4959DEA1F469BC100E794BC /* BaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4959DE91F469BC100E794BC /* BaseAssembly.swift */; };
@@ -393,15 +392,12 @@
 		B1F6BF6EDC3C050A4F0E4A70 /* CoutdownTimerInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoutdownTimerInteractorTests.swift; sourceTree = "<group>"; };
 		B208A955F72DEF538440CED2 /* ClassicTimerPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClassicTimerPresenterTests.swift; sourceTree = "<group>"; };
 		B3ED8FB3EB7809B0E37EA767 /* MainViewRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewRouterTests.swift; sourceTree = "<group>"; };
-		B40989DC1F17A378001ACF1B /* 1_second.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1_second.mp3; sourceTree = "<group>"; };
-		B40989DD1F17A37E001ACF1B /* long-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "long-beep.mp3"; sourceTree = "<group>"; };
 		B411D4771FE8F49A006F4E7F /* CarouselDDM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselDDM.swift; sourceTree = "<group>"; };
 		B415147E1FE281AA00C539B4 /* UIView+extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
 		B41514831FE2881600C539B4 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		B41514851FE2A78100C539B4 /* TimeSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeSettingViewController.storyboard; sourceTree = "<group>"; };
 		B41514871FE2BA5A00C539B4 /* RoundSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoundSettingViewController.storyboard; sourceTree = "<group>"; };
 		B4189C6020519C0500F3C741 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		B4189C622053D9BD00F3C741 /* Gramm-Laskovyi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Gramm-Laskovyi.mp3"; sourceTree = "<group>"; };
 		B4422EC91FD96FBA000ABC64 /* PreStartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreStartController.swift; sourceTree = "<group>"; };
 		B4422ECB1FD96FDE000ABC64 /* IntervalNavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationCell.swift; sourceTree = "<group>"; };
 		B4422ECF1FD970A7000ABC64 /* MainViewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewViewController.storyboard; sourceTree = "<group>"; };
@@ -416,7 +412,6 @@
 		B47539761EB4DDE0008B3A1D /* Fury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47539791EB4DDE0008B3A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B475397E1EB4DDE0008B3A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B47539801EB4DDE0008B3A1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B47539831EB4DDE0008B3A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B47539851EB4DDE0008B3A1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B475398A1EB4DDE0008B3A1D /* FuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -485,8 +480,6 @@
 		B4EA59121FF55D51000138AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4EA591E1FF55FA0000138AF /* TimeWhatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeWhatch.swift; sourceTree = "<group>"; };
 		B4EA59241FF7E82B000138AF /* PreStartWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreStartWatch.swift; sourceTree = "<group>"; };
-		B4F9268D1F13D109003C0828 /* Airhorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Airhorn.mp3; sourceTree = "<group>"; };
-		B4FDDD8B1F292E9A00762382 /* SurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyController.swift; sourceTree = "<group>"; };
 		B578BEFD852ECEC0A9A6258C /* PreViewTimerViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerViewInput.swift; sourceTree = "<group>"; };
 		B756B39CFA9150DE1426627C /* PreViewTimerInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreViewTimerInteractorTests.swift; sourceTree = "<group>"; };
 		B97753711DBDFE2FA8572C34 /* TimerAssembly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerAssembly.swift; sourceTree = "<group>"; };
@@ -536,6 +529,10 @@
 		D4428883206197040063AE0A /* Montserrat-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-LightItalic.otf"; path = "Fonts/Montserrat/Montserrat-LightItalic.otf"; sourceTree = "<group>"; };
 		D4428884206197040063AE0A /* Montserrat-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-ExtraBoldItalic.otf"; path = "Fonts/Montserrat/Montserrat-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
 		D4428885206197040063AE0A /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.otf"; path = "Fonts/Montserrat/Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		D44288B120619BEC0063AE0A /* Airhorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Airhorn.mp3; sourceTree = "<group>"; };
+		D44288B220619BEC0063AE0A /* long-beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "long-beep.mp3"; sourceTree = "<group>"; };
+		D44288B320619BEC0063AE0A /* 1_second.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1_second.mp3; sourceTree = "<group>"; };
+		D44288B720619C620063AE0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4959DE41F4695AD00E794BC /* TimerStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStory.swift; sourceTree = "<group>"; };
 		D4959DE71F46970D00E794BC /* GlobalAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAssembly.swift; sourceTree = "<group>"; };
 		D4959DE91F469BC100E794BC /* BaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAssembly.swift; sourceTree = "<group>"; };
@@ -1251,17 +1248,6 @@
 			path = ClassicTimer;
 			sourceTree = "<group>";
 		};
-		B410823B1ED2F6FC00D285AC /* Music */ = {
-			isa = PBXGroup;
-			children = (
-				B4189C622053D9BD00F3C741 /* Gramm-Laskovyi.mp3 */,
-				B40989DD1F17A37E001ACF1B /* long-beep.mp3 */,
-				B40989DC1F17A378001ACF1B /* 1_second.mp3 */,
-				B4F9268D1F13D109003C0828 /* Airhorn.mp3 */,
-			);
-			name = Music;
-			sourceTree = "<group>";
-		};
 		B411D4791FE8F4C0006F4E7F /* DDM */ = {
 			isa = PBXGroup;
 			children = (
@@ -1425,14 +1411,14 @@
 		B475396D1EB4DDE0008B3A1D = {
 			isa = PBXGroup;
 			children = (
+				D44288B720619C620063AE0A /* Assets.xcassets */,
+				D44288B020619BC90063AE0A /* Songs */,
 				B47539791EB4DDE0008B3A1D /* AppDelegate.swift */,
 				B47539781EB4DDE0008B3A1D /* Fury */,
-				B47539801EB4DDE0008B3A1D /* Assets.xcassets */,
 				B47539A91EB9EF72008B3A1D /* Fonts */,
 				D4959DE61F4696F600E794BC /* Assembly */,
 				D4959DDD1F468A2800E794BC /* Utility */,
 				D4959DDA1F46894A00E794BC /* ComponentsLibrary */,
-				B410823B1ED2F6FC00D285AC /* Music */,
 				B42404041EC48C19000EE6DC /* Extension */,
 				B45D6E691F13D50F00A725D8 /* Service */,
 				B475398D1EB4DDE0008B3A1D /* FuryTests */,
@@ -1470,7 +1456,6 @@
 				B47539821EB4DDE0008B3A1D /* LaunchScreen.storyboard */,
 				B47539851EB4DDE0008B3A1D /* Info.plist */,
 				B44732CB1F248C040013A17B /* GoogleService-Info.plist */,
-				B4FDDD8B1F292E9A00762382 /* SurveyController.swift */,
 				B49B6C4F1FF810590025BB54 /* HealthKitManager.swift */,
 				D40872A420585E0300CAF631 /* AnaliticServer.swift */,
 			);
@@ -1660,6 +1645,16 @@
 				D1A5F530FE05645957EDE549 /* TimeSettingConfiguratorTests.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		D44288B020619BC90063AE0A /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				D44288B320619BEC0063AE0A /* 1_second.mp3 */,
+				D44288B120619BEC0063AE0A /* Airhorn.mp3 */,
+				D44288B220619BEC0063AE0A /* long-beep.mp3 */,
+			);
+			path = Songs;
 			sourceTree = "<group>";
 		};
 		D4959DDA1F46894A00E794BC /* ComponentsLibrary */ = {
@@ -2079,7 +2074,6 @@
 				B4422F061FD97256000ABC64 /* SIL Open Font License.txt in Resources */,
 				D44288A7206197040063AE0A /* Montserrat-LightItalic.otf in Resources */,
 				D442888D206197040063AE0A /* Montserrat-BoldItalic.otf in Resources */,
-				B4F9268E1F13D109003C0828 /* Airhorn.mp3 in Resources */,
 				B4753A0E1EB9F136008B3A1D /* Oswald-Stencil.ttf in Resources */,
 				D442889E206197040063AE0A /* Montserrat-BlackItalic.otf in Resources */,
 				D4428897206197040063AE0A /* Montserrat-Black.otf in Resources */,
@@ -2089,6 +2083,7 @@
 				B4753A311EB9F144008B3A1D /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				D4428892206197040063AE0A /* MontserratAlternates-BlackItalic.otf in Resources */,
 				D442889F206197040063AE0A /* Montserrat-Medium.otf in Resources */,
+				D44288B620619BEC0063AE0A /* 1_second.mp3 in Resources */,
 				D44288A0206197040063AE0A /* MontserratAlternates-Bold.otf in Resources */,
 				B47539841EB4DDE0008B3A1D /* LaunchScreen.storyboard in Resources */,
 				D44288A8206197040063AE0A /* Montserrat-ExtraBoldItalic.otf in Resources */,
@@ -2114,8 +2109,8 @@
 				B41514861FE2A78100C539B4 /* TimeSettingViewController.storyboard in Resources */,
 				B4753A241EB9F144008B3A1D /* Roboto-Black.ttf in Resources */,
 				B4753A2A1EB9F144008B3A1D /* Roboto-LightItalic.ttf in Resources */,
-				B47539811EB4DDE0008B3A1D /* Assets.xcassets in Resources */,
 				D4428896206197040063AE0A /* Montserrat-Bold.otf in Resources */,
+				D44288B420619BEC0063AE0A /* Airhorn.mp3 in Resources */,
 				D4428891206197040063AE0A /* Montserrat-Light.otf in Resources */,
 				B4753A031EB9F136008B3A1D /* Oswald-DemiBold.ttf in Resources */,
 				D442889D206197040063AE0A /* Montserrat-SemiBoldItalic.otf in Resources */,
@@ -2129,6 +2124,7 @@
 				B4753A011EB9F136008B3A1D /* Oswald-BoldItalic.ttf in Resources */,
 				B4422ED01FD970A7000ABC64 /* MainViewViewController.storyboard in Resources */,
 				B4753A321EB9F144008B3A1D /* RobotoCondensed-Italic.ttf in Resources */,
+				D44288B820619C620063AE0A /* Assets.xcassets in Resources */,
 				D442889C206197040063AE0A /* Montserrat-ExtraLightItalic.otf in Resources */,
 				B4753A341EB9F144008B3A1D /* RobotoCondensed-LightItalic.ttf in Resources */,
 				D44288A6206197040063AE0A /* MontserratAlternates-SemiBold.otf in Resources */,
@@ -2141,7 +2137,7 @@
 				D4F3A2401F4FD2F4007EECCC /* BottomCoordinator.storyboard in Resources */,
 				B4C4F1AE1FF114560000DD7F /* NumberCell.xib in Resources */,
 				B4753A251EB9F144008B3A1D /* Roboto-BlackItalic.ttf in Resources */,
-				B40CDC0B1F1B683C00B2187A /* long-beep.mp3 in Resources */,
+				D44288B520619BEC0063AE0A /* long-beep.mp3 in Resources */,
 				B41514881FE2BA5A00C539B4 /* RoundSettingViewController.storyboard in Resources */,
 				B4753A001EB9F136008B3A1D /* Oswald-Bold.ttf in Resources */,
 				D44288A1206197040063AE0A /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
@@ -2153,7 +2149,6 @@
 				B4753A2F1EB9F144008B3A1D /* Roboto-ThinItalic.ttf in Resources */,
 				B4753A231EB9F144008B3A1D /* Apache License.txt in Resources */,
 				D4428895206197040063AE0A /* MontserratAlternates-ExtraLight.otf in Resources */,
-				B40CDC0C1F1B683F00B2187A /* 1_second.mp3 in Resources */,
 				B4753A051EB9F136008B3A1D /* Oswald-ExtraLight.ttf in Resources */,
 				B4753A0F1EB9F136008B3A1D /* SIL Open Font License.txt in Resources */,
 				D4428894206197040063AE0A /* MontserratAlternates-ThinItalic.otf in Resources */,
@@ -2371,7 +2366,6 @@
 				D4959DEA1F469BC100E794BC /* BaseAssembly.swift in Sources */,
 				B4C160F11FDECBF800CAC90A /* PreStartCell.swift in Sources */,
 				B4422ECA1FD96FBB000ABC64 /* PreStartController.swift in Sources */,
-				B4FDDD8C1F292E9A00762382 /* SurveyController.swift in Sources */,
 				D4959DE51F4695AD00E794BC /* TimerStory.swift in Sources */,
 				D4959DEC1F469C0D00E794BC /* ModulesAssembly.swift in Sources */,
 				8930F1F4E92605B34B20E267 /* TimerViewInput.swift in Sources */,
@@ -2674,6 +2668,7 @@
 			buildSettings = {
 				ALTERNATE_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8U3EZY8K9K;
@@ -2696,6 +2691,7 @@
 			buildSettings = {
 				ALTERNATE_GROUP = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8U3EZY8K9K;
