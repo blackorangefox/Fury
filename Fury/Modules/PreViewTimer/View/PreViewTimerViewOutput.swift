@@ -15,4 +15,5 @@ protocol PreViewTimerViewOutput {
     
     func viewIsReady()
     func playButtonPress()
+    func closeButtonPress()
 }

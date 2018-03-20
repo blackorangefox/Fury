@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MainViewInteractorInput {
-
+    func sentAnalitic(type: TimerType)
 }

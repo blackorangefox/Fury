@@ -11,7 +11,7 @@ class RestTimeSettingRouter: RestTimeSettingRouterInput {
 	
 	var view : TimeSettingViewController?
     
-    func openPrestert(style: TimerStyle) {
+    func openPrestart(style: TimerStyle) {
         let story = UIStoryboard.init(name: "Main", bundle: nil)
         let preScreen  = story.instantiateViewController(withIdentifier: "PreStartController") as! PreStartController
         preScreen.style = style

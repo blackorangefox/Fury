@@ -10,7 +10,6 @@ import UIKit
 import UserNotifications
 import SwifterSwift
 import SwiftDate
-import Mixpanel
 import Foundation
 import SwiftySound
 
@@ -295,7 +294,6 @@ extension TimerViewController: BottomViewControllerDelegate {
     
     func finishButtonPress() {
         stopTimer()
-        Mixpanel.mainInstance().track(event: "FINISH press")
         switch type {
         case .classic:
             output.finishButtonPress(with: timeLabel.text ?? "00:00:00")
@@ -322,12 +320,10 @@ extension TimerViewController: BottomViewControllerDelegate {
             case .countdown:
                 continueCountDownTimer()
         }
-        Mixpanel.mainInstance().track(event: "continue press")
         output.continueButtonPress()
     }
     
     func resetButtonPress() {
-        Mixpanel.mainInstance().track(event: "RESET press")
         stopTimer()
         output.resetButtonPress()
     }
@@ -342,7 +338,7 @@ extension TimerViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IntervalNavigationCell", for: indexPath) as! IntervalNavigationCell
         cell.titleLabel.text = titleArray[indexPath.row]
-        cell.titleLabel.textColor = UIColor.lightText
+        cell.titleLabel.textColor = UIColor.white.withAlphaComponent(0.1)
         return cell
     }
     
@@ -354,6 +350,6 @@ extension TimerViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as? IntervalNavigationCell
-        cell?.titleLabel.textColor = UIColor.lightText
+        cell?.titleLabel.textColor = UIColor.white.withAlphaComponent(0.1)
     }
 }

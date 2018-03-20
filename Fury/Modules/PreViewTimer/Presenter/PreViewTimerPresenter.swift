@@ -6,8 +6,6 @@
 //  Copyright © 2017 nova9. All rights reserved.
 //
 
-import Mixpanel
-
 class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, PreViewTimerInteractorOutput {
 
     weak var view: PreViewTimerViewInput!
@@ -19,15 +17,24 @@ class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, Pr
         view.stylize(by: flowStory.style)
     }
     
+    func closeButtonPress() {
+        interactor.analiticCloseButtonPress(type: flowStory.style.type)
+    }
+    
     func playButtonPress() {
         switch flowStory.style.type {
         case  .interval:
+            let title = "Will open round set for"
+            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
             router.openRoundSetting()
         case .countdown:
-            router.openSetTime()
-        default:
-            Mixpanel.mainInstance().track(event: "Start classic timer")
-            router.openPrestert(style: flowStory.style)
+            let title = "Will open work time set for"
+            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+            router.openSetWorkTime()
+        case .classic:
+            let title = "Will open pre-start for"
+            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+            router.openPrestart(style: flowStory.style)
         }
     }
 }

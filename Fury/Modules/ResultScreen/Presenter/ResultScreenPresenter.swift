@@ -17,21 +17,34 @@ class ResultScreenPresenter: ResultScreenModuleInput, ResultScreenViewOutput, Re
     func viewIsReady() {
         view.styleze(by: flowStory.style)
         view.setHero(type: flowStory.style.type)
+        let title = "Opend result controller for"
+        AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
     }
     
     func okButtonPress() {
         if needShowSurveyControlle() {
+            let title = "Will open survey after"
+            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
             router.openSurveyView(style: flowStory.style)
         } else {
+            let title = "Will open main controller after"
+            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
             router.openMainView()
         }
     }
     
     func needShowSurveyControlle() -> Bool {
-        let counter = UserDefaults.standard.integer(forKey: "CounterStartTimer")
-        if counter >= 6 && !UserDefaults.standard.bool(forKey: "user_survey"){
-            return true
+        if UserDefaults.standard.bool(forKey: "user_survey") {
+            return false
         }
-        return false
+        
+        var counter = UserDefaults.standard.integer(forKey: "CounterStartTimer")
+        if counter >= 6 {
+            return true
+        } else {
+            counter += 1
+            UserDefaults.standard.set(counter, forKey: "CounterStartTimer")
+            return false
+        }
     }
 }

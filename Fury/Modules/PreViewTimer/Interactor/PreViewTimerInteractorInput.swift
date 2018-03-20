@@ -9,5 +9,5 @@
 import Foundation
 
 protocol PreViewTimerInteractorInput {
-
+    func analiticCloseButtonPress(type: TimerType)
 }

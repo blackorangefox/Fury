@@ -15,9 +15,14 @@ class RoundSettingPresenter: RoundSettingModuleInput, RoundSettingViewOutput, Ro
 
     func viewIsReady() {
         view.stylez(style: flowStory.style)
+        let title = "Opened round set for"
+        AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
     }
     
     func selectSets(sets: Int) {
+        let title = "Will open work time set for"
+        AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+        
         flowStory.sets = sets
         router.openSetWorkTime()
     }

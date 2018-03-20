@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,8 +16,8 @@
         <array key="Montserrat-SemiBold.otf">
             <string>Montserrat-SemiBold</string>
         </array>
-        <array key="Roboto-Bold.ttf">
-            <string>Roboto-Bold</string>
+        <array key="Oswald-Bold.ttf">
+            <string>Oswald-Bold</string>
         </array>
         <array key="RobotoCondensed-Bold.ttf">
             <string>RobotoCondensed-Bold</string>
@@ -29,14 +29,14 @@
             <objects>
                 <viewController storyboardIdentifier="PreStartController" id="nhB-am-xkb" customClass="PreStartController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="smU-zA-FIF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQw-KD-l9S">
-                                <rect key="frame" x="24" y="518" width="366" height="194"/>
+                                <rect key="frame" x="24" y="449" width="327" height="194"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ct-Yj-0so">
-                                        <rect key="frame" x="310" y="12" width="44" height="44"/>
+                                        <rect key="frame" x="271" y="12" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="9JF-BJ-G4l"/>
                                             <constraint firstAttribute="height" constant="44" id="QQ5-Xw-DbW"/>
@@ -47,20 +47,20 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c4-fT-YlX">
-                                        <rect key="frame" x="23.999999999999996" y="21" width="35.666666666666657" height="27"/>
+                                        <rect key="frame" x="24" y="21" width="35.5" height="27"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="8AF-4I-r20">
-                                        <rect key="frame" x="157.33333333333334" y="53" width="52" height="54"/>
+                                        <rect key="frame" x="138" y="53" width="52" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="54" id="ANo-jn-Qnt"/>
                                             <constraint firstAttribute="width" constant="52" id="eQp-2d-5ak"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p72-Fm-KVB">
-                                        <rect key="frame" x="10" y="129" width="346" height="44"/>
+                                        <rect key="frame" x="10" y="129" width="307" height="44"/>
                                         <string key="text">You can use fury timer in
 horizontal orientation</string>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
@@ -91,11 +91,11 @@ horizontal orientation</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="TKy-9L-77h">
-                                <rect key="frame" x="75" y="216" width="264" height="304"/>
+                                <rect key="frame" x="51" y="159.5" width="273" height="348"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="269"/>
+                                <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="269"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -103,16 +103,16 @@ horizontal orientation</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=compact-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="154"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="154"/>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="172"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="172"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="230"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="256"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="324"/>
+                                    <fontDescription key="fontDescription" name="Oswald-Bold" family="Oswald" pointSize="324"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -145,11 +145,11 @@ horizontal orientation</string>
             <objects>
                 <viewController storyboardIdentifier="SurveyController" id="wXm-Kb-62B" customClass="SurveyController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VRs-Ok-WIn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need your advise" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fi0-bP-amf">
-                                <rect key="frame" x="24" y="32" width="366" height="90"/>
+                                <rect key="frame" x="24" y="32" width="327" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="SVC-9o-uNb">
                                         <variation key="heightClass=compact-widthClass=compact" constant="90"/>
@@ -163,7 +163,7 @@ horizontal orientation</string>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, fill a short survey, it’ll help us improve the app. It won’t take more than 2 minutes!" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5vx-tk-Aoj">
-                                <rect key="frame" x="24" y="145" width="366" height="66"/>
+                                <rect key="frame" x="24" y="145" width="327" height="66"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -172,7 +172,7 @@ horizontal orientation</string>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wR-wE-WWZ">
-                                <rect key="frame" x="24" y="648" width="366" height="64"/>
+                                <rect key="frame" x="24" y="579" width="327" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="640" id="CUh-58-tcC"/>
                                     <constraint firstAttribute="height" constant="64" id="hwg-yG-BQT"/>
@@ -202,7 +202,7 @@ horizontal orientation</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n5-KQ-0y4">
-                                <rect key="frame" x="24" y="576" width="366" height="64"/>
+                                <rect key="frame" x="24" y="507" width="327" height="64"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="UqM-h8-NvP"/>

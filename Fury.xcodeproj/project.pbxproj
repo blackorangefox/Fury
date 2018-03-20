@@ -102,7 +102,6 @@
 		B41514881FE2BA5A00C539B4 /* RoundSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B41514871FE2BA5A00C539B4 /* RoundSettingViewController.storyboard */; };
 		B4189C6120519C0500F3C741 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4189C6020519C0500F3C741 /* Logger.swift */; };
 		B4189C632053D9BD00F3C741 /* Gramm-Laskovyi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4189C622053D9BD00F3C741 /* Gramm-Laskovyi.mp3 */; };
-		B423F36B1ED42B1F0034BFF1 /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423F36A1ED42B1F0034BFF1 /* FinishController.swift */; };
 		B42787FDFEA1DC44A1163710 /* RecordVideoConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A0D5D52A3EF8E39EB9222 /* RecordVideoConfiguratorTests.swift */; };
 		B4422ECA1FD96FBB000ABC64 /* PreStartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4422EC91FD96FBA000ABC64 /* PreStartController.swift */; };
 		B4422ECD1FD96FDE000ABC64 /* IntervalNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4422ECB1FD96FDE000ABC64 /* IntervalNavigationCell.swift */; };
@@ -230,6 +229,7 @@
 		D33F3C4CEB393DB4BAA65E4E /* PreViewTimerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B756B39CFA9150DE1426627C /* PreViewTimerInteractorTests.swift */; };
 		D3DF16F2188C54332B3B0713 /* ResultScreenModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B04AD3D2BF385E45BB35A8 /* ResultScreenModuleInput.swift */; };
 		D3F16349C754F114F8821BDE /* PreViewTimerRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84B5B93C1558A0DE8B825CF /* PreViewTimerRouterInput.swift */; };
+		D40872A520585E0300CAF631 /* AnaliticServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40872A420585E0300CAF631 /* AnaliticServer.swift */; };
 		D4959DE51F4695AD00E794BC /* TimerStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4959DE41F4695AD00E794BC /* TimerStory.swift */; };
 		D4959DE81F46970D00E794BC /* GlobalAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4959DE71F46970D00E794BC /* GlobalAssembly.swift */; };
 		D4959DEA1F469BC100E794BC /* BaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4959DE91F469BC100E794BC /* BaseAssembly.swift */; };
@@ -403,7 +403,6 @@
 		B41514871FE2BA5A00C539B4 /* RoundSettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoundSettingViewController.storyboard; sourceTree = "<group>"; };
 		B4189C6020519C0500F3C741 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B4189C622053D9BD00F3C741 /* Gramm-Laskovyi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Gramm-Laskovyi.mp3"; sourceTree = "<group>"; };
-		B423F36A1ED42B1F0034BFF1 /* FinishController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
 		B4422EC91FD96FBA000ABC64 /* PreStartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreStartController.swift; sourceTree = "<group>"; };
 		B4422ECB1FD96FDE000ABC64 /* IntervalNavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalNavigationCell.swift; sourceTree = "<group>"; };
 		B4422ECF1FD970A7000ABC64 /* MainViewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewViewController.storyboard; sourceTree = "<group>"; };
@@ -537,6 +536,7 @@
 		CF972ED134A4CE693762E1A1 /* TimerRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimerRouter.swift; sourceTree = "<group>"; };
 		D1A5F530FE05645957EDE549 /* TimeSettingConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeSettingConfiguratorTests.swift; sourceTree = "<group>"; };
 		D1DE96AA6C6032D3921BCC57 /* RoundSettingViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RoundSettingViewOutput.swift; sourceTree = "<group>"; };
+		D40872A420585E0300CAF631 /* AnaliticServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaliticServer.swift; sourceTree = "<group>"; };
 		D4959DE41F4695AD00E794BC /* TimerStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStory.swift; sourceTree = "<group>"; };
 		D4959DE71F46970D00E794BC /* GlobalAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAssembly.swift; sourceTree = "<group>"; };
 		D4959DE91F469BC100E794BC /* BaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAssembly.swift; sourceTree = "<group>"; };
@@ -1468,12 +1468,12 @@
 				B4C160EF1FDECBCE00CAC90A /* Cell */,
 				B4422EC91FD96FBA000ABC64 /* PreStartController.swift */,
 				B475397D1EB4DDE0008B3A1D /* Main.storyboard */,
-				B423F36A1ED42B1F0034BFF1 /* FinishController.swift */,
 				B47539821EB4DDE0008B3A1D /* LaunchScreen.storyboard */,
 				B47539851EB4DDE0008B3A1D /* Info.plist */,
 				B44732CB1F248C040013A17B /* GoogleService-Info.plist */,
 				B4FDDD8B1F292E9A00762382 /* SurveyController.swift */,
 				B49B6C4F1FF810590025BB54 /* HealthKitManager.swift */,
+				D40872A420585E0300CAF631 /* AnaliticServer.swift */,
 			);
 			path = Fury;
 			sourceTree = "<group>";
@@ -2364,7 +2364,6 @@
 				B4C4F1AA1FED34F50000DD7F /* TimerServiceProtocol.swift in Sources */,
 				B4753A4B1EBB64A6008B3A1D /* FinishOrContinueView.swift in Sources */,
 				B4422ECD1FD96FDE000ABC64 /* IntervalNavigationCell.swift in Sources */,
-				B423F36B1ED42B1F0034BFF1 /* FinishController.swift in Sources */,
 				B475397A1EB4DDE0008B3A1D /* AppDelegate.swift in Sources */,
 				B44817E61FD97D680011D5AE /* TimerTypeCell.swift in Sources */,
 				D4959DF01F469CDF00E794BC /* TimerStoryProtocol.swift in Sources */,
@@ -2380,6 +2379,7 @@
 				8930F1F4E92605B34B20E267 /* TimerViewInput.swift in Sources */,
 				3A41B530F94D9F3E41952503 /* TimerViewOutput.swift in Sources */,
 				4C58B1CA7BC6654A97854172 /* TimerViewController.swift in Sources */,
+				D40872A520585E0300CAF631 /* AnaliticServer.swift in Sources */,
 				B4189C6120519C0500F3C741 /* Logger.swift in Sources */,
 				2A2E5395D8B479EF7A274BDE /* TimerModuleInput.swift in Sources */,
 				88B483A5E377429FC29E0585 /* TimerPresenter.swift in Sources */,
