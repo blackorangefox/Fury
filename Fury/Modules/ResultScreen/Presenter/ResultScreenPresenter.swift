@@ -6,9 +6,10 @@
 //  Copyright © 2017 nova9. All rights reserved.
 //
 import Foundation
+import StoreKit
 
 class ResultScreenPresenter: ResultScreenModuleInput, ResultScreenViewOutput, ResultScreenInteractorOutput {
-
+    
     weak var view: ResultScreenViewInput!
     var interactor: ResultScreenInteractorInput!
     var router: ResultScreenRouterInput!
@@ -22,15 +23,8 @@ class ResultScreenPresenter: ResultScreenModuleInput, ResultScreenViewOutput, Re
     }
     
     func okButtonPress() {
-        if needShowSurveyControlle() {
-            let title = "Will open survey after"
-            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
-            router.openSurveyView(style: flowStory.style)
-        } else {
-            let title = "Will open main controller after"
-            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
-            router.openMainView()
-        }
+        SKStoreReviewController.requestReview()
+        router.openMainView()
     }
     
     func needShowSurveyControlle() -> Bool {
