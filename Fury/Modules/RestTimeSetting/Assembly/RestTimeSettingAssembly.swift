@@ -24,18 +24,11 @@ static func configure() {
 
     cont.register(TimeSettingViewOutput.self, name: "RestTime", factory: { (resolver: Resolver, view: TimeSettingViewInput) in
             let presenter = RestTimeSettingPresenter()
-            presenter.interactor = resolver.resolve(RestTimeSettingInteractorInput.self, argument: (presenter as RestTimeSettingInteractorOutput))
             presenter.router = resolver.resolve(RestTimeSettingRouterInput.self, argument: (view as! UIViewController))
             presenter.flowStory = resolver.resolve(TimerStoryProtocol.self)
             presenter.view = view
             return presenter
         }).inObjectScope(.transient)
-
-        cont.register(RestTimeSettingInteractorInput.self) { (resolver: Resolver, presenter: RestTimeSettingInteractorOutput) in
-            let interactor = RestTimeSettingInteractor()
-            interactor.output = presenter
-            return interactor
-        }.inObjectScope(.transient)
 
         cont.register(RestTimeSettingRouterInput.self) { (resolver: Resolver, view: UIViewController) in
             let router = RestTimeSettingRouter()

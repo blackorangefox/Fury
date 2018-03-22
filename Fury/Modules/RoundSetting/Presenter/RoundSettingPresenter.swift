@@ -6,10 +6,9 @@
 //  Copyright © 2017 nova9. All rights reserved.
 //
 
-class RoundSettingPresenter: RoundSettingModuleInput, RoundSettingViewOutput, RoundSettingInteractorOutput {
+class RoundSettingPresenter: RoundSettingViewOutput {
 
     weak var view: RoundSettingViewInput!
-    var interactor: RoundSettingInteractorInput!
     var router: RoundSettingRouterInput!
     var flowStory: TimerStoryProtocol!
 

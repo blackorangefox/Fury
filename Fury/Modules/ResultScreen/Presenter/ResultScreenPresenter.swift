@@ -8,10 +8,9 @@
 import Foundation
 import StoreKit
 
-class ResultScreenPresenter: ResultScreenModuleInput, ResultScreenViewOutput, ResultScreenInteractorOutput {
+class ResultScreenPresenter: ResultScreenViewOutput {
     
     weak var view: ResultScreenViewInput!
-    var interactor: ResultScreenInteractorInput!
     var router: ResultScreenRouterInput!
     var flowStory: TimerStoryProtocol!
     

@@ -24,18 +24,11 @@ static func configure() {
 
         cont.register(ResultScreenViewOutput.self, factory: { (resolver: Resolver, view: ResultScreenViewInput) in
             let presenter = ResultScreenPresenter()
-            presenter.interactor = resolver.resolve(ResultScreenInteractorInput.self, argument: (presenter as ResultScreenInteractorOutput))
             presenter.router = resolver.resolve(ResultScreenRouterInput.self, argument: (view as! UIViewController))
             presenter.view = view
             presenter.flowStory = resolver.resolve(TimerStoryProtocol.self)
             return presenter
         }).inObjectScope(.transient)
-
-        cont.register(ResultScreenInteractorInput.self) { (resolver: Resolver, presenter: ResultScreenInteractorOutput) in
-            let interactor = ResultScreenInteractor()
-            interactor.output = presenter
-            return interactor
-        }.inObjectScope(.transient)
 
         cont.register(ResultScreenRouterInput.self) { (resolver: Resolver, view: UIViewController) in
             let router = ResultScreenRouter()

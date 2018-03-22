@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TimerPresenter: TimerModuleInput, TimerViewOutput {
+class TimerPresenter: TimerViewOutput {
     
     weak var view: TimerViewInput!
     var router: TimerRouterInput!

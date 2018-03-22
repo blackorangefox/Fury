@@ -24,18 +24,11 @@ static func configure() {
 
         cont.register(TimeSettingViewOutput.self, factory: { (resolver: Resolver, view: TimeSettingViewInput) in
             let presenter = TimeSettingPresenter()
-            presenter.interactor = resolver.resolve(TimeSettingInteractorInput.self, argument: (presenter as TimeSettingInteractorOutput))
             presenter.router = resolver.resolve(TimeSettingRouterInput.self, argument: (view as! UIViewController))
             presenter.flowStory = resolver.resolve(TimerStoryProtocol.self)
             presenter.view = view
             return presenter
         }).inObjectScope(.transient)
-
-        cont.register(TimeSettingInteractorInput.self) { (resolver: Resolver, presenter: TimeSettingInteractorOutput) in
-            let interactor = TimeSettingInteractor()
-            interactor.output = presenter
-            return interactor
-        }.inObjectScope(.transient)
 
         cont.register(TimeSettingRouterInput.self) { (resolver: Resolver, view: UIViewController) in
             let router = TimeSettingRouter()

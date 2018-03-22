@@ -24,18 +24,11 @@ static func configure() {
 
         cont.register(RoundSettingViewOutput.self, factory: { (resolver: Resolver, view: RoundSettingViewInput) in
             let presenter = RoundSettingPresenter()
-            presenter.interactor = resolver.resolve(RoundSettingInteractorInput.self, argument: (presenter as RoundSettingInteractorOutput))
             presenter.router = resolver.resolve(RoundSettingRouterInput.self, argument: (view as! UIViewController))
             presenter.view = view
             presenter.flowStory = resolver.resolve(TimerStoryProtocol.self)
             return presenter
         }).inObjectScope(.transient)
-
-        cont.register(RoundSettingInteractorInput.self) { (resolver: Resolver, presenter: RoundSettingInteractorOutput) in
-            let interactor = RoundSettingInteractor()
-            interactor.output = presenter
-            return interactor
-        }.inObjectScope(.transient)
 
         cont.register(RoundSettingRouterInput.self) { (resolver: Resolver, view: UIViewController) in
             let router = RoundSettingRouter()

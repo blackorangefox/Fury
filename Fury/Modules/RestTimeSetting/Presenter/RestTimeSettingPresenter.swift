@@ -6,10 +6,9 @@
 //  Copyright © 2017 nova9. All rights reserved.
 //
 
-class RestTimeSettingPresenter: RestTimeSettingModuleInput, TimeSettingViewOutput, RestTimeSettingInteractorOutput {
+class RestTimeSettingPresenter: TimeSettingViewOutput {
     
     weak var view: TimeSettingViewInput!
-    var interactor: RestTimeSettingInteractorInput!
     var router: RestTimeSettingRouterInput!
     var  flowStory: TimerStoryProtocol!
     

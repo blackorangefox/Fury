@@ -6,7 +6,7 @@
 //  Copyright © 2017 nova9. All rights reserved.
 //
 
-class PreViewTimerPresenter: PreViewTimerModuleInput, PreViewTimerViewOutput, PreViewTimerInteractorOutput {
+class PreViewTimerPresenter: PreViewTimerViewOutput, PreViewTimerInteractorOutput {
 
     weak var view: PreViewTimerViewInput!
     var interactor: PreViewTimerInteractorInput!
