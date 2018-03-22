@@ -28,7 +28,7 @@ final class PreStartController: UIViewController {
     private var timer: Timer!
     var style: TimerStyle!
     
-    private let playerService = PlayerService()
+    private let playerService = SoundService()
     @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var bottomGradientViewConstraint: NSLayoutConstraint!

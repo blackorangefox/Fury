@@ -32,7 +32,7 @@ class TimerViewController: UIViewController, TimerViewInput {
     var type: TimerType = .classic
     var countdownTimerStart = Date()
     
-     private let playerService = PlayerService()
+     private let playerService = SoundService()
     
     // MARK: Life cycle
     override func viewDidLoad() {
