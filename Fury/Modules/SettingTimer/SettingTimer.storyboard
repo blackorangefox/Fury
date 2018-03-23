@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting Timer Controller-->
+        <scene sceneID="DZy-tl-Gc3">
+            <objects>
+                <tableViewController id="wdF-Iz-cED" customClass="SettingTimerController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Tnq-ji-oK5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingTimerCell" rowHeight="60" id="L7c-ZY-5SL" customClass="SettingTimerCell" customModule="Fury" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L7c-ZY-5SL" id="ZkO-8l-eMl">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COUNTDOWN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xL-ah-CaZ">
+                                            <rect key="frame" x="16" y="19" width="158.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1 second" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UkZ-cc-8Rz">
+                                            <rect key="frame" x="174.5" y="21.5" width="158.5" height="17"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5xL-ah-CaZ" firstAttribute="centerY" secondItem="ZkO-8l-eMl" secondAttribute="centerY" id="64M-L8-Y5w"/>
+                                        <constraint firstItem="5xL-ah-CaZ" firstAttribute="leading" secondItem="ZkO-8l-eMl" secondAttribute="leadingMargin" id="Jp0-CL-M7U"/>
+                                        <constraint firstItem="UkZ-cc-8Rz" firstAttribute="leading" secondItem="5xL-ah-CaZ" secondAttribute="trailing" id="NKS-BB-tsa"/>
+                                        <constraint firstItem="UkZ-cc-8Rz" firstAttribute="centerY" secondItem="ZkO-8l-eMl" secondAttribute="centerY" id="Yp7-Sl-gjz"/>
+                                        <constraint firstItem="UkZ-cc-8Rz" firstAttribute="trailing" secondItem="ZkO-8l-eMl" secondAttribute="trailingMargin" id="Zxx-km-uH6"/>
+                                        <constraint firstItem="UkZ-cc-8Rz" firstAttribute="width" secondItem="5xL-ah-CaZ" secondAttribute="width" id="eZV-Cc-kuy"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="5xL-ah-CaZ" id="yz6-WO-IBu"/>
+                                    <outlet property="textField" destination="UkZ-cc-8Rz" id="lJb-pZ-udv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wdF-Iz-cED" id="3Oy-He-ZKf"/>
+                            <outlet property="delegate" destination="wdF-Iz-cED" id="rDe-QF-8ze"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70A-Pp-1le" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.200000000000003" y="-36.431784107946029"/>
+        </scene>
+    </scenes>
+</document>

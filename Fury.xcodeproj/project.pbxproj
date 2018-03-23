@@ -99,6 +99,9 @@
 		B44732CC1F248C040013A17B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B44732CB1F248C040013A17B /* GoogleService-Info.plist */; };
 		B44817E61FD97D680011D5AE /* TimerTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44817E51FD97D680011D5AE /* TimerTypeCell.swift */; };
 		B44817E81FD98C7C0011D5AE /* PreViewTimerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44817E71FD98C7C0011D5AE /* PreViewTimerViewController.storyboard */; };
+		B46E339F20657FA6008687C3 /* SettingTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46E339E20657FA6008687C3 /* SettingTimer.storyboard */; };
+		B46E33A12065818C008687C3 /* SettingTimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E33A02065818C008687C3 /* SettingTimerController.swift */; };
+		B46E33A420658357008687C3 /* SettingTimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46E33A320658357008687C3 /* SettingTimerCell.swift */; };
 		B475397A1EB4DDE0008B3A1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47539791EB4DDE0008B3A1D /* AppDelegate.swift */; };
 		B475397F1EB4DDE0008B3A1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B475397D1EB4DDE0008B3A1D /* Main.storyboard */; };
 		B47539841EB4DDE0008B3A1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47539821EB4DDE0008B3A1D /* LaunchScreen.storyboard */; };
@@ -377,6 +380,9 @@
 		B44817E51FD97D680011D5AE /* TimerTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTypeCell.swift; sourceTree = "<group>"; };
 		B44817E71FD98C7C0011D5AE /* PreViewTimerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreViewTimerViewController.storyboard; sourceTree = "<group>"; };
 		B4492F19A02CB7A69961D429 /* Pods_Fury.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fury.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B46E339E20657FA6008687C3 /* SettingTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingTimer.storyboard; sourceTree = "<group>"; };
+		B46E33A02065818C008687C3 /* SettingTimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTimerController.swift; sourceTree = "<group>"; };
+		B46E33A320658357008687C3 /* SettingTimerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTimerCell.swift; sourceTree = "<group>"; };
 		B47539761EB4DDE0008B3A1D /* Fury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47539791EB4DDE0008B3A1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B475397E1EB4DDE0008B3A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -769,6 +775,7 @@
 		3DFE53C6C9176101CF189142 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B46E339D20657F89008687C3 /* SettingTimer */,
 				A5772DDAB5293A2B75075AB5 /* RestTimeSetting */,
 				AA3FF1DD7205212EA9AEEC11 /* RoundSetting */,
 				DAB30873CD8DC98AB3586D70 /* TimeSetting */,
@@ -1327,6 +1334,24 @@
 				F6CAC7DC372D31C9487265F6 /* RoundSettingAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		B46E339D20657F89008687C3 /* SettingTimer */ = {
+			isa = PBXGroup;
+			children = (
+				B46E33A220658335008687C3 /* cell */,
+				B46E339E20657FA6008687C3 /* SettingTimer.storyboard */,
+				B46E33A02065818C008687C3 /* SettingTimerController.swift */,
+			);
+			path = SettingTimer;
+			sourceTree = "<group>";
+		};
+		B46E33A220658335008687C3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				B46E33A320658357008687C3 /* SettingTimerCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		B4707E2D54F62AB2D3E6B6E2 /* Presenter */ = {
@@ -2046,6 +2071,7 @@
 				D44288A6206197040063AE0A /* MontserratAlternates-SemiBold.otf in Resources */,
 				B4753A041EB9F136008B3A1D /* Oswald-Extra-LightItalic.ttf in Resources */,
 				D442889A206197040063AE0A /* MontserratAlternates-BoldItalic.otf in Resources */,
+				B46E339F20657FA6008687C3 /* SettingTimer.storyboard in Resources */,
 				B4753A351EB9F144008B3A1D /* RobotoCondensed-Regular.ttf in Resources */,
 				D4428899206197040063AE0A /* Montserrat-Thin.otf in Resources */,
 				B4753A271EB9F144008B3A1D /* Roboto-BoldItalic.ttf in Resources */,
@@ -2300,9 +2326,11 @@
 				94974BA5E639FF46AE797DDE /* MainViewViewOutput.swift in Sources */,
 				E18CEBD27CE3718ADB197763 /* MainViewViewController.swift in Sources */,
 				E1525A0F35104F96E05DE551 /* MainViewPresenter.swift in Sources */,
+				B46E33A420658357008687C3 /* SettingTimerCell.swift in Sources */,
 				1D2297FDC082A0617AA285E4 /* MainViewInteractorInput.swift in Sources */,
 				01ADE0F10E7C416BFCC0DC70 /* MainViewInteractorOutput.swift in Sources */,
 				AFDDBA1688119D1DC3989CB1 /* MainViewInteractor.swift in Sources */,
+				B46E33A12065818C008687C3 /* SettingTimerController.swift in Sources */,
 				84227DCE32AB18C2FA81BD91 /* MainViewRouterInput.swift in Sources */,
 				B4C4F1B31FF11EE20000DD7F /* NibLoadable.swift in Sources */,
 				DA04C20135DEFFFBBB8DCA1A /* MainViewRouter.swift in Sources */,
