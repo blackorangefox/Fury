@@ -34,19 +34,36 @@ class SettingTimerController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        switch section {
+        case 0:
+           return 1
+        default:
+           return 3
+        }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingTimerCell", for: indexPath) as! SettingTimerCell
+        var model = SettingTimerCellModel(label: "COUNTDOWN", textField: "1 second", type: .hourseMinSec)
+        switch indexPath.section {
+        case 0:
+            model = SettingTimerCellModel(label: "COUNTDOWN", textField: "1 second", type: .sec)
+        default:
+            switch indexPath.row {
+            case 0:
+                model = SettingTimerCellModel(label: "TOTAL ROUNDS", textField: "1 rounds", type: .round)
+            case 1:
+                model = SettingTimerCellModel(label: "WORK DURACTION", textField: "00:00:00", type: .hourseMinSec)
+            default:
+                model = SettingTimerCellModel(label: "REST DURACTION", textField: "00:00:00", type: .hourseMinSec)
+            }
+        }
+        cell.configure(model: model)
         return cell
     }
-    */
-
+ 
+ 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

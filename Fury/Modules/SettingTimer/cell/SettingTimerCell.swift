@@ -14,10 +14,19 @@ enum TypePicker {
     case round
 }
 
-protocol SettingTimerCellModel {
-    var label: String { get set }
-    var textField: String { get set }
-    var type: TypePicker { get set }
+struct  SettingTimerCellModel {
+    var label: String
+    var textField: String
+    var type: TypePicker
+    
+    init(label: String,
+         textField: String,
+         type: TypePicker) {
+        self.label = label
+        self.textField = textField
+        self.type = type
+    }
+    
 }
 
 final class SettingTimerCell: UITableViewCell {
@@ -26,19 +35,37 @@ final class SettingTimerCell: UITableViewCell {
     @IBOutlet weak var textField: UITextField!
     
     private var type: TypePicker = .sec
-    private var pickerOption = Array(1...100)
+    
+    var hour = 0
+    var minutes = 0
+    var seconds = 0
+    var round = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        var pickerView = UIPickerView()
+        let pickerView = UIPickerView()
         pickerView.delegate = self
+        
+
+        textField.inputView = pickerView
         selectionStyle = .none
     }
     
     func configure(model: SettingTimerCellModel) {
         self.label.text = model.label
-        self.textField.text = model.label
+        self.textField.text = model.textField
         self.type = model.type
+    }
+    
+    private func updateLabel() {
+        switch type {
+        case .hourseMinSec:
+            textField.text = String(format: "%02d:%02d:%02d", hour, minutes, seconds)
+        case .sec:
+            textField.text = "\(seconds) seconds"
+        case .round:
+            return textField.text = "\(round) rounds"
+        }
     }
 }
 
@@ -54,9 +81,22 @@ extension SettingTimerCell: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerOption.count
+        switch type {
+        case .hourseMinSec:
+            switch component {
+            case 0:
+                return 23
+            case 1,2:
+                return 60
+            default:
+                return 0
+            }
+        case .sec:
+            return 59
+        case .round:
+            return 99
+        }
     }
-    
 }
 
 extension SettingTimerCell: UIPickerViewDelegate {
@@ -64,11 +104,42 @@ extension SettingTimerCell: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch type {
         case .hourseMinSec:
-            return "\(pickerOption[Int])hrs"
-        case .sec, .round:
-            return 1
+            switch component {
+            case 0:
+                return "\(row) hrs"
+            case 1:
+                return "\(row) min"
+            case 2:
+                return "\(row) sec"
+            default:
+                return ""
+            }
+        case .sec:
+            return "\(row+1) sec"
         case .round:
-            
+            return "\(row+1) rounds"
         }
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch type {
+        case .hourseMinSec:
+            switch component {
+            case 0:
+                hour = row
+            case 1:
+                minutes = row
+            case 2:
+                seconds = row
+            default:
+                break
+            }
+        case .sec:
+            seconds = row + 1
+        case .round:
+            round = row + 1
+        }
+        updateLabel()
+    }
+        
 }

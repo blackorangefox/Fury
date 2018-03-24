@@ -13,7 +13,7 @@
         <!--Setting Timer Controller-->
         <scene sceneID="DZy-tl-Gc3">
             <objects>
-                <tableViewController id="wdF-Iz-cED" customClass="SettingTimerController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="SettingTimer" storyboardIdentifier="SettingTimer" id="wdF-Iz-cED" customClass="SettingTimerController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Tnq-ji-oK5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
