@@ -10,9 +10,24 @@ import UIKit
 
 class SettingTimerController: UITableViewController {
 
+    var timerType: TimerType = .classic
+    var models = [SettingTimerCellModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        switch timerType {
+        case .interval:
+            let roundModel =  SettingTimerCellModel(label: "TOTAL ROUNDS", textField: "1 rounds", type: .round)
+            let workDuractionModel = SettingTimerCellModel(label: "WORK DURACTION", textField: "00:00:00", type: .hourseMinSec)
+            let restDuractionModel = SettingTimerCellModel(label: "REST DURACTION", textField: "00:00:00", type: .hourseMinSec)
+            models = [roundModel, workDuractionModel, restDuractionModel]
+        case .classic:
+            models = [SettingTimerCellModel]()
+        case .countdown:
+            let workDuractionModel = SettingTimerCellModel(label: "WORK DURACTION", textField: "00:00:00", type: .hourseMinSec)
+            models = [workDuractionModel]
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,7 +53,7 @@ class SettingTimerController: UITableViewController {
         case 0:
            return 1
         default:
-           return 3
+           return models.count
         }
     }
 
@@ -50,14 +65,7 @@ class SettingTimerController: UITableViewController {
         case 0:
             model = SettingTimerCellModel(label: "COUNTDOWN", textField: "1 second", type: .sec)
         default:
-            switch indexPath.row {
-            case 0:
-                model = SettingTimerCellModel(label: "TOTAL ROUNDS", textField: "1 rounds", type: .round)
-            case 1:
-                model = SettingTimerCellModel(label: "WORK DURACTION", textField: "00:00:00", type: .hourseMinSec)
-            default:
-                model = SettingTimerCellModel(label: "REST DURACTION", textField: "00:00:00", type: .hourseMinSec)
-            }
+            model = models[indexPath.row]
         }
         cell.configure(model: model)
         return cell
