@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad10_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,11 +24,11 @@
             <objects>
                 <viewController storyboardIdentifier="ResultScreenViewController" id="Yya-PC-AXu" customClass="ResultScreenViewController" customModule="Fury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="biN-EV-jMe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s2-cF-sNs">
-                                <rect key="frame" x="24" y="579" width="327" height="64"/>
+                                <rect key="frame" x="24" y="1024" width="786" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="v3p-gi-eoU"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47v-Wo-5gk">
-                                <rect key="frame" x="24" y="507" width="327" height="64"/>
+                                <rect key="frame" x="24" y="952" width="786" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="jaE-XA-E4e"/>
                                 </constraints>
@@ -60,10 +60,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blV-tp-XUa">
-                                <rect key="frame" x="24" y="44" width="327" height="327"/>
+                                <rect key="frame" x="24" y="44" width="786" height="786"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="classic" translatesAutoresizingMaskIntoConstraints="NO" id="YtB-mh-HRR">
-                                        <rect key="frame" x="99" y="24" width="128" height="163"/>
+                                        <rect key="frame" x="251.5" y="52" width="282" height="359"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="163" id="BYE-1O-pjJ"/>
                                             <constraint firstAttribute="width" constant="128" id="HJq-5Q-VlD"/>
@@ -95,7 +95,7 @@
                                         </variation>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="64" translatesAutoresizingMaskIntoConstraints="NO" id="n60-Gg-Fx0">
-                                        <rect key="frame" x="23" y="187" width="281" height="106"/>
+                                        <rect key="frame" x="23" y="411" width="740" height="233"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="106" id="rSR-pq-V6p"/>
                                             <constraint firstAttribute="height" constant="233" id="y1X-cf-jyW"/>
@@ -125,7 +125,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY RESULT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flH-Fk-4tk">
-                                        <rect key="frame" x="128" y="293" width="70.5" height="15"/>
+                                        <rect key="frame" x="317" y="666" width="152.5" height="32"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -213,6 +213,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="classic" width="256" height="328"/>
+        <image name="classic" width="257" height="273"/>
     </resources>
 </document>
