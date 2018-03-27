@@ -26,9 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         UIApplication.shared.statusBarStyle = .lightContent
         
-       //let vc = GlobalAssembly.resolve(type: MainViewViewInput.self) as! UIViewController
-        let story = UIStoryboard.init(name: "SettingTimer", bundle: nil)
-        let vc = story.instantiateViewController(withIdentifier: "SettingTimer") as! SettingTimerController
+       let vc = GlobalAssembly.resolve(type: MainViewViewInput.self) as! UIViewController
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
         

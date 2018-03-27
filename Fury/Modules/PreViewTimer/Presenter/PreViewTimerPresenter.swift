@@ -22,19 +22,20 @@ class PreViewTimerPresenter: PreViewTimerViewOutput, PreViewTimerInteractorOutpu
     }
     
     func playButtonPress() {
-        switch flowStory.style.type {
-        case  .interval:
-            let title = "Will open round set for"
-            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
-            router.openRoundSetting()
-        case .countdown:
-            let title = "Will open work time set for"
-            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
-            router.openSetWorkTime()
-        case .classic:
-            let title = "Will open pre-start for"
-            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
-            router.openPrestart(style: flowStory.style)
-        }
+        router.open(timerType: flowStory.style.type)
+//        switch flowStory.style.type {
+//        case  .interval:
+//            let title = "Will open round set for"
+//            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+//            router.op
+//        case .countdown:
+//            let title = "Will open work time set for"
+//            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+//            router.openSetWorkTime()
+//        case .classic:
+//            let title = "Will open pre-start for"
+//            AnaliticServer.createAnalitic(title: title, type: flowStory.style.type)
+//            router.openPrestart(style: flowStory.style)
+//        }
     }
 }

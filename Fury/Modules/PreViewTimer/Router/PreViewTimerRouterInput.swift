@@ -11,7 +11,8 @@ import Foundation
 protocol PreViewTimerRouterInput {
 
 	weak var view: PreViewTimerViewController? { get set }
-    func openPrestart(style: TimerStyle)
-    func openRoundSetting()
-    func openSetWorkTime()
+    func open(timerType: TimerType)
+//    func openPrestart(style: TimerStyle)
+//    func openRoundSetting()
+//    func openSetWorkTime()
 }
